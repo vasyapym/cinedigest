@@ -143,7 +143,7 @@ days is plain links between static pages. -#}
   .chip{font-size:.8rem;padding:.2rem .6rem;border:1px solid var(--line);border-radius:1rem;color:var(--mut);cursor:pointer;user-select:none}
   .chip.vc::before{content:"";display:inline-block;width:.55em;height:.55em;border-radius:50%;margin-right:.35em;background:var(--vc,var(--mut))}
   {% for k in venues %}#v-{{ k }}:checked ~ header label[for="v-{{ k }}"], {% endfor %}#allday:checked ~ header label[for="allday"]{color:var(--fg);border-color:var(--fg)}
-  {% for k in venues %}#v-{{ k }}:not(:checked) ~ main .r[data-v="{{ k }}"]{display:none}
+  {% for k in venues %}#v-{{ k }}:not(:checked) ~ main .list .r[data-v="{{ k }}"]{display:none!important}
   {% endfor %}
   {% for k in venues %}.v-{{ k }}{--vc:var(--c-{{ k }})}
   {% endfor %}

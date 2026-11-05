@@ -36,13 +36,13 @@
   .chip{font-size:.8rem;padding:.2rem .6rem;border:1px solid var(--line);border-radius:1rem;color:var(--mut);cursor:pointer;user-select:none}
   .chip.vc::before{content:"";display:inline-block;width:.55em;height:.55em;border-radius:50%;margin-right:.35em;background:var(--vc,var(--mut))}
 #v-domkino:checked ~ header label[for="v-domkino"], #v-rodina:checked ~ header label[for="v-rodina"], #v-avrora:checked ~ header label[for="v-avrora"], #v-poravkino:checked ~ header label[for="v-poravkino"], #v-lenfilm:checked ~ header label[for="v-lenfilm"], #v-outcinema:checked ~ header label[for="v-outcinema"], #v-mirage:checked ~ header label[for="v-mirage"], #allday:checked ~ header label[for="allday"]{color:var(--fg);border-color:var(--fg)}
-#v-domkino:not(:checked) ~ main .r[data-v="domkino"]{display:none}
-#v-rodina:not(:checked) ~ main .r[data-v="rodina"]{display:none}
-#v-avrora:not(:checked) ~ main .r[data-v="avrora"]{display:none}
-#v-poravkino:not(:checked) ~ main .r[data-v="poravkino"]{display:none}
-#v-lenfilm:not(:checked) ~ main .r[data-v="lenfilm"]{display:none}
-#v-outcinema:not(:checked) ~ main .r[data-v="outcinema"]{display:none}
-#v-mirage:not(:checked) ~ main .r[data-v="mirage"]{display:none}
+#v-domkino:not(:checked) ~ main .list .r[data-v="domkino"]{display:none!important}
+#v-rodina:not(:checked) ~ main .list .r[data-v="rodina"]{display:none!important}
+#v-avrora:not(:checked) ~ main .list .r[data-v="avrora"]{display:none!important}
+#v-poravkino:not(:checked) ~ main .list .r[data-v="poravkino"]{display:none!important}
+#v-lenfilm:not(:checked) ~ main .list .r[data-v="lenfilm"]{display:none!important}
+#v-outcinema:not(:checked) ~ main .list .r[data-v="outcinema"]{display:none!important}
+#v-mirage:not(:checked) ~ main .list .r[data-v="mirage"]{display:none!important}
 .v-domkino{--vc:var(--c-domkino)}
 .v-rodina{--vc:var(--c-rodina)}
 .v-avrora{--vc:var(--c-avrora)}

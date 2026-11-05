@@ -67,8 +67,25 @@ def test_venue_badge_precedes_title_and_carries_hall():
 def test_filter_css_and_data_attributes_survive():
     html = render.render(_snapshot())
     for k in VENUES:
-        assert f'#v-{k}:not(:checked) ~ main .r[data-v="{k}"]{{display:none}}' in html
+        assert f'#v-{k}:not(:checked) ~ main .list .r[data-v="{k}"]{{display:none!important}}' in html
     assert 'data-v="mirage"' in html and 'id="allday"' in html
+
+
+def test_venue_hide_survives_allday_cascade():
+    # канарейка каскадного правки: у Дом кино есть и дневная (13:00), и вечерняя (19:00) строка
+    rows = [_s("domkino", "Морозко", TODAY, 13, hall="1"),
+            _s("domkino", "Морозко", TODAY, 19, year=1964)]
+    statuses = [VenueStatus(venue=k, ok=True, count=1, fetched_at=GENERATED) for k in VENUES]
+    snap = Snapshot(generated_at=GENERATED, window_start=TODAY, window_end=TODAY + timedelta(days=1),
+                    statuses=statuses, screenings=rows)
+    html = render.render(snap)
+    assert 'class="r day"' in html and 'class="r"' in html  # да, есть обе строки
+    # allday поднимает дневные строки тем же приоритетом, поэтому прятание площадки обязано
+    # бить по той же глубине и с !important — иначе при «весь день» площадка перестаёт прятаться
+    assert '#allday:checked ~ main .list .r.day{display:grid}' in html
+    for k in VENUES:
+        assert f'.list .r[data-v="{k}"]{{display:none!important}}' in html
+    assert html.count('{display:none!important}') == len(VENUES)  # ни одного лишнего скрытия
 
 
 def test_posters_render_with_exact_attribution():
