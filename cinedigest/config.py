@@ -84,8 +84,9 @@ KINOKASSA_API_URL = "https://kinokassa.kinoplan24.ru"
 LENFILM_SITE_URL = "https://www.lenfilm.ru/service/Kinoteatr-Lenfilm/"
 LENFILM_CINEMA_ID = 2387
 
-# stage 3 — render and delivery
-# index.html byte budget: log.info the size, log.warning at the threshold.
+# stage 5 — render and delivery
+# Byte budget of EVERY generated HTML artifact (index.html and each day page):
+# log.info the size, log.warning at the threshold.
 RENDER_WARN_BYTES = 400 * 1024
 # Telegram push (both env names must be set; otherwise the push is skipped).
 TELEGRAM_BOT_TOKEN_ENV = "TELEGRAM_BOT_TOKEN"
@@ -94,3 +95,33 @@ TELEGRAM_CHAT_ID_ENV = "TELEGRAM_CHAT_ID"
 PAGE_URL_ENV = "CINEDIGEST_PAGE_URL"
 # Optional «код» link in the page footer.
 REPO_URL_ENV = "CINEDIGEST_REPO_URL"
+
+# stage 5 — posters via TMDB (developer / non-commercial tier; conditions: docs/tmdb-image-use.md)
+# The «API Read Access Token» goes in the Authorization: Bearer header; unset → no lookups,
+# the committed cache is still rendered.
+TMDB_READ_TOKEN_ENV = "TMDB_READ_TOKEN"
+TMDB_API_URL = "https://api.themoviedb.org/3"
+# Image URL = base + size + poster_path; no key, no transformation (§1.C: no derivatives).
+TMDB_IMAGE_BASE_URL = "https://image.tmdb.org/t/p/"
+TMDB_POSTER_SIZE = "w185"
+TMDB_LANGUAGE = "ru-RU"
+TMDB_SITE_URL = "https://www.themoviedb.org"
+# Verbatim notice — must be rendered exactly whenever TMDB content is shown.
+TMDB_NOTICE = (
+    "This website uses TMDB and the TMDB APIs but is not endorsed, certified, "
+    "or otherwise approved by TMDB."
+)
+# Official logo file (downloaded as-is from the TMDB logos page) served next to the pages.
+TMDB_LOGO_FILENAME = "tmdb.svg"
+# docs/posters.json — the committed cache; deleting it purges every cached TMDB datum.
+POSTERS_FILENAME = "posters.json"
+# docs/posters-overrides.json — hand-made pins: null | {"tmdb_id": N} | {"poster_path": "/x.jpg"}.
+POSTER_OVERRIDES_FILENAME = "posters-overrides.json"
+# Per-run bounds (first fill of the current window ≈ 117 films).
+TMDB_MAX_LOOKUPS_PER_RUN = 150
+TMDB_FAILURE_LIMIT = 3
+# Cache clause («no longer than 6 months»): hits re-resolved after 150 days, misses retried
+# after 14; anything older than 180 days is dropped on save even when TMDB was unreachable.
+TMDB_REFRESH_DAYS = 150
+TMDB_MISS_RETRY_DAYS = 14
+TMDB_CACHE_MAX_AGE_DAYS = 180

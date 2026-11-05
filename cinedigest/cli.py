@@ -1,4 +1,4 @@
-"""CLI: `run` (fetch → snapshot → page+digest+telegram), `render`, `fetch`.
+"""CLI: `run` (fetch → snapshot → posters → pages+digest+telegram), `render`, `posters`, `fetch`.
 
 Exit codes: 0 — every venue ok; 2 — at least one VenueStatus.ok is False (incl.
 stale); 1 — a crash (caught at this boundary); argparse usage errors exit 2 by
@@ -11,7 +11,7 @@ import logging
 from datetime import date, timedelta
 from pathlib import Path
 
-from . import config, deliver, pipeline
+from . import config, deliver, pipeline, posters
 from .http import Http, safe_filename
 from .model import VENUES, Snapshot
 from .venues import avrora, domkino, lenfilm, mirage, outcinema, poravkino, rodina
@@ -45,6 +45,12 @@ def build_parser() -> argparse.ArgumentParser:
     render_command.add_argument("--snapshot", default=None,
                                 help="screenings.json path (default <out>/docs/screenings.json)")
 
+    posters_command = commands.add_parser(
+        "posters", help="resolve TMDB posters for the saved snapshot (needs TMDB_READ_TOKEN) and rebuild the pages")
+    posters_command.add_argument("--out", default=".", help="workspace root with docs/ (default .)")
+    posters_command.add_argument("--snapshot", default=None,
+                                 help="screenings.json path (default <out>/docs/screenings.json)")
+
     fetch_command = commands.add_parser("fetch", help="save one venue's raw responses, never renders")
     fetch_command.add_argument("--venue", metavar="KEY", required=True, help="venue key, e.g. rodina")
     fetch_command.add_argument("--date", metavar="YYYY-MM-DD", default=None,
@@ -60,7 +66,7 @@ def main(argv=None, venues=None) -> int:
     parser = build_parser()
     args = parser.parse_args(argv)
     args._parser = parser
-    handlers = {"run": _run, "render": _render_command, "fetch": _fetch_command}
+    handlers = {"run": _run, "render": _render_command, "posters": _posters_command, "fetch": _fetch_command}
     try:
         return handlers[args.command](args, venues)
     except Exception:
@@ -78,7 +84,10 @@ def _run(args, venues) -> int:
     )
     if previous is None:
         log.info("no previous snapshot under %s — nothing to carry over", out_dir)
-    snapshot = _run_window(selected, start=start, days=days_number, previous=previous, out_dir=out_dir)
+    http = Http()
+    snapshot = _run_window(selected, start=start, days=days_number, previous=previous,
+                           out_dir=out_dir, http=http)
+    _resolve_posters(snapshot, http, out_dir)
 
     html_path, digest_path = deliver.write(snapshot, out_dir)
     log.info("written: %s, %s", html_path, digest_path)
@@ -98,7 +107,7 @@ def _run(args, venues) -> int:
     return 0
 
 
-def _run_window(venues, *, start: date, days: int, previous, out_dir) -> Snapshot:
+def _run_window(venues, *, start: date, days: int, previous, out_dir, http=None) -> Snapshot:
     """pipeline.run with an explicit window.
 
     Engine fact: the frozen pipeline.run() computes its window as
@@ -110,9 +119,29 @@ def _run_window(venues, *, start: date, days: int, previous, out_dir) -> Snapsho
     original = pipeline.window
     pipeline.window = lambda today, days=None: list(requested)
     try:
-        return pipeline.run(venues, previous=previous, out_dir=out_dir)
+        return pipeline.run(venues, previous=previous, out_dir=out_dir, http=http)
     finally:
         pipeline.window = original
+
+
+def _resolve_posters(snapshot: Snapshot, http, out_dir) -> None:
+    """Best-effort: a resolver failure is logged, the pages still render from the cache."""
+    try:
+        posters.resolve(snapshot.screenings, http=http, out_dir=out_dir, today=pipeline.today_msk())
+    except Exception:
+        log.exception("posters: resolver failed — pages render with the cached posters only")
+
+
+def _posters_command(args, _) -> int:
+    out_dir = args.out
+    snapshot_path = args.snapshot or f"{out_dir}/{config.DOCS_DIRNAME}/{config.SCREENINGS_FILENAME}"
+    snapshot = pipeline.load_snapshot(snapshot_path)
+    if snapshot is None:
+        args._parser.error(f"snapshot not found or unreadable: {snapshot_path}")
+    posters.resolve(snapshot.screenings, http=Http(), out_dir=out_dir, today=pipeline.today_msk())
+    html_path, digest_path = deliver.write(snapshot, out_dir)
+    log.info("written: %s, %s", html_path, digest_path)
+    return 0
 
 
 def _render_command(args, _) -> int:

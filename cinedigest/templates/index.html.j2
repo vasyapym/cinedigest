@@ -1,10 +1,12 @@
-{#- templates/index.html.j2 — the single-file page. Context built by the render stage:
+{#- templates/index.html.j2 — ONE page per window day (index.html = the first day). Context built
+    by the render stage:
     generated_at   datetime (Europe/Moscow)      build time of this snapshot
-    today          date                          MSK date of the run
+    today          date                          MSK date of the run (= window start)
     days           list[tuple[date, list[Screening]]]
                    list(select(screenings, days, evening_only=False).items()), one entry
                    per window date, rows chronological; 00:00–05:59 rows sit under the
-                   PREVIOUS day
+                   PREVIOUS day. Used for the day nav; only days[day_index] is rendered.
+    day_index      int  index into `days` of the day this page shows (0 → index.html)
     evening        list[Screening]  the rows of select(..., evening_only=True) — a LIST, not
                    a set: Screening is a frozen dataclass with an unhashable dict field
                    (extra), membership works by equality
@@ -12,9 +14,14 @@
     venues         dict[str, str]               VENUES: key -> display name
     repo_url       str | None
     json_name      str                            e.g. "screenings.json" (relative link)
+    posters        bool   any TMDB poster URL attached to this snapshot — switches on the
+                          attribution block (logo + verbatim notice) in the footer
+    tmdb_site_url, tmdb_notice, tmdb_logo   str  attribution pieces from config
+Rows may carry extra.poster (a full image.tmdb.org URL) — attached by render, never stored.
 Jinja env: autoescape=True, trim_blocks=True, lstrip_blocks=True. No extensions:
-lists are grown with «{% set _ = xs.append(x) %}» (append returns None). -#}
-
+lists are grown with «{% set _ = xs.append(x) %}» (append returns None).
+JS only for localStorage toggles, dimming past rows and the stale-page banner; switching
+days is plain links between static pages. -#}
 {% macro plural(n, one, few, many) -%}
   {%- set n = n or 0 -%}
   {%- set a = n % 10 -%}{%- set b = n % 100 -%}
@@ -35,6 +42,10 @@ lists are grown with «{% set _ = xs.append(x) %}» (append returns None). -#}
 {% macro dlabel(d, today) -%}
   {%- set off = (d - today).days -%}
   {%- if off == 0 %}Сегодня{% elif off == 1 %}Завтра{% else %}{{ dshort(d) }}{% endif -%}
+{%- endmacro %}
+
+{% macro page_href(i, days) -%}
+  {%- if i == 0 %}index.html{% else %}{{ days[i][0].isoformat() }}.html{% endif -%}
 {%- endmacro %}
 
 {% macro lang(s) -%}
@@ -75,14 +86,18 @@ lists are grown with «{% set _ = xs.append(x) %}» (append returns None). -#}
       data-v="{{ s.venue }}" data-ts="{{ s.start.timestamp()|int }}">
     <time datetime="{{ s.start.isoformat() }}">{{ s.start.strftime('%H:%M') }}{% if night %}<small>ночь на {{ dshort(s.start.date()) }}</small>{% endif %}</time>
     <div class="b">
+      <div class="w">
+        {% if s.url and not film_link %}<a class="v v-{{ s.venue }}" href="{{ s.url }}">{{ venues[s.venue] }}</a>{% else %}<span class="v v-{{ s.venue }}">{{ venues[s.venue] }}</span>{% endif %}
+        {% if s.hall %}<span class="h">{{ hall(s.hall) }}</span>{% endif %}
+      </div>
       <div class="t">
         {% if film_link %}<a href="{{ s.url }}">{{ s.title }}</a>{% else %}<span>{{ s.title }}</span>{% endif %}
         {% if x.original_title and x.original_title != s.title %}<span class="o">{{ x.original_title }}</span>{% endif %}
-        {% if s.url and not film_link %}<a class="v" href="{{ s.url }}">{{ venues[s.venue] }}</a>{% else %}<span class="v">{{ venues[s.venue] }}</span>{% endif %}
       </div>
       {% if parts or s.tags %}<div class="m">{{ parts|join(' · ') }}{% for t in s.tags if t|upper != 'SUB' %} <span class="tag">{{ t }}</span>{% endfor %}</div>{% endif %}
       {% if x.synopsis %}<details><summary>о фильме</summary><p>{{ x.synopsis }}</p></details>{% endif %}
     </div>
+    {% if x.poster %}<img class="p" src="{{ x.poster }}" alt="" width="46" height="69" loading="lazy" decoding="async">{% endif %}
   </li>
 {%- endmacro %}
 
@@ -96,17 +111,20 @@ lists are grown with «{% set _ = xs.append(x) %}» (append returns None). -#}
   {%- endif -%}
 {%- endfor -%}
 {%- set all_down = statuses and (statuses|rejectattr('ok')|list|length == statuses|length) -%}
-
+{%- set page_day, page_rows = days[day_index] -%}
+{%- set page_off = (page_day - today).days -%}
 <!doctype html>
 <html lang="ru">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="color-scheme" content="light dark">
-<title>Кино вечером · СПб · {{ dlong(today) }}</title>
+<title>Кино вечером · СПб · {{ dlong(page_day) }}</title>
 <style>
-  :root{color-scheme:light dark;--bg:#fff;--fg:#141414;--mut:#6b6b6b;--line:#e4e4e4;--chip:#efefef;--acc:#0b57d0;--ok:#1a7f37;--warn:#7a5200;--warnbg:#fff4d6;--bad:#b3261e;--badbg:#fbe9e7}
-  @media (prefers-color-scheme:dark){:root{--bg:#121212;--fg:#ececec;--mut:#9b9b9b;--line:#2b2b2b;--chip:#232323;--acc:#8ab4f8;--ok:#5fd38d;--warn:#f1c76a;--warnbg:#2b2310;--bad:#ff8a80;--badbg:#3a1a17}}
+  :root{color-scheme:light dark;--bg:#fff;--fg:#141414;--mut:#6b6b6b;--line:#e4e4e4;--chip:#efefef;--acc:#0b57d0;--ok:#1a7f37;--warn:#7a5200;--warnbg:#fff4d6;--bad:#b3261e;--badbg:#fbe9e7;
+    --c-domkino:#b3261e;--c-rodina:#1a7f37;--c-avrora:#0b57d0;--c-poravkino:#8a4b00;--c-lenfilm:#0f766e;--c-outcinema:#a21caf;--c-mirage:#c2410c}
+  @media (prefers-color-scheme:dark){:root{--bg:#121212;--fg:#ececec;--mut:#9b9b9b;--line:#2b2b2b;--chip:#232323;--acc:#8ab4f8;--ok:#5fd38d;--warn:#f1c76a;--warnbg:#2b2310;--bad:#ff8a80;--badbg:#3a1a17;
+    --c-domkino:#ff8a80;--c-rodina:#5fd38d;--c-avrora:#8ab4f8;--c-poravkino:#f1c76a;--c-lenfilm:#5eead4;--c-outcinema:#f0abfc;--c-mirage:#fdba74}}
   *{box-sizing:border-box}
   html{background:var(--bg)}
   body{margin:0 auto;max-width:46rem;padding:0 .9rem 4rem;font:16px/1.45 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;color:var(--fg);background:var(--bg)}
@@ -123,8 +141,11 @@ lists are grown with «{% set _ = xs.append(x) %}» (append returns None). -#}
   .days a[aria-current]{background:var(--fg);color:var(--bg)}
   .ctls{display:flex;flex-wrap:wrap;gap:.35rem;padding:.6rem 0 .2rem}
   .chip{font-size:.8rem;padding:.2rem .6rem;border:1px solid var(--line);border-radius:1rem;color:var(--mut);cursor:pointer;user-select:none}
+  .chip.vc::before{content:"";display:inline-block;width:.55em;height:.55em;border-radius:50%;margin-right:.35em;background:var(--vc,var(--mut))}
   {% for k in venues %}#v-{{ k }}:checked ~ header label[for="v-{{ k }}"], {% endfor %}#allday:checked ~ header label[for="allday"]{color:var(--fg);border-color:var(--fg)}
   {% for k in venues %}#v-{{ k }}:not(:checked) ~ main .r[data-v="{{ k }}"]{display:none}
+  {% endfor %}
+  {% for k in venues %}.v-{{ k }}{--vc:var(--c-{{ k }})}
   {% endfor %}
   .list .r.day{display:none}
   #allday:checked ~ main .list .r.day{display:grid}
@@ -134,21 +155,26 @@ lists are grown with «{% set _ = xs.append(x) %}» (append returns None). -#}
   h2 .dt{font-weight:400;color:var(--mut)}
   .cnt{margin:.1rem 0 .4rem;font-size:.85rem;color:var(--mut)}
   .list{list-style:none;margin:0;padding:0}
-  .r{display:grid;grid-template-columns:3.6rem 1fr;column-gap:.5rem;padding:.55rem 0;border-top:1px solid var(--line)}
+  .r{display:grid;grid-template-columns:3.6rem 1fr 2.9rem;column-gap:.5rem;padding:.55rem 0;border-top:1px solid var(--line)}
   .r time{font-variant-numeric:tabular-nums;font-weight:600}
   .r time small{display:block;font-size:.7rem;font-weight:400;color:var(--mut);line-height:1.2}
+  .w{display:flex;flex-wrap:wrap;align-items:baseline;gap:.1rem .5rem;margin-bottom:.1rem}
+  .v{font-size:.72rem;font-weight:700;letter-spacing:.04em;text-transform:uppercase;line-height:1.5;padding:0 .45rem;border-radius:.3rem;text-decoration:none;color:var(--vc,var(--fg));background:var(--chip);background:color-mix(in srgb,var(--vc,var(--fg)) 13%,transparent)}
+  a.v:hover{text-decoration:underline}
+  .h{font-size:.8rem;color:var(--mut)}
   .t{font-weight:600}
   .t a{color:inherit}
   .t .o{font-weight:400;color:var(--mut)}
-  .t .v{font-weight:400;font-size:.8rem;color:var(--mut);white-space:nowrap}
-  .t .v::before{content:"— "}
   .m{font-size:.86rem;color:var(--mut);margin-top:.1rem}
   .tag{display:inline-block;font-size:.72rem;padding:0 .4rem;border:1px solid var(--line);border-radius:.3rem;vertical-align:1px}
+  .p{grid-column:3;width:2.9rem;height:4.35rem;object-fit:cover;border-radius:.25rem;background:var(--chip);align-self:start}
   details{font-size:.86rem;margin-top:.15rem}
   summary{cursor:pointer;color:var(--acc)}
   details p{margin:.3rem 0 0}
   .past{opacity:.45}
   .none{color:var(--mut);font-size:.9rem;padding:.5rem 0;border-top:1px solid var(--line);margin:0}
+  .pn{display:flex;justify-content:space-between;gap:1rem;padding:.8rem 0;border-top:1px solid var(--line);font-size:.9rem}
+  .pn a:last-child{margin-left:auto}
   footer{margin-top:2.5rem;border-top:2px solid var(--line);padding-top:.8rem}
   footer h2{font-size:1rem}
   .st{list-style:none;padding:0;margin:.4rem 0 .8rem;font-size:.9rem}
@@ -157,7 +183,9 @@ lists are grown with «{% set _ = xs.append(x) %}» (append returns None). -#}
   .st .ok .ic{color:var(--ok)}
   .st .wn .ic{color:var(--warn)}
   .st .bd .ic{color:var(--bad)}
-  @media (min-width:40rem){.r{grid-template-columns:4rem 1fr}}
+  .tmdb{font-size:.78rem;color:var(--mut);margin-top:.8rem}
+  .tmdb img{height:.8rem;width:auto;vertical-align:-.1em;margin-right:.3rem}
+  @media (min-width:40rem){.r{grid-template-columns:4rem 1fr 3.2rem}.p{width:3.2rem;height:4.8rem}}
 </style>
 </head>
 <body data-today="{{ today.isoformat() }}"
@@ -179,22 +207,21 @@ lists are grown with «{% set _ = xs.append(x) %}» (append returns None). -#}
   <nav class="days" aria-label="Дни">
     {% for d, rows in days %}
       {% set evc = rows|select('in', evening)|list|length %}
-      <a href="#d-{{ d.isoformat() }}"{% if evc == 0 %} class="z"{% endif %}>{{ dlabel(d, today) }}</a>
+      <a href="{{ page_href(loop.index0, days) }}"{% if loop.index0 == day_index %} aria-current="page"{% endif %}{% if evc == 0 %} class="z"{% endif %}>{{ dlabel(d, today) }}</a>
     {% endfor %}
   </nav>
   <div class="ctls">
     <label for="allday" class="chip">весь день</label>
-    {% for k, name in venues.items() %}<label for="v-{{ k }}" class="chip">{{ name }}</label> {% endfor %}
+    {% for k, name in venues.items() %}<label for="v-{{ k }}" class="chip vc v-{{ k }}">{{ name }}</label> {% endfor %}
   </div>
 </header>
 
 <main>
-{% for d, rows in days %}
+  {% set d = page_day %}{% set rows = page_rows %}
   {% set ev = rows|select('in', evening)|list %}
   {% set nday = rows|length - ev|length %}
-  {% set off = (d - today).days %}
   <section id="d-{{ d.isoformat() }}" aria-labelledby="h-{{ d.isoformat() }}">
-    <h2 id="h-{{ d.isoformat() }}">{% if off == 0 %}Сегодня <span class="dt">· {{ dlong(d) }}</span>{% elif off == 1 %}Завтра <span class="dt">· {{ dlong(d) }}</span>{% else %}{{ dlong(d) }}{% endif %}</h2>
+    <h2 id="h-{{ d.isoformat() }}">{% if page_off == 0 %}Сегодня <span class="dt">· {{ dlong(d) }}</span>{% elif page_off == 1 %}Завтра <span class="dt">· {{ dlong(d) }}</span>{% else %}{{ dlong(d) }}{% endif %}</h2>
     {% if ev or nday %}
       <p class="cnt">{% if ev %}{{ plural(ev|length, 'сеанс', 'сеанса', 'сеансов') }} вечером{% endif %}{% if nday %}<span class="dayonly">{% if ev %} · {% endif %}днём ещё {{ nday }}</span>{% endif %}</p>
     {% endif %}
@@ -209,7 +236,10 @@ lists are grown with «{% set _ = xs.append(x) %}» (append returns None). -#}
       <p class="none">Сеансов нет ни в одном кинотеатре — или расписание на этот день ещё не опубликовано.</p>
     {% endif %}
   </section>
-{% endfor %}
+  <nav class="pn" aria-label="Соседние дни">
+    {% if day_index > 0 %}<a href="{{ page_href(day_index - 1, days) }}">← {{ dlabel(days[day_index - 1][0], today) }}</a>{% endif %}
+    {% if day_index + 1 < days|length %}<a href="{{ page_href(day_index + 1, days) }}">{{ dlabel(days[day_index + 1][0], today) }} →</a>{% endif %}
+  </nav>
 </main>
 
 <footer id="src">
@@ -229,12 +259,15 @@ lists are grown with «{% set _ = xs.append(x) %}» (append returns None). -#}
         {%- if st.requests %} <span class="mut">· {{ st.requests }} запр., {{ '%.1f'|format(st.seconds or 0) }} с</span>{% endif %}</li>
     {% endfor %}
   </ul>
-  <p class="mut">Снимок данных: <a href="{{ json_name }}">{{ json_name }}</a>{% if repo_url %} · <a href="{{ repo_url }}">код</a>{% endif %}. Вечер — сеансы с 18:00; ночные (до 06:00) стоят под предыдущим днём. Прошедшие сеансы приглушены по часам устройства.</p>
+  <p class="mut">Снимок данных: <a href="{{ json_name }}">{{ json_name }}</a>{% if repo_url %} · <a href="{{ repo_url }}">код</a>{% endif %}. Каждый день — отдельная страница. Вечер — сеансы с 18:00; ночные (до 06:00) стоят под предыдущим днём. Прошедшие сеансы приглушены по часам устройства.</p>
+  {% if posters %}
+  <p class="tmdb"><a href="{{ tmdb_site_url }}"><img src="{{ tmdb_logo }}" alt="TMDB"></a>Постеры фильмов — <a href="{{ tmdb_site_url }}">TMDB</a>. {{ tmdb_notice }}</p>
+  {% endif %}
 </footer>
 
 <script>
 (function () {
-  var body = document.body, now = Date.now() / 1000;
+  var body = document.body;
 
   // 1. remember toggles (presentation only; CSS does the actual hiding)
   var KEY = 'kino.toggles', saved = {};
@@ -265,31 +298,6 @@ lists are grown with «{% set _ = xs.append(x) %}» (append returns None). -#}
     var st = document.getElementById('stale');
     st.hidden = false;
     st.textContent = '⚠ Страница собрана ' + body.dataset.generatedHuman + ' — на устройстве уже следующий день, свежего запуска ещё не было.';
-  }
-
-  // 4. jump to the first day with an evening screening still ahead
-  if (!location.hash) {
-    var next = null;
-    for (var i = 0; i < rows.length; i++)
-      if (!rows[i].classList.contains('day') && +rows[i].dataset.ts > now) { next = rows[i]; break; }
-    var sec = next && next.closest('section');
-    if (sec && sec !== document.querySelector('main section')) sec.scrollIntoView();
-  }
-
-  // 5. highlight the day being read
-  if ('IntersectionObserver' in window) {
-    var links = {};
-    Array.prototype.forEach.call(document.querySelectorAll('.days a'), function (a) {
-      links[a.getAttribute('href').slice(1)] = a;
-    });
-    var io = new IntersectionObserver(function (es) {
-      es.forEach(function (e) {
-        if (!e.isIntersecting) return;
-        for (var k in links) links[k].removeAttribute('aria-current');
-        if (links[e.target.id]) links[e.target.id].setAttribute('aria-current', 'date');
-      });
-    }, { rootMargin: '-40% 0px -55% 0px' });
-    Array.prototype.forEach.call(document.querySelectorAll('main section'), function (s) { io.observe(s); });
   }
 })();
 </script>

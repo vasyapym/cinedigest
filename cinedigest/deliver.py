@@ -7,38 +7,54 @@ from pathlib import Path
 
 import requests
 
-from . import config
+from . import config, posters
 from .model import Snapshot
-from .render import render, render_context
+from .render import INDEX_FILENAME, render_context, render_pages
 from .render_text import render_digest, render_telegram, split_telegram
 
 log = logging.getLogger(__name__)
 
 TELEGRAM_API_URL = "https://api.telegram.org/bot{token}/sendMessage"
 
-INDEX_FILENAME = "index.html"
 DIGEST_FILENAME = "digest.txt"
+
+# Day pages are YYYY-MM-DD.html flat in docs/; those outside the window are removed on write.
+DAY_PAGE_GLOB = "????-??-??.html"
 
 
 def write(snapshot: Snapshot, out_dir: Path | str) -> tuple[Path, Path]:
-    """Render index.html and digest.txt under <out_dir>/docs/; return the two paths."""
+    """Render index.html, one page per window day and digest.txt under <out_dir>/docs/;
+    return (index path, digest path). Posters come from the committed cache only — no network."""
     docs = Path(out_dir) / config.DOCS_DIRNAME
     docs.mkdir(parents=True, exist_ok=True)
-    html_path = docs / INDEX_FILENAME
-    digest_path = docs / DIGEST_FILENAME
-    html_path.write_text(render(snapshot), encoding="utf-8")
+    pages = render_pages(snapshot, posters.cached_urls(snapshot.screenings, docs))
+    for name, html in pages.items():
+        (docs / name).write_text(html, encoding="utf-8")
+    prune_day_pages(docs, set(pages))
     context = render_context(snapshot)
+    digest_path = docs / DIGEST_FILENAME
     digest_path.write_text(
         render_digest(context["days"], context["evening"], snapshot.statuses,
                       snapshot.generated_at, context["today"]),
         encoding="utf-8",
     )
-    return html_path, digest_path
+    return docs / INDEX_FILENAME, digest_path
+
+
+def prune_day_pages(docs: Path, keep: set[str]) -> list[Path]:
+    """Delete date-named pages that are not part of this render (days that left the window)."""
+    removed: list[Path] = []
+    for page in sorted(Path(docs).glob(DAY_PAGE_GLOB)):
+        if page.name not in keep:
+            page.unlink()
+            removed.append(page)
+            log.info("removed %s (outside the window)", page)
+    return removed
 
 
 def telegram_text(snapshot: Snapshot, page_url: str | None = None) -> str:
     """The full Telegram body for the snapshot. The trailing page URL comes from
-    the explicit argument or, when unset, from CINEDIGEST_PAGE_URL (Q4: opt-in)."""
+    the explicit argument or, when unset, from CINEDIGEST_PAGE_URL (opt-in)."""
     if page_url is None:
         page_url = os.environ.get(config.PAGE_URL_ENV) or None
     context = render_context(snapshot)

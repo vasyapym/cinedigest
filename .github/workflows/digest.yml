@@ -37,6 +37,8 @@ jobs:
 
       - name: Run the digest
         id: run
+        env:
+          TMDB_READ_TOKEN: ${{ secrets.TMDB_READ_TOKEN }}
         run: |
           set +e
           python -m cinedigest run --out .

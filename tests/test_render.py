@@ -1,153 +1,116 @@
-"""Рендер страницы: контекст, жанры, группировка с ночным правилом, лог размера, шаблон."""
+"""Страницы по дням, бейдж площадки, постеры и атрибуция TMDB, удаление страниц вне окна."""
 from __future__ import annotations
 
-import logging
-from datetime import date, datetime
+import json
+from datetime import date, datetime, timedelta
 from pathlib import Path
 
-from cinedigest import config, render
-from cinedigest.model import MSK, Screening, Snapshot, VenueStatus
+import pytest
+
+from cinedigest import config, deliver, posters, render
+from cinedigest.model import MSK, Screening, Snapshot, VenueStatus, VENUES
 
 TODAY = date(2026, 11, 5)
-GEN_AT = datetime(2026, 11, 5, 9, 1, tzinfo=MSK)
+GENERATED = datetime(2026, 11, 5, 9, 2, tzinfo=MSK)
+NOTICE = "This website uses TMDB and the TMDB APIs but is not endorsed, certified, or otherwise approved by TMDB."
 
 
-def _screening(venue: str, day: date, hour: int, minute: int = 0, title: str = "Фильм",
-               **kwargs) -> Screening:
-    fields = dict(
-        venue=venue,
-        source_id=kwargs.pop("source_id", f"{venue}|{day}|{hour}:{minute:02d}|{title}"),
-        title=title,
-        start=datetime(day.year, day.month, day.day, hour, minute, tzinfo=MSK),
-    )
-    fields.update(kwargs)
-    return Screening(**fields)
+def _s(venue, title, day, hour, minute=0, hall=None, year=None, url=None):
+    extra = {"year": year} if year else {}
+    return Screening(venue=venue, source_id=f"{venue}-{title}-{day}-{hour}", title=title,
+                     start=datetime(day.year, day.month, day.day, hour, minute, tzinfo=MSK),
+                     hall=hall, url=url, extra=extra)
 
 
-def _snapshot(screenings: list[Screening], statuses: list[VenueStatus] | None = None,
-              *, window_end: date = date(2026, 11, 7)) -> Snapshot:
-    if statuses is None:
-        statuses = [VenueStatus(venue=v, ok=True, count=0, fetched_at=None) for v in
-                    ("domkino", "rodina", "avrora", "poravkino", "lenfilm", "outcinema")]
-    return Snapshot(
-        generated_at=GEN_AT,
-        window_start=TODAY,
-        window_end=window_end,
-        statuses=statuses,
-        screenings=screenings,
-    )
-
-
-def test_context_groups_by_digest_day_and_links_evening():
-    evening_show = _screening("domkino", TODAY, 19)
-    day_show = _screening("domkino", TODAY, 14)
-    # Ночной показ 00:30 следующего календарного дня принадлежит «сегодня» (digest_day),
-    # но внутри дня стоит по своему фактическому времени — после 19:00.
-    night_show = _screening("outcinema", date(2026, 11, 6), 0, 30, title="Киноночь")
-    context = render.render_context(_snapshot([evening_show, day_show, night_show]))
-
-    assert [d for d, _rows in context["days"]] == [TODAY, date(2026, 11, 6), date(2026, 11, 7)]
-    first_day = context["days"][0][1]
-    assert [(s.title, s.start.strftime("%H:%M")) for s in first_day] == [
-        ("Фильм", "14:00"), ("Фильм", "19:00"), ("Киноночь", "00:30"),
+def _snapshot(days=7):
+    d0, d1 = TODAY, TODAY + timedelta(days=1)
+    rows = [
+        _s("poravkino", "Морозко", d0, 18, hall="Малый красный зал", year=1964),
+        _s("mirage", "Морозко", d0, 18, hall="1", year=1964, url="https://www.mirage.ru/ticket_new/abc/"),
+        _s("rodina", "Лето в Бадене", d0, 20, 30, year=2025, url="https://rodinakino.ru/events/leto"),
+        _s("avrora", "Битва моторов", d1, 19, year=2025),
     ]
-    # Реализм: `evening` — список, не set: Screening с dict-полем extra нехешируем,
-    # членство работает по равенству, текст шаблона (`s in evening`) не меняется.
-    assert isinstance(context["evening"], list)
-    evening_ids = {s.source_id for s in context["evening"]}
-    assert evening_show.source_id in evening_ids
-    assert night_show.source_id in evening_ids
-    assert day_show.source_id not in evening_ids
-    assert context["today"] == TODAY
-    assert context["json_name"] == "screenings.json"
-    assert context["repo_url"] is None
+    statuses = [VenueStatus(venue=k, ok=True, count=1, fetched_at=GENERATED) for k in VENUES]
+    return Snapshot(generated_at=GENERATED, window_start=TODAY, window_end=TODAY + timedelta(days=days - 1),
+                    statuses=statuses, screenings=rows)
 
 
-def test_genres_string_is_normalized_to_list():
-    outcinema = _screening("outcinema", TODAY, 20, extra={"genres": "боевик, мелодрама, музыка"})
-    domkino = _screening("domkino", TODAY, 19, extra={"genres": ["драма"]})
-    html = render.render(_snapshot([outcinema, domkino]))
-    assert "боевик, мелодрама, музыка" in html
-    assert "драма" in html
+def test_one_page_per_day_plus_index():
+    pages = render.render_pages(_snapshot())
+    assert set(pages) == {"index.html"} | {f"2026-11-{d:02d}.html" for d in range(5, 12)}
+    assert pages["index.html"] == pages["2026-11-05.html"]
+    assert render.render(_snapshot()) == pages["index.html"]
 
 
-def test_genres_cap_of_three_applies_after_normalization():
-    raw = Screening(
-        venue="outcinema",
-        source_id="g1",
-        title="Лента",
-        start=datetime(2026, 11, 5, 20, 0, tzinfo=MSK),
-        extra={"genres": "боевик, мелодрама, музыка, нуар"},
-    )
-    html = render.render(_snapshot([raw]))
-    assert "боевик, мелодрама, музыка" in html
-    assert "нуар" not in html
+def test_page_shows_only_its_day_and_links_the_others():
+    pages = render.render_pages(_snapshot())
+    index, tomorrow = pages["index.html"], pages["2026-11-06.html"]
+    assert 'id="d-2026-11-05"' in index and 'id="d-2026-11-06"' not in index
+    assert 'id="d-2026-11-06"' in tomorrow and "Битва моторов" in tomorrow and "Морозко" not in tomorrow
+    assert 'href="index.html" aria-current="page"' in index
+    assert 'href="2026-11-06.html" aria-current="page"' in tomorrow
+    assert 'href="2026-11-06.html">Завтра →' in index and 'href="index.html">← Сегодня' in tomorrow
+    assert "<title>Кино вечером · СПб · пт 6 ноября</title>" in tomorrow
 
 
-def test_empty_and_eveningless_days_render_their_placeholders():
-    day_show = _screening("domkino", TODAY, 14)
-    html = render.render(_snapshot([day_show]))
-    assert "Вечером сеансов нет — есть 1 дневной, включите «весь день»" in html
-    assert "Сеансов нет ни в одном кинотеатре" in html  # пустые дни после первого
+def test_venue_badge_precedes_title_and_carries_hall():
+    html = render.render(_snapshot())
+    mirage = html.index('class="v v-mirage"')
+    assert html[mirage:].index("Мираж на Большом") < html[mirage:].index("Морозко")
+    assert '<a class="v v-mirage" href="https://www.mirage.ru/ticket_new/abc/">Мираж на Большом</a>' in html
+    assert '<span class="v v-poravkino">Художественный</span>' in html
+    assert '<span class="h">зал 1</span>' in html and '<span class="h">Малый красный зал</span>' in html
+    assert 'class="chip vc v-mirage"' in html
+    assert ".v-mirage{--vc:var(--c-mirage)}" in html
 
 
-def test_template_acceptance_full_render():
-    evening_show = _screening(
-        "domkino", TODAY, 19, title="Сабрина",
-        hall="Белый зал", price_min=350, price_max=350,
-        extra={"year": 1954, "duration_min": 113, "age": "12+"},
-    )
-    day_show = _screening("rodina", TODAY, 14, title="Дневной сеанс")
-    night_show = _screening("outcinema", date(2026, 11, 6), 0, 30, title="Киноночь")
-    statuses = [
-        VenueStatus(venue="domkino", ok=True, count=1, fetched_at=None, requests=3, seconds=1.2),
-        VenueStatus(venue="rodina", ok=False, count=0, fetched_at=None, error="HTTP 503"),
-    ]
-    html = render.render(_snapshot([evening_show, day_show, night_show], statuses))
-
-    assert "Кино вечером" in html
-    assert "СПб · 7 кинотеатров" in html
-    assert "screenings.json" in html
-    assert "Сабрина" in html
-    assert "Белый зал" in html
-    assert "350 ₽" in html
-    assert 'class="r day"' in html                      # дневной ряд размечен («весь день» его покажет)
-    assert "ночь на " in html                           # ночной бейдж
-    assert "недоступен, его сеансов в списке нет" in html  # баннер проблем
-    assert "ошибка: HTTP 503" in html                   # статусы в подвале
-    assert "3 запр., 1.2 с" in html                     # request/секундная строка для смотрящего в код
-    assert 'href="#d-2026-11-06"' in html               # якорь пустого дня
+def test_filter_css_and_data_attributes_survive():
+    html = render.render(_snapshot())
+    for k in VENUES:
+        assert f'#v-{k}:not(:checked) ~ main .r[data-v="{k}"]{{display:none}}' in html
+    assert 'data-v="mirage"' in html and 'id="allday"' in html
 
 
-def test_repo_url_env_reaches_the_footer(monkeypatch):
-    snapshot = _snapshot([])
-    monkeypatch.setenv(config.REPO_URL_ENV, "https://github.com/u/r")
-    assert "https://github.com/u/r" in render.render(snapshot)
-    monkeypatch.delenv(config.REPO_URL_ENV, raising=False)
-    assert "github.com/u/r" not in render.render(snapshot)
+def test_posters_render_with_exact_attribution():
+    urls = {"морозко|1964": f"{config.TMDB_IMAGE_BASE_URL}w185/m.jpg"}
+    html = render.render(_snapshot(), urls)
+    assert html.count('<img class="p" src="https://image.tmdb.org/t/p/w185/m.jpg" alt="" width="46" height="69" loading="lazy" decoding="async">') == 2
+    assert NOTICE in html
+    assert f'<a href="{config.TMDB_SITE_URL}"><img src="tmdb.svg" alt="TMDB"></a>' in html
+    plain = render.render(_snapshot())
+    assert NOTICE not in plain and 'class="p"' not in plain and "Лето в Бадене" in plain
 
 
-def test_size_is_logged_and_warns_at_threshold(caplog, monkeypatch):
-    monkeypatch.setattr(config, "RENDER_WARN_BYTES", 10)
-    with caplog.at_level(logging.INFO, logger="cinedigest.render"):
-        html = render.render(_snapshot([]))
-    size = len(html.encode("utf-8"))
-    assert f"index.html: {size} bytes" in caplog.text
-    assert "page weight budget exceeded" in caplog.text
+def test_jump_and_observer_js_are_gone():
+    html = render.render(_snapshot())
+    assert "IntersectionObserver" not in html and "scrollIntoView" not in html
+    assert "kino.toggles" in html and "classList.toggle('past'" in html and "generatedHuman" in html
 
 
-def test_size_log_info_without_warning_under_threshold(caplog):
-    with caplog.at_level(logging.INFO, logger="cinedigest.render"):
-        render.render(_snapshot([]))
-    assert "page weight budget exceeded" not in caplog.text
-    assert "index.html:" in caplog.text
+def test_write_creates_day_pages_prunes_old_ones_and_uses_cache(tmp_path):
+    docs = tmp_path / "docs"
+    docs.mkdir()
+    (docs / "2026-10-01.html").write_text("old", encoding="utf-8")
+    (docs / "notes.html").write_text("keep", encoding="utf-8")
+    posters.save_cache(docs / config.POSTERS_FILENAME,
+                       {"морозко|1964": {"tmdb_id": 1, "poster_path": "/m.jpg", "resolved_at": "2026-11-05"}}, TODAY)
+    (docs / config.POSTER_OVERRIDES_FILENAME).write_text(json.dumps({"Лето в Бадене|2025": {"poster_path": "/l.jpg"}}),
+                                                         encoding="utf-8")
+    html_path, digest_path = deliver.write(_snapshot(), tmp_path)
+    assert html_path == docs / "index.html" and digest_path.is_file()
+    assert not (docs / "2026-10-01.html").exists() and (docs / "notes.html").exists()
+    assert all((docs / f"2026-11-{d:02d}.html").is_file() for d in range(5, 12))
+    index = html_path.read_text(encoding="utf-8")
+    assert "/w185/m.jpg" in index and "/w185/l.jpg" in index and NOTICE in index
+    digest = digest_path.read_text(encoding="utf-8")
+    assert "image.tmdb.org" not in digest and "TMDB" not in digest
 
 
-def test_allday_toggle_selectors_beat_the_row_grid_rule():
-    """Regression: `.day{display:none}` once lost to the later same-specificity
-    `.r{display:grid}`, so daytime rows were always visible. The selector must stay
-    tied to `.list .r.day` (higher specificity) — a canary against reintroducing the bug."""
-    template = (Path(__file__).parent.parent / "cinedigest" / "templates" / "index.html.j2").read_text(encoding="utf-8")
-    assert ".list .r.day{display:none}" in template
-    assert "#allday:checked ~ main .list .r.day{display:grid}" in template
-    assert "\n  .day{display:none}" not in template
+def test_real_snapshot_pages_fit_the_budget():
+    path = Path(__file__).resolve().parents[1] / "docs" / "screenings.json"
+    if not path.is_file():
+        pytest.skip("no committed snapshot")
+    from cinedigest.pipeline import load_snapshot
+    pages = render.render_pages(load_snapshot(path), {"x|1": "https://image.tmdb.org/t/p/w185/x.jpg"})
+    for name, html in pages.items():
+        assert len(html.encode("utf-8")) < config.RENDER_WARN_BYTES, name
