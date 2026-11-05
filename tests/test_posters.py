@@ -16,7 +16,7 @@ TODAY = date(2026, 11, 5)
 MOROZKO = posters.Film("морозко|1964", "Морозко", 1964)
 # Интеграторская оговорка: три теста ниже читают РЕАЛЬНЫЕ ответы TMDB из tests/fixtures/tmdb/.
 # Они пропускаются, пока фикстуры не скачаны (нужен токен владельца — README «Постеры (TMDB)»).
-_FIXTURE_NAMES = ("search_morozko_1964.json", "search_empty.json", "movie_morozko.json")
+_FIXTURE_NAMES = ("search_morozko_1964.json", "search_morozko_any.json", "search_empty.json", "movie_morozko.json")
 _NEED_FIXTURES = pytest.mark.skipif(
     any(not (FIXTURES / name).is_file() for name in _FIXTURE_NAMES),
     reason="реальные тела TMDB будут скачаны, когда появится TMDB_READ_TOKEN владельца",
@@ -105,12 +105,18 @@ def test_choose_rejects_year_drift_beyond_one():
 
 # ---- parse against fixtures (offline) -------------------------------------------------
 @_NEED_FIXTURES
-def test_parse_morozko_fixture_resolves_a_poster():
-    entries = posters.parse([(MOROZKO.key, _body("search_morozko_1964.json"))], [MOROZKO], today=TODAY)
+def test_parse_morozko_fixture_resolves_a_poster_via_any_retry():
+    # Реальность TMDB (ручная проверка владельца, 2026-11-05): запись классики «Морозко»
+    # несёт ре-релиз 1965-03-24, поэтому поиск с year=1964 пуст, any-ретрай без года
+    # даёт 4 кандидата, и choose() берёт 20932 по строгому названию в окне ±1 года.
+    entries = posters.parse(
+        [(MOROZKO.key, _body("search_morozko_1964.json")),
+         (MOROZKO.key + posters.ANY_SUFFIX, _body("search_morozko_any.json"))],
+        [MOROZKO], today=TODAY)
     entry = entries[MOROZKO.key]
-    assert entry["via"] == "year"
+    assert entry["via"] == "any"
     assert entry["tmdb_title"] == "Морозко"
-    assert isinstance(entry["tmdb_id"], int)
+    assert entry["tmdb_id"] == 20932
     assert entry["poster_path"].startswith("/") and entry["poster_path"].endswith((".jpg", ".png"))
     assert entry["resolved_at"] == "2026-11-05"
 
