@@ -46,3 +46,24 @@ OUTCINEMA_STOREPARTUID = "292580911081"
 OUTCINEMA_RECID = "496330277"
 OUTCINEMA_MAX_PAGES = 10
 OUTCINEMA_PAST_TOLERANCE_DAYS = 60
+
+# stage 2 — domkino — Дом кино (domkino.spb.ru)
+# Per-day schedule: {DOMKINO_SITE_URL}schedule/{Y}/{M}/{D}/ — build the path with
+# day.strftime("%Y/%m/%d") (zero-padded month and day). The www. host is required:
+# the apex without it answers 301.
+DOMKINO_SITE_URL = "https://www.domkino.spb.ru/"
+
+# stage 2 — rodina — Родина (rodinakino.ru, platform p24.app)
+# Per-day page: {RODINA_SITE_URL}?date={Y}/{M}/{D} — slashes in the query date.
+# The `facility` parameter is NOT required (validated 2026-11-05: with and without
+# facility the page renders the same show-times).
+RODINA_SITE_URL = "https://rodinakino.ru/"
+
+# stage 2B — lenfilm — Ленфильм (kinokassa / KinoPlan playbill feed, cinema 2387)
+# KINOKASSA_API_URL repeats the AVRORA_API_FALLBACK value on purpose: avrora and
+# lenfilm run the same kinokassa engine, the shared parser is parameterized by
+# cinema id (avrora 70, lenfilm 2387).
+KINOKASSA_API_URL = "https://kinokassa.kinoplan24.ru"
+# Every lenfilm screening links here; per-seance purchase URLs are not verified.
+LENFILM_SITE_URL = "https://www.lenfilm.ru/service/Kinoteatr-Lenfilm/"
+LENFILM_CINEMA_ID = 2387
