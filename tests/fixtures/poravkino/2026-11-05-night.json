@@ -1,0 +1,64 @@
+[
+  {
+    "id": 571,
+    "name": "Тайный дневник Верити",
+    "name_secondary": "Verity",
+    "ticket_name": "Остановка (Верити)",
+    "genres": "триллер, драма",
+    "age": 18,
+    "duration": 108,
+    "year": 2026,
+    "country": "США",
+    "director": "Пол Лихтенштайн",
+    "is_pushkin": false,
+    "performances": [
+      {
+        "id": 43884,
+        "time": "2026-11-05T23:40:00Z",
+        "is_active": true,
+        "hall_name": "1",
+        "price": 350,
+        "is3d": false
+      }
+    ]
+  },
+  {
+    "id": 573,
+    "name": "Зверь",
+    "name_secondary": "The Beast",
+    "ticket_name": "Остановка (Зверь)",
+    "genres": "драма, фантастика",
+    "age": 18,
+    "duration": 121,
+    "year": 2023,
+    "country": "Франция",
+    "director": "Бертран Бонелло",
+    "is_pushkin": false,
+    "performances": [
+      {
+        "id": 43885,
+        "time": "2026-11-05T23:45:00Z",
+        "is_active": true,
+        "hall_name": "Малый синий",
+        "price": 350,
+        "is3d": false
+      },
+      {
+        "id": 49001,
+        "time": "2026-11-05T16:35",
+        "is_active": true,
+        "hall_name": "Малый синий",
+        "price": 300,
+        "is3d": false
+      },
+      {
+        "id": 49002,
+        "time": "2026-11-05T19:15:00+03:00",
+        "is_active": true,
+        "hall_name": "Малый синий",
+        "price": 300,
+        "is3d": false
+      }
+    ]
+  }
+]

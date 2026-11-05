@@ -3,10 +3,11 @@ from __future__ import annotations
 
 import json
 import logging
-from datetime import date, timezone
+import re
+from datetime import date, datetime
 
 from .. import config
-from ..model import VENUES, Screening, synthetic_id
+from ..model import MSK, VENUES, Screening, synthetic_id
 from . import load_json, parse_iso, text_or_none, to_int
 
 log = logging.getLogger(__name__)
@@ -70,10 +71,27 @@ def legit_empty(body: str) -> bool:
     return True
 
 
+# The API labels its local wall time with a bogus "Z" suffix: e.g. «Тайный
+# дневник Верити» is "2026-11-05T23:40:00Z", and the venue's own site shows
+# it at 23:40 — the front-end (assets/cinemaDateTime-*.js) parses the string
+# with a regex that only extracts the literal clock components and renders
+# HH:MM verbatim, no timezone conversion. So the wall time is already MSK;
+# a trailing offset designator is noise. Strip it like the site does and
+# read the remainder in `assume=MSK`.
+_TIME_SUFFIX_RE = re.compile(r"(?:Z|z|[+-]\d{2}:?\d{2})$")
+
+
+def _venue_time(raw) -> datetime | None:
+    if isinstance(raw, str):
+        cleaned = _TIME_SUFFIX_RE.sub("", raw.strip())
+        return parse_iso(cleaned, assume=MSK)
+    return None
+
+
 def _screening(movie: dict, performance: dict, source_url: str) -> Screening | None:
     if not performance.get("is_active"):
         return None
-    start = parse_iso(performance.get("time"), assume=timezone.utc)
+    start = _venue_time(performance.get("time"))
     if start is None:
         log.debug("poravkino: performance %s has no usable time, skipped", performance.get("id"))
         return None
