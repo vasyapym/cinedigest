@@ -1,7 +1,7 @@
 {
   "_notice": "This website uses TMDB and the TMDB APIs but is not endorsed, certified, or otherwise approved by TMDB.",
   "_source": "https://www.themoviedb.org",
-  "_purge": "delete this file to remove every cached TMDB datum; entries older than 180 days are dropped on every save",
+  "_purge": "delete this file and the docs/posters/ folder to purge the served poster cache; entries older than 180 days are dropped on every save and image files share the same retention limit (see file_downloaded_at)",
   "films": {
     "theatrehd курентзис кармен|2026": {
       "title": "TheatreHD: Курентзис: Кармен",
@@ -21,6 +21,17 @@
       "resolved_at": "2026-11-05",
       "via": "miss"
     },
+    "барашек в ящике|2026": {
+      "title": "Барашек в ящике",
+      "year": 2026,
+      "tmdb_id": 1553969,
+      "tmdb_title": "Барашек в ящике",
+      "poster_path": "/aUeOpkCfGJHgQYFy89vTb0OvgWF.jpg",
+      "resolved_at": "2026-11-05",
+      "via": "year",
+      "file": "aUeOpkCfGJHgQYFy89vTb0OvgWF.jpg",
+      "file_downloaded_at": "2026-11-05"
+    },
     "барашек шон и чудище лохматое|2026": {
       "title": "Барашек Шон и чудище лохматое",
       "year": 2026,
@@ -28,7 +39,9 @@
       "tmdb_title": "Барашек Шон и Чудище лохматое",
       "poster_path": "/lND7rSounD24SQcBFCCd0VOGgXN.jpg",
       "resolved_at": "2026-11-05",
-      "via": "year"
+      "via": "year",
+      "file": "lND7rSounD24SQcBFCCd0VOGgXN.jpg",
+      "file_downloaded_at": "2026-11-05"
     },
     "бедный бедный павел|2003": {
       "title": "Бедный, бедный Павел",
@@ -37,7 +50,9 @@
       "tmdb_title": "Бедный, бедный Павел",
       "poster_path": "/cl2MQqtrdzGrtrOtQVTmCpEkDxd.jpg",
       "resolved_at": "2026-11-05",
-      "via": "year"
+      "via": "year",
+      "file": "cl2MQqtrdzGrtrOtQVTmCpEkDxd.jpg",
+      "file_downloaded_at": "2026-11-05"
     },
     "без оглядки|2026": {
       "title": "Без оглядки",
@@ -46,7 +61,9 @@
       "tmdb_title": "Без оглядки",
       "poster_path": "/i1q5AFv5IXVhmO2cDgx8NllbmHh.jpg",
       "resolved_at": "2026-11-05",
-      "via": "year"
+      "via": "year",
+      "file": "i1q5AFv5IXVhmO2cDgx8NllbmHh.jpg",
+      "file_downloaded_at": "2026-11-05"
     },
     "безумный день в комеди франсез субтитры|2026": {
       "title": "Безумный день в Комеди Франсез (субтитры)",
@@ -55,7 +72,9 @@
       "tmdb_title": "Безумный день в Комеди Франсез",
       "poster_path": "/3ykToOKrgIlKBOkxpRscXNAkzET.jpg",
       "resolved_at": "2026-11-05",
-      "via": "any"
+      "via": "any",
+      "file": "3ykToOKrgIlKBOkxpRscXNAkzET.jpg",
+      "file_downloaded_at": "2026-11-05"
     },
     "безумный день в комеди франсез|2026": {
       "title": "Безумный день в Комеди Франсез",
@@ -64,7 +83,9 @@
       "tmdb_title": "Безумный день в Комеди Франсез",
       "poster_path": "/3ykToOKrgIlKBOkxpRscXNAkzET.jpg",
       "resolved_at": "2026-11-05",
-      "via": "year"
+      "via": "year",
+      "file": "3ykToOKrgIlKBOkxpRscXNAkzET.jpg",
+      "file_downloaded_at": "2026-11-05"
     },
     "беспечный возраст|2025": {
       "title": "Беспечный возраст",
@@ -73,7 +94,9 @@
       "tmdb_title": "Беспечный возраст",
       "poster_path": "/j6R4HJwwXK6CzlJQfZ1jeVLaFvR.jpg",
       "resolved_at": "2026-11-05",
-      "via": "year"
+      "via": "year",
+      "file": "j6R4HJwwXK6CzlJQfZ1jeVLaFvR.jpg",
+      "file_downloaded_at": "2026-11-05"
     },
     "битва моторов|0": {
       "title": "Битва моторов",
@@ -91,7 +114,9 @@
       "tmdb_title": "Битва моторов",
       "poster_path": "/oxvc4t0IzHUnkQGfYqUAbLV7zY8.jpg",
       "resolved_at": "2026-11-05",
-      "via": "year"
+      "via": "year",
+      "file": "oxvc4t0IzHUnkQGfYqUAbLV7zY8.jpg",
+      "file_downloaded_at": "2026-11-05"
     },
     "бледный цветок|1964": {
       "title": "БЛЕДНЫЙ ЦВЕТОК",
@@ -100,7 +125,9 @@
       "tmdb_title": "Бледный цветок",
       "poster_path": "/tYG4fjaGaC3HyOwI1iG1XvzCdO3.jpg",
       "resolved_at": "2026-11-05",
-      "via": "year"
+      "via": "year",
+      "file": "tYG4fjaGaC3HyOwI1iG1XvzCdO3.jpg",
+      "file_downloaded_at": "2026-11-05"
     },
     "бог ей судья|1945": {
       "title": "БОГ ЕЙ СУДЬЯ",
@@ -109,7 +136,9 @@
       "tmdb_title": "Бог ей судья",
       "poster_path": "/aUzQZt2UlaurZ3wlhzVXQb6PQk8.jpg",
       "resolved_at": "2026-11-05",
-      "via": "year"
+      "via": "year",
+      "file": "aUzQZt2UlaurZ3wlhzVXQb6PQk8.jpg",
+      "file_downloaded_at": "2026-11-05"
     },
     "большие гонки пегас iii|2026": {
       "title": "Большие гонки. Пегас III",
@@ -127,7 +156,9 @@
       "tmdb_title": "Бугония",
       "poster_path": "/obeihpiGpQTdE7rPoWy1BVQsumY.jpg",
       "resolved_at": "2026-11-05",
-      "via": "any"
+      "via": "any",
+      "file": "obeihpiGpQTdE7rPoWy1BVQsumY.jpg",
+      "file_downloaded_at": "2026-11-05"
     },
     "вкускилл субтитры|2026": {
       "title": "Вкускилл (субтитры)",
@@ -136,7 +167,9 @@
       "tmdb_title": "Вкускилл",
       "poster_path": "/7FJ4jD5R9Y7BgYIvd4RG3N8ZpkX.jpg",
       "resolved_at": "2026-11-05",
-      "via": "any"
+      "via": "any",
+      "file": "7FJ4jD5R9Y7BgYIvd4RG3N8ZpkX.jpg",
+      "file_downloaded_at": "2026-11-05"
     },
     "вкускилл|2026": {
       "title": "Вкускилл",
@@ -145,7 +178,9 @@
       "tmdb_title": "Вкускилл",
       "poster_path": "/7FJ4jD5R9Y7BgYIvd4RG3N8ZpkX.jpg",
       "resolved_at": "2026-11-05",
-      "via": "year"
+      "via": "year",
+      "file": "7FJ4jD5R9Y7BgYIvd4RG3N8ZpkX.jpg",
+      "file_downloaded_at": "2026-11-05"
     },
     "воскрешение|2025": {
       "title": "Воскрешение",
@@ -154,7 +189,20 @@
       "tmdb_title": "Воскрешение",
       "poster_path": "/b2GH2jj7rKkmlh08QQxHMzyc0W2.jpg",
       "resolved_at": "2026-11-05",
-      "via": "year"
+      "via": "year",
+      "file": "b2GH2jj7rKkmlh08QQxHMzyc0W2.jpg",
+      "file_downloaded_at": "2026-11-05"
+    },
+    "восставший|2026": {
+      "title": "Восставший",
+      "year": 2026,
+      "tmdb_id": 977942,
+      "tmdb_title": "Восставший",
+      "poster_path": "/uSDqNYQXOGTbWdMMmzMJkXROJDh.jpg",
+      "resolved_at": "2026-11-05",
+      "via": "year",
+      "file": "uSDqNYQXOGTbWdMMmzMJkXROJDh.jpg",
+      "file_downloaded_at": "2026-11-05"
     },
     "время развлечений|1967": {
       "title": "ВРЕМЯ РАЗВЛЕЧЕНИЙ",
@@ -163,7 +211,9 @@
       "tmdb_title": "Время развлечений",
       "poster_path": "/bgxgIpgFog5GgJXnsgGNVVHCznu.jpg",
       "resolved_at": "2026-11-05",
-      "via": "year"
+      "via": "year",
+      "file": "bgxgIpgFog5GgJXnsgGNVVHCznu.jpg",
+      "file_downloaded_at": "2026-11-05"
     },
     "выход 8|2025": {
       "title": "Выход 8",
@@ -172,7 +222,9 @@
       "tmdb_title": "Выход 8",
       "poster_path": "/afORML1iggGkWf8M0Jsf2PPpIHv.jpg",
       "resolved_at": "2026-11-05",
-      "via": "year"
+      "via": "year",
+      "file": "afORML1iggGkWf8M0Jsf2PPpIHv.jpg",
+      "file_downloaded_at": "2026-11-05"
     },
     "гарри поттер и философский камень|0": {
       "title": "Гарри Поттер и философский камень",
@@ -190,7 +242,9 @@
       "tmdb_title": "Глубокий сон",
       "poster_path": "/aKEDmkjHgUKab0wEe5FxSVhAHof.jpg",
       "resolved_at": "2026-11-05",
-      "via": "year"
+      "via": "year",
+      "file": "aKEDmkjHgUKab0wEe5FxSVhAHof.jpg",
+      "file_downloaded_at": "2026-11-05"
     },
     "госфорд парк|2001": {
       "title": "Госфорд Парк",
@@ -199,7 +253,9 @@
       "tmdb_title": "Госфорд парк",
       "poster_path": "/sKM5KAv4yAN8Zs7HLG6us33OE9x.jpg",
       "resolved_at": "2026-11-05",
-      "via": "year"
+      "via": "year",
+      "file": "sKM5KAv4yAN8Zs7HLG6us33OE9x.jpg",
+      "file_downloaded_at": "2026-11-05"
     },
     "грация|2025": {
       "title": "Грация",
@@ -208,7 +264,9 @@
       "tmdb_title": "Грация",
       "poster_path": "/xgZclC1K9Mm8HeK226EnJMz2uwt.jpg",
       "resolved_at": "2026-11-05",
-      "via": "year"
+      "via": "year",
+      "file": "xgZclC1K9Mm8HeK226EnJMz2uwt.jpg",
+      "file_downloaded_at": "2026-11-05"
     },
     "диггер|0": {
       "title": "Диггер",
@@ -219,6 +277,17 @@
       "resolved_at": "2026-11-05",
       "via": "miss"
     },
+    "дневная красавица субтитры|1967": {
+      "title": "Дневная красавица (субтитры)",
+      "year": 1967,
+      "tmdb_id": 649,
+      "tmdb_title": "Дневная красавица",
+      "poster_path": "/oUKD5gq6Xo1zaGcQyYXZGes52CH.jpg",
+      "resolved_at": "2026-11-05",
+      "via": "any",
+      "file": "oUKD5gq6Xo1zaGcQyYXZGes52CH.jpg",
+      "file_downloaded_at": "2026-11-05"
+    },
     "дневная красавица|1967": {
       "title": "Дневная красавица",
       "year": 1967,
@@ -226,7 +295,9 @@
       "tmdb_title": "Дневная красавица",
       "poster_path": "/oUKD5gq6Xo1zaGcQyYXZGes52CH.jpg",
       "resolved_at": "2026-11-05",
-      "via": "year"
+      "via": "year",
+      "file": "oUKD5gq6Xo1zaGcQyYXZGes52CH.jpg",
+      "file_downloaded_at": "2026-11-05"
     },
     "до встречи в тоскане|2026": {
       "title": "До встречи в Тоскане",
@@ -235,7 +306,9 @@
       "tmdb_title": "До встречи в Тоскане",
       "poster_path": "/5Y2Ej3SWnCQRAgBx0AlJKM9iQUX.jpg",
       "resolved_at": "2026-11-05",
-      "via": "year"
+      "via": "year",
+      "file": "5Y2Ej3SWnCQRAgBx0AlJKM9iQUX.jpg",
+      "file_downloaded_at": "2026-11-05"
     },
     "жертвоприношение субтитры|1986": {
       "title": "Жертвоприношение (субтитры)",
@@ -244,7 +317,9 @@
       "tmdb_title": "Жертвоприношение",
       "poster_path": "/uOZ7GiXRDLdJ8jr3ft8uYJCvktV.jpg",
       "resolved_at": "2026-11-05",
-      "via": "any"
+      "via": "any",
+      "file": "uOZ7GiXRDLdJ8jr3ft8uYJCvktV.jpg",
+      "file_downloaded_at": "2026-11-05"
     },
     "жертвоприношение|1986": {
       "title": "Жертвоприношение",
@@ -253,7 +328,9 @@
       "tmdb_title": "Жертвоприношение",
       "poster_path": "/uOZ7GiXRDLdJ8jr3ft8uYJCvktV.jpg",
       "resolved_at": "2026-11-05",
-      "via": "year"
+      "via": "year",
+      "file": "uOZ7GiXRDLdJ8jr3ft8uYJCvktV.jpg",
+      "file_downloaded_at": "2026-11-05"
     },
     "живая книга|2026": {
       "title": "Живая книга",
@@ -262,7 +339,9 @@
       "tmdb_title": "Живая книга",
       "poster_path": "/huBvsWOlXvQ3rxPLwkOi3J3WxYj.jpg",
       "resolved_at": "2026-11-05",
-      "via": "year"
+      "via": "year",
+      "file": "huBvsWOlXvQ3rxPLwkOi3J3WxYj.jpg",
+      "file_downloaded_at": "2026-11-05"
     },
     "завороженный|1945": {
       "title": "ЗАВОРОЖЕННЫЙ",
@@ -271,7 +350,9 @@
       "tmdb_title": "Заворожённый",
       "poster_path": "/dPAox7jGScLBvxKLeRptJIBF7v.jpg",
       "resolved_at": "2026-11-05",
-      "via": "year"
+      "via": "year",
+      "file": "dPAox7jGScLBvxKLeRptJIBF7v.jpg",
+      "file_downloaded_at": "2026-11-05"
     },
     "запределье субтитры|2006": {
       "title": "Запределье (субтитры)",
@@ -298,7 +379,9 @@
       "tmdb_title": "Звук падения",
       "poster_path": "/ApOwQ2ytWuoLCEs7iOx6M53TrSA.jpg",
       "resolved_at": "2026-11-05",
-      "via": "year"
+      "via": "year",
+      "file": "ApOwQ2ytWuoLCEs7iOx6M53TrSA.jpg",
+      "file_downloaded_at": "2026-11-05"
     },
     "и наступит рассвет|2026": {
       "title": "И наступит рассвет",
@@ -307,7 +390,9 @@
       "tmdb_title": "И наступит рассвет",
       "poster_path": "/iqTuBlAVud12BcL7kWMpHVCqFQa.jpg",
       "resolved_at": "2026-11-05",
-      "via": "year"
+      "via": "year",
+      "file": "iqTuBlAVud12BcL7kWMpHVCqFQa.jpg",
+      "file_downloaded_at": "2026-11-05"
     },
     "идеальные дни|2023": {
       "title": "Идеальные дни",
@@ -316,7 +401,9 @@
       "tmdb_title": "Идеальные дни",
       "poster_path": "/sujrVgNoj9wjc8TR9WU3DmdBIR4.jpg",
       "resolved_at": "2026-11-05",
-      "via": "year"
+      "via": "year",
+      "file": "sujrVgNoj9wjc8TR9WU3DmdBIR4.jpg",
+      "file_downloaded_at": "2026-11-05"
     },
     "идеальный шторм|2026": {
       "title": "Идеальный шторм",
@@ -325,7 +412,9 @@
       "tmdb_title": "Идеальный шторм",
       "poster_path": "/dfSdr4XZo6efeb4a7ig17Ux0NJ7.jpg",
       "resolved_at": "2026-11-05",
-      "via": "year"
+      "via": "year",
+      "file": "dfSdr4XZo6efeb4a7ig17Ux0NJ7.jpg",
+      "file_downloaded_at": "2026-11-05"
     },
     "изгои субтитры|1983": {
       "title": "Изгои (субтитры)",
@@ -334,7 +423,9 @@
       "tmdb_title": "Изгои",
       "poster_path": "/68XmLIWfSBdDcyxsXc1hDBZevQB.jpg",
       "resolved_at": "2026-11-05",
-      "via": "any"
+      "via": "any",
+      "file": "68XmLIWfSBdDcyxsXc1hDBZevQB.jpg",
+      "file_downloaded_at": "2026-11-05"
     },
     "караваджо душа и кровь|2018": {
       "title": "Караваджо: Душа и кровь",
@@ -343,7 +434,9 @@
       "tmdb_title": "Караваджо. Душа и кровь",
       "poster_path": "/umuhpw3dm2TrgMKcDI5TUNMDZ3R.jpg",
       "resolved_at": "2026-11-05",
-      "via": "year"
+      "via": "year",
+      "file": "umuhpw3dm2TrgMKcDI5TUNMDZ3R.jpg",
+      "file_downloaded_at": "2026-11-05"
     },
     "клэйфейс|0": {
       "title": "Клэйфейс",
@@ -361,7 +454,9 @@
       "tmdb_title": "Колония",
       "poster_path": "/uQIlX1zpvM7FAKRbeyLDJN3zxrX.jpg",
       "resolved_at": "2026-11-05",
-      "via": "any"
+      "via": "any",
+      "file": "uQIlX1zpvM7FAKRbeyLDJN3zxrX.jpg",
+      "file_downloaded_at": "2026-11-05"
     },
     "крик премьера|1957": {
       "title": "КРИК (ПРЕМЬЕРА)",
@@ -379,7 +474,9 @@
       "tmdb_title": "Кто боится Вирджинии Вульф?",
       "poster_path": "/bHqhXLTyX9BLKwe9uWO0k2SLxcj.jpg",
       "resolved_at": "2026-11-05",
-      "via": "year"
+      "via": "year",
+      "file": "bHqhXLTyX9BLKwe9uWO0k2SLxcj.jpg",
+      "file_downloaded_at": "2026-11-05"
     },
     "курочка пух и прах субтитры|2025": {
       "title": "Курочка. Пух и прах (субтитры)",
@@ -397,7 +494,9 @@
       "tmdb_title": "Легенды леса",
       "poster_path": "/5rcsd0iGbsQ6DFTI3HclJPJzY9K.jpg",
       "resolved_at": "2026-11-05",
-      "via": "any"
+      "via": "any",
+      "file": "5rcsd0iGbsQ6DFTI3HclJPJzY9K.jpg",
+      "file_downloaded_at": "2026-11-05"
     },
     "лето будет общим|2025": {
       "title": "Лето будет общим",
@@ -406,7 +505,9 @@
       "tmdb_title": "Лето будет общим",
       "poster_path": "/9za2weDN92KJNDCNlYOYGlY4Cw6.jpg",
       "resolved_at": "2026-11-05",
-      "via": "any"
+      "via": "any",
+      "file": "9za2weDN92KJNDCNlYOYGlY4Cw6.jpg",
+      "file_downloaded_at": "2026-11-05"
     },
     "лето в бадене|2026": {
       "title": "Лето в Бадене",
@@ -415,7 +516,9 @@
       "tmdb_title": "Лето в Бадене",
       "poster_path": "/hi1ZUDa3ZP2NG7lkprq6fDmi3Si.jpg",
       "resolved_at": "2026-11-05",
-      "via": "year"
+      "via": "year",
+      "file": "hi1ZUDa3ZP2NG7lkprq6fDmi3Si.jpg",
+      "file_downloaded_at": "2026-11-05"
     },
     "лиля|0": {
       "title": "Лиля",
@@ -451,7 +554,9 @@
       "tmdb_title": "Любовь моя",
       "poster_path": "/9FwnoA8GfNMjSmp4pTFDWTiSETB.jpg",
       "resolved_at": "2026-11-05",
-      "via": "year"
+      "via": "year",
+      "file": "9FwnoA8GfNMjSmp4pTFDWTiSETB.jpg",
+      "file_downloaded_at": "2026-11-05"
     },
     "мальчик и птица|2023": {
       "title": "Мальчик и птица",
@@ -460,7 +565,9 @@
       "tmdb_title": "Мальчик и птица",
       "poster_path": "/oTmSnrE9MuQMhZkosZRE5bYvstK.jpg",
       "resolved_at": "2026-11-05",
-      "via": "year"
+      "via": "year",
+      "file": "oTmSnrE9MuQMhZkosZRE5bYvstK.jpg",
+      "file_downloaded_at": "2026-11-05"
     },
     "меня пожирает собственная кровать|2026": {
       "title": "Меня пожирает собственная кровать",
@@ -469,7 +576,9 @@
       "tmdb_title": "Меня пожирает собственная кровать",
       "poster_path": "/nqhtgyt3u14kTGLwj7o1eHNtPqU.jpg",
       "resolved_at": "2026-11-05",
-      "via": "year"
+      "via": "year",
+      "file": "nqhtgyt3u14kTGLwj7o1eHNtPqU.jpg",
+      "file_downloaded_at": "2026-11-05"
     },
     "мечтать не вредно|2026": {
       "title": "Мечтать не вредно",
@@ -478,7 +587,9 @@
       "tmdb_title": "Мечтать не вредно",
       "poster_path": "/coEalVHfqwcoRHDG141eBhR0yI1.jpg",
       "resolved_at": "2026-11-05",
-      "via": "year"
+      "via": "year",
+      "file": "coEalVHfqwcoRHDG141eBhR0yI1.jpg",
+      "file_downloaded_at": "2026-11-05"
     },
     "морозко|2026": {
       "title": "Морозко",
@@ -487,7 +598,9 @@
       "tmdb_title": "Морозко",
       "poster_path": "/ogN4Ul6UnDqRph23g3ZtAexm3M0.jpg",
       "resolved_at": "2026-11-05",
-      "via": "year"
+      "via": "year",
+      "file": "ogN4Ul6UnDqRph23g3ZtAexm3M0.jpg",
+      "file_downloaded_at": "2026-11-05"
     },
     "мужчина и женщина субтитры|1966": {
       "title": "Мужчина и женщина (субтитры)",
@@ -496,7 +609,9 @@
       "tmdb_title": "Мужчина и женщина",
       "poster_path": "/pf48G21NCF2BrfzFt5Xl9kONO78.jpg",
       "resolved_at": "2026-11-05",
-      "via": "any"
+      "via": "any",
+      "file": "pf48G21NCF2BrfzFt5Xl9kONO78.jpg",
+      "file_downloaded_at": "2026-11-05"
     },
     "на гребне волны субтитры|1991": {
       "title": "На гребне волны (субтитры)",
@@ -505,7 +620,9 @@
       "tmdb_title": "На гребне волны",
       "poster_path": "/5w7W8uJyChwbiShMhSvLvWKVaBV.jpg",
       "resolved_at": "2026-11-05",
-      "via": "any"
+      "via": "any",
+      "file": "5w7W8uJyChwbiShMhSvLvWKVaBV.jpg",
+      "file_downloaded_at": "2026-11-05"
     },
     "на последнем дыхании субтитры|1960": {
       "title": "На последнем дыхании (субтитры)",
@@ -514,7 +631,9 @@
       "tmdb_title": "На последнем дыхании",
       "poster_path": "/3b5uFBKGWwJF36rUlGL5mdtj9AU.jpg",
       "resolved_at": "2026-11-05",
-      "via": "any"
+      "via": "any",
+      "file": "3b5uFBKGWwJF36rUlGL5mdtj9AU.jpg",
+      "file_downloaded_at": "2026-11-05"
     },
     "на последнем дыхании|1960": {
       "title": "На последнем дыхании",
@@ -523,7 +642,9 @@
       "tmdb_title": "На последнем дыхании",
       "poster_path": "/3b5uFBKGWwJF36rUlGL5mdtj9AU.jpg",
       "resolved_at": "2026-11-05",
-      "via": "year"
+      "via": "year",
+      "file": "3b5uFBKGWwJF36rUlGL5mdtj9AU.jpg",
+      "file_downloaded_at": "2026-11-05"
     },
     "на ярком солнце|1960": {
       "title": "На ярком солнце",
@@ -532,7 +653,9 @@
       "tmdb_title": "На ярком солнце",
       "poster_path": "/pbYERp2oS1dO6HLhg4ufWwA7PaN.jpg",
       "resolved_at": "2026-11-05",
-      "via": "year"
+      "via": "year",
+      "file": "pbYERp2oS1dO6HLhg4ufWwA7PaN.jpg",
+      "file_downloaded_at": "2026-11-05"
     },
     "навар|2025": {
       "title": "Навар",
@@ -541,7 +664,9 @@
       "tmdb_title": "Навар",
       "poster_path": "/AoS76k8UGPMZwf128Z7hCnHcv7K.jpg",
       "resolved_at": "2026-11-05",
-      "via": "year"
+      "via": "year",
+      "file": "AoS76k8UGPMZwf128Z7hCnHcv7K.jpg",
+      "file_downloaded_at": "2026-11-05"
     },
     "настройщик|2025": {
       "title": "Настройщик",
@@ -550,7 +675,9 @@
       "tmdb_title": "Настройщик",
       "poster_path": "/7oNxg17JawXBMdkuSo7hpThhTZF.jpg",
       "resolved_at": "2026-11-05",
-      "via": "year"
+      "via": "year",
+      "file": "7oNxg17JawXBMdkuSo7hpThhTZF.jpg",
+      "file_downloaded_at": "2026-11-05"
     },
     "непокой|2026": {
       "title": "Непокой",
@@ -559,7 +686,9 @@
       "tmdb_title": "Непокой",
       "poster_path": "/AnM5IIlW8FytzjnTLkqyQujvkUu.jpg",
       "resolved_at": "2026-11-05",
-      "via": "year"
+      "via": "year",
+      "file": "AnM5IIlW8FytzjnTLkqyQujvkUu.jpg",
+      "file_downloaded_at": "2026-11-05"
     },
     "обитель зла|0": {
       "title": "Обитель зла",
@@ -577,7 +706,9 @@
       "tmdb_title": "Остров забвения",
       "poster_path": "/cLEsUIvvzEUzoID2FdxTcNJBHwB.jpg",
       "resolved_at": "2026-11-05",
-      "via": "year"
+      "via": "year",
+      "file": "cLEsUIvvzEUzoID2FdxTcNJBHwB.jpg",
+      "file_downloaded_at": "2026-11-05"
     },
     "отверженные|2026": {
       "title": "Отверженные",
@@ -586,7 +717,9 @@
       "tmdb_title": "Отверженные",
       "poster_path": "/b9RR1u16vsLe8e45IRqsQAmZHsg.jpg",
       "resolved_at": "2026-11-05",
-      "via": "year"
+      "via": "year",
+      "file": "b9RR1u16vsLe8e45IRqsQAmZHsg.jpg",
+      "file_downloaded_at": "2026-11-05"
     },
     "отпуск без конца субтитры|1980": {
       "title": "Отпуск без конца (субтитры)",
@@ -595,7 +728,9 @@
       "tmdb_title": "Отпуск без конца",
       "poster_path": "/jGOJJVscEPK8YT2z2blacHzfuxp.jpg",
       "resolved_at": "2026-11-05",
-      "via": "any"
+      "via": "any",
+      "file": "jGOJJVscEPK8YT2z2blacHzfuxp.jpg",
+      "file_downloaded_at": "2026-11-05"
     },
     "павильон на воде|2023": {
       "title": "Павильон на воде",
@@ -613,7 +748,9 @@
       "tmdb_title": "Параллельные истории",
       "poster_path": "/bw84eOxjZFGt6I6GOYWLVMiLNCT.jpg",
       "resolved_at": "2026-11-05",
-      "via": "any"
+      "via": "any",
+      "file": "bw84eOxjZFGt6I6GOYWLVMiLNCT.jpg",
+      "file_downloaded_at": "2026-11-05"
     },
     "параллельные истории|2026": {
       "title": "Параллельные истории",
@@ -622,7 +759,9 @@
       "tmdb_title": "Параллельные истории",
       "poster_path": "/bw84eOxjZFGt6I6GOYWLVMiLNCT.jpg",
       "resolved_at": "2026-11-05",
-      "via": "year"
+      "via": "year",
+      "file": "bw84eOxjZFGt6I6GOYWLVMiLNCT.jpg",
+      "file_downloaded_at": "2026-11-05"
     },
     "пентхаус|2026": {
       "title": "Пентхаус",
@@ -631,7 +770,9 @@
       "tmdb_title": "Пентхаус",
       "poster_path": "/AuBdbFZytyvFT6Tw2CRMRNxaoWt.jpg",
       "resolved_at": "2026-11-05",
-      "via": "year"
+      "via": "year",
+      "file": "AuBdbFZytyvFT6Tw2CRMRNxaoWt.jpg",
+      "file_downloaded_at": "2026-11-05"
     },
     "питер фм|2006": {
       "title": "Питер ФМ",
@@ -649,7 +790,9 @@
       "tmdb_title": "Плетёный муж",
       "poster_path": "/ej29DO6sC6IsxQLtYPj4ZxfwCQP.jpg",
       "resolved_at": "2026-11-05",
-      "via": "any"
+      "via": "any",
+      "file": "ej29DO6sC6IsxQLtYPj4ZxfwCQP.jpg",
+      "file_downloaded_at": "2026-11-05"
     },
     "плетеный муж|2026": {
       "title": "Плетёный муж",
@@ -658,7 +801,9 @@
       "tmdb_title": "Плетёный муж",
       "poster_path": "/ej29DO6sC6IsxQLtYPj4ZxfwCQP.jpg",
       "resolved_at": "2026-11-05",
-      "via": "year"
+      "via": "year",
+      "file": "ej29DO6sC6IsxQLtYPj4ZxfwCQP.jpg",
+      "file_downloaded_at": "2026-11-05"
     },
     "пока небо смотрит|2026": {
       "title": "Пока небо смотрит",
@@ -667,7 +812,20 @@
       "tmdb_title": "Пока небо смотрит",
       "poster_path": "/8HAEmx8nLJMGYMOyhMWw49ynxPn.jpg",
       "resolved_at": "2026-11-05",
-      "via": "year"
+      "via": "year",
+      "file": "8HAEmx8nLJMGYMOyhMWw49ynxPn.jpg",
+      "file_downloaded_at": "2026-11-05"
+    },
+    "посторонний субтитры|2025": {
+      "title": "Посторонний (субтитры)",
+      "year": 2025,
+      "tmdb_id": 1429348,
+      "tmdb_title": "Посторонний",
+      "poster_path": "/gji9ScexriPBpYoK5ZWWOp72hyx.jpg",
+      "resolved_at": "2026-11-05",
+      "via": "any",
+      "file": "gji9ScexriPBpYoK5ZWWOp72hyx.jpg",
+      "file_downloaded_at": "2026-11-05"
     },
     "посторонний|2025": {
       "title": "Посторонний",
@@ -676,7 +834,9 @@
       "tmdb_title": "Посторонний",
       "poster_path": "/gji9ScexriPBpYoK5ZWWOp72hyx.jpg",
       "resolved_at": "2026-11-05",
-      "via": "year"
+      "via": "year",
+      "file": "gji9ScexriPBpYoK5ZWWOp72hyx.jpg",
+      "file_downloaded_at": "2026-11-05"
     },
     "похитители велосипедов|1948": {
       "title": "ПОХИТИТЕЛИ ВЕЛОСИПЕДОВ",
@@ -685,7 +845,9 @@
       "tmdb_title": "Похитители велосипедов",
       "poster_path": "/sG8NMNWbP7lrf3S1Pk3Bai40Ctz.jpg",
       "resolved_at": "2026-11-05",
-      "via": "year"
+      "via": "year",
+      "file": "sG8NMNWbP7lrf3S1Pk3Bai40Ctz.jpg",
+      "file_downloaded_at": "2026-11-05"
     },
     "пранкер|2026": {
       "title": "Пранкер",
@@ -694,11 +856,22 @@
       "tmdb_title": "Пранкер",
       "poster_path": "/gbhq0zQE9POxzq92zejRYectFUX.jpg",
       "resolved_at": "2026-11-05",
-      "via": "year"
+      "via": "year",
+      "file": "gbhq0zQE9POxzq92zejRYectFUX.jpg",
+      "file_downloaded_at": "2026-11-05"
     },
     "психопатка версия с субтитрами|2026": {
       "title": "Психопатка (версия с субтитрами)",
       "year": 2026,
+      "tmdb_id": null,
+      "tmdb_title": null,
+      "poster_path": null,
+      "resolved_at": "2026-11-05",
+      "via": "miss"
+    },
+    "пятый элемент субтитры|1997": {
+      "title": "Пятый элемент (субтитры)",
+      "year": 1997,
       "tmdb_id": null,
       "tmdb_title": null,
       "poster_path": null,
@@ -712,7 +885,9 @@
       "tmdb_title": "Пятый элемент",
       "poster_path": "/bqALmWhVaqfQedyPZn7MeuOjfSk.jpg",
       "resolved_at": "2026-11-05",
-      "via": "year"
+      "via": "year",
+      "file": "bqALmWhVaqfQedyPZn7MeuOjfSk.jpg",
+      "file_downloaded_at": "2026-11-05"
     },
     "рождение империи|2026": {
       "title": "Рождение империи",
@@ -721,7 +896,9 @@
       "tmdb_title": "Рождение империи",
       "poster_path": "/1JbTVMAXpfcez5bFWJpgnwdIAde.jpg",
       "resolved_at": "2026-11-05",
-      "via": "year"
+      "via": "year",
+      "file": "1JbTVMAXpfcez5bFWJpgnwdIAde.jpg",
+      "file_downloaded_at": "2026-11-05"
     },
     "рокко и его братья|1960": {
       "title": "РОККО И ЕГО БРАТЬЯ",
@@ -730,7 +907,9 @@
       "tmdb_title": "Рокко и его братья",
       "poster_path": "/2SWZHeThPv8cNp6Xv0p9hoKiAb.jpg",
       "resolved_at": "2026-11-05",
-      "via": "year"
+      "via": "year",
+      "file": "2SWZHeThPv8cNp6Xv0p9hoKiAb.jpg",
+      "file_downloaded_at": "2026-11-05"
     },
     "роллинг лауд дикое веселье|2026": {
       "title": "Роллинг Лауд. Дикое веселье",
@@ -739,7 +918,9 @@
       "tmdb_title": "Роллинг Лауд. Дикое веселье",
       "poster_path": "/mA2IIbx6hJd51m5JdHKPxBh4tSn.jpg",
       "resolved_at": "2026-11-05",
-      "via": "year"
+      "via": "year",
+      "file": "mA2IIbx6hJd51m5JdHKPxBh4tSn.jpg",
+      "file_downloaded_at": "2026-11-05"
     },
     "романовы преданность и предательство|0": {
       "title": "Романовы: преданность и предательство",
@@ -757,7 +938,20 @@
       "tmdb_title": "Романовы: Преданность и предательство",
       "poster_path": "/tTQRu9b1uJfvTYOKm6tnEeXn6DH.jpg",
       "resolved_at": "2026-11-05",
-      "via": "year"
+      "via": "year",
+      "file": "tTQRu9b1uJfvTYOKm6tnEeXn6DH.jpg",
+      "file_downloaded_at": "2026-11-05"
+    },
+    "сентиментальная ценность субтитры|2025": {
+      "title": "Сентиментальная ценность (субтитры)",
+      "year": 2025,
+      "tmdb_id": 1124566,
+      "tmdb_title": "Сентиментальная ценность",
+      "poster_path": "/bhyEpWjIFnsBoZd2zwhaUvQGN7I.jpg",
+      "resolved_at": "2026-11-05",
+      "via": "any",
+      "file": "bhyEpWjIFnsBoZd2zwhaUvQGN7I.jpg",
+      "file_downloaded_at": "2026-11-05"
     },
     "сентиментальная ценность|2025": {
       "title": "Сентиментальная ценность",
@@ -766,7 +960,9 @@
       "tmdb_title": "Сентиментальная ценность",
       "poster_path": "/bhyEpWjIFnsBoZd2zwhaUvQGN7I.jpg",
       "resolved_at": "2026-11-05",
-      "via": "year"
+      "via": "year",
+      "file": "bhyEpWjIFnsBoZd2zwhaUvQGN7I.jpg",
+      "file_downloaded_at": "2026-11-05"
     },
     "сердце зверя|0": {
       "title": "Сердце зверя",
@@ -784,7 +980,9 @@
       "tmdb_title": "Сказка о потерянном времени",
       "poster_path": "/rHIHELSgTGWnDryaoj9Yb15iTkd.jpg",
       "resolved_at": "2026-11-05",
-      "via": "year"
+      "via": "year",
+      "file": "rHIHELSgTGWnDryaoj9Yb15iTkd.jpg",
+      "file_downloaded_at": "2026-11-05"
     },
     "случай с фортепиано|2025": {
       "title": "Случай с фортепиано",
@@ -793,7 +991,9 @@
       "tmdb_title": "Случай с фортепиано",
       "poster_path": "/j7NnmvuwZboZwIZPZ4EKEupQRj2.jpg",
       "resolved_at": "2026-11-05",
-      "via": "year"
+      "via": "year",
+      "file": "j7NnmvuwZboZwIZPZ4EKEupQRj2.jpg",
+      "file_downloaded_at": "2026-11-05"
     },
     "сны поездов субтитры|2025": {
       "title": "Сны поездов (субтитры)",
@@ -802,7 +1002,9 @@
       "tmdb_title": "Сны поездов",
       "poster_path": "/b3AfV6Pr0s3kXiXh5wgMGTkpIov.jpg",
       "resolved_at": "2026-11-05",
-      "via": "any"
+      "via": "any",
+      "file": "b3AfV6Pr0s3kXiXh5wgMGTkpIov.jpg",
+      "file_downloaded_at": "2026-11-05"
     },
     "страх сцены|1950": {
       "title": "СТРАХ СЦЕНЫ",
@@ -811,7 +1013,9 @@
       "tmdb_title": "Страх сцены",
       "poster_path": "/l43OTqhib8do1WwXig8JI8Y68Fd.jpg",
       "resolved_at": "2026-11-05",
-      "via": "year"
+      "via": "year",
+      "file": "l43OTqhib8do1WwXig8JI8Y68Fd.jpg",
+      "file_downloaded_at": "2026-11-05"
     },
     "сумерки сага затмение|2010": {
       "title": "Сумерки. Сага. Затмение",
@@ -820,7 +1024,9 @@
       "tmdb_title": "Сумерки. Сага. Затмение",
       "poster_path": "/40ut2seLFEeyTcan7V2cVjwRvI9.jpg",
       "resolved_at": "2026-11-05",
-      "via": "year"
+      "via": "year",
+      "file": "40ut2seLFEeyTcan7V2cVjwRvI9.jpg",
+      "file_downloaded_at": "2026-11-05"
     },
     "сущность субтитры|2025": {
       "title": "Сущность (субтитры)",
@@ -829,7 +1035,9 @@
       "tmdb_title": "Сущность",
       "poster_path": "/uAs0VN7VtdDL0VZ80hIu5qa9Ydf.jpg",
       "resolved_at": "2026-11-05",
-      "via": "any"
+      "via": "any",
+      "file": "uAs0VN7VtdDL0VZ80hIu5qa9Ydf.jpg",
+      "file_downloaded_at": "2026-11-05"
     },
     "тайный дневник верити|2026": {
       "title": "Тайный дневник Верити",
@@ -838,7 +1046,9 @@
       "tmdb_title": "Тайный дневник Верити",
       "poster_path": "/lkcSRoS5FXzzNi13ug6kenL2vi2.jpg",
       "resolved_at": "2026-11-05",
-      "via": "year"
+      "via": "year",
+      "file": "lkcSRoS5FXzzNi13ug6kenL2vi2.jpg",
+      "file_downloaded_at": "2026-11-05"
     },
     "твигги|2024": {
       "title": "Твигги",
@@ -847,7 +1057,9 @@
       "tmdb_title": "Твигги",
       "poster_path": "/6G6IeQzLrhkmpe2Sr6BLO65biFQ.jpg",
       "resolved_at": "2026-11-05",
-      "via": "year"
+      "via": "year",
+      "file": "6G6IeQzLrhkmpe2Sr6BLO65biFQ.jpg",
+      "file_downloaded_at": "2026-11-05"
     },
     "театр в кино женитьба бальзаминова|2026": {
       "title": "Театр в кино: Женитьба Бальзаминова",
@@ -865,7 +1077,9 @@
       "tmdb_title": "Тони",
       "poster_path": "/gB7mAm5WLxp4iIwQs3dj3OOgN2m.jpg",
       "resolved_at": "2026-11-05",
-      "via": "any"
+      "via": "any",
+      "file": "gB7mAm5WLxp4iIwQs3dj3OOgN2m.jpg",
+      "file_downloaded_at": "2026-11-05"
     },
     "тони|2026": {
       "title": "Тони",
@@ -874,7 +1088,9 @@
       "tmdb_title": "Тони",
       "poster_path": "/gB7mAm5WLxp4iIwQs3dj3OOgN2m.jpg",
       "resolved_at": "2026-11-05",
-      "via": "year"
+      "via": "year",
+      "file": "gB7mAm5WLxp4iIwQs3dj3OOgN2m.jpg",
+      "file_downloaded_at": "2026-11-05"
     },
     "учитель обещавший море|2024": {
       "title": "Учитель, обещавший море",
@@ -883,7 +1099,20 @@
       "tmdb_title": "Учитель, обещавший море",
       "poster_path": "/snwSmHyWhzgstpvbS1ggCFxxN7H.jpg",
       "resolved_at": "2026-11-05",
-      "via": "year"
+      "via": "year",
+      "file": "snwSmHyWhzgstpvbS1ggCFxxN7H.jpg",
+      "file_downloaded_at": "2026-11-05"
+    },
+    "фальшивомонетчик|2025": {
+      "title": "Фальшивомонетчик",
+      "year": 2025,
+      "tmdb_id": 1376415,
+      "tmdb_title": "Фальшивомонетчик",
+      "poster_path": "/floSDR9UzvdMEdbnzUdmaXL4qKA.jpg",
+      "resolved_at": "2026-11-05",
+      "via": "year",
+      "file": "floSDR9UzvdMEdbnzUdmaXL4qKA.jpg",
+      "file_downloaded_at": "2026-11-05"
     },
     "фьорд версия с субтитрами|2026": {
       "title": "Фьорд (версия с субтитрами)",
@@ -901,7 +1130,9 @@
       "tmdb_title": "Фьорд",
       "poster_path": "/kDAwTzpCmW3EXmVei5yHI5Bfr6U.jpg",
       "resolved_at": "2026-11-05",
-      "via": "any"
+      "via": "any",
+      "file": "kDAwTzpCmW3EXmVei5yHI5Bfr6U.jpg",
+      "file_downloaded_at": "2026-11-05"
     },
     "фьорд|2026": {
       "title": "Фьорд",
@@ -910,7 +1141,9 @@
       "tmdb_title": "Фьорд",
       "poster_path": "/kDAwTzpCmW3EXmVei5yHI5Bfr6U.jpg",
       "resolved_at": "2026-11-05",
-      "via": "year"
+      "via": "year",
+      "file": "kDAwTzpCmW3EXmVei5yHI5Bfr6U.jpg",
+      "file_downloaded_at": "2026-11-05"
     },
     "хранитель камфорного дерева|2026": {
       "title": "Хранитель Камфорного дерева",
@@ -919,7 +1152,31 @@
       "tmdb_title": "Хранитель камфорного дерева",
       "poster_path": "/2nHuvIyZyDiiebg0XPl7qQLz2R3.jpg",
       "resolved_at": "2026-11-05",
-      "via": "year"
+      "via": "year",
+      "file": "2nHuvIyZyDiiebg0XPl7qQLz2R3.jpg",
+      "file_downloaded_at": "2026-11-05"
+    },
+    "цвета времени|2025": {
+      "title": "Цвета времени",
+      "year": 2025,
+      "tmdb_id": 1235304,
+      "tmdb_title": "Цвета времени",
+      "poster_path": "/tHBmVPGlV7K5MLYEzqbBZz1vbRB.jpg",
+      "resolved_at": "2026-11-05",
+      "via": "year",
+      "file": "tHBmVPGlV7K5MLYEzqbBZz1vbRB.jpg",
+      "file_downloaded_at": "2026-11-05"
+    },
+    "частная жизнь субтитры|2025": {
+      "title": "Частная жизнь (субтитры)",
+      "year": 2025,
+      "tmdb_id": 1290432,
+      "tmdb_title": "Частная жизнь",
+      "poster_path": "/A1gwYE2GBC15M4VNu89u3hiXLdQ.jpg",
+      "resolved_at": "2026-11-05",
+      "via": "any",
+      "file": "A1gwYE2GBC15M4VNu89u3hiXLdQ.jpg",
+      "file_downloaded_at": "2026-11-05"
     },
     "частная жизнь|2025": {
       "title": "Частная жизнь",
@@ -928,7 +1185,9 @@
       "tmdb_title": "Частная жизнь",
       "poster_path": "/A1gwYE2GBC15M4VNu89u3hiXLdQ.jpg",
       "resolved_at": "2026-11-05",
-      "via": "year"
+      "via": "year",
+      "file": "A1gwYE2GBC15M4VNu89u3hiXLdQ.jpg",
+      "file_downloaded_at": "2026-11-05"
     },
     "человек слон артпоказ|1980": {
       "title": "Человек-слон. АртПоказ",
@@ -946,7 +1205,9 @@
       "tmdb_title": "Четыре жизни Петра Мамонова",
       "poster_path": "/rmIQQN159fzmTZulMjYiEPl9PdA.jpg",
       "resolved_at": "2026-11-05",
-      "via": "year"
+      "via": "year",
+      "file": "rmIQQN159fzmTZulMjYiEPl9PdA.jpg",
+      "file_downloaded_at": "2026-11-05"
     },
     "чудо юдо|2026": {
       "title": "Чудо-Юдо",
@@ -955,7 +1216,9 @@
       "tmdb_title": "Чудо-Юдо",
       "poster_path": "/tr2UDGeImwouJh4sP8jk9FrwcPo.jpg",
       "resolved_at": "2026-11-05",
-      "via": "year"
+      "via": "year",
+      "file": "tr2UDGeImwouJh4sP8jk9FrwcPo.jpg",
+      "file_downloaded_at": "2026-11-05"
     },
     "шоссе в никуда артпоказ|1996": {
       "title": "Шоссе в никуда. АртПоказ",
@@ -965,6 +1228,28 @@
       "poster_path": null,
       "resolved_at": "2026-11-05",
       "via": "miss"
+    },
+    "это хит субтитры|2026": {
+      "title": "Это хит! (субтитры)",
+      "year": 2026,
+      "tmdb_id": 1284016,
+      "tmdb_title": "Это хит!",
+      "poster_path": "/fa4EdkINTMRJXWNsEcs24t4D1QN.jpg",
+      "resolved_at": "2026-11-05",
+      "via": "any",
+      "file": "fa4EdkINTMRJXWNsEcs24t4D1QN.jpg",
+      "file_downloaded_at": "2026-11-05"
+    },
+    "яйцо ангела|1985": {
+      "title": "Яйцо ангела",
+      "year": 1985,
+      "tmdb_id": 15916,
+      "tmdb_title": "Яйцо ангела",
+      "poster_path": "/nY2E6sC6LMFgtL2vIHikRWsfSGZ.jpg",
+      "resolved_at": "2026-11-05",
+      "via": "year",
+      "file": "nY2E6sC6LMFgtL2vIHikRWsfSGZ.jpg",
+      "file_downloaded_at": "2026-11-05"
     }
   }
 }
