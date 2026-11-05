@@ -58,6 +58,18 @@ DOMKINO_SITE_URL = "https://www.domkino.spb.ru/"
 # The `facility` parameter is NOT required (validated 2026-11-05: with and without
 # facility the page renders the same show-times).
 RODINA_SITE_URL = "https://rodinakino.ru/"
+# Per-film pages {RODINA_SITE_URL}events/<slug> (schema.org Movie microdata): fetched once per
+# distinct film with a seance inside the window, best-effort, bounded.
+RODINA_MAX_EVENT_PAGES = 60
+# After this many failed film pages the remaining ones are skipped for the run.
+RODINA_EVENT_FAILURE_LIMIT = 3
+
+# stage 4 — mirage — Мираж на Большом (www.mirage.ru; the apex 301-redirects to www)
+# City-wide per-day page: {MIRAGE_SITE_URL}spb/schedule/{DD.MM.YYYY}/ — all SPb branches on
+# one page; the adapter keeps the block of one branch only (picked by id, name as fallback).
+MIRAGE_SITE_URL = "https://www.mirage.ru/"
+MIRAGE_BRANCH_ID = 1
+MIRAGE_BRANCH_NAME = "НА БОЛЬШОМ"
 
 # stage 2B — lenfilm — Ленфильм (kinokassa / KinoPlan playbill feed, cinema 2387)
 # KINOKASSA_API_URL repeats the AVRORA_API_FALLBACK value on purpose: avrora and

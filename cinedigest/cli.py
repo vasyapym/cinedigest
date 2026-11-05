@@ -14,17 +14,17 @@ from pathlib import Path
 from . import config, deliver, pipeline
 from .http import Http, safe_filename
 from .model import VENUES, Snapshot
-from .venues import avrora, domkino, lenfilm, outcinema, poravkino, rodina
+from .venues import avrora, domkino, lenfilm, mirage, outcinema, poravkino, rodina
 
 log = logging.getLogger(__name__)
 
-# The six adapter modules, in the canonical VENUES order.
-DEFAULT_VENUES = [domkino, rodina, avrora, poravkino, lenfilm, outcinema]
+# The seven adapter modules, in the canonical VENUES order.
+DEFAULT_VENUES = [domkino, rodina, avrora, poravkino, lenfilm, outcinema, mirage]
 
 
 def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(
-        prog="cinedigest", description="вечерний кинодайджест шести кинотеатров СПб",
+        prog="cinedigest", description="вечерний кинодайджест семи кинотеатров СПб",
     )
     commands = parser.add_subparsers(dest="command", required=True)
 

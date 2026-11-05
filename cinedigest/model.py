@@ -14,6 +14,7 @@ VENUES = {
     "poravkino": "Художественный",
     "lenfilm": "Ленфильм",
     "outcinema": "Out Cinema",
+    "mirage": "Мираж на Большом",
 }
 
 EVENING_FROM = time(18, 0)

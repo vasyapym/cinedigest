@@ -135,3 +135,119 @@ def test_broken_rows_are_skipped_without_crash():
     assert [(s.title, s.start, s.language, s.price_min) for s in items] == [
         ("Окей", datetime(2026, 11, 6, 13, 0, tzinfo=MSK), "оригинальный", 200),
     ]
+
+
+def test_pinned_film_card_facts():
+    keyed = {(s.title, s.start): s for s in _day_items()}
+    sacrifice = keyed[("Жертвоприношение", datetime(2026, 11, 6, 10, 30, tzinfo=MSK))]
+    assert sacrifice.extra == {
+        "year": 1986,
+        "country": "Швеция, Франция, Великобритания",
+        "duration_min": 149,
+        "age": "18+",
+        "original_title": "Offret",
+        "director": "Андрей Тарковский",
+        "genres": ["драма"],
+    }
+
+    vkuskill = keyed[("Вкускилл", datetime(2026, 11, 6, 13, 15, tzinfo=MSK))]
+    assert vkuskill.extra == {
+        "year": 2026,
+        "country": "Япония",
+        "duration_min": 88,
+        "age": "18+",
+        "original_title": "チルド",
+        "director": "Юсукэ Ивасаки",
+        "genres": ["ужасы"],
+    }
+
+
+def test_year_coverage_from_real_cards():
+    items = _day_items()
+    with_year = [s for s in items if "year" in s.extra]
+    assert len(with_year) == 28
+    assert {s.extra["year"] for s in with_year} == {
+        1960, 1966, 1983, 1986, 1991, 2006, 2023, 2024, 2025, 2026,
+    }
+    assert all(isinstance(s.extra["year"], int) for s in with_year)
+
+
+def _row(clock: str, title_html: str, genres: str = "", language: str = "",
+         price: str = "") -> str:
+    return (
+        f"<tr><td>{clock}</td><td>{title_html}</td><td>{genres}</td>"
+        f"<td>{language}</td><td>{price}</td></tr>"
+    )
+
+
+def _parse_synthetic(body: str):
+    return domkino.parse([("2026-11-06", body)], [date(2026, 11, 6)])
+
+
+def test_title_link_wins_and_card_link_is_fallback():
+    body = (
+        "<html><body><h3>Большой зал</h3><table>"
+        + _row("10:00", '<a href="/films/row-film/">Из строки</a>', "драма")
+        + _row("12:00", "Из карточки", "комедия")
+        + "</table>"
+        '<div><a href="/films/card-film/">Подробнее</a>'
+        "<p>2026 / Россия / драма</p></div>"
+        "</body></html>"
+    )
+    items = _parse_synthetic(body)
+    assert len(items) == 2
+    assert items[0].url == config.DOMKINO_SITE_URL + "films/row-film/"
+    assert items[1].url == config.DOMKINO_SITE_URL + "films/card-film/"
+    assert items[0].extra == {"year": 2026, "country": "Россия", "genres": ["драма"]}
+    assert items[1].extra == {"year": 2026, "country": "Россия", "genres": ["комедия"]}
+
+
+def test_film_card_walk_stops_at_next_table_and_hall():
+    # Карточка второй таблицы не должна попасть ни в первую, ни в следующий зал.
+    body = (
+        "<html><body><h3>Большой зал</h3><table>"
+        + _row("10:00", "Без карточки")
+        + "</table><table>"
+        + _row("12:00", "Со своей карточкой")
+        + "</table>"
+        '<div><a href="/films/second/">Подробнее</a>'
+        "<p>2006 / Франция / драма</p>"
+        '<span class="duration">95 мин.</span></div>'
+        "<h3>Синий зал</h3><table>"
+        + _row("14:00", "Другой зал")
+        + "</table></body></html>"
+    )
+    items = _parse_synthetic(body)
+    assert len(items) == 3
+    assert items[0].extra == {}
+    assert items[0].url is None
+    assert items[1].extra == {
+        "year": 2006, "country": "Франция", "duration_min": 95,
+    }
+    assert items[1].url == config.DOMKINO_SITE_URL + "films/second/"
+    assert items[2].hall == "Синий зал"
+    assert items[2].extra == {}
+    assert items[2].url is None
+
+
+def test_broken_row_guard_requires_five_cells_and_nonempty_title():
+    body = (
+        "<html><body><h3>Большой зал</h3><table>"
+        "<tr><th>Время</th><th>Фильм</th></tr>"
+        "<tr><td>10:00</td><td>Четыре ячейки</td><td></td><td></td></tr>"
+        "<tr><td>11:00</td><td>Шесть ячеек</td><td></td><td></td><td></td><td></td></tr>"
+        + _row("12:00", "   ")
+        + _row("25:00", "Неверный час")
+        + _row("13:60", "Неверная минута")
+        + _row("не время", "Неверная строка")
+        + _row("14:00", "Окей", "драма, комедия", "", "нет цены")
+        + "</table></body></html>"
+    )
+    items = _parse_synthetic(body)
+    assert len(items) == 1
+    assert items[0].title == "Окей"
+    assert items[0].start == datetime(2026, 11, 6, 14, 0, tzinfo=MSK)
+    assert items[0].extra == {"genres": ["драма", "комедия"]}
+    assert items[0].language is None
+    assert items[0].price_min is None and items[0].price_max is None
+    assert domkino.legit_empty(body) is False

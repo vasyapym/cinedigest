@@ -106,7 +106,7 @@ def test_template_acceptance_full_render():
     html = render.render(_snapshot([evening_show, day_show, night_show], statuses))
 
     assert "Кино вечером" in html
-    assert "СПб · 6 кинотеатров" in html
+    assert "СПб · 7 кинотеатров" in html
     assert "screenings.json" in html
     assert "Сабрина" in html
     assert "Белый зал" in html

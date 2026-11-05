@@ -3,6 +3,7 @@ from __future__ import annotations
 
 import logging
 import re
+from dataclasses import asdict, dataclass
 from datetime import date, datetime, time
 from urllib.parse import urljoin
 
@@ -23,6 +24,28 @@ _HEADINGS = ("h1", "h2", "h3", "h4", "h5", "h6")
 _TIME_RE = re.compile(r"^\d{1,2}:\d{2}$")
 _FILMS_RE = re.compile(r"^/films/")
 
+# Film-card line «2026 / Россия / комедия[ / дублированный]»: the year first, then the
+# country segment (capitalised), the genres (lowercase), sometimes the translation wording.
+_YEAR_LINE_RE = re.compile(r"^\s*(1[89]\d{2}|20\d{2})\s*/\s*(.*)$", re.DOTALL)
+_DURATION_RE = re.compile(r"(\d+)\s*мин")
+_DIRECTOR_RE = re.compile(r"^Режисс[её]р[ыа]?\s*:\s*(.+)$", re.DOTALL)
+
+
+@dataclass(frozen=True)
+class FilmCard:
+    """What the film-card block after a row table says about the table's film."""
+
+    url: str | None = None
+    year: int | None = None
+    country: str | None = None
+    duration_min: int | None = None
+    age: str | None = None
+    original_title: str | None = None
+    director: str | None = None
+
+    def facts(self) -> dict:
+        return {key: value for key, value in asdict(self).items() if key != "url" and value is not None}
+
 
 def day_url(day: date) -> str:
     return f"{config.DOMKINO_SITE_URL}schedule/{day.strftime('%Y/%m/%d')}/"
@@ -41,8 +64,10 @@ def parse(raw: list[tuple[str, str]], days: list[date]) -> list[Screening]:
     """Schedule tables of each hall on every day page; times are local MSK of the page date.
 
     The page interleaves the row tables with film-card blocks between them, so rows
-    are taken table by table starting from each hall heading. A far-future day returns
-    a schedule shell without hall headings and yields nothing (a legitimate empty day).
+    are taken table by table starting from each hall heading, and each table's card
+    (year, country, duration, age, original title, director, film link) is attached
+    to its rows. A far-future day returns a schedule shell without hall headings and
+    yields nothing (a legitimate empty day).
     """
     wanted = set(days)
     seen: set[str] = set()
@@ -122,6 +147,7 @@ def _section_tables(heading: Tag) -> list[Tag]:
 
 
 def _table_screenings(table: Tag, day: date, source_url: str, hall: str) -> list[Screening]:
+    card = _film_card(table)
     out: list[Screening] = []
     for row in table.find_all("tr"):
         cells = row.find_all("td")
@@ -131,14 +157,14 @@ def _table_screenings(table: Tag, day: date, source_url: str, hall: str) -> list
             log.debug("domkino %s: row %s has %d cells, expected 5, skipped",
                       hall, cells[0].get_text(strip=True), len(cells))
             continue
-        screening = _screening(cells, day, source_url, hall)
+        screening = _screening(cells, day, source_url, hall, card)
         if screening is None:
             continue
         out.append(screening)
     return out
 
 
-def _screening(cells: list[Tag], day: date, source_url: str, hall: str) -> Screening | None:
+def _screening(cells: list[Tag], day: date, source_url: str, hall: str, card: FilmCard) -> Screening | None:
     hours, minutes = (int(part) for part in cells[0].get_text(strip=True).split(":"))
     try:
         start = datetime.combine(day, time(hours, minutes), tzinfo=MSK)
@@ -156,8 +182,7 @@ def _screening(cells: list[Tag], day: date, source_url: str, hall: str) -> Scree
     ]
     language = cells[3].get_text(" ", strip=True) or None
     price = _price(cells[4])
-    film_url = _film_url(cells[1])
-    extra: dict = {}
+    extra: dict = card.facts()
     if genres:
         extra["genres"] = genres
     return Screening(
@@ -170,7 +195,7 @@ def _screening(cells: list[Tag], day: date, source_url: str, hall: str) -> Scree
         price_max=price,
         language=language,
         tags=(),
-        url=film_url,
+        url=_film_url(cells[1]) or card.url,
         source_url=source_url,
         extra=extra,
     )
@@ -183,21 +208,53 @@ def _price(cell: Tag) -> int | None:
 
 
 def _film_url(title_cell: Tag) -> str | None:
-    """The film page link of one row: /films/<slug>/ anchor inside the title cell or,
-    as in the real markup, inside the film-card block right after the row's table
-    (the walk stops at the next <table> so it cannot reach another row's card)."""
+    """A /films/<slug>/ anchor inside the title cell itself (not the real markup today,
+    kept as the first choice); otherwise the card's link is used."""
     anchor = title_cell.find("a", href=_FILMS_RE)
-    if anchor is not None:
-        return urljoin(config.DOMKINO_SITE_URL, anchor.get("href", ""))
-    table = title_cell.find_parent("table")
-    if table is None:
+    if anchor is None:
         return None
+    return urljoin(config.DOMKINO_SITE_URL, anchor.get("href", ""))
+
+
+def _film_card(table: Tag) -> FilmCard:
+    """The film-card block right after one row table: poster/«Подробнее» link, «2026 /
+    Россия / комедия», duration and age spans, original title, «Режиссёр: …». The walk
+    stops at the next <table> or hall heading, so a card can never be read for another
+    table's rows; the table's own cells are skipped."""
+    url = year = country = duration = age = original = director = None
     for element in table.next_elements:
-        if element is table:
+        if not isinstance(element, Tag) or element is table or element.find_parent("table") is table:
             continue
-        name = getattr(element, "name", None)
-        if name == "table":
-            return None
-        if name == "a" and _FILMS_RE.match(element.get("href", "")):
-            return urljoin(config.DOMKINO_SITE_URL, element["href"])
+        name = element.name
+        if name == "table" or (name in _HEADINGS and element.get_text(strip=True) in HALLS):
+            break
+        classes = element.get("class") or []
+        if name == "a" and url is None and _FILMS_RE.match(element.get("href", "")):
+            url = urljoin(config.DOMKINO_SITE_URL, element["href"])
+        elif name == "p":
+            text = " ".join(element.get_text(" ", strip=True).split())
+            line = _YEAR_LINE_RE.match(text)
+            if line is not None and year is None:
+                year = int(line.group(1))
+                country = _country(line.group(2))
+                continue
+            who = _DIRECTOR_RE.match(text)
+            if who is not None and director is None:
+                director = who.group(1).strip() or None
+        elif name == "span" and "duration" in classes and duration is None:
+            match = _DURATION_RE.search(element.get_text(" ", strip=True))
+            duration = int(match.group(1)) if match else None
+        elif name == "span" and "vozrast" in classes and age is None:
+            age = element.get_text(strip=True) or None
+        elif name == "h3" and "en_name" in classes and original is None:
+            original = element.get_text(" ", strip=True) or None
+    return FilmCard(url, year, country, duration, age, original, director)
+
+
+def _country(rest: str) -> str | None:
+    """The capitalised segment after the year («Россия», «США, Великобритания»); genres
+    are lowercase and the translation wording comes last."""
+    for segment in (part.strip() for part in rest.split("/")):
+        if segment and segment[0].isupper():
+            return segment
     return None
