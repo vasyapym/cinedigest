@@ -30,15 +30,19 @@ def test_day_fixture_parses_forty_nine_unique_screenings():
     items = _parse(_body(DAY))
     # 50 якорей с фрагментами; один сеанс стоит на странице дважды
     # («Шоссе в никуда. АртПоказ» 19:05 — в слайдере и в списке), дедуп оставляет первое.
+    # Залы есть только у показов основного списка (15 строк в этом дне).
     assert len(items) == 49
     ids = [s.source_id for s in items]
     assert len(set(ids)) == len(ids)
     for screening in items:
         assert screening.venue == "rodina"
-        assert screening.hall is None
+        assert screening.hall is None or "зал" in screening.hall
         assert screening.tags == ()
         assert screening.source_url == DAY_URL
         assert screening.start.tzinfo is MSK
+    assert sum(1 for s in items if s.hall == "Большой зал") == 5
+    assert sum(1 for s in items if s.hall == "Малый 1 зал") == 6
+    assert sum(1 for s in items if s.hall == "Малый 2 зал") == 4
 
 
 def test_fragment_dates_rule_over_request_date():
@@ -54,26 +58,29 @@ def test_pinned_example_rows():
     items = _parse(_body(DAY))
     keyed = {(s.title, s.start): s for s in items}
 
-    # Большой список: цена «250 ₽» (тонкий пробел) и рядом ссылка на фильм.
+    # Большой список: цена «250 ₽» (тонкий пробел), зал из соседнего блока и ссылка на фильм.
     storm = keyed[("Идеальный шторм", datetime(2026, 11, 7, 10, 5, tzinfo=MSK))]
     assert (storm.price_min, storm.price_max) == (250, 250)
     assert storm.language is None
+    assert storm.hall == "Большой зал"
     assert storm.url == "https://rodinakino.ru/events/idealnyj-shtorm-2026"
-    assert storm.source_id == synthetic_id("rodina", storm.start, "Идеальный шторм", None)
+    assert storm.source_id == synthetic_id("rodina", storm.start, "Идеальный шторм", "Большой зал")
 
     pegas = keyed[("Большие гонки. Пегас III", datetime(2026, 11, 7, 10, 10, tzinfo=MSK))]
     assert (pegas.price_min, pegas.price_max) == (250, 250)
+    assert pegas.hall == "Малый 2 зал"
     assert pegas.url == "https://rodinakino.ru/events/bolshie-gonki-pegas-iii-2026"
 
-    # Слайдерный показ: бейдж SUB входит в language, цены в блоке нет, /events/ рядом нет.
+    # Слайдерный показ: бейдж SUB входит в language, цены, зала и /events/ в блоке нет.
     french = keyed[("Безумный день в Комеди Франсез", datetime(2026, 11, 5, 17, 50, tzinfo=MSK))]
     assert french.language == "SUB"
     assert (french.price_min, french.price_max) == (None, None)
+    assert french.hall is None
     assert french.url is None
 
     schosse = [s for s in items if s.title == "Шоссе в никуда. АртПоказ" and s.start == datetime(2026, 11, 7, 19, 5, tzinfo=MSK)]
-    assert len(schosse) == 1  # дубль слайдер+список схлопнут первым вхождением
-    assert (schosse[0].language, schosse[0].price_min) == ("SUB", None)
+    assert len(schosse) == 1  # дубль слайдер+список схлопнут первым вхождением (слайдер — без зала)
+    assert (schosse[0].language, schosse[0].price_min, schosse[0].hall) == ("SUB", None, None)
 
 
 def test_range_of_prices_from_fixture():
@@ -120,6 +127,7 @@ def test_percent_encoded_fragment_is_accepted():
     assert show.start == datetime(2026, 11, 7, 20, 15, tzinfo=MSK)
     assert (show.price_min, show.price_max) == (300, 300)
     assert show.language == "SUB"
+    assert show.hall is None  # блок без соседа с текстом «… зал»
     assert show.url == "https://rodinakino.ru/events/test-event-2026"
     assert show.source_url == f"{config.RODINA_SITE_URL}?date=2026/11/07"
 

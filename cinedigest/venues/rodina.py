@@ -28,6 +28,7 @@ _FRAGMENT_RE = re.compile(r"^(\d{4})/(\d{2})/(\d{2}) (\d{2}):(\d{2})$")
 _HEADINGS = ("h1", "h2", "h3", "h4", "h5", "h6")
 _EVENTS_RE = re.compile(r"/events/")
 _SHOW_BOX_RE = re.compile(r"^Show_show__")
+_TAGS_RE = re.compile(r"^EventShowsList_tags__")
 
 
 def day_url(day: date) -> str:
@@ -50,16 +51,19 @@ def parse(raw: list[tuple[str, str]], days: list[date]) -> list[Screening]:
     the nearest shows of neighbouring days on a day page), so screenings are NOT cut
     by `days` here — `days` is kept for the adapter contract; the pipeline applies the
     window itself. The `facility` parameter was validated as not required, so pages
-    fetched without it parse the same.
+    fetched without it parse the same. Duplicates (a list show repeated by the
+    gallery-slider without its hall/price) collapse to the first document occurrence
+    by (start, title) — the id now varies with `hall`, so the identity is kept here.
     """
-    seen: set[str] = set()
+    seen: set[tuple[datetime, str]] = set()
     out: list[Screening] = []
     for label, body in raw:
         source_url = _source_url(label)
         for screening in _page_screenings(body, source_url):
-            if screening.source_id in seen:
+            key = (screening.start, screening.title)
+            if key in seen:
                 continue
-            seen.add(screening.source_id)
+            seen.add(key)
             out.append(screening)
     return out
 
@@ -123,12 +127,13 @@ def _screening(anchor: Tag, match: re.Match, source_url: str) -> Screening | Non
         log.debug("rodina: anchor %r has no enclosing event block with a heading, skipped", anchor.get("href"))
         return None
     price = _price(show)
+    hall = _hall(show)
     return Screening(
         venue=ID,
-        source_id=synthetic_id(ID, start, title, None),
+        source_id=synthetic_id(ID, start, title, hall),
         title=title,
         start=start,
-        hall=None,
+        hall=hall,
         price_min=price,
         price_max=price,
         language=_language(show),
@@ -202,4 +207,22 @@ def _language(show: Tag | None) -> str | None:
         return "SUB"
     if show.find("span", attrs={"data-format": "SUB"}):
         return "SUB"
+    return None
+
+
+def _hall(show: Tag | None) -> str | None:
+    """Hall of the show when the schedule-list wrapper renders it in a tags sibling
+    («Большой зал», «Малый 2 зал»); the gallery-slider blocks have no such sibling,
+    so their shows stay hall=None. Only texts naming a «зал» are accepted."""
+    if show is None:
+        return None
+    parent = show.parent
+    if parent is None:
+        return None
+    for sibling in parent.find_all("div", recursive=False):
+        classes = sibling.get("class") or []
+        if not any(_TAGS_RE.match(str(token)) for token in classes):
+            continue
+        text = " ".join(sibling.get_text(" ", strip=True).split())
+        return text if "зал" in text else None
     return None

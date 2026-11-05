@@ -1,0 +1,75 @@
+# The reachability probe behind design D2 (day-1 decision rule): can an Actions
+# runner reach the six hosts? Every line prints "<name> <http_code> <bytes> <time>s"
+# from the runner's own IP, which is the whole point — a laptop probe will not
+# answer for the datacenter IPs.
+#
+# Decision rule (kept in comments per the design): six 200 answers with plausible
+# sizes → digest.yml (Actions) stays the primary scheduler; any 4xx/5xx or a
+# near-zero size → run the identical command from local cron on the owner's
+# machine. The lenfilm line additionally requires the body to contain "token"
+# (the /app endpoint bootstraps the playbill credentials) — HTTP 200 without it
+# means the API shape changed.
+name: probe
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 5 * * 1"   # Mondays 08:00 MSK — a periodic re-run of the rule
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Probe the six hosts
+        run: |
+          # A fixed sample day: the probe measures reachability, not schedule freshness.
+          D=2026-11-05
+          SLASHED=$( echo "$D" | tr - / )
+          UA="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0 Safari/537.36"
+
+          echo "probe started $( date -u '+%F %T UTC' ) from an Actions runner"
+
+          # domkino — the www. host is required (the apex answers 301)
+          curl -sS -o /dev/null -m 30 -A "$UA" \
+            -w "domkino %{http_code} %{size_download}B %{time_total}s\n" \
+            "https://www.domkino.spb.ru/schedule/$SLASHED/"
+
+          # rodina — deliberately WITHOUT the facility parameter (stage-2 finding)
+          curl -sS -o /dev/null -m 30 -A "$UA" \
+            -w "rodina %{http_code} %{size_download}B %{time_total}s\n" \
+            "https://rodinakino.ru/?date=$SLASHED"
+
+          # poravkino — the playbill JSON the digest really uses
+          curl -sS -o /dev/null -m 30 \
+            -w "poravkino %{http_code} %{size_download}B %{time_total}s\n" \
+            "https://poravkino.ru/api/schedule?date=$D"
+
+          # avrora — playbill through its public token (published in the site shell;
+          # the known constant is the fallback of the adapter)
+          TOKEN=$( curl -sS -m 30 -A "$UA" https://avrora.spb.ru/ \
+                   | grep -oE 'kinositeSettings=\{token:"[A-Za-z0-9]+"?' | head -1 \
+                   | sed -E 's/.*token:"//' | tr -d '"}{}' )
+          echo "avrora token extracted: ${#TOKEN} chars"
+          curl -sS -o /dev/null -m 30 \
+            -H "X-Application-Token: ${TOKEN:-Q4uVHhNkaQiQ1SvI098z5KEtwHT5AQII}" -H "X-Platform: widget" \
+            -w "avrora %{http_code} %{size_download}B %{time_total}s\n" \
+            "https://kinokassa.kinoplan24.ru/api/v2/release/playbill?city_id=2&date=$D"
+
+          # outcinema — the Tilda store feed the adapter fetches
+          curl -sS -o /dev/null -m 30 \
+            -H "Origin: https://outcinema.ru" -H "Referer: https://outcinema.ru/" \
+            -w "outcinema %{http_code} %{size_download}B %{time_total}s\n" \
+            "https://store.tildaapi.com/api/getproductslist/?storepartuid=292580911081&recid=496330277&c=$( date +%s%3N )&getparts=true&getoptions=true"
+
+          # lenfilm — /app bootstraps the account token; expect 200 AND a "token" substring
+          LENFILM=$( curl -sS -m 30 -H "X-Platform: widget" \
+                     -w '\n%{http_code} %{size_download}' \
+                     "https://kinokassa.kinoplan24.ru/api/v2/app?with_cities=true&cinema_id=2387" )
+          LENFILM_CODE=$( echo "$LENFILM" | tail -1 | cut -d' ' -f1 )
+          LENFILM_SIZE=$( echo "$LENFILM" | tail -1 | cut -d' ' -f2 )
+          if echo "$LENFILM" | head -n -1 | grep -q token; then
+            echo "lenfilm $LENFILM_CODE ${LENFILM_SIZE}B token-present"
+          else
+            echo "lenfilm $LENFILM_CODE ${LENFILM_SIZE}B token-MISSING — lenfilm probe FAILED"
+          fi

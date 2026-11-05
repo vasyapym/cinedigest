@@ -67,3 +67,14 @@ KINOKASSA_API_URL = "https://kinokassa.kinoplan24.ru"
 # Every lenfilm screening links here; per-seance purchase URLs are not verified.
 LENFILM_SITE_URL = "https://www.lenfilm.ru/service/Kinoteatr-Lenfilm/"
 LENFILM_CINEMA_ID = 2387
+
+# stage 3 — render and delivery
+# index.html byte budget: log.info the size, log.warning at the threshold.
+RENDER_WARN_BYTES = 400 * 1024
+# Telegram push (both env names must be set; otherwise the push is skipped).
+TELEGRAM_BOT_TOKEN_ENV = "TELEGRAM_BOT_TOKEN"
+TELEGRAM_CHAT_ID_ENV = "TELEGRAM_CHAT_ID"
+# Optional trailing URL of the rendered page in the Telegram message.
+PAGE_URL_ENV = "CINEDIGEST_PAGE_URL"
+# Optional «код» link in the page footer.
+REPO_URL_ENV = "CINEDIGEST_REPO_URL"

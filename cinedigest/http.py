@@ -3,12 +3,14 @@ from __future__ import annotations
 
 import logging
 import re
+import ssl
 import time
 from pathlib import Path
 from typing import Callable
 from urllib.parse import urlsplit
 
 import requests
+from requests.adapters import HTTPAdapter
 
 from . import config
 
@@ -19,6 +21,23 @@ Sink = Callable[[str, str, str], None]
 
 _CHARSET_RE = re.compile(r"charset=([\w\-]+)", re.IGNORECASE)
 _UNSAFE_FILENAME_RE = re.compile(r"[^\w.\-]+")
+
+_WEAK_DH_HOSTS = ("www.domkino.spb.ru", "domkino.spb.ru")
+
+
+class _WeakDHAdapter(HTTPAdapter):
+    """TLS adapter for hosts whose servers still offer small DH keys (e.g. Dom Kino).
+
+    OpenSSL 3.x rejects the handshake with DH_KEY_TOO_SMALL at the default security
+    level; SECLEVEL=1 accepts it. Mounted ONLY for the domkino hosts, so every other
+    venue keeps the strict default posture.
+    """
+
+    def init_poolmanager(self, *args: object, **kwargs: object) -> None:
+        context = ssl.create_default_context()
+        context.set_ciphers("DEFAULT@SECLEVEL=1")
+        kwargs["ssl_context"] = context
+        super().init_poolmanager(*args, **kwargs)
 
 
 class HttpError(Exception):
@@ -47,6 +66,9 @@ class Http:
         read_timeout: float = config.READ_TIMEOUT_SECONDS,
     ):
         self._session = session if session is not None else requests.Session()
+        if session is None:  # the strict posture stays intact everywhere else
+            for host in _WEAK_DH_HOSTS:
+                self._session.mount(f"https://{host}/", _WeakDHAdapter())
         self.sink = sink
         self._sleep = sleep
         self._clock = clock
