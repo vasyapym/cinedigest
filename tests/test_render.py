@@ -72,9 +72,9 @@ def test_filter_css_and_data_attributes_survive():
 
 
 def test_posters_render_with_exact_attribution():
-    urls = {"морозко|1964": f"{config.TMDB_IMAGE_BASE_URL}w185/m.jpg"}
-    html = render.render(_snapshot(), urls)
-    assert html.count('<img class="p" src="https://image.tmdb.org/t/p/w185/m.jpg" alt="" width="46" height="69" loading="lazy" decoding="async">') == 2
+    files = {"морозко|1964": "posters/m.jpg"}  # локальная копия: относительный путь, без CDN
+    html = render.render(_snapshot(), files)
+    assert html.count('<img class="p" src="posters/m.jpg" alt="" width="46" height="69" loading="lazy" decoding="async">') == 2
     assert NOTICE in html
     assert f'<a href="{config.TMDB_SITE_URL}"><img src="tmdb.svg" alt="TMDB"></a>' in html
     plain = render.render(_snapshot())
@@ -92,8 +92,19 @@ def test_write_creates_day_pages_prunes_old_ones_and_uses_cache(tmp_path):
     docs.mkdir()
     (docs / "2026-10-01.html").write_text("old", encoding="utf-8")
     (docs / "notes.html").write_text("keep", encoding="utf-8")
-    posters.save_cache(docs / config.POSTERS_FILENAME,
-                       {"морозко|1964": {"tmdb_id": 1, "poster_path": "/m.jpg", "resolved_at": "2026-11-05"}}, TODAY)
+    (docs / config.POSTERS_DIRNAME).mkdir()
+    (docs / config.POSTERS_DIRNAME / "m.jpg").write_bytes(b"m")
+    (docs / config.POSTERS_DIRNAME / "l.jpg").write_bytes(b"l")
+    (docs / config.POSTERS_DIRNAME / "old.jpg").write_bytes(b"no-entry-references-it")
+    posters.save_cache(
+        docs / config.POSTERS_FILENAME,
+        # морозко — обычный хит с байтовыми полями; «Лето в Бадене» — запись того же вида,
+        # которую _attach_bytes создаёт для скачанных байтов ручного постер-овервайда
+        {"морозко|1964": {"tmdb_id": 1, "poster_path": "/m.jpg", "resolved_at": "2026-11-05",
+                          "file": "m.jpg", "file_downloaded_at": "2026-11-05"},
+         "лето в бадене|2025": {"tmdb_id": None, "poster_path": None, "resolved_at": "2026-11-05",
+                                "file": "l.jpg", "file_downloaded_at": "2026-11-05"}},
+        TODAY)
     (docs / config.POSTER_OVERRIDES_FILENAME).write_text(json.dumps({"Лето в Бадене|2025": {"poster_path": "/l.jpg"}}),
                                                          encoding="utf-8")
     html_path, digest_path = deliver.write(_snapshot(), tmp_path)
@@ -101,9 +112,13 @@ def test_write_creates_day_pages_prunes_old_ones_and_uses_cache(tmp_path):
     assert not (docs / "2026-10-01.html").exists() and (docs / "notes.html").exists()
     assert all((docs / f"2026-11-{d:02d}.html").is_file() for d in range(5, 12))
     index = html_path.read_text(encoding="utf-8")
-    assert "/w185/m.jpg" in index and "/w185/l.jpg" in index and NOTICE in index
+    assert 'src="posters/m.jpg"' in index and 'src="posters/l.jpg"' in index and NOTICE in index
+    assert "image.tmdb.org" not in index
+    assert not (docs / config.POSTERS_DIRNAME / "old.jpg").exists()  # осиротевший файл подчищен
     digest = digest_path.read_text(encoding="utf-8")
-    assert "image.tmdb.org" not in digest and "TMDB" not in digest
+    assert "image.tmdb.org" not in digest and "TMDB" not in digest and "posters/" not in digest
+    telegram = deliver.telegram_text(_snapshot(), page_url=None)
+    assert "posters/" not in telegram and "image.tmdb.org" not in telegram and "TMDB" not in telegram
 
 
 def test_real_snapshot_pages_fit_the_budget():
@@ -111,6 +126,6 @@ def test_real_snapshot_pages_fit_the_budget():
     if not path.is_file():
         pytest.skip("no committed snapshot")
     from cinedigest.pipeline import load_snapshot
-    pages = render.render_pages(load_snapshot(path), {"x|1": "https://image.tmdb.org/t/p/w185/x.jpg"})
+    pages = render.render_pages(load_snapshot(path), {"x|1": "posters/x.jpg"})
     for name, html in pages.items():
         assert len(html.encode("utf-8")) < config.RENDER_WARN_BYTES, name

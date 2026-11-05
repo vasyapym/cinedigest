@@ -24,10 +24,15 @@ DAY_PAGE_GLOB = "????-??-??.html"
 
 def write(snapshot: Snapshot, out_dir: Path | str) -> tuple[Path, Path]:
     """Render index.html, one page per window day and digest.txt under <out_dir>/docs/;
-    return (index path, digest path). Posters come from the committed cache only — no network."""
+    return (index path, digest path). Posters come from the committed cache only — no network;
+    before rendering the expired image files and orphans under docs/posters/ are pruned, so a
+    page can never point at a file that does not exist."""
     docs = Path(out_dir) / config.DOCS_DIRNAME
     docs.mkdir(parents=True, exist_ok=True)
-    pages = render_pages(snapshot, posters.cached_urls(snapshot.screenings, docs))
+    today = snapshot.window_start
+    posters.cleanup(docs / config.POSTERS_DIRNAME,
+                    posters.prune(posters.load_cache(docs / config.POSTERS_FILENAME), today), today)
+    pages = render_pages(snapshot, posters.cached_urls(snapshot.screenings, docs, today))
     for name, html in pages.items():
         (docs / name).write_text(html, encoding="utf-8")
     prune_day_pages(docs, set(pages))

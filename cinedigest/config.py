@@ -117,9 +117,16 @@ TMDB_LOGO_FILENAME = "tmdb.svg"
 POSTERS_FILENAME = "posters.json"
 # docs/posters-overrides.json — hand-made pins: null | {"tmdb_id": N} | {"poster_path": "/x.jpg"}.
 POSTER_OVERRIDES_FILENAME = "posters-overrides.json"
+# docs/posters/ — the local byte copies: the page serves posters/<basename> from here;
+# no CDN URL is ever rendered (a missing or expired local file renders no poster at all).
+POSTERS_DIRNAME = "posters"
 # Per-run bounds (first fill of the current window ≈ 117 films).
 TMDB_MAX_LOOKUPS_PER_RUN = 150
 TMDB_FAILURE_LIMIT = 3
+# Separate per-run bounds of the BYTE stage (downloads dedupe by validated poster path;
+# the first download fill ≈ the 83 metadata-only cache entries, then a handful per new film).
+TMDB_MAX_DOWNLOADS_PER_RUN = 150
+TMDB_DOWNLOAD_FAILURE_LIMIT = 3
 # Cache clause («no longer than 6 months»): hits re-resolved after 150 days, misses retried
 # after 14; anything older than 180 days is dropped on save even when TMDB was unreachable.
 TMDB_REFRESH_DAYS = 150

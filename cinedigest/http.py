@@ -89,6 +89,34 @@ class Http:
         label: str = "",
     ) -> str:
         """Return the decoded body of a successful answer; raise HttpError otherwise."""
+        body = _decode(self._request(url, params=params, headers=headers))
+        self._archive(venue, label, body)
+        return body
+
+    def get_bytes(
+        self,
+        url: str,
+        *,
+        params: dict | None = None,
+        headers: dict | None = None,
+        venue: str = "",
+        label: str = "",
+    ) -> bytes:
+        """Return response.content of a successful answer unchanged: no decoding (image data
+        is not text) and no archive sink (the raw-body snapshots stay text-only)."""
+        return self._request(url, params=params, headers=headers).content
+
+    def _request(
+        self,
+        url: str,
+        *,
+        params: dict | None = None,
+        headers: dict | None = None,
+    ) -> requests.Response:
+        """The machinery both get() and get_bytes() share: merged headers, per-host pause,
+        timeouts, retries. HttpError on a 4xx immediately, on 5xx / transport errors after
+        the retries are exhausted; the caller unpacks the untouched response itself —
+        get() decodes the body, get_bytes() takes response.content as is."""
         merged_headers = {"User-Agent": config.USER_AGENT, "Accept-Language": config.ACCEPT_LANGUAGE}
         if headers:
             merged_headers.update(headers)
@@ -113,9 +141,7 @@ class Http:
                 elif status >= 400:
                     raise HttpError(f"HTTP {status}", url=url, status=status)
                 else:
-                    body = _decode(response)
-                    self._archive(venue, label, body)
-                    return body
+                    return response
             if attempt < attempts and self._backoff:
                 delay = self._backoff[min(attempt - 1, len(self._backoff) - 1)]
                 if delay > 0:
