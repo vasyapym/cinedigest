@@ -1,5 +1,5 @@
-"""Мираж на Большом (www.mirage.ru): the city-wide per-day schedule page of the chain,
-cut to the block of branch 1 («НА БОЛЬШОМ», Большой пр. П.С., 35А). One request per window day."""
+"""Мираж на Большом (www.mirage.ru): the per-day schedule page FILTERED TO BRANCH 1
+(«НА БОЛЬШОМ», Большой пр. П.С., 35А): /spb/schedule/{DD.MM.YYYY}/cinema/1/. One request per window day."""
 from __future__ import annotations
 
 import logging
@@ -30,7 +30,9 @@ _PLAIN_FORMATS = {"2D"}
 
 
 def day_url(day: date) -> str:
-    return f"{config.MIRAGE_SITE_URL}spb/schedule/{day.strftime('%d.%m.%Y')}/"
+    """The date comes FIRST, the branch filter second: the bare /spb/schedule/cinema/1/
+    form ignores any trailing date and always serves today (validated 2026-11-05)."""
+    return f"{config.MIRAGE_SITE_URL}spb/schedule/{day.strftime('%d.%m.%Y')}/cinema/{config.MIRAGE_BRANCH_ID}/"
 
 
 def fetch(http, days: list[date]) -> list[tuple[str, str]]:

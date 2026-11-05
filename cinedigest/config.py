@@ -65,8 +65,12 @@ RODINA_MAX_EVENT_PAGES = 60
 RODINA_EVENT_FAILURE_LIMIT = 3
 
 # stage 4 — mirage — Мираж на Большом (www.mirage.ru; the apex 301-redirects to www)
-# City-wide per-day page: {MIRAGE_SITE_URL}spb/schedule/{DD.MM.YYYY}/ — all SPb branches on
-# one page; the adapter keeps the block of one branch only (picked by id, name as fallback).
+# Per-day schedule FILTERED TO ONE BRANCH: {MIRAGE_SITE_URL}spb/schedule/{DD.MM.YYYY}/cinema/{branch}/
+# — date FIRST, branch id second (the /spb/schedule/cinema/1/ form without a date always
+# renders TODAY and ignores the date part: validated 2026-11-05). The city page
+# /spb/schedule/{DD.MM.YYYY}/ merges every branch into ONE .session-box under the first
+# branch's heading, so a city-page branch-1 slice over-counts ~9× (259 vs 29 on 05.11):
+# the branch-filtered URL is the source of truth for «НА БОЛЬШОМ».
 MIRAGE_SITE_URL = "https://www.mirage.ru/"
 MIRAGE_BRANCH_ID = 1
 MIRAGE_BRANCH_NAME = "НА БОЛЬШОМ"

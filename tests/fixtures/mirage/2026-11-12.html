@@ -87,7 +87,37 @@
 <div class="viewport-wrapper">
 <header class="header">
 	<div class="container">
-		
+					<a href="https://www.mirage.ru/film/7651/zver-.htm" class="top-bnr-wrapper">
+				<img src="/images/background/big/r227.jpg" alt="" class="top_ban_show">
+				<img src="/images/background/big/rm227.jpg" alt="" class="top_ban_m_show">
+			</a>
+            <style>
+                @media (max-width: 767px) {
+                    .side-nav ul {
+                        padding-top: 100px;
+                    }
+                }
+                @media (min-width: 768px) {
+                    .side-nav ul {
+                        padding-top: 150px;
+                    }
+	                .top_ban_m_show {
+		                display: none;
+	                }
+                    .top_ban_show {
+                        display: block;
+                    }
+                }
+                @media (max-width: 767px) {
+	                .top_ban_m_show {
+                        display: block;
+	                }
+                    .top_ban_show {
+                        display: none;
+                    }
+                }
+                </style>
+			
 		<div class="header-wrapper d-flex align-items-center">
 			<div class="header-logo">
 				<a href="/"><img src="/i/logo.svg" alt=""></a>
@@ -202,10 +232,12 @@
 		        <div class="head active">
 			        Кинотеатры
 
-			        <span class="total">9</span>
+			        <span class="total">1 из 9</span>
 
 		        </div>
-		        		        <div class="content" style="display: block;">
+		        			        &nbsp;&nbsp;&nbsp;
+			        <span style="cursor: pointer" onclick="clear_fill('cinema');">X</span>
+			        		        <div class="content" style="display: block;">
 			        <div id="fiL_uncheck" class="checkbox-item fiL_uncheck">
 				        <label>
 					        Отменить выбор
@@ -224,49 +256,49 @@
 				        </div>
 				        				        <div class="checkbox-item">
 					        <label>
-						        <input class="cinn" type="checkbox" name="cinema_id[]" value="27" checked>
+						        <input class="cinn" type="checkbox" name="cinema_id[]" value="27">
 						        <span class="checkbox-custom"></span>
 						        ПИК					        </label>
 				        </div>
 				        				        <div class="checkbox-item">
 					        <label>
-						        <input class="cinn" type="checkbox" name="cinema_id[]" value="14" checked>
+						        <input class="cinn" type="checkbox" name="cinema_id[]" value="14">
 						        <span class="checkbox-custom"></span>
 						        ЕВРОПОЛИС (НА РЕКОНСТРУКЦИИ)					        </label>
 				        </div>
 				        				        <div class="checkbox-item">
 					        <label>
-						        <input class="cinn" type="checkbox" name="cinema_id[]" value="10" checked>
+						        <input class="cinn" type="checkbox" name="cinema_id[]" value="10">
 						        <span class="checkbox-custom"></span>
 						        БАЛКАНИЯ NOVA-2					        </label>
 				        </div>
 				        				        <div class="checkbox-item">
 					        <label>
-						        <input class="cinn" type="checkbox" name="cinema_id[]" value="4" checked>
+						        <input class="cinn" type="checkbox" name="cinema_id[]" value="4">
 						        <span class="checkbox-custom"></span>
 						        ОЗЕРКИ					        </label>
 				        </div>
 				        				        <div class="checkbox-item">
 					        <label>
-						        <input class="cinn" type="checkbox" name="cinema_id[]" value="13" checked>
+						        <input class="cinn" type="checkbox" name="cinema_id[]" value="13">
 						        <span class="checkbox-custom"></span>
 						        LEOMALL (Монпансье)					        </label>
 				        </div>
 				        				        <div class="checkbox-item">
 					        <label>
-						        <input class="cinn" type="checkbox" name="cinema_id[]" value="8" checked>
+						        <input class="cinn" type="checkbox" name="cinema_id[]" value="8">
 						        <span class="checkbox-custom"></span>
 						        МЕЖДУНАРОДНЫЙ					        </label>
 				        </div>
 				        				        <div class="checkbox-item">
 					        <label>
-						        <input class="cinn" type="checkbox" name="cinema_id[]" value="2" checked>
+						        <input class="cinn" type="checkbox" name="cinema_id[]" value="2">
 						        <span class="checkbox-custom"></span>
 						        ГУЛЛИВЕР					        </label>
 				        </div>
 				        				        <div class="checkbox-item">
 					        <label>
-						        <input class="cinn" type="checkbox" name="cinema_id[]" value="11" checked>
+						        <input class="cinn" type="checkbox" name="cinema_id[]" value="11">
 						        <span class="checkbox-custom"></span>
 						        ОКА г. Колпино					        </label>
 				        </div>
@@ -499,7 +531,7 @@
         Написать отзыв
     </div>
     <form name="add_comment" method="post" action="?" enctype="application/x-www-form-urlencoded">
-        <input type="hidden" name="add_review_all" value="6aec3f7242c74">
+        <input type="hidden" name="add_review_all" value="6aec5c819399f">
         <div class="form-item">
             <input type="text" name="surname" placeholder="Как вас зовут?" required>
         </div>

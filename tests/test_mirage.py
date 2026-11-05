@@ -1,4 +1,4 @@
-"""Мираж на Большом: сохранённые страницы сети, выбор филиала, дата, билеты и формы пустого дня."""
+"""Мираж на Большом: веточная страница-расписание (/spb/schedule/{день}/cinema/1/), выбор филиала, дата, билеты и формы пустого дня."""
 from __future__ import annotations
 
 import re
@@ -11,23 +11,28 @@ from cinedigest.model import MSK, synthetic_id
 from cinedigest.venues import mirage
 
 FIXTURES = Path(__file__).parent / "fixtures" / "mirage"
-DAY = "2026-11-07.html"
-PREVIOUS_DAY = "2026-11-06.html"
-DAY_URL = "https://www.mirage.ru/spb/schedule/07.11.2026/"
-WINDOW = [date(2026, 11, 7)]
+DAY = "2026-11-06.html"
+PREVIOUS_DAY = "2026-11-05.html"
+EVEN_LATER_DAY = "2026-11-07.html"
+FAR_DAY = "2026-11-12.html"
+DAY_URL = "https://www.mirage.ru/spb/schedule/06.11.2026/cinema/1/"
+WINDOW = [date(2026, 11, 6)]
 TICKET = "00000000-0000-4000-8000-000000000001"
 OTHER_TICKET = "00000000-0000-4000-8000-000000000002"
 UUID_RE = re.compile(
     r"[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-"
     r"[0-9a-fA-F]{4}-[0-9a-fA-F]{12}"
 )
+# Залы настоящей ветки 1 (Большой пр. П.С.): №1…№7; 9–11 и «№8 1/2» живут у других веток,
+# и городская страница (где все ветки сливаются в один .session-box) подмешивала их к нам.
+BRANCH1_HALLS = {"1", "2", "3", "4", "5", "6", "7"}
 
 
 def _body(name: str) -> str:
     return (FIXTURES / name).read_text(encoding="utf-8")
 
 
-def _parse(body: str, label: str = "2026-11-07"):
+def _parse(body: str, label: str = "2026-11-06"):
     return mirage.parse([(label, body)], WINDOW)
 
 
@@ -72,7 +77,7 @@ def _branch(content: str = "", *, name: str = "НА БОЛЬШОМ",
     )
 
 
-def _page(*boxes: str, active: str = "07.11.2026") -> str:
+def _page(*boxes: str, active: str = "06.11.2026") -> str:
     return (
         "<html><body>"
         f'<a class="date-tab active" href="/spb/schedule/{active}/">{active}</a>'
@@ -82,9 +87,9 @@ def _page(*boxes: str, active: str = "07.11.2026") -> str:
 
 
 def test_day_url_pattern():
-    assert mirage.day_url(date(2026, 11, 7)) == DAY_URL
+    assert mirage.day_url(date(2026, 11, 6)) == DAY_URL
     assert mirage.day_url(date(2026, 1, 2)) == (
-        "https://www.mirage.ru/spb/schedule/02.01.2026/"
+        "https://www.mirage.ru/spb/schedule/02.01.2026/cinema/1/"
     )
 
 
@@ -97,42 +102,37 @@ def test_fetch_requests_one_page_per_day_with_labels():
             self.calls.append((url, venue, label))
             return f"body:{label}"
 
-    days = [date(2026, 11, 6), date(2026, 11, 7)]
+    days = [date(2026, 11, 5), date(2026, 11, 6)]
     http = FakeHttp()
     assert mirage.fetch(http, days) == [
+        ("2026-11-05", "body:2026-11-05"),
         ("2026-11-06", "body:2026-11-06"),
-        ("2026-11-07", "body:2026-11-07"),
     ]
     assert http.calls == [
         (
-            "https://www.mirage.ru/spb/schedule/06.11.2026/",
-            "mirage", "2026-11-06",
+            "https://www.mirage.ru/spb/schedule/05.11.2026/cinema/1/",
+            "mirage", "2026-11-05",
         ),
-        (DAY_URL, "mirage", "2026-11-07"),
+        (DAY_URL, "mirage", "2026-11-06"),
     ]
 
 
-def test_day_fixture_parses_308_branch_rows_with_ticket_ids_and_halls():
+def test_day_fixture_parses_36_branch_rows_with_ticket_ids_and_halls():
     items = _day_items()
-    assert len(items) == 308
-    assert len({s.source_id for s in items}) == 308
+    assert len(items) == 36
+    assert len({s.source_id for s in items}) == 36
     assert Counter(s.hall for s in items) == {
-        "1": 41,
-        "4": 44,
-        "3": 38,
-        "2": 44,
-        "5": 42,
-        "6": 32,
-        "7": 29,
-        "10": 8,
-        "9": 10,
-        "11": 4,
-        "8": 10,
-        "Зал №8 1/2": 6,
+        "3": 6,
+        "4": 6,
+        "1": 5,
+        "2": 5,
+        "6": 5,
+        "7": 5,
+        "5": 4,
     }
     for screening in items:
         assert screening.venue == "mirage"
-        assert screening.day == date(2026, 11, 7)
+        assert screening.day == date(2026, 11, 6)
         assert screening.start.tzinfo is MSK
         assert screening.source_url == DAY_URL
         assert UUID_RE.fullmatch(screening.source_id)
@@ -143,6 +143,9 @@ def test_day_fixture_parses_308_branch_rows_with_ticket_ids_and_halls():
         assert screening.price_max is None
         assert screening.language is None
         assert screening.tags == ()
+    # Защита от смешивания веток: у ветки 1 нет залов №8 1/2 и №9–11, они жили у других
+    # веток и городская страница подмешивала их в один .session-box (инцидент 2026-11-05).
+    assert {s.hall for s in items} <= BRANCH1_HALLS
 
 
 def test_first_three_fixture_sessions_preserve_document_order_and_facts():
@@ -183,39 +186,41 @@ def test_first_three_fixture_sessions_preserve_document_order_and_facts():
 def test_fixture_price_raw_presence_absence_and_multivalue_text():
     items = _day_items()
     with_raw = [s for s in items if "price_raw" in s.extra]
-    without_raw = [s for s in items if "price_raw" not in s.extra]
-    assert len(with_raw) == 277
-    assert len(without_raw) == 31
     values = {s.extra["price_raw"] for s in with_raw}
-    assert {
-        "30000₽", "40000₽", "55000₽", "450₽ 400₽ 2400₽ 3600₽",
-    } <= values
+    assert len(with_raw) == 5
+    assert {"30000₽", "40000₽", "55000₽"} <= values
     assert all(isinstance(value, str) and value for value in values)
     assert all(s.price_min is None and s.price_max is None for s in items)
 
+    # 05.11 несёт многоитарифную строку цен в одном сеансе — она хранится дословно
+    # (окно этого теста — 06.11, поэтому парсим тело 05.11 под его собственным днём).
+    earlier = mirage.parse([("2026-11-05", _body(PREVIOUS_DAY))], [date(2026, 11, 5)])
+    raw05 = [s.extra["price_raw"] for s in earlier if "price_raw" in s.extra]
+    assert "500₽ 550₽ 1700₽ 2550₽" in raw05
+
 
 def test_wrong_date_fixture_is_skipped_and_warns():
-    raw = [("2026-11-07", _body(PREVIOUS_DAY))]
+    raw = [("2026-11-06", _body(PREVIOUS_DAY))]
     assert mirage.parse(raw, WINDOW) == []
     assert mirage.warning(raw) == (
-        "сайт отдал другую дату вместо 07.11 — расписания на эти дни ещё нет"
+        "сайт отдал другую дату вместо 06.11 — расписания на эти дни ещё нет"
     )
 
 
 def test_each_real_fixture_parses_under_its_own_date_without_warning():
-    for label, filename in [
-        ("2026-11-06", PREVIOUS_DAY),
-        ("2026-11-07", DAY),
+    for label, filename, expected in [
+        ("2026-11-05", PREVIOUS_DAY, 29),
+        ("2026-11-06", DAY, 36),
+        ("2026-11-07", EVEN_LATER_DAY, 36),
     ]:
         day = date.fromisoformat(label)
         raw = [(label, _body(filename))]
         assert mirage._active_tab_date(mirage._soup(raw[0][1])) == day
         items = mirage.parse(raw, [day])
-        assert items
+        assert len(items) == expected
         assert all(s.day == day for s in items)
+        assert {s.hall for s in items} <= BRANCH1_HALLS
         assert mirage.warning(raw) is None
-        if filename == DAY:
-            assert len(items) == 308
 
 
 def test_branch_selection_uses_id_before_position_or_name():
@@ -371,13 +376,13 @@ def test_broken_sessions_fallback_id_deduplication_and_window_filter():
     items = _parse(body)
     assert len(items) == 1
     screening = items[0]
-    assert screening.start == datetime(2026, 11, 7, 12, 30, tzinfo=MSK)
+    assert screening.start == datetime(2026, 11, 6, 12, 30, tzinfo=MSK)
     assert screening.source_id == synthetic_id(
         "mirage", screening.start, screening.title, "2",
     )
     assert screening.url is None
 
-    raw = [("2026-11-07", body), ("2026-11-07", body)]
+    raw = [("2026-11-06", body), ("2026-11-06", body)]
     assert mirage.parse(raw, WINDOW) == items
     assert mirage.parse(raw, [date(2026, 11, 8)]) == []
     assert mirage.parse([("not-a-date", body)], WINDOW) == []
@@ -386,13 +391,11 @@ def test_broken_sessions_fallback_id_deduplication_and_window_filter():
 
 def test_far_future_day_is_a_schedule_shell_with_silent_zero():
     # День за пределами ~5 опубликованных вкладок: HTTP 200, настоящая страница
-    # расписания (h1 «Расписание…», навигация с датами и премьерными ссылками),
-    # но без активной вкладки, без сеансов и без распознаваемого блока филиала.
-    # Парс молчит: 0 строк без warning. legit_empty остаётся строгим — форма
-    # закладывает филиалы с потерянной ссылкой, что могло бы скрывать данные.
-    # Ложной тревоги нет: правило «подозрительного нуля» работает на уровне
-    # площадки, а первые дни окна всегда дают сеансы с опубликованных вкладок.
-    raw = [("2026-11-12", _body("2026-11-12.html"))]
+    # расписания, но без активной вкладки, без сеансов и без блока филиала.
+    # Парс молчит: 0 строк без warning; legit_empty остаётся строгим. Ложной
+    # тревоги нет: правило «подозрительного нуля» работает на уровне площадки,
+    # а первые дни окна дают сеансы с опубликованных вкладок.
+    raw = [("2026-11-12", _body(FAR_DAY))]
     assert mirage._active_tab_date(mirage._soup(raw[0][1])) is None
     assert mirage.parse(raw, [date(2026, 11, 12)]) == []
     assert mirage.warning(raw) is None
