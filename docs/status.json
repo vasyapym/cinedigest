@@ -1,0 +1,86 @@
+[
+  {
+    "venue": "domkino",
+    "ok": true,
+    "count": 53,
+    "fetched_at": "2026-11-05T12:31:50.486906+03:00",
+    "stale": false,
+    "suspicious": false,
+    "error": null,
+    "warning": null,
+    "requests": 7,
+    "seconds": 9.829
+  },
+  {
+    "venue": "rodina",
+    "ok": true,
+    "count": 117,
+    "fetched_at": "2026-11-05T12:33:02.403986+03:00",
+    "stale": false,
+    "suspicious": false,
+    "error": null,
+    "warning": null,
+    "requests": 23,
+    "seconds": 71.916
+  },
+  {
+    "venue": "avrora",
+    "ok": true,
+    "count": 41,
+    "fetched_at": "2026-11-05T12:33:11.787659+03:00",
+    "stale": false,
+    "suspicious": false,
+    "error": null,
+    "warning": null,
+    "requests": 8,
+    "seconds": 9.379
+  },
+  {
+    "venue": "poravkino",
+    "ok": true,
+    "count": 41,
+    "fetched_at": "2026-11-05T12:33:19.344920+03:00",
+    "stale": false,
+    "suspicious": false,
+    "error": null,
+    "warning": null,
+    "requests": 7,
+    "seconds": 7.557
+  },
+  {
+    "venue": "lenfilm",
+    "ok": true,
+    "count": 28,
+    "fetched_at": "2026-11-05T12:33:27.024066+03:00",
+    "stale": false,
+    "suspicious": false,
+    "error": null,
+    "warning": null,
+    "requests": 9,
+    "seconds": 7.679
+  },
+  {
+    "venue": "outcinema",
+    "ok": true,
+    "count": 11,
+    "fetched_at": "2026-11-05T12:33:27.295934+03:00",
+    "stale": false,
+    "suspicious": false,
+    "error": null,
+    "warning": null,
+    "requests": 1,
+    "seconds": 0.272
+  },
+  {
+    "venue": "mirage",
+    "ok": true,
+    "count": 1180,
+    "fetched_at": "2026-11-05T12:33:36.382572+03:00",
+    "stale": false,
+    "suspicious": false,
+    "error": null,
+    "warning": null,
+    "requests": 7,
+    "seconds": 9.086
+  }
+]
