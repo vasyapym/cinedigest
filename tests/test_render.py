@@ -3,6 +3,7 @@ from __future__ import annotations
 
 import logging
 from datetime import date, datetime
+from pathlib import Path
 
 from cinedigest import config, render
 from cinedigest.model import MSK, Screening, Snapshot, VenueStatus
@@ -140,3 +141,13 @@ def test_size_log_info_without_warning_under_threshold(caplog):
         render.render(_snapshot([]))
     assert "page weight budget exceeded" not in caplog.text
     assert "index.html:" in caplog.text
+
+
+def test_allday_toggle_selectors_beat_the_row_grid_rule():
+    """Regression: `.day{display:none}` once lost to the later same-specificity
+    `.r{display:grid}`, so daytime rows were always visible. The selector must stay
+    tied to `.list .r.day` (higher specificity) — a canary against reintroducing the bug."""
+    template = (Path(__file__).parent.parent / "cinedigest" / "templates" / "index.html.j2").read_text(encoding="utf-8")
+    assert ".list .r.day{display:none}" in template
+    assert "#allday:checked ~ main .list .r.day{display:grid}" in template
+    assert "\n  .day{display:none}" not in template
