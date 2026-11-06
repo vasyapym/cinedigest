@@ -1,6 +1,8 @@
 # The daily digest run: fetch all six venues, write the snapshot, the page and the digest.
 #
-# cron "0 6 * * *" = 09:00 MSK (UTC+3, no DST in Russia), plus a manual trigger.
+# cron "17 5 * * *" = 08:17 MSK (UTC+3): deliberately off the top of the hour —
+# GitHub Actions throttles schedules that fire on :00 and can silently skip
+# them (observed 2026-11-06: the 06:00 retrieval never registered at all).
 # The run exits 0 when every venue is ok, 2 when any venue failed (degraded,
 # incl. stale data carried over). A degraded run still commits docs/ (the page
 # must publish the honest banner), uploads the raw snapshots/ artifact for
