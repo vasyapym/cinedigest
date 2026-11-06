@@ -1,8 +1,10 @@
 # The daily digest run: fetch all six venues, write the snapshot, the page and the digest.
 #
-# cron "17 5 * * *" = 08:17 MSK (UTC+3): deliberately off the top of the hour —
-# GitHub Actions throttles schedules that fire on :00 and can silently skip
-# them (observed 2026-11-06: the 06:00 retrieval never registered at all).
+# cron "17 3/4/5 * * *" = 06:17/07:17/08:17 MSK (UTC+3): three wake-ups a morning, all
+# deliberately off the top of the hour — GitHub Actions throttles schedules that fire
+# on :00 and can silently skip them (observed 2026-11-06: the 06:00 retrieval never
+# registered at all). The first successful run of the day clears the stale-page banner;
+# the later ones refresh data. Owner asked for the triple.
 # The run exits 0 when every venue is ok, 2 when any venue failed (degraded,
 # incl. stale data carried over). A degraded run still commits docs/ (the page
 # must publish the honest banner), uploads the raw snapshots/ artifact for
@@ -15,7 +17,9 @@ name: digest
 
 on:
   schedule:
-    - cron: "0 6 * * *"
+    - cron: "17 3 * * *"
+    - cron: "17 4 * * *"
+    - cron: "17 5 * * *"
   workflow_dispatch:
 
 permissions:
