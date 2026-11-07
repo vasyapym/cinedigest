@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-07T12:38:34.411935+03:00",
+  "generated_at": "2026-11-07T13:16:58.884881+03:00",
   "window_start": "2026-11-07",
   "window_end": "2026-11-13",
   "statuses": [
@@ -7,85 +7,85 @@
       "venue": "domkino",
       "ok": true,
       "count": 102,
-      "fetched_at": "2026-11-07T12:38:52.135223+03:00",
+      "fetched_at": "2026-11-07T13:17:17.036348+03:00",
       "stale": false,
       "suspicious": false,
       "error": null,
       "warning": null,
       "requests": 7,
-      "seconds": 17.723
+      "seconds": 18.151
     },
     {
       "venue": "rodina",
       "ok": true,
-      "count": 118,
-      "fetched_at": "2026-11-07T12:39:42.160988+03:00",
+      "count": 117,
+      "fetched_at": "2026-11-07T13:18:03.032919+03:00",
       "stale": false,
       "suspicious": false,
       "error": null,
       "warning": null,
       "requests": 32,
-      "seconds": 50.026
+      "seconds": 45.997
     },
     {
       "venue": "avrora",
       "ok": true,
-      "count": 51,
-      "fetched_at": "2026-11-07T12:39:50.672805+03:00",
+      "count": 50,
+      "fetched_at": "2026-11-07T13:18:10.826239+03:00",
       "stale": false,
       "suspicious": false,
       "error": null,
       "warning": null,
       "requests": 8,
-      "seconds": 8.511
+      "seconds": 7.793
     },
     {
       "venue": "poravkino",
       "ok": true,
-      "count": 146,
-      "fetched_at": "2026-11-07T12:39:56.921336+03:00",
+      "count": 145,
+      "fetched_at": "2026-11-07T13:18:17.877541+03:00",
       "stale": false,
       "suspicious": false,
       "error": null,
       "warning": null,
       "requests": 7,
-      "seconds": 6.249
+      "seconds": 7.051
     },
     {
       "venue": "lenfilm",
       "ok": true,
       "count": 27,
-      "fetched_at": "2026-11-07T12:40:04.651657+03:00",
+      "fetched_at": "2026-11-07T13:18:25.195097+03:00",
       "stale": false,
       "suspicious": false,
       "error": null,
       "warning": null,
       "requests": 9,
-      "seconds": 7.73
+      "seconds": 7.318
     },
     {
       "venue": "outcinema",
       "ok": true,
       "count": 8,
-      "fetched_at": "2026-11-07T12:40:05.188649+03:00",
+      "fetched_at": "2026-11-07T13:18:25.605739+03:00",
       "stale": false,
       "suspicious": false,
       "error": null,
       "warning": null,
       "requests": 1,
-      "seconds": 0.537
+      "seconds": 0.411
     },
     {
       "venue": "mirage",
       "ok": true,
-      "count": 172,
-      "fetched_at": "2026-11-07T12:40:14.412081+03:00",
+      "count": 170,
+      "fetched_at": "2026-11-07T13:18:34.394695+03:00",
       "stale": false,
       "suspicious": false,
       "error": null,
       "warning": null,
       "requests": 7,
-      "seconds": 9.223
+      "seconds": 8.789
     }
   ],
   "screenings": [
@@ -279,53 +279,6 @@
       }
     },
     {
-      "venue": "mirage",
-      "source_id": "ccb782c1-2e6c-4812-8e17-16f7949d3a33",
-      "title": "Морозко",
-      "start": "2026-11-07T12:00:00+03:00",
-      "hall": "6",
-      "price_min": null,
-      "price_max": null,
-      "language": null,
-      "tags": [],
-      "url": "https://www.mirage.ru/ticket_new/ccb782c1-2e6c-4812-8e17-16f7949d3a33/",
-      "source_url": "https://www.mirage.ru/spb/schedule/07.11.2026/cinema/1/",
-      "extra": {
-        "genres": [
-          "фэнтези",
-          "семейный"
-        ],
-        "age": "6+",
-        "film_id": 7619
-      }
-    },
-    {
-      "venue": "rodina",
-      "source_id": "7a26b108fa95",
-      "title": "Сумерки. Сага. Затмение",
-      "start": "2026-11-07T12:25:00+03:00",
-      "hall": "Малый 2 зал",
-      "price_min": 250,
-      "price_max": 250,
-      "language": null,
-      "tags": [],
-      "url": "https://rodinakino.ru/events/sumerki-saga-zatmenie-2010",
-      "source_url": "https://rodinakino.ru/?date=2026/11/07",
-      "extra": {
-        "year": 2010,
-        "age": "18+",
-        "duration_min": 124,
-        "synopsis": "Белла пытается разобраться в своих чувствах к Эдварду и Джейкобу. Тем временем в Сиэтле таинственным образом исчезают люди, а армия новорожденных вампиров готовится к нападению. Чтобы защитить Беллу, Эдвард и Джейкоб вынуждены объединиться, несмотря на давнюю вражду между вампирами и оборотнями. Смогут ли они забыть…",
-        "director": "Дэвид Слэйд",
-        "genres": [
-          "мелодрама",
-          "фэнтези",
-          "триллер"
-        ],
-        "country": "США"
-      }
-    },
-    {
       "venue": "domkino",
       "source_id": "7fa9167ff241",
       "title": "Запределье (субтитры)",
@@ -347,31 +300,6 @@
         "genres": [
           "приключения"
         ]
-      }
-    },
-    {
-      "venue": "mirage",
-      "source_id": "1a3650ae-dfdd-3a21-4440-47ed2d89458f",
-      "title": "Остров забвения",
-      "start": "2026-11-07T12:30:00+03:00",
-      "hall": "7",
-      "price_min": null,
-      "price_max": null,
-      "language": null,
-      "tags": [],
-      "url": "https://www.mirage.ru/ticket_new/1a3650ae-dfdd-3a21-4440-47ed2d89458f/",
-      "source_url": "https://www.mirage.ru/spb/schedule/07.11.2026/cinema/1/",
-      "extra": {
-        "genres": [
-          "комедия",
-          "приключения",
-          "мультфильм",
-          "фэнтези",
-          "семейный"
-        ],
-        "age": "6+",
-        "price_raw": "30000₽",
-        "film_id": 7664
       }
     },
     {
@@ -423,35 +351,6 @@
       }
     },
     {
-      "venue": "poravkino",
-      "source_id": "43953",
-      "title": "Плетёный муж",
-      "start": "2026-11-07T12:45:00+03:00",
-      "hall": "VIP",
-      "price_min": 550,
-      "price_max": 550,
-      "language": null,
-      "tags": [],
-      "url": "https://poravkino.ru/",
-      "source_url": "https://poravkino.ru/api/schedule?date=2026-11-07",
-      "extra": {
-        "year": 2026,
-        "country": "США, Великобритания, Австралия",
-        "director": "Алекс Хьюстон Фишер, Элинор Уилсон",
-        "original_title": "Плетеный муж",
-        "duration_min": 110,
-        "age": 18,
-        "genres": [
-          "драма",
-          "комедия",
-          "мелодрама",
-          "фантастика",
-          "фэнтези"
-        ],
-        "is_pushkin": false
-      }
-    },
-    {
       "venue": "mirage",
       "source_id": "5d5dab74-8a12-4c90-ba9d-437e9f06e03e",
       "title": "Рождение империи",
@@ -493,31 +392,6 @@
         ],
         "age": "6+",
         "film_id": 7624
-      }
-    },
-    {
-      "venue": "avrora",
-      "source_id": "6ae9d4953f000087009ef321",
-      "title": "Лето в Бадене",
-      "start": "2026-11-07T13:10:00+03:00",
-      "hall": "Малый",
-      "price_min": 450,
-      "price_max": 450,
-      "language": null,
-      "tags": [],
-      "url": "https://avrora.spb.ru/",
-      "source_url": "https://kinokassa.kinoplan24.ru/api/v2/release/playbill?city_id=2&date=2026-11-07",
-      "extra": {
-        "release_id": 26051,
-        "year": 2026,
-        "duration_min": 73,
-        "age": "18+",
-        "genres": [
-          "драма"
-        ],
-        "country": "Россия",
-        "free_places": 93,
-        "online_sale": true
       }
     },
     {
@@ -691,7 +565,7 @@
           "криминальный триллер"
         ],
         "country": "Россия",
-        "free_places": 173,
+        "free_places": 171,
         "online_sale": true
       }
     },
@@ -771,7 +645,7 @@
           "комедия"
         ],
         "country": "США, Великобритания",
-        "free_places": 321,
+        "free_places": 313,
         "online_sale": true
       }
     },
@@ -969,7 +843,7 @@
           "драма"
         ],
         "country": "Франция",
-        "free_places": 56,
+        "free_places": 51,
         "online_sale": true
       }
     },
@@ -1126,7 +1000,7 @@
     },
     {
       "venue": "mirage",
-      "source_id": "e3cb00fe-2f6b-4e1a-8492-ee24674e8a0c",
+      "source_id": "bc2928957ae7",
       "title": "Одиссея",
       "start": "2026-11-07T15:15:00+03:00",
       "hall": "5",
@@ -1134,7 +1008,7 @@
       "price_max": null,
       "language": null,
       "tags": [],
-      "url": "https://www.mirage.ru/ticket_new/e3cb00fe-2f6b-4e1a-8492-ee24674e8a0c/",
+      "url": null,
       "source_url": "https://www.mirage.ru/spb/schedule/07.11.2026/cinema/1/",
       "extra": {
         "genres": [
@@ -1337,7 +1211,7 @@
           "историческая драма"
         ],
         "country": "Россия",
-        "free_places": 332,
+        "free_places": 328,
         "online_sale": true
       }
     },
@@ -1670,7 +1544,7 @@
           "комедия"
         ],
         "country": "США, Великобритания",
-        "free_places": 62,
+        "free_places": 58,
         "online_sale": true
       }
     },
@@ -1771,7 +1645,7 @@
           "драма"
         ],
         "country": "Россия",
-        "free_places": 42,
+        "free_places": 35,
         "online_sale": true
       }
     },
@@ -1947,7 +1821,7 @@
     },
     {
       "venue": "mirage",
-      "source_id": "56007356bfe6",
+      "source_id": "b967030b-5175-4ff3-ae0f-ee9aaa5d65f9",
       "title": "Одиссея",
       "start": "2026-11-07T18:40:00+03:00",
       "hall": "5",
@@ -1955,7 +1829,7 @@
       "price_max": null,
       "language": null,
       "tags": [],
-      "url": null,
+      "url": "https://www.mirage.ru/ticket_new/b967030b-5175-4ff3-ae0f-ee9aaa5d65f9/",
       "source_url": "https://www.mirage.ru/spb/schedule/07.11.2026/cinema/1/",
       "extra": {
         "genres": [
@@ -2047,7 +1921,7 @@
           "комедия"
         ],
         "country": "США, Великобритания",
-        "free_places": 332,
+        "free_places": 323,
         "online_sale": true
       }
     },
@@ -2393,7 +2267,7 @@
           "драма"
         ],
         "country": "Россия",
-        "free_places": 89,
+        "free_places": 87,
         "online_sale": true
       }
     },
@@ -2670,7 +2544,7 @@
           "драма"
         ],
         "country": "Россия",
-        "free_places": 406,
+        "free_places": 404,
         "online_sale": true
       }
     },
@@ -4444,7 +4318,7 @@
           "драма"
         ],
         "country": "Россия",
-        "free_places": 91,
+        "free_places": 88,
         "online_sale": true
       }
     },
@@ -4880,7 +4754,7 @@
       "language": null,
       "tags": [],
       "url": "https://rodinakino.ru/events/sumerki-saga-zatmenie-2010",
-      "source_url": "https://rodinakino.ru/?date=2026/11/08",
+      "source_url": "https://rodinakino.ru/?date=2026/11/07",
       "extra": {
         "year": 2010,
         "age": "18+",
@@ -5065,7 +4939,7 @@
           "драма"
         ],
         "country": "Испания",
-        "free_places": 79,
+        "free_places": 75,
         "online_sale": true
       }
     },
@@ -5674,7 +5548,7 @@
           "драма"
         ],
         "country": "Россия",
-        "free_places": 90,
+        "free_places": 88,
         "online_sale": true
       }
     },
@@ -6545,7 +6419,7 @@
           "саспенс триллер"
         ],
         "country": "Румыния, Франция, Норвегия, Дания, Финляндия, Швеция",
-        "free_places": 105,
+        "free_places": 104,
         "online_sale": true
       }
     },
@@ -10239,7 +10113,7 @@
           "драма"
         ],
         "country": "Румыния, Франция, Норвегия, Дания, Финляндия, Швеция",
-        "free_places": 425,
+        "free_places": 424,
         "online_sale": true
       }
     },
@@ -15434,7 +15308,7 @@
           "драма"
         ],
         "country": "США",
-        "free_places": 380,
+        "free_places": 379,
         "online_sale": true
       }
     },
