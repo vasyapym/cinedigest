@@ -1,91 +1,91 @@
 {
-  "generated_at": "2026-11-07T12:18:57.130525+03:00",
+  "generated_at": "2026-11-07T12:28:03.863908+03:00",
   "window_start": "2026-11-07",
   "window_end": "2026-11-13",
   "statuses": [
     {
       "venue": "domkino",
       "ok": true,
-      "count": 100,
-      "fetched_at": "2026-11-07T12:19:10.595921+03:00",
+      "count": 102,
+      "fetched_at": "2026-11-07T12:28:21.048978+03:00",
       "stale": false,
       "suspicious": false,
       "error": null,
       "warning": null,
       "requests": 7,
-      "seconds": 13.465
+      "seconds": 17.185
     },
     {
       "venue": "rodina",
       "ok": true,
       "count": 120,
-      "fetched_at": "2026-11-07T12:19:58.984781+03:00",
+      "fetched_at": "2026-11-07T12:29:12.852183+03:00",
       "stale": false,
       "suspicious": false,
       "error": null,
       "warning": null,
       "requests": 32,
-      "seconds": 48.389
+      "seconds": 51.803
     },
     {
       "venue": "avrora",
       "ok": true,
       "count": 51,
-      "fetched_at": "2026-11-07T12:20:06.112514+03:00",
+      "fetched_at": "2026-11-07T12:29:21.169091+03:00",
       "stale": false,
       "suspicious": false,
       "error": null,
       "warning": null,
       "requests": 8,
-      "seconds": 7.127
+      "seconds": 8.316
     },
     {
       "venue": "poravkino",
       "ok": true,
       "count": 147,
-      "fetched_at": "2026-11-07T12:20:12.171923+03:00",
+      "fetched_at": "2026-11-07T12:29:27.381817+03:00",
       "stale": false,
       "suspicious": false,
       "error": null,
       "warning": null,
       "requests": 7,
-      "seconds": 6.059
+      "seconds": 6.213
     },
     {
       "venue": "lenfilm",
       "ok": true,
-      "count": 28,
-      "fetched_at": "2026-11-07T12:20:19.456786+03:00",
+      "count": 27,
+      "fetched_at": "2026-11-07T12:29:34.996749+03:00",
       "stale": false,
       "suspicious": false,
       "error": null,
       "warning": null,
       "requests": 9,
-      "seconds": 7.285
+      "seconds": 7.615
     },
     {
       "venue": "outcinema",
       "ok": true,
       "count": 8,
-      "fetched_at": "2026-11-07T12:20:19.836295+03:00",
+      "fetched_at": "2026-11-07T12:29:35.532446+03:00",
       "stale": false,
       "suspicious": false,
       "error": null,
       "warning": null,
       "requests": 1,
-      "seconds": 0.379
+      "seconds": 0.536
     },
     {
       "venue": "mirage",
       "ok": true,
       "count": 173,
-      "fetched_at": "2026-11-07T12:20:28.568031+03:00",
+      "fetched_at": "2026-11-07T12:29:45.031024+03:00",
       "stale": false,
       "suspicious": false,
       "error": null,
       "warning": null,
       "requests": 7,
-      "seconds": 8.732
+      "seconds": 9.498
     }
   ],
   "screenings": [
@@ -298,32 +298,6 @@
         ],
         "age": "18+",
         "film_id": 7450
-      }
-    },
-    {
-      "venue": "lenfilm",
-      "source_id": "6ad8abad3f000053004a7327",
-      "title": "Барашек Шон и чудище лохматое",
-      "start": "2026-11-07T12:00:00+03:00",
-      "hall": "1",
-      "price_min": 300,
-      "price_max": 300,
-      "language": null,
-      "tags": [],
-      "url": "https://www.lenfilm.ru/service/Kinoteatr-Lenfilm/",
-      "source_url": "https://kinokassa.kinoplan24.ru/api/v2/release/playbill?cinema_id=2387&date=2026-11-07",
-      "extra": {
-        "release_id": 25760,
-        "year": 2026,
-        "duration_min": 80,
-        "age": "6+",
-        "genres": [
-          "семейная комедия",
-          "анимация"
-        ],
-        "country": "Великобритания, Франция, США",
-        "free_places": 178,
-        "online_sale": true
       }
     },
     {
@@ -1251,7 +1225,7 @@
     },
     {
       "venue": "mirage",
-      "source_id": "bc2928957ae7",
+      "source_id": "e3cb00fe-2f6b-4e1a-8492-ee24674e8a0c",
       "title": "Одиссея",
       "start": "2026-11-07T15:15:00+03:00",
       "hall": "5",
@@ -1259,7 +1233,7 @@
       "price_max": null,
       "language": null,
       "tags": [],
-      "url": null,
+      "url": "https://www.mirage.ru/ticket_new/e3cb00fe-2f6b-4e1a-8492-ee24674e8a0c/",
       "source_url": "https://www.mirage.ru/spb/schedule/07.11.2026/cinema/1/",
       "extra": {
         "genres": [
@@ -1795,7 +1769,7 @@
           "комедия"
         ],
         "country": "США, Великобритания",
-        "free_places": 67,
+        "free_places": 65,
         "online_sale": true
       }
     },
@@ -2172,7 +2146,7 @@
           "комедия"
         ],
         "country": "США, Великобритания",
-        "free_places": 336,
+        "free_places": 333,
         "online_sale": true
       }
     },
@@ -2518,7 +2492,7 @@
           "драма"
         ],
         "country": "Россия",
-        "free_places": 92,
+        "free_places": 89,
         "online_sale": true
       }
     },
@@ -3993,7 +3967,7 @@
           "драма"
         ],
         "country": "Франция",
-        "free_places": 177,
+        "free_places": 174,
         "online_sale": true
       }
     },
@@ -5596,6 +5570,31 @@
         "country": "США, Великобритания",
         "free_places": 395,
         "online_sale": true
+      }
+    },
+    {
+      "venue": "domkino",
+      "source_id": "422fbab1d991",
+      "title": "Изгои",
+      "start": "2026-11-08T17:05:00+03:00",
+      "hall": "Белый зал",
+      "price_min": 300,
+      "price_max": 300,
+      "language": null,
+      "tags": [],
+      "url": "https://www.domkino.spb.ru/films/izgoi759684/",
+      "source_url": "https://www.domkino.spb.ru/schedule/2026/11/08/",
+      "extra": {
+        "year": 1983,
+        "country": "США, Франция",
+        "duration_min": 91,
+        "age": "18+",
+        "original_title": "The Outsiders",
+        "director": "Фрэнсис Форд Коппола",
+        "genres": [
+          "драма",
+          "криминал"
+        ]
       }
     },
     {
@@ -11637,6 +11636,30 @@
       }
     },
     {
+      "venue": "domkino",
+      "source_id": "ac5cd819cafc",
+      "title": "Безумный день в Комеди Франсез (субтитры)",
+      "start": "2026-11-10T15:30:00+03:00",
+      "hall": "Большой зал",
+      "price_min": 400,
+      "price_max": 400,
+      "language": null,
+      "tags": [],
+      "url": "https://www.domkino.spb.ru/films/bezumny_den_v_kamedi_fransez_subtitry/",
+      "source_url": "https://www.domkino.spb.ru/schedule/2026/11/10/",
+      "extra": {
+        "year": 2026,
+        "country": "Франция",
+        "duration_min": 75,
+        "age": "18+",
+        "original_title": "De la Comédie-Française",
+        "director": "Мартен Дарондо, Бертран Юскла",
+        "genres": [
+          "комедия"
+        ]
+      }
+    },
+    {
       "venue": "mirage",
       "source_id": "bb8d529d-08ea-4612-b2c7-bbac89e86a70",
       "title": "Битва моторов",
@@ -15510,7 +15533,7 @@
           "драма"
         ],
         "country": "США",
-        "free_places": 381,
+        "free_places": 380,
         "online_sale": true
       }
     },
