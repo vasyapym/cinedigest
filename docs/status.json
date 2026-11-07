@@ -3,84 +3,84 @@
     "venue": "domkino",
     "ok": true,
     "count": 102,
-    "fetched_at": "2026-11-07T12:28:21.048978+03:00",
+    "fetched_at": "2026-11-07T12:38:52.135223+03:00",
     "stale": false,
     "suspicious": false,
     "error": null,
     "warning": null,
     "requests": 7,
-    "seconds": 17.185
+    "seconds": 17.723
   },
   {
     "venue": "rodina",
     "ok": true,
-    "count": 120,
-    "fetched_at": "2026-11-07T12:29:12.852183+03:00",
+    "count": 118,
+    "fetched_at": "2026-11-07T12:39:42.160988+03:00",
     "stale": false,
     "suspicious": false,
     "error": null,
     "warning": null,
     "requests": 32,
-    "seconds": 51.803
+    "seconds": 50.026
   },
   {
     "venue": "avrora",
     "ok": true,
     "count": 51,
-    "fetched_at": "2026-11-07T12:29:21.169091+03:00",
+    "fetched_at": "2026-11-07T12:39:50.672805+03:00",
     "stale": false,
     "suspicious": false,
     "error": null,
     "warning": null,
     "requests": 8,
-    "seconds": 8.316
+    "seconds": 8.511
   },
   {
     "venue": "poravkino",
     "ok": true,
-    "count": 147,
-    "fetched_at": "2026-11-07T12:29:27.381817+03:00",
+    "count": 146,
+    "fetched_at": "2026-11-07T12:39:56.921336+03:00",
     "stale": false,
     "suspicious": false,
     "error": null,
     "warning": null,
     "requests": 7,
-    "seconds": 6.213
+    "seconds": 6.249
   },
   {
     "venue": "lenfilm",
     "ok": true,
     "count": 27,
-    "fetched_at": "2026-11-07T12:29:34.996749+03:00",
+    "fetched_at": "2026-11-07T12:40:04.651657+03:00",
     "stale": false,
     "suspicious": false,
     "error": null,
     "warning": null,
     "requests": 9,
-    "seconds": 7.615
+    "seconds": 7.73
   },
   {
     "venue": "outcinema",
     "ok": true,
     "count": 8,
-    "fetched_at": "2026-11-07T12:29:35.532446+03:00",
+    "fetched_at": "2026-11-07T12:40:05.188649+03:00",
     "stale": false,
     "suspicious": false,
     "error": null,
     "warning": null,
     "requests": 1,
-    "seconds": 0.536
+    "seconds": 0.537
   },
   {
     "venue": "mirage",
     "ok": true,
-    "count": 173,
-    "fetched_at": "2026-11-07T12:29:45.031024+03:00",
+    "count": 172,
+    "fetched_at": "2026-11-07T12:40:14.412081+03:00",
     "stale": false,
     "suspicious": false,
     "error": null,
     "warning": null,
     "requests": 7,
-    "seconds": 9.498
+    "seconds": 9.223
   }
 ]
