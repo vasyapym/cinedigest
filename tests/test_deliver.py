@@ -134,6 +134,21 @@ def test_send_telegram_skips_without_env_pair(monkeypatch):
     assert stub.calls == []  # ничего не отправлено
 
 
+def test_send_telegram_skips_when_env_pair_is_empty(monkeypatch):
+    """GitHub Actions maps unset secrets to empty strings: an empty pair is 'not
+    configured', not a crash (observed in Actions run 42358859277)."""
+    stub = TelegramStub()
+    monkeypatch.setattr(deliver.requests, "post", stub.post)
+    monkeypatch.setenv(config.TELEGRAM_BOT_TOKEN_ENV, "")
+    monkeypatch.setenv(config.TELEGRAM_CHAT_ID_ENV, "")
+
+    sent, reason = deliver.send_telegram("текст")
+
+    assert sent is False
+    assert "TELEGRAM_BOT_TOKEN" in reason and "TELEGRAM_CHAT_ID" in reason
+    assert stub.calls == []  # ничего не отправлено
+
+
 def test_send_telegram_raises_on_http_error(monkeypatch):
     stub = TelegramStub(status_code=500)
     monkeypatch.setattr(deliver.requests, "post", stub.post)

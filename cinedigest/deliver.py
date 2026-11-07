@@ -71,10 +71,14 @@ def telegram_text(snapshot: Snapshot, page_url: str | None = None) -> str:
 
 def send_telegram(text: str) -> tuple[bool, str | None]:
     """POST every part of the message in order. Returns (False, reason) when the env
-    pair is missing — a deliberate skip; raises on a bad HTTP answer or an ok:false body."""
+    pair is missing or empty — a deliberate skip; raises on a bad HTTP answer or an
+    ok:false body."""
     token = os.environ.get(config.TELEGRAM_BOT_TOKEN_ENV)
     chat_id = os.environ.get(config.TELEGRAM_CHAT_ID_ENV)
-    if token is None or chat_id is None:
+    # GitHub Actions maps unset secrets to EMPTY strings: an empty pair must skip
+    # like an absent one (observed 2026-11-07: "" slipped past `is None` and the run
+    # crashed on a 404 from bot/sendMessage).
+    if not token or not chat_id:
         return False, (
             f"telegram is not configured: both {config.TELEGRAM_BOT_TOKEN_ENV} and "
             f"{config.TELEGRAM_CHAT_ID_ENV} must be set"
