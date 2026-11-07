@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-07T11:57:42.093751+03:00",
+  "generated_at": "2026-11-07T12:14:18.253182+03:00",
   "window_start": "2026-11-07",
   "window_end": "2026-11-13",
   "statuses": [
@@ -7,85 +7,85 @@
       "venue": "domkino",
       "ok": true,
       "count": 100,
-      "fetched_at": "2026-11-07T11:57:57.081136+03:00",
+      "fetched_at": "2026-11-07T12:14:35.965868+03:00",
       "stale": false,
       "suspicious": false,
       "error": null,
       "warning": null,
       "requests": 7,
-      "seconds": 14.987
+      "seconds": 17.713
     },
     {
       "venue": "rodina",
       "ok": true,
       "count": 120,
-      "fetched_at": "2026-11-07T11:58:47.973993+03:00",
+      "fetched_at": "2026-11-07T12:15:26.863295+03:00",
       "stale": false,
       "suspicious": false,
       "error": null,
       "warning": null,
       "requests": 32,
-      "seconds": 50.893
+      "seconds": 50.897
     },
     {
       "venue": "avrora",
       "ok": true,
       "count": 51,
-      "fetched_at": "2026-11-07T11:58:55.298600+03:00",
+      "fetched_at": "2026-11-07T12:15:35.271771+03:00",
       "stale": false,
       "suspicious": false,
       "error": null,
       "warning": null,
       "requests": 8,
-      "seconds": 7.324
+      "seconds": 8.408
     },
     {
       "venue": "poravkino",
       "ok": true,
       "count": 148,
-      "fetched_at": "2026-11-07T11:59:01.128893+03:00",
+      "fetched_at": "2026-11-07T12:15:41.374149+03:00",
       "stale": false,
       "suspicious": false,
       "error": null,
       "warning": null,
       "requests": 7,
-      "seconds": 5.83
+      "seconds": 6.102
     },
     {
       "venue": "lenfilm",
       "ok": true,
       "count": 28,
-      "fetched_at": "2026-11-07T11:59:08.401431+03:00",
+      "fetched_at": "2026-11-07T12:15:48.919483+03:00",
       "stale": false,
       "suspicious": false,
       "error": null,
       "warning": null,
       "requests": 9,
-      "seconds": 7.273
+      "seconds": 7.545
     },
     {
       "venue": "outcinema",
       "ok": true,
       "count": 8,
-      "fetched_at": "2026-11-07T11:59:08.843612+03:00",
+      "fetched_at": "2026-11-07T12:15:49.456839+03:00",
       "stale": false,
       "suspicious": false,
       "error": null,
       "warning": null,
       "requests": 1,
-      "seconds": 0.442
+      "seconds": 0.537
     },
     {
       "venue": "mirage",
       "ok": true,
-      "count": 175,
-      "fetched_at": "2026-11-07T11:59:17.292889+03:00",
+      "count": 174,
+      "fetched_at": "2026-11-07T12:15:58.864961+03:00",
       "stale": false,
       "suspicious": false,
       "error": null,
       "warning": null,
       "requests": 7,
-      "seconds": 8.449
+      "seconds": 9.408
     }
   ],
   "screenings": [
@@ -256,28 +256,6 @@
     },
     {
       "venue": "mirage",
-      "source_id": "b3e95c69-42d3-4eab-98ee-de5b4af22e26",
-      "title": "Барашек Шон и чудище лохматое",
-      "start": "2026-11-07T11:20:00+03:00",
-      "hall": "3",
-      "price_min": null,
-      "price_max": null,
-      "language": null,
-      "tags": [],
-      "url": "https://www.mirage.ru/ticket_new/b3e95c69-42d3-4eab-98ee-de5b4af22e26/",
-      "source_url": "https://www.mirage.ru/spb/schedule/07.11.2026/cinema/1/",
-      "extra": {
-        "genres": [
-          "комедия",
-          "мультфильм",
-          "семейный"
-        ],
-        "age": "6+",
-        "film_id": 7641
-      }
-    },
-    {
-      "venue": "mirage",
       "source_id": "1e0d41eb-dd3e-472b-9b00-de1003b495ad",
       "title": "Битва моторов",
       "start": "2026-11-07T11:30:00+03:00",
@@ -323,7 +301,7 @@
     },
     {
       "venue": "mirage",
-      "source_id": "c37ebed8-d649-4160-9c22-55aa2be02c75",
+      "source_id": "879973b94b58",
       "title": "Одиссея",
       "start": "2026-11-07T11:50:00+03:00",
       "hall": "5",
@@ -331,7 +309,7 @@
       "price_max": null,
       "language": null,
       "tags": [],
-      "url": "https://www.mirage.ru/ticket_new/c37ebed8-d649-4160-9c22-55aa2be02c75/",
+      "url": null,
       "source_url": "https://www.mirage.ru/spb/schedule/07.11.2026/cinema/1/",
       "extra": {
         "genres": [
@@ -966,7 +944,7 @@
           "комедия"
         ],
         "country": "США, Великобритания",
-        "free_places": 324,
+        "free_places": 323,
         "online_sale": true
       }
     },
@@ -1321,7 +1299,7 @@
     },
     {
       "venue": "mirage",
-      "source_id": "bc2928957ae7",
+      "source_id": "e3cb00fe-2f6b-4e1a-8492-ee24674e8a0c",
       "title": "Одиссея",
       "start": "2026-11-07T15:15:00+03:00",
       "hall": "5",
@@ -1329,7 +1307,7 @@
       "price_max": null,
       "language": null,
       "tags": [],
-      "url": null,
+      "url": "https://www.mirage.ru/ticket_new/e3cb00fe-2f6b-4e1a-8492-ee24674e8a0c/",
       "source_url": "https://www.mirage.ru/spb/schedule/07.11.2026/cinema/1/",
       "extra": {
         "genres": [
@@ -1532,7 +1510,7 @@
           "историческая драма"
         ],
         "country": "Россия",
-        "free_places": 343,
+        "free_places": 337,
         "online_sale": true
       }
     },
@@ -1966,7 +1944,7 @@
           "драма"
         ],
         "country": "Россия",
-        "free_places": 46,
+        "free_places": 42,
         "online_sale": true
       }
     },
@@ -2242,7 +2220,7 @@
           "комедия"
         ],
         "country": "США, Великобритания",
-        "free_places": 341,
+        "free_places": 336,
         "online_sale": true
       }
     },
@@ -2588,7 +2566,7 @@
           "драма"
         ],
         "country": "Россия",
-        "free_places": 93,
+        "free_places": 92,
         "online_sale": true
       }
     },
@@ -15499,7 +15477,7 @@
         "year": 2026,
         "duration_min": 25,
         "age": "18+",
-        "free_places": 189,
+        "free_places": 188,
         "online_sale": true
       }
     },
