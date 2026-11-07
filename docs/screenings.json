@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-07T14:02:40.311832+03:00",
+  "generated_at": "2026-11-07T14:47:10.122315+03:00",
   "window_start": "2026-11-07",
   "window_end": "2026-11-13",
   "statuses": [
@@ -7,85 +7,85 @@
       "venue": "domkino",
       "ok": true,
       "count": 106,
-      "fetched_at": "2026-11-07T14:02:55.337832+03:00",
+      "fetched_at": "2026-11-07T14:47:27.644109+03:00",
       "stale": false,
       "suspicious": false,
       "error": null,
       "warning": null,
       "requests": 7,
-      "seconds": 15.026
+      "seconds": 17.522
     },
     {
       "venue": "rodina",
       "ok": true,
-      "count": 117,
-      "fetched_at": "2026-11-07T14:03:42.688804+03:00",
+      "count": 115,
+      "fetched_at": "2026-11-07T14:48:19.004440+03:00",
       "stale": false,
       "suspicious": false,
       "error": null,
       "warning": null,
       "requests": 32,
-      "seconds": 47.351
+      "seconds": 51.36
     },
     {
       "venue": "avrora",
       "ok": true,
-      "count": 50,
-      "fetched_at": "2026-11-07T14:03:51.310647+03:00",
+      "count": 48,
+      "fetched_at": "2026-11-07T14:48:27.211698+03:00",
       "stale": false,
       "suspicious": false,
       "error": null,
       "warning": null,
       "requests": 8,
-      "seconds": 8.621
+      "seconds": 8.206
     },
     {
       "venue": "poravkino",
       "ok": true,
-      "count": 141,
-      "fetched_at": "2026-11-07T14:03:56.984625+03:00",
+      "count": 139,
+      "fetched_at": "2026-11-07T14:48:33.184841+03:00",
       "stale": false,
       "suspicious": false,
       "error": null,
       "warning": null,
       "requests": 7,
-      "seconds": 5.674
+      "seconds": 5.973
     },
     {
       "venue": "lenfilm",
       "ok": true,
-      "count": 27,
-      "fetched_at": "2026-11-07T14:04:04.242400+03:00",
+      "count": 26,
+      "fetched_at": "2026-11-07T14:48:40.706006+03:00",
       "stale": false,
       "suspicious": false,
       "error": null,
       "warning": null,
       "requests": 9,
-      "seconds": 7.258
+      "seconds": 7.521
     },
     {
       "venue": "outcinema",
       "ok": true,
-      "count": 8,
-      "fetched_at": "2026-11-07T14:04:04.681567+03:00",
+      "count": 5,
+      "fetched_at": "2026-11-07T14:48:41.325440+03:00",
       "stale": false,
       "suspicious": false,
       "error": null,
       "warning": null,
       "requests": 1,
-      "seconds": 0.439
+      "seconds": 0.619
     },
     {
       "venue": "mirage",
       "ok": true,
-      "count": 168,
-      "fetched_at": "2026-11-07T14:04:13.116147+03:00",
+      "count": 167,
+      "fetched_at": "2026-11-07T14:48:50.347629+03:00",
       "stale": false,
       "suspicious": false,
       "error": null,
       "warning": null,
       "requests": 7,
-      "seconds": 8.434
+      "seconds": 9.022
     }
   ],
   "screenings": [
@@ -133,24 +133,6 @@
         "genres": [
           "мультфильм"
         ]
-      }
-    },
-    {
-      "venue": "outcinema",
-      "source_id": "547170662601",
-      "title": "СКАЗКИ ТУМАННОЙ ЛУНЫ ПОСЛЕ ДОЖДЯ",
-      "start": "2026-11-07T10:40:00+03:00",
-      "hall": null,
-      "price_min": 590,
-      "price_max": 590,
-      "language": "Японский язык, русские субтитры",
-      "tags": [
-        "ЯПОНСКАЯ КЛАССИКА"
-      ],
-      "url": "https://kinowidget.kinoplan.ru/seats/8588/10027996/6ae60f603f0000ac00ec168a",
-      "source_url": "https://store.tildaapi.com/api/getproductslist/?storepartuid=292580911081&recid=496330277",
-      "extra": {
-        "synopsis": "Один из любимых фильмов Тарковского и Скорсезе, в элегантной минималистичной манере переносящий на экран традиционные японские сказания о сверхъестественном Режиссер: Кэндзи Мидзогути Япония, 1953, 96 мин., 16+ Жанр: фэнтези, драма, военный Японский язык, русские субтитры"
       }
     },
     {
@@ -303,30 +285,6 @@
       }
     },
     {
-      "venue": "outcinema",
-      "source_id": "792215237253",
-      "title": "ТВИГГИ",
-      "start": "2026-11-07T12:40:00+03:00",
-      "hall": null,
-      "price_min": 590,
-      "price_max": 590,
-      "language": "Английский язык, русские субтитры",
-      "tags": [
-        "ДОКУМЕНТАЛЬНОЕ"
-      ],
-      "url": "https://kinowidget.kinoplan.ru/seats/8588/25997/6aed9c5c3e00004400e19359",
-      "source_url": "https://store.tildaapi.com/api/getproductslist/?storepartuid=292580911081&recid=496330277",
-      "extra": {
-        "synopsis": "История о судьбе Лесли Хорнби, которая в 16 лет благодаря случайной стрижке в лондонском салоне стала «лицом 1966 года» и первой супермоделью, а затем сознательно оставила подиум, чтобы реализовать себя в качестве актрисы, певицы и просто счастливой женщины",
-        "director": "Сэди Фрост",
-        "country": "Великобритания",
-        "year": 2024,
-        "duration_min": 96,
-        "age": "18+",
-        "genres": "документальный, биография"
-      }
-    },
-    {
       "venue": "domkino",
       "source_id": "e5854ec466ce",
       "title": "Жертвоприношение",
@@ -401,108 +359,6 @@
     },
     {
       "venue": "mirage",
-      "source_id": "b7caa337-9857-4b2a-b995-e105ea25c854",
-      "title": "Тайный дневник Верити",
-      "start": "2026-11-07T13:25:00+03:00",
-      "hall": "4",
-      "price_min": null,
-      "price_max": null,
-      "language": null,
-      "tags": [],
-      "url": "https://www.mirage.ru/ticket_new/b7caa337-9857-4b2a-b995-e105ea25c854/",
-      "source_url": "https://www.mirage.ru/spb/schedule/07.11.2026/cinema/1/",
-      "extra": {
-        "genres": [
-          "детектив",
-          "триллер",
-          "драма",
-          "криминал"
-        ],
-        "age": "18+",
-        "film_id": 7628
-      }
-    },
-    {
-      "venue": "lenfilm",
-      "source_id": "6ada00d4400000450087bea6",
-      "title": "Навар",
-      "start": "2026-11-07T13:50:00+03:00",
-      "hall": "1",
-      "price_min": 300,
-      "price_max": 300,
-      "language": null,
-      "tags": [],
-      "url": "https://www.lenfilm.ru/service/Kinoteatr-Lenfilm/",
-      "source_url": "https://kinokassa.kinoplan24.ru/api/v2/release/playbill?cinema_id=2387&date=2026-11-07",
-      "extra": {
-        "release_id": 24668,
-        "year": 2025,
-        "duration_min": 85,
-        "age": "18+",
-        "genres": [
-          "криминальный триллер"
-        ],
-        "country": "Россия",
-        "free_places": 157,
-        "online_sale": true
-      }
-    },
-    {
-      "venue": "rodina",
-      "source_id": "f6fe0ed1c53c",
-      "title": "Рождение империи",
-      "start": "2026-11-07T13:55:00+03:00",
-      "hall": "Большой зал",
-      "price_min": 300,
-      "price_max": 300,
-      "language": null,
-      "tags": [],
-      "url": "https://rodinakino.ru/events/rozhdenie-imperii-2026",
-      "source_url": "https://rodinakino.ru/?date=2026/11/07",
-      "extra": {
-        "year": 2026,
-        "age": "12+",
-        "duration_min": 140,
-        "synopsis": "Вернувшись на родину после Великого посольства, Петр Первый вступает в затяжную войну со Швецией за выход к морю. На пути к победе его ожидают серьёзные испытания, разочарования, обман и предательства.",
-        "director": "Андрей Кравчук",
-        "genres": [
-          "история",
-          "биография",
-          "драма"
-        ],
-        "country": "Пушкинская карта, Россия"
-      }
-    },
-    {
-      "venue": "avrora",
-      "source_id": "6ae9cd543f0000ac009edb78",
-      "title": "Плетёный муж",
-      "start": "2026-11-07T14:00:00+03:00",
-      "hall": "Большой",
-      "price_min": 450,
-      "price_max": 600,
-      "language": null,
-      "tags": [],
-      "url": "https://avrora.spb.ru/",
-      "source_url": "https://kinokassa.kinoplan24.ru/api/v2/release/playbill?city_id=2&date=2026-11-07",
-      "extra": {
-        "release_id": 25872,
-        "year": 2026,
-        "duration_min": 105,
-        "age": "18+",
-        "genres": [
-          "фантастика",
-          "фэнтези",
-          "мелодрама",
-          "комедия"
-        ],
-        "country": "США, Великобритания",
-        "free_places": 288,
-        "online_sale": true
-      }
-    },
-    {
-      "venue": "mirage",
       "source_id": "bbae6356-3778-461c-8dde-47644ecba875",
       "title": "Сумерки. Сага. Новолуние",
       "start": "2026-11-07T14:10:00+03:00",
@@ -521,57 +377,6 @@
         ],
         "age": "18+",
         "film_id": 7593
-      }
-    },
-    {
-      "venue": "poravkino",
-      "source_id": "43958",
-      "title": "Рождение империи",
-      "start": "2026-11-07T14:10:00+03:00",
-      "hall": "Премьер",
-      "price_min": 400,
-      "price_max": 400,
-      "language": null,
-      "tags": [],
-      "url": "https://poravkino.ru/",
-      "source_url": "https://poravkino.ru/api/schedule?date=2026-11-07",
-      "extra": {
-        "year": 2026,
-        "country": "Россия",
-        "director": "Андрей Кравчук, Алексей Нужный",
-        "original_title": "Рождение империи",
-        "duration_min": 150,
-        "age": 12,
-        "genres": [
-          "биографический",
-          "драма"
-        ],
-        "is_pushkin": false
-      }
-    },
-    {
-      "venue": "rodina",
-      "source_id": "0f92c8955e22",
-      "title": "Битва моторов",
-      "start": "2026-11-07T14:15:00+03:00",
-      "hall": "Малый 1 зал",
-      "price_min": 250,
-      "price_max": 250,
-      "language": null,
-      "tags": [],
-      "url": "https://rodinakino.ru/events/bitva-motorov-2026",
-      "source_url": "https://rodinakino.ru/?date=2026/11/07",
-      "extra": {
-        "year": 2026,
-        "age": "12+",
-        "duration_min": 144,
-        "synopsis": "1908 год. Автолюбитель Андрей Нагель находит поддержку у инженера Дмитрия Бондарева. Вместе они собирают команду единомышленников и приступают к разработке автомобиля «Руссо-Балт». Когда проект оказывается под угрозой, Нагель принимает рискованное решение — доказать жизнеспособность их машины в легендарном Ралли…",
-        "director": "Илья Маланин",
-        "genres": [
-          "приключения",
-          "драма"
-        ],
-        "country": "Пушкинская карта, Россия"
       }
     },
     {
@@ -618,85 +423,6 @@
         ],
         "age": "18+",
         "film_id": 7658
-      }
-    },
-    {
-      "venue": "poravkino",
-      "source_id": "43959",
-      "title": "Плетёный муж",
-      "start": "2026-11-07T14:30:00+03:00",
-      "hall": "1",
-      "price_min": 400,
-      "price_max": 400,
-      "language": null,
-      "tags": [],
-      "url": "https://poravkino.ru/",
-      "source_url": "https://poravkino.ru/api/schedule?date=2026-11-07",
-      "extra": {
-        "year": 2026,
-        "country": "США, Великобритания, Австралия",
-        "director": "Алекс Хьюстон Фишер, Элинор Уилсон",
-        "original_title": "Плетеный муж",
-        "duration_min": 110,
-        "age": 18,
-        "genres": [
-          "драма",
-          "комедия",
-          "мелодрама",
-          "фантастика",
-          "фэнтези"
-        ],
-        "is_pushkin": false
-      }
-    },
-    {
-      "venue": "outcinema",
-      "source_id": "533806759191",
-      "title": "ПОХИТИТЕЛИ ВЕЛОСИПЕДОВ",
-      "start": "2026-11-07T14:35:00+03:00",
-      "hall": null,
-      "price_min": 590,
-      "price_max": 590,
-      "language": "Итальянский язык, русские субтитры",
-      "tags": [
-        "ИТАЛЬЯНСКИЙ НЕОРЕАЛИЗМ"
-      ],
-      "url": "https://kinowidget.kinoplan.ru/seats/8588/10019461/6ae60fce3e00004300a91b2d",
-      "source_url": "https://store.tildaapi.com/api/getproductslist/?storepartuid=292580911081&recid=496330277",
-      "extra": {
-        "synopsis": "Пропитанная обреченностью история итальянского бедняка, который тщетно пытается прокормить свою семью",
-        "director": "Витторио Де Сика",
-        "country": "Италия",
-        "year": 1948,
-        "duration_min": 89,
-        "age": "12+",
-        "genres": "драма"
-      }
-    },
-    {
-      "venue": "avrora",
-      "source_id": "6ae9ce933f00004c00095225",
-      "title": "Отверженные",
-      "start": "2026-11-07T14:40:00+03:00",
-      "hall": "Малый",
-      "price_min": 500,
-      "price_max": 500,
-      "language": null,
-      "tags": [],
-      "url": "https://avrora.spb.ru/",
-      "source_url": "https://kinokassa.kinoplan24.ru/api/v2/release/playbill?city_id=2&date=2026-11-07",
-      "extra": {
-        "release_id": 24083,
-        "year": 2026,
-        "duration_min": 173,
-        "age": "18+",
-        "genres": [
-          "исторический",
-          "драма"
-        ],
-        "country": "Франция",
-        "free_places": 49,
-        "online_sale": true
       }
     },
     {
@@ -943,7 +669,7 @@
           "драма"
         ],
         "country": "Россия",
-        "free_places": 192,
+        "free_places": 189,
         "online_sale": true
       }
     },
@@ -1063,7 +789,7 @@
           "историческая драма"
         ],
         "country": "Россия",
-        "free_places": 316,
+        "free_places": 306,
         "online_sale": true
       }
     },
@@ -1396,7 +1122,7 @@
           "комедия"
         ],
         "country": "США, Великобритания",
-        "free_places": 48,
+        "free_places": 38,
         "online_sale": true
       }
     },
@@ -1497,7 +1223,7 @@
           "драма"
         ],
         "country": "Россия",
-        "free_places": 28,
+        "free_places": 26,
         "online_sale": true
       }
     },
@@ -1773,7 +1499,7 @@
           "комедия"
         ],
         "country": "США, Великобритания",
-        "free_places": 312,
+        "free_places": 296,
         "online_sale": true
       }
     },
@@ -1992,7 +1718,7 @@
           "драма"
         ],
         "country": "Россия",
-        "free_places": 176,
+        "free_places": 173,
         "online_sale": true
       }
     },
@@ -2119,7 +1845,7 @@
           "драма"
         ],
         "country": "Россия",
-        "free_places": 86,
+        "free_places": 84,
         "online_sale": true
       }
     },
@@ -3519,7 +3245,7 @@
           "комедия"
         ],
         "country": "США, Великобритания",
-        "free_places": 97,
+        "free_places": 95,
         "online_sale": true
       }
     },
@@ -4170,7 +3896,7 @@
           "драма"
         ],
         "country": "Россия",
-        "free_places": 88,
+        "free_places": 86,
         "online_sale": true
       }
     },
@@ -4388,7 +4114,7 @@
       "language": null,
       "tags": [],
       "url": "https://rodinakino.ru/events/bitva-motorov-2026",
-      "source_url": "https://rodinakino.ru/?date=2026/11/08",
+      "source_url": "https://rodinakino.ru/?date=2026/11/07",
       "extra": {
         "year": 2026,
         "age": "12+",
@@ -4423,7 +4149,7 @@
           "историческая драма"
         ],
         "country": "Россия",
-        "free_places": 397,
+        "free_places": 396,
         "online_sale": true
       }
     },
@@ -4695,7 +4421,7 @@
           "театр в кино"
         ],
         "country": "Австрия",
-        "free_places": 122,
+        "free_places": 121,
         "online_sale": true
       }
     },
@@ -4791,7 +4517,7 @@
           "драма"
         ],
         "country": "Испания",
-        "free_places": 75,
+        "free_places": 74,
         "online_sale": true
       }
     },
@@ -5457,7 +5183,7 @@
           "комедия"
         ],
         "country": "США, Великобритания",
-        "free_places": 153,
+        "free_places": 152,
         "online_sale": true
       }
     },
@@ -5818,7 +5544,7 @@
           "историческая драма"
         ],
         "country": "Россия",
-        "free_places": 409,
+        "free_places": 405,
         "online_sale": true
       }
     },
@@ -6271,7 +5997,7 @@
           "саспенс триллер"
         ],
         "country": "Румыния, Франция, Норвегия, Дания, Финляндия, Швеция",
-        "free_places": 104,
+        "free_places": 103,
         "online_sale": true
       }
     },
@@ -14135,7 +13861,7 @@
           "драма"
         ],
         "country": "Россия",
-        "free_places": 106,
+        "free_places": 104,
         "online_sale": true
       }
     },
