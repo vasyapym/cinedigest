@@ -2,6 +2,7 @@
 from __future__ import annotations
 
 import json
+from dataclasses import replace
 from datetime import date, datetime, timedelta
 from pathlib import Path
 
@@ -75,6 +76,7 @@ def test_venue_hide_survives_allday_cascade():
     # канарейка каскадного правки: у Дом кино есть и дневная (13:00), и вечерняя (19:00) строка
     rows = [_s("domkino", "Морозко", TODAY, 13, hall="1"),
             _s("domkino", "Морозко", TODAY, 19, year=1964)]
+    rows = [replace(s, extra={**s.extra, "country": "Россия"}) for s in rows]
     statuses = [VenueStatus(venue=k, ok=True, count=1, fetched_at=GENERATED) for k in VENUES]
     snap = Snapshot(generated_at=GENERATED, window_start=TODAY, window_end=TODAY + timedelta(days=1),
                     statuses=statuses, screenings=rows)
@@ -85,7 +87,9 @@ def test_venue_hide_survives_allday_cascade():
     assert '#allday:checked ~ main .list .r.day{display:grid}' in html
     for k in VENUES:
         assert f'.list .r[data-v="{k}"]{{display:none!important}}' in html
-    assert html.count('{display:none!important}') == len(VENUES)  # ни одного лишнего скрытия
+    assert '#no-russia:checked ~ main .list .r[data-country-status="Russian"]{display:none!important}' in html
+    assert html.count('data-country-status="Russian">') == 2
+    assert html.count('{display:none!important}') == len(VENUES) + 1
 
 
 def test_posters_render_with_exact_attribution():

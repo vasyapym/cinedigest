@@ -8,7 +8,7 @@ from datetime import date, timedelta
 
 from jinja2 import Environment, PackageLoader
 
-from . import config, posters
+from . import config, countries, posters
 from .model import Screening, Snapshot, VENUES, select
 
 log = logging.getLogger(__name__)
@@ -83,7 +83,13 @@ def render_context(snapshot: Snapshot, poster_urls: dict[str, str] | None = None
     set — Screening is a frozen dataclass with an unhashable dict field (extra),
     so a set of Screenings cannot exist; membership works by equality instead.
     """
-    screenings = _attach_posters(_normalize_genres(list(snapshot.screenings)), poster_urls or {})
+    window_rows = [
+        s for s in snapshot.screenings
+        if snapshot.window_start <= s.digest_day <= snapshot.window_end
+    ]
+    screenings = _attach_posters(
+        _normalize_genres(countries.enrich(window_rows)), poster_urls or {},
+    )
     days = _window_days(snapshot)
     all_days = list(select(screenings, days, evening_only=False).items())
     evening = [s for rows in select(screenings, days, evening_only=True).values() for s in rows]

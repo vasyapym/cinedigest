@@ -71,7 +71,7 @@ days is plain links between static pages. -#}
   {%- set night = s.start.hour < 6 -%}
   {%- set parts = [] -%}
   {%- if x.year %}{% set _ = parts.append(x.year|string) %}{% endif -%}
-  {%- if x.country %}{% set _ = parts.append(x.country) %}{% endif -%}
+  {%- if x.country %}{% set _ = parts.append(x.country if x.country is string else (x.country|join(', '))) %}{% endif -%}
   {%- if x.duration_min %}{% set _ = parts.append(x.duration_min ~ ' мин') %}{% endif -%}
   {%- if x.age %}{% set a = x.age|string|trim %}{% set _ = parts.append(a if a.endswith('+') else a ~ '+') %}{% endif -%}
   {%- if x.director %}{% set _ = parts.append('реж. ' ~ x.director) %}{% endif -%}
@@ -83,7 +83,8 @@ days is plain links between static pages. -#}
   {%- if x.online_sale is defined and x.online_sale is sameas false %}{% set _ = parts.append('только в кассе') %}{% endif -%}
 
   <li class="r{% if not is_evening %} day{% endif %}{% if night %} night{% endif %}"
-      data-v="{{ s.venue }}" data-ts="{{ s.start.timestamp()|int }}">
+      data-v="{{ s.venue }}" data-ts="{{ s.start.timestamp()|int }}"
+      data-country-status="{{ x.country_status|default('unknown') }}">
     <time datetime="{{ s.start.isoformat() }}">{{ s.start.strftime('%H:%M') }}{% if night %}<small>ночь на {{ dshort(s.start.date()) }}</small>{% endif %}</time>
     <div class="b">
       <div class="w">
@@ -142,9 +143,10 @@ days is plain links between static pages. -#}
   .ctls{display:flex;flex-wrap:wrap;gap:.35rem;padding:.6rem 0 .2rem}
   .chip{font-size:.8rem;padding:.2rem .6rem;border:1px solid var(--line);border-radius:1rem;color:var(--mut);cursor:pointer;user-select:none}
   .chip.vc::before{content:"";display:inline-block;width:.55em;height:.55em;border-radius:50%;margin-right:.35em;background:var(--vc,var(--mut))}
-  {% for k in venues %}#v-{{ k }}:checked ~ header label[for="v-{{ k }}"], {% endfor %}#allday:checked ~ header label[for="allday"]{color:var(--fg);border-color:var(--fg)}
+  {% for k in venues %}#v-{{ k }}:checked ~ header label[for="v-{{ k }}"], {% endfor %}#allday:checked ~ header label[for="allday"], #no-russia:checked ~ header label[for="no-russia"]{color:var(--fg);border-color:var(--fg)}
   {% for k in venues %}#v-{{ k }}:not(:checked) ~ main .list .r[data-v="{{ k }}"]{display:none!important}
   {% endfor %}
+  #no-russia:checked ~ main .list .r[data-country-status="Russian"]{display:none!important}
   {% for k in venues %}.v-{{ k }}{--vc:var(--c-{{ k }})}
   {% endfor %}
   .list .r.day{display:none}
@@ -192,6 +194,7 @@ days is plain links between static pages. -#}
       data-generated="{{ generated_at.isoformat() }}"
       data-generated-human="{{ dlong(generated_at.date()) }} в {{ generated_at.strftime('%H:%M') }}">
 <input type="checkbox" id="allday" class="ctl">
+<input type="checkbox" id="no-russia" class="ctl">
 {% for k in venues %}<input type="checkbox" id="v-{{ k }}" class="ctl" checked> {% endfor %}
 
 <header>
@@ -212,6 +215,7 @@ days is plain links between static pages. -#}
   </nav>
   <div class="ctls">
     <label for="allday" class="chip">весь день</label>
+    <label for="no-russia" class="chip" title="Скрыть фильмы с участием России, включая копродукции; СССР не считается Россией; неизвестная страна не исключается" aria-label="нероссийские: скрыть фильмы с участием России, включая копродукции; СССР не считается Россией; неизвестная страна не исключается">нероссийские</label>
     {% for k, name in venues.items() %}<label for="v-{{ k }}" class="chip vc v-{{ k }}">{{ name }}</label> {% endfor %}
   </div>
 </header>
@@ -230,10 +234,10 @@ days is plain links between static pages. -#}
         {% for s in rows %}{{ row(s, s in evening, venues) }}{% endfor %}
       </ul>
       {% if not ev %}
-        <p class="none none-ev">Вечером сеансов нет{% if nday %} — есть {{ plural(nday, 'дневной', 'дневных', 'дневных') }}, включите «весь день»{% endif %}.</p>
+        <p class="none none-ev">Проверьте фильтры{% if nday %} или включите «весь день»{% endif %}.</p>
       {% endif %}
     {% else %}
-      <p class="none">Сеансов нет ни в одном кинотеатре — или расписание на этот день ещё не опубликовано.</p>
+      <p class="none">Список пуст — возможно, расписание ещё не опубликовано.</p>
     {% endif %}
   </section>
   <nav class="pn" aria-label="Соседние дни">
