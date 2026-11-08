@@ -274,14 +274,18 @@ days is plain links between static pages. -#}
   var body = document.body;
 
   // 1. remember toggles (presentation only; CSS does the actual hiding)
+  // Restore-on-load skips row-hiding filters: a saved hide must never silently
+  // drop rows on every fresh load. Such flags are also dropped from the store
+  // on the next change (EPHEMERAL), so the fix self-cleans old junk values.
   var KEY = 'kino.toggles', saved = {};
+  var EPHEMERAL = { 'no-russia': true };
   try { saved = JSON.parse(localStorage.getItem(KEY) || '{}'); } catch (e) {}
   var ctls = Array.prototype.slice.call(document.querySelectorAll('input.ctl'));
   ctls.forEach(function (i) {
-    if (i.id in saved) i.checked = !!saved[i.id];
+    if (i.id in saved && !EPHEMERAL[i.id]) i.checked = !!saved[i.id];
     i.addEventListener('change', function () {
       var o = {};
-      ctls.forEach(function (j) { o[j.id] = j.checked; });
+      ctls.forEach(function (j) { if (!EPHEMERAL[j.id]) o[j.id] = j.checked; });
       try { localStorage.setItem(KEY, JSON.stringify(o)); } catch (e) {}
     });
   });

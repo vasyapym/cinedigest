@@ -326,8 +326,9 @@ def test_chip_and_storage_coverage_are_identical_on_every_page():
         assert '#no-russia:checked ~ header label[for="no-russia"]{color:var(--fg);border-color:var(--fg)}' in html
         assert "var KEY = 'kino.toggles'" in html
         assert "document.querySelectorAll('input.ctl')" in html
-        assert "if (i.id in saved) i.checked = !!saved[i.id];" in html
-        assert "o[j.id] = j.checked;" in html
+        assert "EPHEMERAL = { 'no-russia': true }" in html
+        assert "if (i.id in saved && !EPHEMERAL[i.id]) i.checked = !!saved[i.id];" in html
+        assert "if (!EPHEMERAL[j.id]) o[j.id] = j.checked;" in html
         assert COUNTRY_HIDE in html
         assert html.count("{display:none!important}") == len(VENUES) + 1
         assert "IntersectionObserver" not in html and "scrollIntoView" not in html
