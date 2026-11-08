@@ -8,10 +8,11 @@ from __future__ import annotations
 
 import argparse
 import logging
+import os
 from datetime import date, timedelta
 from pathlib import Path
 
-from . import config, deliver, pipeline, posters
+from . import config, countries, deliver, pipeline, posters
 from .http import Http, safe_filename
 from .model import VENUES, Snapshot
 from .venues import avrora, domkino, lenfilm, mirage, outcinema, poravkino, rodina
@@ -89,7 +90,10 @@ def _run(args, venues) -> int:
                            out_dir=out_dir, http=http)
     _resolve_posters(snapshot, http, out_dir)
 
-    html_path, digest_path = deliver.write(snapshot, out_dir)
+    html_path, digest_path = deliver.write(
+        snapshot, out_dir,
+        cache_entries=_load_poster_entries(out_dir),
+    )
     log.info("written: %s, %s", html_path, digest_path)
 
     text = deliver.telegram_text(snapshot)
@@ -127,9 +131,40 @@ def _run_window(venues, *, start: date, days: int, previous, out_dir, http=None)
 def _resolve_posters(snapshot: Snapshot, http, out_dir) -> None:
     """Best-effort: a resolver failure is logged, the pages still render from the cache."""
     try:
-        posters.resolve(snapshot.screenings, http=http, out_dir=out_dir, today=pipeline.today_msk())
+        kwargs = {}
+        if os.environ.get("TMDB_READ_TOKEN"):
+            kwargs["year_hints"] = _poster_year_hints(snapshot, out_dir)
+        posters.resolve(
+            snapshot.screenings, http=http, out_dir=out_dir,
+            today=pipeline.today_msk(), **kwargs,
+        )
     except Exception:
         log.exception("posters: resolver failed — pages render with the cached posters only")
+
+
+def _load_poster_entries(out_dir) -> dict:
+    """Read the committed inner cache mapping; no token or network is needed."""
+    return posters.prune(
+        posters.load_cache(
+            Path(out_dir) / config.DOCS_DIRNAME / config.POSTERS_FILENAME,
+        ),
+        pipeline.today_msk(),
+    )
+
+
+def _poster_year_hints(snapshot: Snapshot, out_dir) -> dict[str, int]:
+    entries = _load_poster_entries(out_dir)
+    additional = [
+        countries.CountryEvidence(**record)
+        for record in posters.identity_evidence(entries)
+    ]
+    return countries.identity_hints(
+        (
+            row for row in snapshot.screenings
+            if snapshot.window_start <= row.digest_day <= snapshot.window_end
+        ),
+        additional=additional,
+    )
 
 
 def _posters_command(args, _) -> int:
@@ -138,8 +173,17 @@ def _posters_command(args, _) -> int:
     snapshot = pipeline.load_snapshot(snapshot_path)
     if snapshot is None:
         args._parser.error(f"snapshot not found or unreadable: {snapshot_path}")
-    posters.resolve(snapshot.screenings, http=Http(), out_dir=out_dir, today=pipeline.today_msk())
-    html_path, digest_path = deliver.write(snapshot, out_dir)
+    kwargs = {}
+    if os.environ.get("TMDB_READ_TOKEN"):
+        kwargs["year_hints"] = _poster_year_hints(snapshot, out_dir)
+    posters.resolve(
+        snapshot.screenings, http=Http(), out_dir=out_dir,
+        today=pipeline.today_msk(), **kwargs,
+    )
+    html_path, digest_path = deliver.write(
+        snapshot, out_dir,
+        cache_entries=_load_poster_entries(out_dir),
+    )
     log.info("written: %s, %s", html_path, digest_path)
     return 0
 
@@ -153,7 +197,10 @@ def _render_command(args, _) -> int:
     snapshot = pipeline.load_snapshot(snapshot_path)
     if snapshot is None:
         args._parser.error(f"snapshot not found or unreadable: {snapshot_path}")
-    html_path, digest_path = deliver.write(snapshot, out_dir)
+    html_path, digest_path = deliver.write(
+        snapshot, out_dir,
+        cache_entries=_load_poster_entries(out_dir),
+    )
     log.info("written: %s, %s", html_path, digest_path)
     return 0
 

@@ -14,9 +14,11 @@ Country = str | list[str] | tuple[str, ...]
 
 _SEPARATORS = re.compile(r"[,;/|+&\n·]+")
 _WORD_SEPARATORS = re.compile(r"[\W_]+", re.UNICODE)
+_IGNORED_COUNTRY_TOKENS = {"пушкинская карта"}  # venue badge markers («Пушкинская карта») leak into country strings; not a country
 _ALIASES = {
     "россия": "ru",
     "российская федерация": "ru",
+    "russia": "ru",
     "ru": "ru",
     "rus": "ru",
     "ссср": "su",
@@ -53,6 +55,8 @@ def _countries(value) -> frozenset[str]:
             continue
         for part in _SEPARATORS.split(text):
             entry = _WORD_SEPARATORS.sub(" ", part.casefold()).strip()
+            if entry in _IGNORED_COUNTRY_TOKENS:
+                continue
             parenthesized = re.fullmatch(r"([^()]+)\(([^()]+)\)[\s.]*", part.strip())
             if parenthesized:
                 outer, inner = (
@@ -112,7 +116,7 @@ def enrich(
     already available data; this function never loads a cache or calls a resolver.
 
     Source countries are preserved verbatim. Missing countries may be copied
-    from original window evidence only: derived results never become donors.
+    from original window or additional evidence only: results never become donors.
     """
     rows = list(screenings)
     by_title: dict[str, list[CountryEvidence]] = defaultdict(list)
@@ -138,11 +142,13 @@ def enrich(
 
     for item in additional:
         title = norm(item.title)
-        if not title or not _countries(item.country):
+        if not title:
             continue
         year = film_year(item.year)
         if year is not None:
             years[title].add(year)
+        if not _countries(item.country):
+            continue
         by_title[title].append(CountryEvidence(
             title=title,
             year=year,
@@ -167,3 +173,40 @@ def enrich(
         extra["country_status"] = country_status(extra.get("country"))
         copies.append(replace(row, extra=extra))
     return copies
+
+
+def identity_hints(
+    screenings: Iterable[Screening],
+    additional: Iterable[CountryEvidence] = (),
+) -> dict[str, int]:
+    """Recover a year for undated rows only when one dated identity is known.
+
+    Countries and their agreement do not establish identity: every valid dated
+    row or additional record participates, including country-less evidence.
+    """
+    years: dict[str, set[int]] = defaultdict(set)
+    missing: set[str] = set()
+
+    for row in screenings:
+        title = norm(row.title)
+        if not title:
+            continue
+        year = film_year((row.extra or {}).get("year"))
+        if year is None:
+            missing.add(title)
+        else:
+            years[title].add(year)
+
+    for item in additional:
+        title = norm(item.title)
+        if not title:
+            continue
+        year = film_year(item.year)
+        if year is not None:
+            years[title].add(year)
+
+    return {
+        title: next(iter(years[title]))
+        for title in sorted(missing)
+        if len(years.get(title, ())) == 1
+    }

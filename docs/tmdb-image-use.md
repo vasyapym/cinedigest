@@ -106,6 +106,8 @@ A page footer with logo + notice qualifies as an "About/Credits type section" pe
 
 So a JSON of resolved poster paths is a permitted cache but must not silently outlive 6 months (i.e. paths committed to the repo need a re-check/re-resolution at least every 6 months to stay within the clause; also practical because TMDB replaces artwork, in which case old paths 404 — though nothing in the terms guarantees the CDN serves any given poster forever, and nothing promises NOT to delete posters either).
 
+For confidently identified films, the poster cache additionally stores production-country names obtained from TMDB movie details, together with their retrieval date and TMDB provenance. These fields share the existing cache-entry refresh and pruning lifecycle; they do not extend metadata or poster-byte retention. Details retrieval is bounded by the same per-run film-admission limit, while poster downloads retain their separate limits; failed or unavailable country data is not inferred from search results.
+
 The [FAQ](https://developer.themoviedb.org/docs/faq) "API legal notice" confirms the rights baseline:
 
 > "We do not claim ownership of any of the images or data in the API. We comply with the Digital Millennium Copyright Act (DMCA) and expeditiously remove infringing content when properly notified. Any data and/or images you upload you expressly grant us a license to use. You are prohibited from using the images and/or data in connection with libelous, defamatory, obscene, pornographic, abusive or otherwise offensive content."

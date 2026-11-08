@@ -60,13 +60,17 @@ def _normalize_genres(screenings: list[Screening]) -> list[Screening]:
     return copies
 
 
-def _attach_posters(screenings: list[Screening], urls: dict[str, str]) -> list[Screening]:
+def _attach_posters(screenings: list[Screening], urls: dict[str, str],
+                    year_hints: dict[str, int] | None = None) -> list[Screening]:
     """Render-only copies carrying extra.poster; the snapshot itself never stores the URL."""
     if not urls:
         return screenings
     copies: list[Screening] = []
     for s in screenings:
-        key = posters.film_key(s.title, posters.film_year((s.extra or {}).get("year")))
+        year = posters.film_year((s.extra or {}).get("year"))
+        if year is None and year_hints is not None:
+            year = posters.film_year(year_hints.get(posters.norm(s.title)))
+        key = posters.film_key(s.title, year)
         url = urls.get(key) if key else None
         if url:
             x = dict(s.extra or {})
@@ -76,7 +80,11 @@ def _attach_posters(screenings: list[Screening], urls: dict[str, str]) -> list[S
     return copies
 
 
-def render_context(snapshot: Snapshot, poster_urls: dict[str, str] | None = None) -> dict:
+def render_context(
+    snapshot: Snapshot,
+    poster_urls: dict[str, str] | None = None,
+    cache_entries: dict | None = None,
+) -> dict:
     """The context documented in templates/index.html.j2 (minus the per-page day_index).
 
     Engine fact: `select(..., evening_only=True)` screenings go into a LIST, not a
@@ -87,8 +95,22 @@ def render_context(snapshot: Snapshot, poster_urls: dict[str, str] | None = None
         s for s in snapshot.screenings
         if snapshot.window_start <= s.digest_day <= snapshot.window_end
     ]
+    additional = (
+        [
+            countries.CountryEvidence(**record)
+            for record in (
+                posters.country_evidence(cache_entries)
+                + posters.identity_evidence(cache_entries)
+            )
+        ]
+    ) if cache_entries is not None else []
+    year_hints = countries.identity_hints(window_rows, additional=additional)
     screenings = _attach_posters(
-        _normalize_genres(countries.enrich(window_rows)), poster_urls or {},
+        _normalize_genres(countries.enrich(
+            window_rows, additional=additional,
+        )),
+        poster_urls or {},
+        year_hints,
     )
     days = _window_days(snapshot)
     all_days = list(select(screenings, days, evening_only=False).items())
@@ -109,10 +131,14 @@ def render_context(snapshot: Snapshot, poster_urls: dict[str, str] | None = None
     }
 
 
-def render_pages(snapshot: Snapshot, poster_urls: dict[str, str] | None = None) -> dict[str, str]:
+def render_pages(
+    snapshot: Snapshot,
+    poster_urls: dict[str, str] | None = None,
+    cache_entries: dict | None = None,
+) -> dict[str, str]:
     """filename -> HTML: index.html (= the first window day) plus one page per window day.
     Every artifact's size is logged; a page at or over the budget warns."""
-    context = render_context(snapshot, poster_urls)
+    context = render_context(snapshot, poster_urls, cache_entries=cache_entries)
     pages: dict[str, str] = {}
     for index, (day, _rows) in enumerate(context["days"]):
         html = _template().render(**context, day_index=index)
@@ -128,6 +154,10 @@ def render_pages(snapshot: Snapshot, poster_urls: dict[str, str] | None = None) 
     return pages
 
 
-def render(snapshot: Snapshot, poster_urls: dict[str, str] | None = None) -> str:
+def render(
+    snapshot: Snapshot,
+    poster_urls: dict[str, str] | None = None,
+    cache_entries: dict | None = None,
+) -> str:
     """index.html — the first window day. Other days: render_pages()."""
-    return render_pages(snapshot, poster_urls)[INDEX_FILENAME]
+    return render_pages(snapshot, poster_urls, cache_entries=cache_entries)[INDEX_FILENAME]

@@ -84,6 +84,7 @@ def _extras(rows, **kwargs):
     "Франция · Россия",
     ["Франция", "Россия"],
     ("США", "ru"),
+    "Пушкинская карта, Россия",
 ])
 def test_russian_aliases_and_coproductions(country):
     assert countries.country_status(country) == "Russian"
@@ -104,7 +105,7 @@ def test_non_russian_entries_are_not_substring_matches(country):
     assert countries.country_status(country) == "other"
 
 
-@pytest.mark.parametrize("country", [None, "", "  ", [], (), " / ; ", 123])
+@pytest.mark.parametrize("country", [None, "", "  ", [], (), " / ; ", 123, "Пушкинская карта"])
 def test_missing_country_is_unknown(country):
     assert countries.country_status(country) == "unknown"
 

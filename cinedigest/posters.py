@@ -302,6 +302,22 @@ def country_evidence(entries: dict) -> list[dict]:
         })
     return out
 
+
+def identity_evidence(entries: dict) -> list[dict]:
+    """Pure dated identities, including entries without country evidence."""
+    out = []
+    for entry in entries.values():
+        if not isinstance(entry, dict) or not isinstance(entry.get("title"), str):
+            continue
+        year = film_year(entry.get("year"))
+        if year is None:
+            continue
+        out.append({
+            "title": entry["title"], "year": year, "country": "",
+            "source": entry.get("country_via") or f"tmdb:{entry.get('tmdb_id')}",
+        })
+    return out
+
 def results(body) -> list[dict]:
     data = _json(body)
     items = data.get("results") if isinstance(data, dict) else None
@@ -429,12 +445,13 @@ def _ready_name(key, entries: dict[str, dict], overrides: dict, today: date, pos
     return name
 
 
-def cached_urls(screenings, docs_dir, today: date) -> dict[str, str]:
+def cached_urls(screenings, docs_dir, today: date,
+                year_hints: dict[str, int] | None = None) -> dict[str, str]:
     """Offline render path: the local poster files the committed cache + overrides give for a
     snapshot — freshness re-checked against `today` at every render, never from mere existence."""
     docs = Path(docs_dir)
     return poster_files(
-        films(screenings),
+        films(screenings, year_hints),
         load_cache(docs / config.POSTERS_FILENAME),
         load_overrides(docs / config.POSTER_OVERRIDES_FILENAME),
         today,

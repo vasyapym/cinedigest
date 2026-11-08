@@ -7,7 +7,7 @@ from pathlib import Path
 
 import requests
 
-from . import config, posters
+from . import config, countries, posters
 from .model import Snapshot
 from .render import INDEX_FILENAME, render_context, render_pages
 from .render_text import render_digest, render_telegram, split_telegram
@@ -22,7 +22,11 @@ DIGEST_FILENAME = "digest.txt"
 DAY_PAGE_GLOB = "????-??-??.html"
 
 
-def write(snapshot: Snapshot, out_dir: Path | str) -> tuple[Path, Path]:
+def write(
+    snapshot: Snapshot,
+    out_dir: Path | str,
+    cache_entries: dict | None = None,
+) -> tuple[Path, Path]:
     """Render index.html, one page per window day and digest.txt under <out_dir>/docs/;
     return (index path, digest path). Posters come from the committed cache only — no network;
     before rendering the expired image files and orphans under docs/posters/ are pruned, so a
@@ -30,9 +34,32 @@ def write(snapshot: Snapshot, out_dir: Path | str) -> tuple[Path, Path]:
     docs = Path(out_dir) / config.DOCS_DIRNAME
     docs.mkdir(parents=True, exist_ok=True)
     today = snapshot.window_start
+    entries = posters.prune(
+        posters.load_cache(docs / config.POSTERS_FILENAME), today,
+    )
     posters.cleanup(docs / config.POSTERS_DIRNAME,
-                    posters.prune(posters.load_cache(docs / config.POSTERS_FILENAME), today), today)
-    pages = render_pages(snapshot, posters.cached_urls(snapshot.screenings, docs, today))
+                    entries, today)
+    identity_entries = cache_entries if cache_entries is not None else entries
+    identities = [
+        countries.CountryEvidence(**record)
+        for record in posters.identity_evidence(identity_entries)
+    ]
+    year_hints = countries.identity_hints(
+        (
+            row for row in snapshot.screenings
+            if snapshot.window_start <= row.digest_day <= snapshot.window_end
+        ),
+        additional=identities,
+    )
+    poster_urls = posters.cached_urls(
+        snapshot.screenings, docs, today, year_hints=year_hints,
+    )
+    if cache_entries is None:
+        pages = render_pages(snapshot, poster_urls)
+    else:
+        pages = render_pages(
+            snapshot, poster_urls, cache_entries=cache_entries,
+        )
     for name, html in pages.items():
         (docs / name).write_text(html, encoding="utf-8")
     prune_day_pages(docs, set(pages))
