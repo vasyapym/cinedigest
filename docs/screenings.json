@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-08T13:27:51.889460+03:00",
+  "generated_at": "2026-11-08T13:37:49.633669+03:00",
   "window_start": "2026-11-08",
   "window_end": "2026-11-14",
   "statuses": [
@@ -7,85 +7,85 @@
       "venue": "domkino",
       "ok": true,
       "count": 93,
-      "fetched_at": "2026-11-08T13:28:09.633391+03:00",
+      "fetched_at": "2026-11-08T13:38:04.574441+03:00",
       "stale": false,
       "suspicious": false,
       "error": null,
       "warning": null,
       "requests": 7,
-      "seconds": 17.744
+      "seconds": 14.941
     },
     {
       "venue": "rodina",
       "ok": true,
       "count": 120,
-      "fetched_at": "2026-11-08T13:29:01.020060+03:00",
+      "fetched_at": "2026-11-08T13:38:47.500423+03:00",
       "stale": false,
       "suspicious": false,
       "error": null,
       "warning": null,
       "requests": 32,
-      "seconds": 51.387
+      "seconds": 42.926
     },
     {
       "venue": "avrora",
       "ok": true,
       "count": 40,
-      "fetched_at": "2026-11-08T13:29:09.350604+03:00",
+      "fetched_at": "2026-11-08T13:38:54.722355+03:00",
       "stale": false,
       "suspicious": false,
       "error": null,
       "warning": null,
       "requests": 8,
-      "seconds": 8.33
+      "seconds": 7.221
     },
     {
       "venue": "poravkino",
       "ok": true,
       "count": 92,
-      "fetched_at": "2026-11-08T13:29:15.514441+03:00",
+      "fetched_at": "2026-11-08T13:39:00.310648+03:00",
       "stale": false,
       "suspicious": false,
       "error": null,
       "warning": null,
       "requests": 7,
-      "seconds": 6.164
+      "seconds": 5.588
     },
     {
       "venue": "lenfilm",
       "ok": true,
       "count": 26,
-      "fetched_at": "2026-11-08T13:29:23.141717+03:00",
+      "fetched_at": "2026-11-08T13:39:07.162153+03:00",
       "stale": false,
       "suspicious": false,
       "error": null,
       "warning": null,
       "requests": 9,
-      "seconds": 7.627
+      "seconds": 6.851
     },
     {
       "venue": "outcinema",
       "ok": true,
       "count": 19,
-      "fetched_at": "2026-11-08T13:29:23.721095+03:00",
+      "fetched_at": "2026-11-08T13:39:07.534746+03:00",
       "stale": false,
       "suspicious": false,
       "error": null,
       "warning": null,
       "requests": 1,
-      "seconds": 0.579
+      "seconds": 0.373
     },
     {
       "venue": "mirage",
       "ok": true,
       "count": 134,
-      "fetched_at": "2026-11-08T13:29:33.476074+03:00",
+      "fetched_at": "2026-11-08T13:39:15.579579+03:00",
       "stale": false,
       "suspicious": false,
       "error": null,
       "warning": null,
       "requests": 7,
-      "seconds": 9.755
+      "seconds": 8.044
     }
   ],
   "screenings": [
@@ -1040,7 +1040,7 @@
           "драма"
         ],
         "country": "Испания",
-        "free_places": 54,
+        "free_places": 53,
         "online_sale": true
       }
     },
@@ -1300,7 +1300,7 @@
     },
     {
       "venue": "mirage",
-      "source_id": "48f80923bb6c",
+      "source_id": "ae055d03-c559-46c8-b7b6-58ca532ff458",
       "title": "Кит: Во тьме глубин",
       "start": "2026-11-08T16:50:00+03:00",
       "hall": "6",
@@ -1308,7 +1308,7 @@
       "price_max": null,
       "language": null,
       "tags": [],
-      "url": null,
+      "url": "https://www.mirage.ru/ticket_new/ae055d03-c559-46c8-b7b6-58ca532ff458/",
       "source_url": "https://www.mirage.ru/spb/schedule/08.11.2026/cinema/1/",
       "extra": {
         "genres": [
@@ -1444,7 +1444,7 @@
           "комедия"
         ],
         "country": "США, Великобритания",
-        "free_places": 348,
+        "free_places": 346,
         "online_sale": true
       }
     },
@@ -1649,7 +1649,7 @@
           "драма"
         ],
         "country": "Россия",
-        "free_places": 53,
+        "free_places": 51,
         "online_sale": true
       }
     },
@@ -1706,7 +1706,7 @@
           "комедия"
         ],
         "country": "США, Великобритания",
-        "free_places": 116,
+        "free_places": 115,
         "online_sale": true
       }
     },
