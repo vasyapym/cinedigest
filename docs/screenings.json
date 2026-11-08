@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-08T12:24:12.104588+03:00",
+  "generated_at": "2026-11-08T12:40:25.238207+03:00",
   "window_start": "2026-11-08",
   "window_end": "2026-11-14",
   "statuses": [
@@ -7,85 +7,85 @@
       "venue": "domkino",
       "ok": true,
       "count": 93,
-      "fetched_at": "2026-11-08T12:24:28.043372+03:00",
+      "fetched_at": "2026-11-08T12:40:41.781623+03:00",
       "stale": false,
       "suspicious": false,
       "error": null,
       "warning": null,
       "requests": 7,
-      "seconds": 15.939
+      "seconds": 16.543
     },
     {
       "venue": "rodina",
       "ok": true,
-      "count": 123,
-      "fetched_at": "2026-11-08T12:25:20.921261+03:00",
+      "count": 121,
+      "fetched_at": "2026-11-08T12:41:28.531489+03:00",
       "stale": false,
       "suspicious": false,
       "error": null,
       "warning": null,
       "requests": 32,
-      "seconds": 52.878
+      "seconds": 46.75
     },
     {
       "venue": "avrora",
       "ok": true,
       "count": 41,
-      "fetched_at": "2026-11-08T12:25:28.297300+03:00",
+      "fetched_at": "2026-11-08T12:41:36.423736+03:00",
       "stale": false,
       "suspicious": false,
       "error": null,
       "warning": null,
       "requests": 8,
-      "seconds": 7.375
+      "seconds": 7.892
     },
     {
       "venue": "poravkino",
       "ok": true,
-      "count": 94,
-      "fetched_at": "2026-11-08T12:25:34.219353+03:00",
+      "count": 93,
+      "fetched_at": "2026-11-08T12:41:42.498960+03:00",
       "stale": false,
       "suspicious": false,
       "error": null,
       "warning": null,
       "requests": 7,
-      "seconds": 5.922
+      "seconds": 6.075
     },
     {
       "venue": "lenfilm",
       "ok": true,
       "count": 26,
-      "fetched_at": "2026-11-08T12:25:41.438316+03:00",
+      "fetched_at": "2026-11-08T12:41:49.807943+03:00",
       "stale": false,
       "suspicious": false,
       "error": null,
       "warning": null,
       "requests": 9,
-      "seconds": 7.219
+      "seconds": 7.309
     },
     {
       "venue": "outcinema",
       "ok": true,
       "count": 19,
-      "fetched_at": "2026-11-08T12:25:41.862317+03:00",
+      "fetched_at": "2026-11-08T12:41:50.310134+03:00",
       "stale": false,
       "suspicious": false,
       "error": null,
       "warning": null,
       "requests": 1,
-      "seconds": 0.424
+      "seconds": 0.502
     },
     {
       "venue": "mirage",
       "ok": true,
-      "count": 137,
-      "fetched_at": "2026-11-08T12:25:49.928380+03:00",
+      "count": 136,
+      "fetched_at": "2026-11-08T12:41:58.699259+03:00",
       "stale": false,
       "suspicious": false,
       "error": null,
       "warning": null,
       "requests": 7,
-      "seconds": 8.066
+      "seconds": 8.389
     }
   ],
   "screenings": [
@@ -280,28 +280,6 @@
     },
     {
       "venue": "mirage",
-      "source_id": "b0604455-5178-4f1e-af2a-4e4773fc4ef1",
-      "title": "Одиссея",
-      "start": "2026-11-08T11:50:00+03:00",
-      "hall": "5",
-      "price_min": null,
-      "price_max": null,
-      "language": null,
-      "tags": [],
-      "url": "https://www.mirage.ru/ticket_new/b0604455-5178-4f1e-af2a-4e4773fc4ef1/",
-      "source_url": "https://www.mirage.ru/spb/schedule/08.11.2026/cinema/1/",
-      "extra": {
-        "genres": [
-          "боевик",
-          "приключения",
-          "фэнтези"
-        ],
-        "age": "18+",
-        "film_id": 7450
-      }
-    },
-    {
-      "venue": "mirage",
       "source_id": "f5a352ad-0241-480c-92ed-e815ae5179ed",
       "title": "Морозко",
       "start": "2026-11-08T12:00:00+03:00",
@@ -346,83 +324,6 @@
           "военный",
           "исторический"
         ]
-      }
-    },
-    {
-      "venue": "rodina",
-      "source_id": "ba21dfca9f7e",
-      "title": "Настройщик",
-      "start": "2026-11-08T12:15:00+03:00",
-      "hall": "Малый 1 зал",
-      "price_min": 250,
-      "price_max": 250,
-      "language": null,
-      "tags": [],
-      "url": "https://rodinakino.ru/events/nastrojshik-2025",
-      "source_url": "https://rodinakino.ru/?date=2026/11/08",
-      "extra": {
-        "year": 2025,
-        "age": "18+",
-        "duration_min": 108,
-        "synopsis": "Нью-Йорк. Жизнь Ники — страдающего гиперакузией талантливого настройщика фортепиано — переворачивается с ног на голову, когда он обнаруживает, что его навыки и тонкий слух настройки можно применять для взлома сейфов. Когда его пожилой наставник и партнёр Гарри попадает в больницу, парень решает присоединиться к банде…",
-        "director": "Дэниэл Роэр",
-        "genres": [
-          "драма",
-          "мелодрама",
-          "криминал",
-          "музыка"
-        ],
-        "country": "Канада, США"
-      }
-    },
-    {
-      "venue": "rodina",
-      "source_id": "cb7690c879e7",
-      "title": "Лето в Бадене",
-      "start": "2026-11-08T12:20:00+03:00",
-      "hall": "Большой зал",
-      "price_min": 270,
-      "price_max": 270,
-      "language": null,
-      "tags": [],
-      "url": "https://rodinakino.ru/events/leto-v-badene-2026",
-      "source_url": "https://rodinakino.ru/?date=2026/11/08",
-      "extra": {
-        "year": 2026,
-        "age": "18+",
-        "duration_min": 80,
-        "synopsis": "Советский интеллигент занимается наукой и медициной, иногда пишет в стол, для себя. Его единственный сын решает уехать из страны навсегда. Это разбивает отцу сердце, ставит крест на карьере и положении в обществе. Потеряв всё, он решается воплотить замысел всей жизни и написать роман о Фёдоре Достоевском. Подобно…",
-        "director": "Антон Желнов",
-        "genres": [
-          "драма"
-        ],
-        "country": "Россия"
-      }
-    },
-    {
-      "venue": "poravkino",
-      "source_id": "44004",
-      "title": "Битва моторов",
-      "start": "2026-11-08T12:25:00+03:00",
-      "hall": "3",
-      "price_min": 350,
-      "price_max": 350,
-      "language": null,
-      "tags": [],
-      "url": "https://poravkino.ru/",
-      "source_url": "https://poravkino.ru/api/schedule?date=2026-11-08",
-      "extra": {
-        "year": 0,
-        "country": "Россия",
-        "director": "Илья Маланин",
-        "original_title": "Битва моторов",
-        "duration_min": 155,
-        "age": 12,
-        "genres": [
-          "драма",
-          "приключения"
-        ],
-        "is_pushkin": false
       }
     },
     {
@@ -646,7 +547,7 @@
           "драма"
         ],
         "country": "Россия",
-        "free_places": 50,
+        "free_places": 47,
         "online_sale": true
       }
     },
@@ -899,7 +800,7 @@
           "историческая драма"
         ],
         "country": "Россия",
-        "free_places": 344,
+        "free_places": 341,
         "online_sale": true
       }
     },
@@ -1671,7 +1572,7 @@
           "комедия"
         ],
         "country": "США, Великобритания",
-        "free_places": 356,
+        "free_places": 351,
         "online_sale": true
       }
     },
@@ -1876,7 +1777,7 @@
           "драма"
         ],
         "country": "Россия",
-        "free_places": 63,
+        "free_places": 61,
         "online_sale": true
       }
     },
@@ -1933,7 +1834,7 @@
           "комедия"
         ],
         "country": "США, Великобритания",
-        "free_places": 122,
+        "free_places": 123,
         "online_sale": true
       }
     },
@@ -2294,7 +2195,7 @@
           "историческая драма"
         ],
         "country": "Россия",
-        "free_places": 367,
+        "free_places": 365,
         "online_sale": true
       }
     },
@@ -6035,7 +5936,7 @@
           "театр в кино"
         ],
         "country": "Россия",
-        "free_places": 79,
+        "free_places": 75,
         "online_sale": true
       }
     },
@@ -8437,7 +8338,7 @@
         "duration_min": 124,
         "age": "18+",
         "country": "США",
-        "free_places": 100,
+        "free_places": 98,
         "online_sale": true
       }
     },
