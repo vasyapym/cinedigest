@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-08T14:16:51.936173+03:00",
+  "generated_at": "2026-11-08T14:20:51.034390+03:00",
   "window_start": "2026-11-08",
   "window_end": "2026-11-14",
   "statuses": [
@@ -7,85 +7,85 @@
       "venue": "domkino",
       "ok": true,
       "count": 93,
-      "fetched_at": "2026-11-08T14:17:08.774128+03:00",
+      "fetched_at": "2026-11-08T14:21:25.651756+03:00",
       "stale": false,
       "suspicious": false,
       "error": null,
       "warning": null,
       "requests": 7,
-      "seconds": 16.838
+      "seconds": 34.617
     },
     {
       "venue": "rodina",
       "ok": true,
       "count": 119,
-      "fetched_at": "2026-11-08T14:17:57.816740+03:00",
+      "fetched_at": "2026-11-08T14:22:15.188124+03:00",
       "stale": false,
       "suspicious": false,
       "error": null,
       "warning": null,
       "requests": 32,
-      "seconds": 49.043
+      "seconds": 49.536
     },
     {
       "venue": "avrora",
       "ok": true,
       "count": 40,
-      "fetched_at": "2026-11-08T14:18:05.707779+03:00",
+      "fetched_at": "2026-11-08T14:22:23.031906+03:00",
       "stale": false,
       "suspicious": false,
       "error": null,
       "warning": null,
       "requests": 8,
-      "seconds": 7.89
+      "seconds": 7.843
     },
     {
       "venue": "poravkino",
       "ok": true,
-      "count": 88,
-      "fetched_at": "2026-11-08T14:18:11.571857+03:00",
+      "count": 87,
+      "fetched_at": "2026-11-08T14:22:28.934494+03:00",
       "stale": false,
       "suspicious": false,
       "error": null,
       "warning": null,
       "requests": 7,
-      "seconds": 5.864
+      "seconds": 5.903
     },
     {
       "venue": "lenfilm",
       "ok": true,
       "count": 26,
-      "fetched_at": "2026-11-08T14:18:19.115162+03:00",
+      "fetched_at": "2026-11-08T14:22:36.415455+03:00",
       "stale": false,
       "suspicious": false,
       "error": null,
       "warning": null,
       "requests": 9,
-      "seconds": 7.543
+      "seconds": 7.481
     },
     {
       "venue": "outcinema",
       "ok": true,
       "count": 19,
-      "fetched_at": "2026-11-08T14:18:19.578622+03:00",
+      "fetched_at": "2026-11-08T14:22:36.883881+03:00",
       "stale": false,
       "suspicious": false,
       "error": null,
       "warning": null,
       "requests": 1,
-      "seconds": 0.463
+      "seconds": 0.468
     },
     {
       "venue": "mirage",
       "ok": true,
       "count": 131,
-      "fetched_at": "2026-11-08T14:18:28.098134+03:00",
+      "fetched_at": "2026-11-08T14:22:46.059044+03:00",
       "stale": false,
       "suspicious": false,
       "error": null,
       "warning": null,
       "requests": 7,
-      "seconds": 8.519
+      "seconds": 9.175
     }
   ],
   "screenings": [
@@ -404,32 +404,6 @@
       }
     },
     {
-      "venue": "poravkino",
-      "source_id": "44010",
-      "title": "Рождение империи",
-      "start": "2026-11-08T14:10:00+03:00",
-      "hall": "Премьер",
-      "price_min": 400,
-      "price_max": 400,
-      "language": null,
-      "tags": [],
-      "url": "https://poravkino.ru/",
-      "source_url": "https://poravkino.ru/api/schedule?date=2026-11-08",
-      "extra": {
-        "year": 2026,
-        "country": "Россия",
-        "director": "Андрей Кравчук, Алексей Нужный",
-        "original_title": "Рождение империи",
-        "duration_min": 150,
-        "age": 12,
-        "genres": [
-          "биографический",
-          "драма"
-        ],
-        "is_pushkin": false
-      }
-    },
-    {
       "venue": "rodina",
       "source_id": "17cdf027d10f",
       "title": "Битва моторов",
@@ -686,7 +660,6 @@
       "url": "https://poravkino.ru/",
       "source_url": "https://poravkino.ru/api/schedule?date=2026-11-08",
       "extra": {
-        "year": 0,
         "country": "США, Великобритания, Мексика",
         "director": "Алехандро Гонсалес Иньярриту",
         "original_title": "Диггер",
@@ -747,7 +720,7 @@
           "театр в кино"
         ],
         "country": "Австрия",
-        "free_places": 82,
+        "free_places": 83,
         "online_sale": true
       }
     },
@@ -786,7 +759,6 @@
       "url": "https://poravkino.ru/",
       "source_url": "https://poravkino.ru/api/schedule?date=2026-11-08",
       "extra": {
-        "year": 0,
         "country": "Россия",
         "director": "Илья Маланин",
         "original_title": "Битва моторов",
@@ -956,7 +928,6 @@
       "url": "https://poravkino.ru/",
       "source_url": "https://poravkino.ru/api/schedule?date=2026-11-08",
       "extra": {
-        "year": 0,
         "country": "США, Великобритания",
         "director": "Джеймс Уоткинс",
         "original_title": "Клэйфейс",
@@ -1343,7 +1314,6 @@
       "url": "https://poravkino.ru/",
       "source_url": "https://poravkino.ru/api/schedule?date=2026-11-08",
       "extra": {
-        "year": 0,
         "country": "США",
         "director": "Дэвид Эйр",
         "original_title": "Сердце зверя",
@@ -1417,7 +1387,6 @@
       "url": "https://poravkino.ru/",
       "source_url": "https://poravkino.ru/api/schedule?date=2026-11-08",
       "extra": {
-        "year": 0,
         "country": "Россия",
         "director": "Илья Маланин",
         "original_title": "Битва моторов",
@@ -1509,7 +1478,7 @@
           "комедия"
         ],
         "country": "США, Великобритания",
-        "free_places": 113,
+        "free_places": 114,
         "online_sale": true
       }
     },
@@ -1594,7 +1563,6 @@
       "url": "https://poravkino.ru/",
       "source_url": "https://poravkino.ru/api/schedule?date=2026-11-08",
       "extra": {
-        "year": 0,
         "country": "Франция, Испания",
         "director": "Родриго Сорогойен",
         "original_title": "Любовь моя",
@@ -2234,7 +2202,6 @@
       "url": "https://poravkino.ru/",
       "source_url": "https://poravkino.ru/api/schedule?date=2026-11-08",
       "extra": {
-        "year": 0,
         "country": "США, Великобритания",
         "director": "Джеймс Уоткинс",
         "original_title": "Клэйфейс",
@@ -2783,7 +2750,6 @@
       "url": "https://poravkino.ru/",
       "source_url": "https://poravkino.ru/api/schedule?date=2026-11-08",
       "extra": {
-        "year": 0,
         "country": "США, Великобритания",
         "director": "Джеймс Уоткинс",
         "original_title": "Клэйфейс",
@@ -2809,7 +2775,6 @@
       "url": "https://poravkino.ru/",
       "source_url": "https://poravkino.ru/api/schedule?date=2026-11-08",
       "extra": {
-        "year": 0,
         "country": "США, Германия",
         "director": "Зак Креггер",
         "original_title": "Обитель зла",
@@ -2888,7 +2853,6 @@
       "url": "https://poravkino.ru/",
       "source_url": "https://poravkino.ru/api/schedule?date=2026-11-08",
       "extra": {
-        "year": 0,
         "country": "США",
         "director": "Дэвид Эйр",
         "original_title": "Сердце зверя",
@@ -2945,7 +2909,6 @@
       "url": "https://poravkino.ru/",
       "source_url": "https://poravkino.ru/api/schedule?date=2026-11-08",
       "extra": {
-        "year": 0,
         "country": "США",
         "director": "Ренни Харлин",
         "original_title": "Зверь",
@@ -3104,7 +3067,6 @@
       "url": "https://poravkino.ru/",
       "source_url": "https://poravkino.ru/api/schedule?date=2026-11-09",
       "extra": {
-        "year": 0,
         "country": "Россия",
         "director": "Илья Маланин",
         "original_title": "Битва моторов",
@@ -3130,7 +3092,6 @@
       "url": "https://poravkino.ru/",
       "source_url": "https://poravkino.ru/api/schedule?date=2026-11-09",
       "extra": {
-        "year": 0,
         "country": "США",
         "director": "Ренни Харлин",
         "original_title": "Зверь",
@@ -3457,7 +3418,6 @@
       "url": "https://poravkino.ru/",
       "source_url": "https://poravkino.ru/api/schedule?date=2026-11-09",
       "extra": {
-        "year": 0,
         "country": "Россия",
         "director": "Василий Чигинский",
         "original_title": "Романовы: преданность и предательство",
@@ -3686,7 +3646,6 @@
       "url": "https://poravkino.ru/",
       "source_url": "https://poravkino.ru/api/schedule?date=2026-11-09",
       "extra": {
-        "year": 0,
         "country": "Россия",
         "director": "Илья Маланин",
         "original_title": "Битва моторов",
@@ -4283,7 +4242,6 @@
       "url": "https://poravkino.ru/",
       "source_url": "https://poravkino.ru/api/schedule?date=2026-11-09",
       "extra": {
-        "year": 0,
         "country": "США, Великобритания, Мексика",
         "director": "Алехандро Гонсалес Иньярриту",
         "original_title": "Диггер",
@@ -4385,7 +4343,6 @@
       "url": "https://poravkino.ru/",
       "source_url": "https://poravkino.ru/api/schedule?date=2026-11-09",
       "extra": {
-        "year": 0,
         "country": "Россия",
         "director": "Илья Маланин",
         "original_title": "Битва моторов",
@@ -4629,7 +4586,6 @@
       "url": "https://poravkino.ru/",
       "source_url": "https://poravkino.ru/api/schedule?date=2026-11-09",
       "extra": {
-        "year": 0,
         "country": "США, Великобритания",
         "director": "Джеймс Уоткинс",
         "original_title": "Клэйфейс",
@@ -4955,7 +4911,6 @@
       "url": "https://poravkino.ru/",
       "source_url": "https://poravkino.ru/api/schedule?date=2026-11-09",
       "extra": {
-        "year": 0,
         "country": "США",
         "director": "Дэвид Эйр",
         "original_title": "Сердце зверя",
@@ -5107,7 +5062,6 @@
       "url": "https://poravkino.ru/",
       "source_url": "https://poravkino.ru/api/schedule?date=2026-11-09",
       "extra": {
-        "year": 0,
         "country": "Россия",
         "director": "Илья Маланин",
         "original_title": "Битва моторов",
@@ -5255,7 +5209,6 @@
       "url": "https://poravkino.ru/",
       "source_url": "https://poravkino.ru/api/schedule?date=2026-11-09",
       "extra": {
-        "year": 0,
         "country": "Франция, Испания",
         "director": "Родриго Сорогойен",
         "original_title": "Любовь моя",
@@ -5822,7 +5775,6 @@
       "url": "https://poravkino.ru/",
       "source_url": "https://poravkino.ru/api/schedule?date=2026-11-09",
       "extra": {
-        "year": 0,
         "country": "США, Великобритания",
         "director": "Джеймс Уоткинс",
         "original_title": "Клэйфейс",
@@ -6442,7 +6394,6 @@
       "url": "https://poravkino.ru/",
       "source_url": "https://poravkino.ru/api/schedule?date=2026-11-09",
       "extra": {
-        "year": 0,
         "country": "США, Великобритания",
         "director": "Джеймс Уоткинс",
         "original_title": "Клэйфейс",
@@ -6468,7 +6419,6 @@
       "url": "https://poravkino.ru/",
       "source_url": "https://poravkino.ru/api/schedule?date=2026-11-09",
       "extra": {
-        "year": 0,
         "country": "США, Германия",
         "director": "Зак Креггер",
         "original_title": "Обитель зла",
@@ -6547,7 +6497,6 @@
       "url": "https://poravkino.ru/",
       "source_url": "https://poravkino.ru/api/schedule?date=2026-11-09",
       "extra": {
-        "year": 0,
         "country": "США",
         "director": "Дэвид Эйр",
         "original_title": "Сердце зверя",
@@ -6604,7 +6553,6 @@
       "url": "https://poravkino.ru/",
       "source_url": "https://poravkino.ru/api/schedule?date=2026-11-09",
       "extra": {
-        "year": 0,
         "country": "США",
         "director": "Ренни Харлин",
         "original_title": "Зверь",

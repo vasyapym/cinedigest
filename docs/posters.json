@@ -142,15 +142,6 @@
       "file": "j6R4HJwwXK6CzlJQfZ1jeVLaFvR.jpg",
       "file_downloaded_at": "2026-11-05"
     },
-    "битва моторов|0": {
-      "title": "Битва моторов",
-      "year": 0,
-      "tmdb_id": null,
-      "tmdb_title": null,
-      "poster_path": null,
-      "resolved_at": "2026-11-05",
-      "via": "miss"
-    },
     "битва моторов|2026": {
       "title": "Битва моторов",
       "year": 2026,
@@ -301,15 +292,6 @@
       "file": "afORML1iggGkWf8M0Jsf2PPpIHv.jpg",
       "file_downloaded_at": "2026-11-05"
     },
-    "гарри поттер и философский камень|0": {
-      "title": "Гарри Поттер и философский камень",
-      "year": 0,
-      "tmdb_id": null,
-      "tmdb_title": null,
-      "poster_path": null,
-      "resolved_at": "2026-11-05",
-      "via": "miss"
-    },
     "глубокий сон|1946": {
       "title": "ГЛУБОКИЙ СОН",
       "year": 1946,
@@ -324,11 +306,19 @@
     "голова ластик артпоказ|1977": {
       "title": "Голова ластик. АртПоказ",
       "year": 1977,
-      "tmdb_id": null,
-      "tmdb_title": null,
-      "poster_path": null,
-      "resolved_at": "2026-11-07",
-      "via": "miss"
+      "tmdb_id": 985,
+      "tmdb_title": "Голова-ластик",
+      "poster_path": "/cl1jZJMaWDOaWWSGo6n6GE5RCxY.jpg",
+      "resolved_at": "2026-11-08",
+      "via": "stripped",
+      "retry_query": "Голова ластик",
+      "country": [
+        "United States of America"
+      ],
+      "country_at": "2026-11-08",
+      "country_via": "tmdb:985",
+      "file": "cl1jZJMaWDOaWWSGo6n6GE5RCxY.jpg",
+      "file_downloaded_at": "2026-11-08"
     },
     "горец|1986": {
       "title": "Горец",
@@ -340,6 +330,22 @@
       "via": "year",
       "file": "6i46VuUWseqX8d4QAI9XldNzS5s.jpg",
       "file_downloaded_at": "2026-11-08"
+    },
+    "госфорд парк субтитры|any": {
+      "title": "Госфорд Парк (субтитры)",
+      "year": null,
+      "tmdb_id": 5279,
+      "tmdb_title": "Госфорд парк",
+      "poster_path": "/sKM5KAv4yAN8Zs7HLG6us33OE9x.jpg",
+      "resolved_at": "2026-11-08",
+      "via": "stripped",
+      "retry_query": "Госфорд Парк",
+      "country": [
+        "Italy",
+        "United States of America"
+      ],
+      "country_at": "2026-11-08",
+      "country_via": "tmdb:5279"
     },
     "госфорд парк|2001": {
       "title": "Госфорд Парк",
@@ -394,13 +400,13 @@
       "file": "pGyuM0qntTdW5g9bRwqH4h7gkms.jpg",
       "file_downloaded_at": "2026-11-06"
     },
-    "диггер|0": {
+    "диггер|any": {
       "title": "Диггер",
-      "year": 0,
+      "year": null,
       "tmdb_id": null,
       "tmdb_title": null,
       "poster_path": null,
-      "resolved_at": "2026-11-05",
+      "resolved_at": "2026-11-08",
       "via": "miss"
     },
     "дневная красавица субтитры|1967": {
@@ -508,16 +514,26 @@
       "tmdb_id": null,
       "tmdb_title": null,
       "poster_path": null,
-      "resolved_at": "2026-11-05",
-      "via": "miss"
+      "resolved_at": "2026-11-08",
+      "via": "miss",
+      "retry_query": "Запределье"
     },
-    "зверь|0": {
+    "зверь|any": {
       "title": "Зверь",
-      "year": 0,
+      "year": null,
       "tmdb_id": null,
       "tmdb_title": null,
       "poster_path": null,
-      "resolved_at": "2026-11-05",
+      "resolved_at": "2026-11-08",
+      "via": "miss"
+    },
+    "звонок|any": {
+      "title": "Звонок",
+      "year": null,
+      "tmdb_id": null,
+      "tmdb_title": null,
+      "poster_path": null,
+      "resolved_at": "2026-11-08",
       "via": "miss"
     },
     "звук падения|2025": {
@@ -586,6 +602,22 @@
       "file": "68XmLIWfSBdDcyxsXc1hDBZevQB.jpg",
       "file_downloaded_at": "2026-11-07"
     },
+    "история огня|any": {
+      "title": "История огня",
+      "year": null,
+      "tmdb_id": 1418531,
+      "tmdb_title": "История огня",
+      "poster_path": "/345iQbrsk9GPUrk8toAuhxcacss.jpg",
+      "resolved_at": "2026-11-08",
+      "via": "yearless",
+      "country": [
+        "China"
+      ],
+      "country_at": "2026-11-08",
+      "country_via": "tmdb:1418531",
+      "file": "345iQbrsk9GPUrk8toAuhxcacss.jpg",
+      "file_downloaded_at": "2026-11-08"
+    },
     "к востоку от рая|1955": {
       "title": "К ВОСТОКУ ОТ РАЯ",
       "year": 1955,
@@ -608,14 +640,37 @@
       "file": "umuhpw3dm2TrgMKcDI5TUNMDZ3R.jpg",
       "file_downloaded_at": "2026-11-05"
     },
-    "клэйфейс|0": {
+    "кит во тьме глубин|any": {
+      "title": "Кит: Во тьме глубин",
+      "year": null,
+      "tmdb_id": 1255833,
+      "tmdb_title": "Кит: Во тьме глубин",
+      "poster_path": "/sqrx5rMkdSSaXTmd19jAbUx5Cpc.jpg",
+      "resolved_at": "2026-11-08",
+      "via": "yearless",
+      "country": [
+        "United States of America"
+      ],
+      "country_at": "2026-11-08",
+      "country_via": "tmdb:1255833",
+      "file": "sqrx5rMkdSSaXTmd19jAbUx5Cpc.jpg",
+      "file_downloaded_at": "2026-11-08"
+    },
+    "клэйфейс|any": {
       "title": "Клэйфейс",
-      "year": 0,
-      "tmdb_id": null,
-      "tmdb_title": null,
-      "poster_path": null,
-      "resolved_at": "2026-11-05",
-      "via": "miss"
+      "year": null,
+      "tmdb_id": 1400940,
+      "tmdb_title": "Клэйфейс",
+      "poster_path": "/r2ib7b2QRLRlb8g7K2QI2rfFgeA.jpg",
+      "resolved_at": "2026-11-08",
+      "via": "yearless",
+      "country": [
+        "United States of America"
+      ],
+      "country_at": "2026-11-08",
+      "country_via": "tmdb:1400940",
+      "file": "r2ib7b2QRLRlb8g7K2QI2rfFgeA.jpg",
+      "file_downloaded_at": "2026-11-08"
     },
     "колония субтитры|2026": {
       "title": "Колония (субтитры)",
@@ -701,15 +756,6 @@
       "file": "hi1ZUDa3ZP2NG7lkprq6fDmi3Si.jpg",
       "file_downloaded_at": "2026-11-05"
     },
-    "лиля|0": {
-      "title": "Лиля",
-      "year": 0,
-      "tmdb_id": null,
-      "tmdb_title": null,
-      "poster_path": null,
-      "resolved_at": "2026-11-05",
-      "via": "miss"
-    },
     "лиля|2026": {
       "title": "Лиля",
       "year": 2026,
@@ -724,15 +770,6 @@
     "любовь моя оригинальная версия с субтитрами|2026": {
       "title": "Любовь моя (оригинальная версия с субтитрами)",
       "year": 2026,
-      "tmdb_id": null,
-      "tmdb_title": null,
-      "poster_path": null,
-      "resolved_at": "2026-11-05",
-      "via": "miss"
-    },
-    "любовь моя|0": {
-      "title": "Любовь моя",
-      "year": 0,
       "tmdb_id": null,
       "tmdb_title": null,
       "poster_path": null,
@@ -760,6 +797,15 @@
       "via": "year",
       "file": "oTmSnrE9MuQMhZkosZRE5bYvstK.jpg",
       "file_downloaded_at": "2026-11-05"
+    },
+    "мастер витя и мотор сборник 1 знакомство|any": {
+      "title": "Мастер Витя и Мотор. Сборник №1. Знакомство",
+      "year": null,
+      "tmdb_id": null,
+      "tmdb_title": null,
+      "poster_path": null,
+      "resolved_at": "2026-11-08",
+      "via": "miss"
     },
     "меня пожирает собственная кровать|2026": {
       "title": "Меня пожирает собственная кровать",
@@ -801,6 +847,15 @@
       "tmdb_title": null,
       "poster_path": null,
       "resolved_at": "2026-11-07",
+      "via": "miss"
+    },
+    "молчание ягнят|any": {
+      "title": "Молчание ягнят",
+      "year": null,
+      "tmdb_id": null,
+      "tmdb_title": null,
+      "poster_path": null,
+      "resolved_at": "2026-11-08",
       "via": "miss"
     },
     "морозко|2026": {
@@ -944,13 +999,22 @@
       "file": "fWjZWs6nd7urk7zfQBj4xmCGKAC.jpg",
       "file_downloaded_at": "2026-11-06"
     },
-    "обитель зла|0": {
+    "обитель зла|any": {
       "title": "Обитель зла",
-      "year": 0,
+      "year": null,
       "tmdb_id": null,
       "tmdb_title": null,
       "poster_path": null,
-      "resolved_at": "2026-11-05",
+      "resolved_at": "2026-11-08",
+      "via": "miss"
+    },
+    "одиссея|any": {
+      "title": "Одиссея",
+      "year": null,
+      "tmdb_id": null,
+      "tmdb_title": null,
+      "poster_path": null,
+      "resolved_at": "2026-11-08",
       "via": "miss"
     },
     "остров забвения|2026": {
@@ -963,6 +1027,16 @@
       "via": "year",
       "file": "cLEsUIvvzEUzoID2FdxTcNJBHwB.jpg",
       "file_downloaded_at": "2026-11-05"
+    },
+    "отверженные версия с субтитрами|any": {
+      "title": "Отверженные (версия с субтитрами)",
+      "year": null,
+      "tmdb_id": null,
+      "tmdb_title": null,
+      "poster_path": null,
+      "resolved_at": "2026-11-08",
+      "via": "miss",
+      "retry_query": "Отверженные"
     },
     "отверженные|2026": {
       "title": "Отверженные",
@@ -1139,20 +1213,38 @@
     "психопатка версия с субтитрами|2026": {
       "title": "Психопатка (версия с субтитрами)",
       "year": 2026,
-      "tmdb_id": null,
-      "tmdb_title": null,
-      "poster_path": null,
-      "resolved_at": "2026-11-05",
-      "via": "miss"
+      "tmdb_id": 1379486,
+      "tmdb_title": "Психопатка",
+      "poster_path": "/fO63NFzTelEXcAsJTvNDFKygSGW.jpg",
+      "resolved_at": "2026-11-08",
+      "via": "stripped",
+      "retry_query": "Психопатка",
+      "country": [
+        "United States of America",
+        "United Kingdom"
+      ],
+      "country_at": "2026-11-08",
+      "country_via": "tmdb:1379486",
+      "file": "fO63NFzTelEXcAsJTvNDFKygSGW.jpg",
+      "file_downloaded_at": "2026-11-08"
     },
     "психопатка субтитры|2026": {
       "title": "Психопатка (субтитры)",
       "year": 2026,
-      "tmdb_id": null,
-      "tmdb_title": null,
-      "poster_path": null,
-      "resolved_at": "2026-11-06",
-      "via": "miss"
+      "tmdb_id": 1379486,
+      "tmdb_title": "Психопатка",
+      "poster_path": "/fO63NFzTelEXcAsJTvNDFKygSGW.jpg",
+      "resolved_at": "2026-11-08",
+      "via": "stripped",
+      "retry_query": "Психопатка",
+      "country": [
+        "United States of America",
+        "United Kingdom"
+      ],
+      "country_at": "2026-11-08",
+      "country_via": "tmdb:1379486",
+      "file": "fO63NFzTelEXcAsJTvNDFKygSGW.jpg",
+      "file_downloaded_at": "2026-11-08"
     },
     "психопатка|2026": {
       "title": "Психопатка",
@@ -1163,7 +1255,7 @@
       "resolved_at": "2026-11-06",
       "via": "year",
       "file": "fO63NFzTelEXcAsJTvNDFKygSGW.jpg",
-      "file_downloaded_at": "2026-11-06"
+      "file_downloaded_at": "2026-11-08"
     },
     "пьяный ангел|1948": {
       "title": "ПЬЯНЫЙ АНГЕЛ",
@@ -1179,11 +1271,19 @@
     "пятый элемент субтитры|1997": {
       "title": "Пятый элемент (субтитры)",
       "year": 1997,
-      "tmdb_id": null,
-      "tmdb_title": null,
-      "poster_path": null,
-      "resolved_at": "2026-11-05",
-      "via": "miss"
+      "tmdb_id": 18,
+      "tmdb_title": "Пятый элемент",
+      "poster_path": "/bqALmWhVaqfQedyPZn7MeuOjfSk.jpg",
+      "resolved_at": "2026-11-08",
+      "via": "stripped",
+      "retry_query": "Пятый элемент",
+      "country": [
+        "France"
+      ],
+      "country_at": "2026-11-08",
+      "country_via": "tmdb:18",
+      "file": "bqALmWhVaqfQedyPZn7MeuOjfSk.jpg",
+      "file_downloaded_at": "2026-11-08"
     },
     "пятый элемент|1997": {
       "title": "Пятый элемент",
@@ -1218,6 +1318,15 @@
       "file": "1JbTVMAXpfcez5bFWJpgnwdIAde.jpg",
       "file_downloaded_at": "2026-11-05"
     },
+    "рок|any": {
+      "title": "Рок",
+      "year": null,
+      "tmdb_id": null,
+      "tmdb_title": null,
+      "poster_path": null,
+      "resolved_at": "2026-11-08",
+      "via": "miss"
+    },
     "рокко и его братья|1960": {
       "title": "РОККО И ЕГО БРАТЬЯ",
       "year": 1960,
@@ -1240,15 +1349,6 @@
       "file": "mA2IIbx6hJd51m5JdHKPxBh4tSn.jpg",
       "file_downloaded_at": "2026-11-05"
     },
-    "романовы преданность и предательство|0": {
-      "title": "Романовы: преданность и предательство",
-      "year": 0,
-      "tmdb_id": null,
-      "tmdb_title": null,
-      "poster_path": null,
-      "resolved_at": "2026-11-05",
-      "via": "miss"
-    },
     "романовы преданность и предательство|2026": {
       "title": "Романовы: преданность и предательство",
       "year": 2026,
@@ -1270,6 +1370,15 @@
       "via": "year",
       "file": "iffXA82dTqE3pEAR9WqpjTDQUgO.jpg",
       "file_downloaded_at": "2026-11-08"
+    },
+    "сайлент хилл|any": {
+      "title": "Сайлент Хилл",
+      "year": null,
+      "tmdb_id": null,
+      "tmdb_title": null,
+      "poster_path": null,
+      "resolved_at": "2026-11-08",
+      "via": "miss"
     },
     "сансет бульвар|1950": {
       "title": "САНСЕТ БУЛЬВАР",
@@ -1304,13 +1413,13 @@
       "file": "bhyEpWjIFnsBoZd2zwhaUvQGN7I.jpg",
       "file_downloaded_at": "2026-11-05"
     },
-    "сердце зверя|0": {
+    "сердце зверя|any": {
       "title": "Сердце зверя",
-      "year": 0,
+      "year": null,
       "tmdb_id": null,
       "tmdb_title": null,
       "poster_path": null,
-      "resolved_at": "2026-11-05",
+      "resolved_at": "2026-11-08",
       "via": "miss"
     },
     "сказка о потерянном времени|2026": {
@@ -1379,6 +1488,22 @@
       "file": "40ut2seLFEeyTcan7V2cVjwRvI9.jpg",
       "file_downloaded_at": "2026-11-05"
     },
+    "сумерки сага новолуние|any": {
+      "title": "Сумерки. Сага. Новолуние",
+      "year": null,
+      "tmdb_id": 18239,
+      "tmdb_title": "Сумерки. Сага. Новолуние",
+      "poster_path": "/qOkJ1pvQnDTqg0V1HNMZ5IqKyAI.jpg",
+      "resolved_at": "2026-11-08",
+      "via": "yearless",
+      "country": [
+        "United States of America"
+      ],
+      "country_at": "2026-11-08",
+      "country_via": "tmdb:18239",
+      "file": "qOkJ1pvQnDTqg0V1HNMZ5IqKyAI.jpg",
+      "file_downloaded_at": "2026-11-08"
+    },
     "сущность субтитры|2025": {
       "title": "Сущность (субтитры)",
       "year": 2025,
@@ -1415,11 +1540,19 @@
     "твин пикс сквозь огонь артпоказ|1992": {
       "title": "Твин Пикс: Сквозь огонь. АртПоказ",
       "year": 1992,
-      "tmdb_id": null,
-      "tmdb_title": null,
-      "poster_path": null,
+      "tmdb_id": 1923,
+      "tmdb_title": "Твин Пикс: Сквозь огонь",
+      "poster_path": "/gYZwtA9hOqricJchQUlAtyX8SPk.jpg",
       "resolved_at": "2026-11-08",
-      "via": "miss"
+      "via": "stripped",
+      "retry_query": "Твин Пикс: Сквозь огонь",
+      "country": [
+        "United States of America"
+      ],
+      "country_at": "2026-11-08",
+      "country_via": "tmdb:1923",
+      "file": "gYZwtA9hOqricJchQUlAtyX8SPk.jpg",
+      "file_downloaded_at": "2026-11-08"
     },
     "театр в кино женитьба бальзаминова|2026": {
       "title": "Театр в кино: Женитьба Бальзаминова",
@@ -1455,11 +1588,19 @@
     "увидеть все версия с субтитрами|2026": {
       "title": "Увидеть всё (версия с субтитрами)",
       "year": 2026,
-      "tmdb_id": null,
-      "tmdb_title": null,
-      "poster_path": null,
+      "tmdb_id": 1765072,
+      "tmdb_title": "Увидеть всё",
+      "poster_path": "/57tGJt2nHQqrpsrRO9XLxhgGPMd.jpg",
       "resolved_at": "2026-11-08",
-      "via": "miss"
+      "via": "stripped",
+      "retry_query": "Увидеть всё",
+      "country": [
+        "United States of America"
+      ],
+      "country_at": "2026-11-08",
+      "country_via": "tmdb:1765072",
+      "file": "57tGJt2nHQqrpsrRO9XLxhgGPMd.jpg",
+      "file_downloaded_at": "2026-11-08"
     },
     "учитель обещавший море|2024": {
       "title": "Учитель, обещавший море",
@@ -1486,11 +1627,23 @@
     "фьорд версия с субтитрами|2026": {
       "title": "Фьорд (версия с субтитрами)",
       "year": 2026,
-      "tmdb_id": null,
-      "tmdb_title": null,
-      "poster_path": null,
-      "resolved_at": "2026-11-05",
-      "via": "miss"
+      "tmdb_id": 1401459,
+      "tmdb_title": "Фьорд",
+      "poster_path": "/kDAwTzpCmW3EXmVei5yHI5Bfr6U.jpg",
+      "resolved_at": "2026-11-08",
+      "via": "stripped",
+      "retry_query": "Фьорд",
+      "country": [
+        "Romania",
+        "Norway",
+        "France",
+        "Finland",
+        "Denmark",
+        "Sweden",
+        "United States of America"
+      ],
+      "country_at": "2026-11-08",
+      "country_via": "tmdb:1401459"
     },
     "фьорд субтитры|2026": {
       "title": "Фьорд (субтитры)",
@@ -1567,14 +1720,39 @@
       "resolved_at": "2026-11-08",
       "via": "miss"
     },
+    "человек паук новый день|any": {
+      "title": "Человек-паук: Новый день",
+      "year": null,
+      "tmdb_id": 969681,
+      "tmdb_title": "Человек-паук: Новый день",
+      "poster_path": "/gNBiOPEbEPGPTfTIyGDvNQ50m0V.jpg",
+      "resolved_at": "2026-11-08",
+      "via": "yearless",
+      "country": [
+        "United States of America"
+      ],
+      "country_at": "2026-11-08",
+      "country_via": "tmdb:969681",
+      "file": "gNBiOPEbEPGPTfTIyGDvNQ50m0V.jpg",
+      "file_downloaded_at": "2026-11-08"
+    },
     "человек слон артпоказ|1980": {
       "title": "Человек-слон. АртПоказ",
       "year": 1980,
-      "tmdb_id": null,
-      "tmdb_title": null,
-      "poster_path": null,
-      "resolved_at": "2026-11-05",
-      "via": "miss"
+      "tmdb_id": 1955,
+      "tmdb_title": "Человек-слон",
+      "poster_path": "/9xmbYkDyBDF11QFS6NRjsYrX3BG.jpg",
+      "resolved_at": "2026-11-08",
+      "via": "stripped",
+      "retry_query": "Человек-слон",
+      "country": [
+        "United States of America",
+        "United Kingdom"
+      ],
+      "country_at": "2026-11-08",
+      "country_via": "tmdb:1955",
+      "file": "9xmbYkDyBDF11QFS6NRjsYrX3BG.jpg",
+      "file_downloaded_at": "2026-11-08"
     },
     "четыре жизни петра мамонова|2026": {
       "title": "Четыре жизни Петра Мамонова",
