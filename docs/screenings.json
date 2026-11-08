@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-08T13:37:49.633669+03:00",
+  "generated_at": "2026-11-08T14:16:51.936173+03:00",
   "window_start": "2026-11-08",
   "window_end": "2026-11-14",
   "statuses": [
@@ -7,85 +7,85 @@
       "venue": "domkino",
       "ok": true,
       "count": 93,
-      "fetched_at": "2026-11-08T13:38:04.574441+03:00",
+      "fetched_at": "2026-11-08T14:17:08.774128+03:00",
       "stale": false,
       "suspicious": false,
       "error": null,
       "warning": null,
       "requests": 7,
-      "seconds": 14.941
+      "seconds": 16.838
     },
     {
       "venue": "rodina",
       "ok": true,
-      "count": 120,
-      "fetched_at": "2026-11-08T13:38:47.500423+03:00",
+      "count": 119,
+      "fetched_at": "2026-11-08T14:17:57.816740+03:00",
       "stale": false,
       "suspicious": false,
       "error": null,
       "warning": null,
       "requests": 32,
-      "seconds": 42.926
+      "seconds": 49.043
     },
     {
       "venue": "avrora",
       "ok": true,
       "count": 40,
-      "fetched_at": "2026-11-08T13:38:54.722355+03:00",
+      "fetched_at": "2026-11-08T14:18:05.707779+03:00",
       "stale": false,
       "suspicious": false,
       "error": null,
       "warning": null,
       "requests": 8,
-      "seconds": 7.221
+      "seconds": 7.89
     },
     {
       "venue": "poravkino",
       "ok": true,
-      "count": 92,
-      "fetched_at": "2026-11-08T13:39:00.310648+03:00",
+      "count": 88,
+      "fetched_at": "2026-11-08T14:18:11.571857+03:00",
       "stale": false,
       "suspicious": false,
       "error": null,
       "warning": null,
       "requests": 7,
-      "seconds": 5.588
+      "seconds": 5.864
     },
     {
       "venue": "lenfilm",
       "ok": true,
       "count": 26,
-      "fetched_at": "2026-11-08T13:39:07.162153+03:00",
+      "fetched_at": "2026-11-08T14:18:19.115162+03:00",
       "stale": false,
       "suspicious": false,
       "error": null,
       "warning": null,
       "requests": 9,
-      "seconds": 6.851
+      "seconds": 7.543
     },
     {
       "venue": "outcinema",
       "ok": true,
       "count": 19,
-      "fetched_at": "2026-11-08T13:39:07.534746+03:00",
+      "fetched_at": "2026-11-08T14:18:19.578622+03:00",
       "stale": false,
       "suspicious": false,
       "error": null,
       "warning": null,
       "requests": 1,
-      "seconds": 0.373
+      "seconds": 0.463
     },
     {
       "venue": "mirage",
       "ok": true,
-      "count": 134,
-      "fetched_at": "2026-11-08T13:39:15.579579+03:00",
+      "count": 131,
+      "fetched_at": "2026-11-08T14:18:28.098134+03:00",
       "stale": false,
       "suspicious": false,
       "error": null,
       "warning": null,
       "requests": 7,
-      "seconds": 8.044
+      "seconds": 8.519
     }
   ],
   "screenings": [
@@ -354,28 +354,6 @@
       }
     },
     {
-      "venue": "mirage",
-      "source_id": "d1da2a9c-99d0-46e7-a089-0e80ffdebc08",
-      "title": "Рождение империи",
-      "start": "2026-11-08T12:55:00+03:00",
-      "hall": "1",
-      "price_min": null,
-      "price_max": null,
-      "language": null,
-      "tags": [],
-      "url": "https://www.mirage.ru/ticket_new/d1da2a9c-99d0-46e7-a089-0e80ffdebc08/",
-      "source_url": "https://www.mirage.ru/spb/schedule/08.11.2026/cinema/1/",
-      "extra": {
-        "genres": [
-          "драма",
-          "биография",
-          "история"
-        ],
-        "age": "12+",
-        "film_id": 7643
-      }
-    },
-    {
       "venue": "domkino",
       "source_id": "5a8e5e8ba4c5",
       "title": "Это хит! (субтитры)",
@@ -402,51 +380,6 @@
       }
     },
     {
-      "venue": "mirage",
-      "source_id": "e3d94c02-6f7f-4d78-a05a-b477fa6d32d7",
-      "title": "Чудо-Юдо",
-      "start": "2026-11-08T13:05:00+03:00",
-      "hall": "3",
-      "price_min": null,
-      "price_max": null,
-      "language": null,
-      "tags": [],
-      "url": "https://www.mirage.ru/ticket_new/e3d94c02-6f7f-4d78-a05a-b477fa6d32d7/",
-      "source_url": "https://www.mirage.ru/spb/schedule/08.11.2026/cinema/1/",
-      "extra": {
-        "genres": [
-          "приключения",
-          "фэнтези",
-          "семейный"
-        ],
-        "age": "6+",
-        "film_id": 7624
-      }
-    },
-    {
-      "venue": "mirage",
-      "source_id": "ca7a8129-9745-4dea-859e-3f03d9885be5",
-      "title": "Тайный дневник Верити",
-      "start": "2026-11-08T13:25:00+03:00",
-      "hall": "4",
-      "price_min": null,
-      "price_max": null,
-      "language": null,
-      "tags": [],
-      "url": "https://www.mirage.ru/ticket_new/ca7a8129-9745-4dea-859e-3f03d9885be5/",
-      "source_url": "https://www.mirage.ru/spb/schedule/08.11.2026/cinema/1/",
-      "extra": {
-        "genres": [
-          "детектив",
-          "триллер",
-          "драма",
-          "криминал"
-        ],
-        "age": "18+",
-        "film_id": 7628
-      }
-    },
-    {
       "venue": "outcinema",
       "source_id": "509835173402",
       "title": "КТО БОИТСЯ ВИРДЖИНИИ ВУЛФ?",
@@ -468,136 +401,6 @@
         "duration_min": 131,
         "age": "16+",
         "genres": "драма"
-      }
-    },
-    {
-      "venue": "poravkino",
-      "source_id": "44006",
-      "title": "Рождение империи",
-      "start": "2026-11-08T13:30:00+03:00",
-      "hall": "2",
-      "price_min": 350,
-      "price_max": 350,
-      "language": null,
-      "tags": [],
-      "url": "https://poravkino.ru/",
-      "source_url": "https://poravkino.ru/api/schedule?date=2026-11-08",
-      "extra": {
-        "year": 2026,
-        "country": "Россия",
-        "director": "Андрей Кравчук, Алексей Нужный",
-        "original_title": "Рождение империи",
-        "duration_min": 150,
-        "age": 12,
-        "genres": [
-          "биографический",
-          "драма"
-        ],
-        "is_pushkin": false
-      }
-    },
-    {
-      "venue": "poravkino",
-      "source_id": "44007",
-      "title": "Сумерки. Сага. Затмение",
-      "start": "2026-11-08T13:40:00+03:00",
-      "hall": "4",
-      "price_min": 350,
-      "price_max": 350,
-      "language": null,
-      "tags": [],
-      "url": "https://poravkino.ru/",
-      "source_url": "https://poravkino.ru/api/schedule?date=2026-11-08",
-      "extra": {
-        "year": 2010,
-        "country": "США",
-        "director": "Дэвид Слэйд",
-        "original_title": "Сумерки. Сага. Затмение",
-        "duration_min": 130,
-        "age": 18,
-        "genres": [
-          "мелодрама",
-          "триллер",
-          "фэнтези"
-        ],
-        "is_pushkin": false
-      }
-    },
-    {
-      "venue": "poravkino",
-      "source_id": "44008",
-      "title": "Роллинг Лауд. Дикое веселье",
-      "start": "2026-11-08T13:45:00+03:00",
-      "hall": "Малый синий",
-      "price_min": 350,
-      "price_max": 350,
-      "language": null,
-      "tags": [],
-      "url": "https://poravkino.ru/",
-      "source_url": "https://poravkino.ru/api/schedule?date=2026-11-08",
-      "extra": {
-        "year": 2026,
-        "country": "США",
-        "director": "Джереми Гарелик",
-        "original_title": "Роллинг Лауд. Дикое веселье",
-        "duration_min": 100,
-        "age": 18,
-        "genres": [
-          "комедия"
-        ],
-        "is_pushkin": false
-      }
-    },
-    {
-      "venue": "poravkino",
-      "source_id": "44009",
-      "title": "Отверженные",
-      "start": "2026-11-08T13:55:00+03:00",
-      "hall": "Малый красный",
-      "price_min": 350,
-      "price_max": 350,
-      "language": null,
-      "tags": [],
-      "url": "https://poravkino.ru/",
-      "source_url": "https://poravkino.ru/api/schedule?date=2026-11-08",
-      "extra": {
-        "year": 2026,
-        "country": "Франция",
-        "director": "Фред Кавайе",
-        "original_title": "Отверженные",
-        "duration_min": 180,
-        "age": 18,
-        "genres": [
-          "драма",
-          "мелодрама"
-        ],
-        "is_pushkin": false
-      }
-    },
-    {
-      "venue": "rodina",
-      "source_id": "17abd3d60a05",
-      "title": "Рождение империи",
-      "start": "2026-11-08T13:55:00+03:00",
-      "hall": "Большой зал",
-      "price_min": 300,
-      "price_max": 300,
-      "language": null,
-      "tags": [],
-      "url": "https://rodinakino.ru/events/rozhdenie-imperii-2026",
-      "source_url": "https://rodinakino.ru/?date=2026/11/08",
-      "extra": {
-        "year": 2026,
-        "age": "12+",
-        "duration_min": 140,
-        "synopsis": "Вернувшись на родину после Великого посольства, Петр Первый вступает в затяжную войну со Швецией за выход к морю. На пути к победе его ожидают серьёзные испытания, разочарования, обман и предательства.",
-        "director": "Андрей Кравчук",
-        "genres": [
-          "история",
-          "биография",
-          "драма"
-        ],
-        "country": "Пушкинская карта, Россия"
       }
     },
     {
@@ -672,7 +475,7 @@
           "историческая драма"
         ],
         "country": "Россия",
-        "free_places": 334,
+        "free_places": 312,
         "online_sale": true
       }
     },
@@ -944,7 +747,7 @@
           "театр в кино"
         ],
         "country": "Австрия",
-        "free_places": 83,
+        "free_places": 82,
         "online_sale": true
       }
     },
@@ -1040,7 +843,7 @@
           "драма"
         ],
         "country": "Испания",
-        "free_places": 53,
+        "free_places": 52,
         "online_sale": true
       }
     },
@@ -1300,7 +1103,7 @@
     },
     {
       "venue": "mirage",
-      "source_id": "ae055d03-c559-46c8-b7b6-58ca532ff458",
+      "source_id": "48f80923bb6c",
       "title": "Кит: Во тьме глубин",
       "start": "2026-11-08T16:50:00+03:00",
       "hall": "6",
@@ -1308,7 +1111,7 @@
       "price_max": null,
       "language": null,
       "tags": [],
-      "url": "https://www.mirage.ru/ticket_new/ae055d03-c559-46c8-b7b6-58ca532ff458/",
+      "url": null,
       "source_url": "https://www.mirage.ru/spb/schedule/08.11.2026/cinema/1/",
       "extra": {
         "genres": [
@@ -1444,7 +1247,7 @@
           "комедия"
         ],
         "country": "США, Великобритания",
-        "free_places": 346,
+        "free_places": 339,
         "online_sale": true
       }
     },
@@ -1649,7 +1452,7 @@
           "драма"
         ],
         "country": "Россия",
-        "free_places": 51,
+        "free_places": 47,
         "online_sale": true
       }
     },
@@ -1706,7 +1509,7 @@
           "комедия"
         ],
         "country": "США, Великобритания",
-        "free_places": 115,
+        "free_places": 113,
         "online_sale": true
       }
     },
@@ -2067,7 +1870,7 @@
           "историческая драма"
         ],
         "country": "Россия",
-        "free_places": 360,
+        "free_places": 356,
         "online_sale": true
       }
     },
@@ -2520,7 +2323,7 @@
           "саспенс триллер"
         ],
         "country": "Румыния, Франция, Норвегия, Дания, Финляндия, Швеция",
-        "free_places": 100,
+        "free_places": 99,
         "online_sale": true
       }
     },
@@ -4687,7 +4490,7 @@
           "драма"
         ],
         "country": "Россия",
-        "free_places": 425,
+        "free_places": 423,
         "online_sale": true
       }
     },
@@ -9166,7 +8969,7 @@
           "драма"
         ],
         "country": "Россия",
-        "free_places": 110,
+        "free_places": 109,
         "online_sale": true
       }
     },
@@ -11456,7 +11259,7 @@
           "комедийный хоррор"
         ],
         "country": "Великобритания",
-        "free_places": 189,
+        "free_places": 188,
         "online_sale": true
       }
     },
@@ -12951,7 +12754,7 @@
           "драма"
         ],
         "country": "Швеция, Франция, Великобритания",
-        "free_places": 182,
+        "free_places": 181,
         "online_sale": true
       }
     },
