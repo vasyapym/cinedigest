@@ -409,6 +409,7 @@ def test_resolve_with_token_fills_and_persists_cache(tmp_path):
     assert saved["file_downloaded_at"] == TODAY.isoformat()
     assert [call[0] for call in http.calls] == [
         "https://api.themoviedb.org/3/search/movie",
+        "https://api.themoviedb.org/3/movie/3",
         f"{config.TMDB_IMAGE_BASE_URL}w185/m.jpg",
     ]
     http2 = FakeHttp({"m.jpg": fixture})

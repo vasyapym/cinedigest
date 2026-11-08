@@ -65,13 +65,15 @@ def film_key(title, year) -> str | None:
     return f"{name}|{int(year)}"
 
 
-def films(screenings) -> dict[str, Film]:
+def films(screenings, year_hints: dict[str, int] | None = None) -> dict[str, Film]:
     """Distinct films carrying a year, first-seen order; domkino's original_title is kept
     as soon as any row of the film has one."""
     out: dict[str, Film] = {}
     for s in screenings:
         x = s.extra or {}
         year = film_year(x.get("year"))
+        if year is None and year_hints is not None:
+            year = film_year(year_hints.get(norm(s.title)))
         key = film_key(s.title, year)
         if key is None:
             continue
@@ -111,7 +113,15 @@ def save_cache(path, entries: dict[str, dict], today: date) -> bool:
     if file.is_file() and file.read_text(encoding="utf-8") == text:
         return False
     file.parent.mkdir(parents=True, exist_ok=True)
-    file.write_text(text, encoding="utf-8")
+    temp = file.with_name(f".{file.name}.{os.getpid()}.part")
+    try:
+        temp.write_text(text, encoding="utf-8")
+        os.replace(temp, file)
+    finally:
+        try:
+            temp.unlink()
+        except FileNotFoundError:
+            pass
     return True
 
 
@@ -225,6 +235,73 @@ def fetch(http, token: str, due: list[Film], overrides: dict | None = None) -> l
 
 
 # ---- matching (pure) ------------------------------------------------------------------
+def _country_fields(movie: dict, today: date) -> dict:
+    """Only a verified movie-details body may reach this parser; never search results."""
+    countries = movie.get("production_countries")
+    if not isinstance(countries, list):
+        return {}
+    names = []
+    for country in countries:
+        name = country.get("name") if isinstance(country, dict) else None
+        if isinstance(name, str) and name.strip():
+            names.append(name)
+    return {
+        "country": names,
+        "country_at": today.isoformat(),
+        "country_via": f"tmdb:{movie['id']}",
+    }
+
+
+def fetch_details(http, token: str, entries: dict[str, dict], today: date) -> dict[str, dict]:
+    """Fetch countries for already-confident identities, at most one details request per film.
+    The caller supplies films admitted to the lookup budget; this defensive cap also bounds
+    direct calls. Details failures do not discard successfully resolved poster metadata."""
+    headers = {"Authorization": f"Bearer {token}", "Accept": "application/json"}
+    out: dict[str, dict] = {}
+    failures = 0
+    for key, entry in list(entries.items())[: config.TMDB_MAX_LOOKUPS_PER_RUN]:
+        tmdb_id = entry.get("tmdb_id")
+        if not isinstance(tmdb_id, int) or isinstance(tmdb_id, bool) or tmdb_id <= 0:
+            continue
+        try:
+            body = http.get(
+                f"{config.TMDB_API_URL}/movie/{tmdb_id}",
+                params={"language": config.TMDB_LANGUAGE},
+                headers=headers, venue=ID, label=key + "@details",
+            )
+            movie = _json(body)
+            if not isinstance(movie, dict) or movie.get("id") != tmdb_id:
+                raise ValueError("invalid or mismatched movie details")
+            out[key] = _country_fields(movie, today)
+        except (HttpError, ValueError) as exc:
+            failures += 1
+            log.warning("posters: %s details: %s", key, exc)
+            if failures >= config.TMDB_FAILURE_LIMIT:
+                log.warning("posters: %d failed details — remaining countries wait",
+                            failures)
+                break
+    return out
+
+
+def country_evidence(entries: dict) -> list[dict]:
+    """Pure reader of load_cache()'s film-key mapping, NOT the JSON envelope."""
+    out = []
+    for entry in entries.values():
+        if not isinstance(entry, dict) or not isinstance(entry.get("title"), str):
+            continue
+        country = entry.get("country")
+        if not isinstance(country, (str, list)) or not country:
+            continue
+        if not any(isinstance(name, str) and name.strip()
+                   for name in (country if isinstance(country, list) else [country])):
+            continue
+        out.append({
+            "title": entry["title"], "year": entry.get("year"),
+            "country": list(country) if isinstance(country, list) else country,
+            "source": entry.get("country_via") or f"tmdb:{entry.get('tmdb_id')}",
+        })
+    return out
+
 def results(body) -> list[dict]:
     data = _json(body)
     items = data.get("results") if isinstance(data, dict) else None
@@ -271,6 +348,7 @@ def parse(raw: list[tuple[str, str]], due: list[Film], overrides: dict | None = 
             movie = _json(bodies.get(film.key))
             if isinstance(movie, dict) and movie.get("id") == override["tmdb_id"]:
                 out[film.key] = _entry(film, movie, today, "override")
+                out[film.key].update(_country_fields(movie, today))
             continue
         if film.key not in bodies:
             continue
@@ -365,13 +443,14 @@ def cached_urls(screenings, docs_dir, today: date) -> dict[str, str]:
 
 
 # ---- byte plan (offline reads, no network) -----------------------------------------------
-def download_plan(screenings, entries: dict[str, dict], overrides: dict, today: date, posters_dir) -> list[str]:
+def download_plan(screenings, entries: dict[str, dict], overrides: dict, today: date, posters_dir,
+                  year_hints: dict[str, int] | None = None) -> list[str]:
     """Poster paths whose local copy still has to be fetched: the entry records no such file,
     its byte age is expired/undated, or the file is gone from disk. Distinct poster paths only
     (several films may share one file) in order of first need; unsafe paths never reach here."""
     due: list[str] = []
     seen: set[str] = set()
-    for key in films(screenings):
+    for key in films(screenings, year_hints):
         path = poster_path(key, entries, overrides)
         if not path or path in seen or file_name(path) is None:
             continue
@@ -500,17 +579,19 @@ def _attach_bytes(cache: dict[str, dict], wanted: dict[str, Film], overrides: di
     return annotated
 
 
-def resolve(screenings, *, http, out_dir, today: date, token: str | None = None) -> dict[str, str]:
+def resolve(screenings, *, http, out_dir, today: date, token: str | None = None,
+            year_hints: dict[str, int] | None = None) -> dict[str, str]:
     """Look up what the cache lacks, download what still has no local copy, persist
     docs/posters.json + docs/posters/, return film key -> 'posters/<basename>'.
     Without a token (env unset) nothing is fetched and the cache as it stands is used —
     yet expired entries and stale image files are still pruned, the served docs stay honest."""
     docs = Path(out_dir) / config.DOCS_DIRNAME
+    screenings = tuple(screenings)
     cache_path = docs / config.POSTERS_FILENAME
     posters_dir = docs / config.POSTERS_DIRNAME
     overrides = load_overrides(docs / config.POSTER_OVERRIDES_FILENAME)
     cache = load_cache(cache_path)
-    wanted = films(screenings)
+    wanted = films(screenings, year_hints)
     if token is None:
         token = os.environ.get(config.TMDB_READ_TOKEN_ENV) or None
     if not token:
@@ -525,9 +606,19 @@ def resolve(screenings, *, http, out_dir, today: date, token: str | None = None)
             parsed = parse(raw, due, overrides, today)
             _carry_file_fields(parsed, cache)
             cache.update(parsed)
+            detail_entries = {
+                film.key: cache[film.key] for film in due
+                if film.key in cache
+                and not (film.key in parsed
+                         and isinstance(overrides.get(film.key), dict)
+                         and overrides[film.key].get("tmdb_id"))
+            }
+            for key, fields in fetch_details(http, token, detail_entries, today).items():
+                cache[key].update(fields)
     cache = prune(cache, today)
     if token:
-        stored = download_files(http, download_plan(screenings, cache, overrides, today, posters_dir),
+        stored = download_files(http, download_plan(screenings, cache, overrides, today, posters_dir,
+                                                   year_hints),
                                 posters_dir)
         _attach_bytes(cache, wanted, overrides, stored, today)
     pruned_files = cleanup(posters_dir, cache, today)
