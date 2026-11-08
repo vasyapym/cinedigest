@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-08T14:20:51.034390+03:00",
+  "generated_at": "2026-11-08T14:35:11.918048+03:00",
   "window_start": "2026-11-08",
   "window_end": "2026-11-14",
   "statuses": [
@@ -7,85 +7,85 @@
       "venue": "domkino",
       "ok": true,
       "count": 93,
-      "fetched_at": "2026-11-08T14:21:25.651756+03:00",
+      "fetched_at": "2026-11-08T14:35:26.313707+03:00",
       "stale": false,
       "suspicious": false,
       "error": null,
       "warning": null,
       "requests": 7,
-      "seconds": 34.617
+      "seconds": 14.396
     },
     {
       "venue": "rodina",
       "ok": true,
-      "count": 119,
-      "fetched_at": "2026-11-08T14:22:15.188124+03:00",
+      "count": 118,
+      "fetched_at": "2026-11-08T14:36:16.558078+03:00",
       "stale": false,
       "suspicious": false,
       "error": null,
       "warning": null,
       "requests": 32,
-      "seconds": 49.536
+      "seconds": 50.244
     },
     {
       "venue": "avrora",
       "ok": true,
-      "count": 40,
-      "fetched_at": "2026-11-08T14:22:23.031906+03:00",
+      "count": 39,
+      "fetched_at": "2026-11-08T14:36:23.776143+03:00",
       "stale": false,
       "suspicious": false,
       "error": null,
       "warning": null,
       "requests": 8,
-      "seconds": 7.843
+      "seconds": 7.217
     },
     {
       "venue": "poravkino",
       "ok": true,
       "count": 87,
-      "fetched_at": "2026-11-08T14:22:28.934494+03:00",
+      "fetched_at": "2026-11-08T14:36:30.263875+03:00",
       "stale": false,
       "suspicious": false,
       "error": null,
       "warning": null,
       "requests": 7,
-      "seconds": 5.903
+      "seconds": 6.488
     },
     {
       "venue": "lenfilm",
       "ok": true,
       "count": 26,
-      "fetched_at": "2026-11-08T14:22:36.415455+03:00",
+      "fetched_at": "2026-11-08T14:36:37.373697+03:00",
       "stale": false,
       "suspicious": false,
       "error": null,
       "warning": null,
       "requests": 9,
-      "seconds": 7.481
+      "seconds": 7.11
     },
     {
       "venue": "outcinema",
       "ok": true,
       "count": 19,
-      "fetched_at": "2026-11-08T14:22:36.883881+03:00",
+      "fetched_at": "2026-11-08T14:36:37.819367+03:00",
       "stale": false,
       "suspicious": false,
       "error": null,
       "warning": null,
       "requests": 1,
-      "seconds": 0.468
+      "seconds": 0.446
     },
     {
       "venue": "mirage",
       "ok": true,
       "count": 131,
-      "fetched_at": "2026-11-08T14:22:46.059044+03:00",
+      "fetched_at": "2026-11-08T14:36:45.016630+03:00",
       "stale": false,
       "suspicious": false,
       "error": null,
       "warning": null,
       "requests": 7,
-      "seconds": 9.175
+      "seconds": 7.197
     }
   ],
   "screenings": [
@@ -404,56 +404,6 @@
       }
     },
     {
-      "venue": "rodina",
-      "source_id": "17cdf027d10f",
-      "title": "Битва моторов",
-      "start": "2026-11-08T14:15:00+03:00",
-      "hall": "Малый 1 зал",
-      "price_min": 250,
-      "price_max": 250,
-      "language": null,
-      "tags": [],
-      "url": "https://rodinakino.ru/events/bitva-motorov-2026",
-      "source_url": "https://rodinakino.ru/?date=2026/11/08",
-      "extra": {
-        "year": 2026,
-        "age": "12+",
-        "duration_min": 144,
-        "synopsis": "1908 год. Автолюбитель Андрей Нагель находит поддержку у инженера Дмитрия Бондарева. Вместе они собирают команду единомышленников и приступают к разработке автомобиля «Руссо-Балт». Когда проект оказывается под угрозой, Нагель принимает рискованное решение — доказать жизнеспособность их машины в легендарном Ралли…",
-        "director": "Илья Маланин",
-        "genres": [
-          "приключения",
-          "драма"
-        ],
-        "country": "Пушкинская карта, Россия"
-      }
-    },
-    {
-      "venue": "avrora",
-      "source_id": "6ae9d03d3c00008d00576762",
-      "title": "Рождение империи",
-      "start": "2026-11-08T14:25:00+03:00",
-      "hall": "Большой",
-      "price_min": 450,
-      "price_max": 600,
-      "language": null,
-      "tags": [],
-      "url": "https://avrora.spb.ru/",
-      "source_url": "https://kinokassa.kinoplan24.ru/api/v2/release/playbill?city_id=2&date=2026-11-08",
-      "extra": {
-        "release_id": 14748,
-        "year": 2026,
-        "duration_min": 140,
-        "age": "12+",
-        "genres": [
-          "историческая драма"
-        ],
-        "country": "Россия",
-        "free_places": 312,
-        "online_sale": true
-      }
-    },
-    {
       "venue": "domkino",
       "source_id": "005a056840b7",
       "title": "Посторонний (субтитры)",
@@ -720,7 +670,7 @@
           "театр в кино"
         ],
         "country": "Австрия",
-        "free_places": 83,
+        "free_places": 82,
         "online_sale": true
       }
     },
@@ -815,7 +765,7 @@
           "драма"
         ],
         "country": "Испания",
-        "free_places": 52,
+        "free_places": 51,
         "online_sale": true
       }
     },
@@ -1074,7 +1024,7 @@
     },
     {
       "venue": "mirage",
-      "source_id": "48f80923bb6c",
+      "source_id": "ae055d03-c559-46c8-b7b6-58ca532ff458",
       "title": "Кит: Во тьме глубин",
       "start": "2026-11-08T16:50:00+03:00",
       "hall": "6",
@@ -1082,7 +1032,7 @@
       "price_max": null,
       "language": null,
       "tags": [],
-      "url": null,
+      "url": "https://www.mirage.ru/ticket_new/ae055d03-c559-46c8-b7b6-58ca532ff458/",
       "source_url": "https://www.mirage.ru/spb/schedule/08.11.2026/cinema/1/",
       "extra": {
         "genres": [
@@ -1218,7 +1168,7 @@
           "комедия"
         ],
         "country": "США, Великобритания",
-        "free_places": 339,
+        "free_places": 334,
         "online_sale": true
       }
     },
@@ -1838,7 +1788,7 @@
           "историческая драма"
         ],
         "country": "Россия",
-        "free_places": 356,
+        "free_places": 354,
         "online_sale": true
       }
     },
@@ -4117,7 +4067,7 @@
       "language": null,
       "tags": [],
       "url": "https://rodinakino.ru/events/bitva-motorov-2026",
-      "source_url": "https://rodinakino.ru/?date=2026/11/09",
+      "source_url": "https://rodinakino.ru/?date=2026/11/08",
       "extra": {
         "year": 2026,
         "age": "12+",
