@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-08T14:46:45.233250+03:00",
+  "generated_at": "2026-11-08T14:59:11.938290+03:00",
   "window_start": "2026-11-08",
   "window_end": "2026-11-14",
   "statuses": [
@@ -7,85 +7,85 @@
       "venue": "domkino",
       "ok": true,
       "count": 93,
-      "fetched_at": "2026-11-08T14:47:01.543355+03:00",
+      "fetched_at": "2026-11-08T14:59:30.208630+03:00",
       "stale": false,
       "suspicious": false,
       "error": null,
       "warning": null,
       "requests": 7,
-      "seconds": 16.31
+      "seconds": 18.27
     },
     {
       "venue": "rodina",
       "ok": true,
       "count": 118,
-      "fetched_at": "2026-11-08T14:47:51.970704+03:00",
+      "fetched_at": "2026-11-08T15:00:21.891375+03:00",
       "stale": false,
       "suspicious": false,
       "error": null,
       "warning": null,
       "requests": 32,
-      "seconds": 50.427
+      "seconds": 51.683
     },
     {
       "venue": "avrora",
       "ok": true,
       "count": 39,
-      "fetched_at": "2026-11-08T14:47:59.556854+03:00",
+      "fetched_at": "2026-11-08T15:00:30.051166+03:00",
       "stale": false,
       "suspicious": false,
       "error": null,
       "warning": null,
       "requests": 8,
-      "seconds": 7.586
+      "seconds": 8.159
     },
     {
       "venue": "poravkino",
       "ok": true,
-      "count": 86,
-      "fetched_at": "2026-11-08T14:48:05.468184+03:00",
+      "count": 85,
+      "fetched_at": "2026-11-08T15:00:37.330032+03:00",
       "stale": false,
       "suspicious": false,
       "error": null,
       "warning": null,
       "requests": 7,
-      "seconds": 5.911
+      "seconds": 7.279
     },
     {
       "venue": "lenfilm",
       "ok": true,
       "count": 26,
-      "fetched_at": "2026-11-08T14:48:12.896065+03:00",
+      "fetched_at": "2026-11-08T15:00:46.147079+03:00",
       "stale": false,
       "suspicious": false,
       "error": null,
       "warning": null,
       "requests": 9,
-      "seconds": 7.428
+      "seconds": 8.817
     },
     {
       "venue": "outcinema",
       "ok": true,
       "count": 19,
-      "fetched_at": "2026-11-08T14:48:13.356780+03:00",
+      "fetched_at": "2026-11-08T15:00:46.906790+03:00",
       "stale": false,
       "suspicious": false,
       "error": null,
       "warning": null,
       "requests": 1,
-      "seconds": 0.461
+      "seconds": 0.76
     },
     {
       "venue": "mirage",
       "ok": true,
       "count": 131,
-      "fetched_at": "2026-11-08T14:48:22.615935+03:00",
+      "fetched_at": "2026-11-08T15:00:56.389657+03:00",
       "stale": false,
       "suspicious": false,
       "error": null,
       "warning": null,
       "requests": 7,
-      "seconds": 9.259
+      "seconds": 9.483
     }
   ],
   "screenings": [
@@ -569,31 +569,6 @@
       }
     },
     {
-      "venue": "poravkino",
-      "source_id": "44012",
-      "title": "Диггер",
-      "start": "2026-11-08T14:55:00+03:00",
-      "hall": "VIP",
-      "price_min": 650,
-      "price_max": 650,
-      "language": null,
-      "tags": [],
-      "url": "https://poravkino.ru/",
-      "source_url": "https://poravkino.ru/api/schedule?date=2026-11-08",
-      "extra": {
-        "country": "США, Великобритания, Мексика",
-        "director": "Алехандро Гонсалес Иньярриту",
-        "original_title": "Диггер",
-        "duration_min": 130,
-        "age": 18,
-        "genres": [
-          "драма",
-          "комедия"
-        ],
-        "is_pushkin": false
-      }
-    },
-    {
       "venue": "domkino",
       "source_id": "7c552d468010",
       "title": "Частная жизнь (субтитры)",
@@ -641,7 +616,7 @@
           "театр в кино"
         ],
         "country": "Австрия",
-        "free_places": 81,
+        "free_places": 80,
         "online_sale": true
       }
     },
@@ -995,7 +970,7 @@
     },
     {
       "venue": "mirage",
-      "source_id": "48f80923bb6c",
+      "source_id": "ae055d03-c559-46c8-b7b6-58ca532ff458",
       "title": "Кит: Во тьме глубин",
       "start": "2026-11-08T16:50:00+03:00",
       "hall": "6",
@@ -1003,7 +978,7 @@
       "price_max": null,
       "language": null,
       "tags": [],
-      "url": null,
+      "url": "https://www.mirage.ru/ticket_new/ae055d03-c559-46c8-b7b6-58ca532ff458/",
       "source_url": "https://www.mirage.ru/spb/schedule/08.11.2026/cinema/1/",
       "extra": {
         "genres": [
@@ -1139,7 +1114,7 @@
           "комедия"
         ],
         "country": "США, Великобритания",
-        "free_places": 332,
+        "free_places": 328,
         "online_sale": true
       }
     },
@@ -1399,7 +1374,7 @@
           "комедия"
         ],
         "country": "США, Великобритания",
-        "free_places": 112,
+        "free_places": 110,
         "online_sale": true
       }
     },
@@ -5962,7 +5937,7 @@
           "драма"
         ],
         "country": "Румыния, Франция, Норвегия, Дания, Финляндия, Швеция",
-        "free_places": 423,
+        "free_places": 421,
         "online_sale": true
       }
     },
@@ -6183,7 +6158,7 @@
           "драма"
         ],
         "country": "Россия",
-        "free_places": 110,
+        "free_places": 108,
         "online_sale": true
       }
     },
@@ -7882,7 +7857,7 @@
         "duration_min": 124,
         "age": "18+",
         "country": "США",
-        "free_places": 98,
+        "free_places": 96,
         "online_sale": true
       }
     },
