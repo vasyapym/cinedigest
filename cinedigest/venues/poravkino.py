@@ -123,7 +123,7 @@ def _screening(movie: dict, performance: dict, source_url: str) -> Screening | N
 def _extra(movie: dict) -> dict:
     extra: dict = {}
     year = to_int(movie.get("year"))
-    if year is not None:
+    if year is not None and 1900 <= year <= 2099:
         extra["year"] = year
     for key, source_key in (("country", "country"), ("director", "director"), ("original_title", "name_secondary")):
         value = text_or_none(movie.get(source_key))

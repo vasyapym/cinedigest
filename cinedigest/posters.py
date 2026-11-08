@@ -24,10 +24,18 @@ from .http import HttpError
 log = logging.getLogger(__name__)
 
 ID = "tmdb"  # archive-sink folder of the raw answers: snapshots/<run>/tmdb/<label>
-ANY_SUFFIX = "@any"  # label suffix of the year-less retry
+ANY_SUFFIX = "@any"  # dated film's retry without a year parameter
+STRIPPED_SUFFIX = "@stripped"
+YEARLESS = "any"  # cache-key suffix, not a numeric year
+_QUALIFIER_RE = re.compile(
+    r"(?:\s*\((?:версия\b[^()]*|с\s+субтитрами|субтитры|артпоказ)\)"
+    r"|\s*[.:\-–—]\s*(?:артпоказ|версия\b[^()]*|с\s+субтитрами|субтитры)"
+    r"|\s+(?:с\s+субтитрами|субтитры))\s*$",
+    re.IGNORECASE,
+)
 _PUNCT_RE = re.compile(r"[^\w\s]")
 _SPACES_RE = re.compile(r"\s+")
-_YEAR_RE = re.compile(r"(?<!\d)(1[89]\d{2}|20\d{2})(?!\d)")
+_YEAR_RE = re.compile(r"(?<![\d.\-])(19\d{2}|20\d{2})(?![\d.])")
 _SAFE_FILE_RE = re.compile(r"^[A-Za-z0-9][A-Za-z0-9._-]*$")
 _MISSING = object()
 
@@ -36,7 +44,7 @@ _MISSING = object()
 class Film:
     key: str
     title: str
-    year: int
+    year: int | None
     original_title: str | None = None
 
 
@@ -49,32 +57,65 @@ def norm(title) -> str:
 
 
 def film_year(value) -> int | None:
-    """extra.year as an int: accepts 2025, "2025", "2024–2025" (first year wins)."""
+    """Accept supported film years, 1900–2099; zero/invalid years are absent."""
     if value is None or isinstance(value, bool):
         return None
     if isinstance(value, int):
-        return value
+        return value if 1900 <= value <= 2099 else None
+    if not isinstance(value, str):
+        return None
     match = _YEAR_RE.search(str(value))
     return int(match.group(1)) if match else None
 
 
-def film_key(title, year) -> str | None:
+def film_key(title, year, *, allow_yearless: bool = False) -> str | None:
     name = norm(title)
-    if not name or year is None:
+    year = film_year(year)
+    if not name:
         return None
-    return f"{name}|{int(year)}"
+    if year is None:
+        return f"{name}|{YEARLESS}" if allow_yearless else None
+    return f"{name}|{year}"
+
+
+def stripped_title(title: str) -> str | None:
+    """Remove only terminal, recognised venue notes; never arbitrary parentheses."""
+    clean = title.strip()
+    while True:
+        shorter = _QUALIFIER_RE.sub("", clean).strip()
+        if shorter == clean:
+            break
+        clean = shorter
+    return clean if norm(clean) and norm(clean) != norm(title) else None
+
+
+def _valid_id(movie: dict) -> bool:
+    value = movie.get("id")
+    return isinstance(value, int) and not isinstance(value, bool) and value > 0
 
 
 def films(screenings, year_hints: dict[str, int] | None = None) -> dict[str, Film]:
-    """Distinct films carrying a year, first-seen order; domkino's original_title is kept
-    as soon as any row of the film has one."""
+    """Distinct identities without mutating rows. A unique dated row can date its
+    yearless siblings; ambiguous siblings are not independently admitted."""
+    screenings = tuple(screenings)
+    dated: dict[str, set[int]] = {}
+    for s in screenings:
+        year = film_year((s.extra or {}).get("year"))
+        if year is not None:
+            dated.setdefault(norm(s.title), set()).add(year)
     out: dict[str, Film] = {}
     for s in screenings:
         x = s.extra or {}
         year = film_year(x.get("year"))
         if year is None and year_hints is not None:
             year = film_year(year_hints.get(norm(s.title)))
-        key = film_key(s.title, year)
+        if year is None:
+            years = dated.get(norm(s.title), set())
+            if len(years) > 1:
+                continue
+            if years:
+                year = next(iter(years))
+        key = film_key(s.title, year, allow_yearless=True)
         if key is None:
             continue
         original = str(x.get("original_title") or "").strip() or None
@@ -129,6 +170,11 @@ def prune(entries: dict[str, dict], today: date) -> dict[str, dict]:
     """Entries resolved within TMDB_CACHE_MAX_AGE_DAYS; undated or future-dated ones go too."""
     kept: dict[str, dict] = {}
     for key, entry in entries.items():
+        _, sep, suffix = key.rpartition("|")
+        if sep and suffix != YEARLESS and film_year(suffix) is None:
+            continue
+        if entry.get("year") is not None and film_year(entry.get("year")) is None:
+            continue
         resolved = _parse_date(entry.get("resolved_at"))
         if resolved is None or not 0 <= (today - resolved).days <= config.TMDB_CACHE_MAX_AGE_DAYS:
             continue
@@ -150,7 +196,7 @@ def load_overrides(path) -> dict[str, dict | None]:
             log.warning("posters: override %r ignored — expected null or an object", raw_key)
             continue
         title, sep, year = raw_key.rpartition("|")
-        key = film_key(title, film_year(year)) if sep else None
+        key = film_key(title, year, allow_yearless=year == YEARLESS) if sep else None
         out[key or raw_key] = value
     return out
 
@@ -179,7 +225,11 @@ def plan(wanted: dict[str, Film], cache: dict[str, dict], overrides: dict, today
             if entry and entry.get("tmdb_id") == tmdb_id and fresh(entry, today):
                 continue
             due.append(film)
-        elif entry is None or not fresh(entry, today):
+        elif (entry is None or not fresh(entry, today)
+              or (entry.get("via") == "miss"
+                  and stripped_title(film.title)
+                  and "retry_query" not in entry)):
+            # Give pre-feature qualifier misses one immediate, recorded retry.
             due.append(film)
     over = len(due) - config.TMDB_MAX_LOOKUPS_PER_RUN
     if over > 0:
@@ -189,9 +239,9 @@ def plan(wanted: dict[str, Film], cache: dict[str, dict], overrides: dict, today
 
 # ---- network --------------------------------------------------------------------------
 def fetch(http, token: str, due: list[Film], overrides: dict | None = None) -> list[tuple[str, str]]:
-    """Raw TMDB answers as (label, body): label = film key; the year-less retry (only when the
-    first search is empty) is labelled key + '@any'; an id pin fetches /movie/{id} under the key.
-    Stops after TMDB_FAILURE_LIMIT failed lookups (a 429 is a failure, never retried here)."""
+    """One primary request and at most one fallback per admitted film.
+    A qualifier retry takes precedence over the existing empty-search @any retry.
+    Pins use /movie/{id}; HttpError failures retain the existing circuit breaker."""
     overrides = overrides or {}
     headers = {"Authorization": f"Bearer {token}", "Accept": "application/json"}
     search_url = f"{config.TMDB_API_URL}/search/movie"
@@ -208,22 +258,33 @@ def fetch(http, token: str, due: list[Film], overrides: dict | None = None) -> l
                 )
                 raw.append((film.key, body))
                 continue
+            params = {"query": film.title, "language": config.TMDB_LANGUAGE,
+                      "include_adult": "false"}
+            year = film_year(film.year)
+            if year is not None:
+                params["year"] = year
             body = http.get(
                 search_url,
-                params={"query": film.title, "year": film.year,
-                        "language": config.TMDB_LANGUAGE, "include_adult": "false"},
+                params=params,
                 headers=headers, venue=ID, label=film.key,
             )
             raw.append((film.key, body))
-            if not results(body):
-                label = film.key + ANY_SUFFIX
-                body = http.get(
-                    search_url,
-                    params={"query": film.original_title or film.title,
-                            "language": config.TMDB_LANGUAGE, "include_adult": "false"},
-                    headers=headers, venue=ID, label=label,
-                )
-                raw.append((label, body))
+            candidates = results(body)
+            clean = stripped_title(film.title)
+            if clean and choose(candidates, film) is None:
+                query, suffix = clean, STRIPPED_SUFFIX
+            elif year is not None and not candidates:
+                query, suffix = film.original_title or film.title, ANY_SUFFIX
+            else:
+                continue
+            label = film.key + suffix
+            body = http.get(
+                search_url,
+                params={"query": query,
+                        "language": config.TMDB_LANGUAGE, "include_adult": "false"},
+                headers=headers, venue=ID, label=label,
+            )
+            raw.append((label, body))
         except HttpError as exc:
             failures += 1
             log.warning("posters: %s: %s", film.key, exc)
@@ -324,28 +385,42 @@ def results(body) -> list[dict]:
     return [item for item in (items or []) if isinstance(item, dict)]
 
 
-def choose(candidates: list[dict], film: Film) -> dict | None:
+def choose(candidates: list[dict], film: Film, *, strict_title: bool = False) -> dict | None:
     """Precision first: an exact normalised title/original-title match within ±1 year
-    (exact year, then popularity, break ties); else a LONE same-year answer; else None."""
+    (exact year, then popularity, break ties); else a LONE same-year answer.
+    Yearless admission requires exactly one returned candidate with a valid id.
+    Stripped retries additionally require an exact title match; no lone-result escape."""
     wanted = {norm(film.title)}
     if film.original_title:
         wanted.add(norm(film.original_title))
     wanted.discard("")
+    target_year = film_year(film.year)
+    if target_year is None:
+        if len(candidates) != 1 or not _valid_id(candidates[0]):
+            return None
+        lone = candidates[0]
+        names = {norm(lone.get("title")), norm(lone.get("original_title"))}
+        if strict_title and not names & wanted:
+            return None
+        return lone
     best: dict | None = None
     best_rank: tuple | None = None
     for movie in candidates:
+        if not _valid_id(movie):
+            continue
         year = _release_year(movie.get("release_date"))
-        if year is None or abs(year - film.year) > 1:
+        if year is None or abs(year - target_year) > 1:
             continue
         names = {norm(movie.get("title")), norm(movie.get("original_title"))}
         if not names & wanted:
             continue
-        rank = (year == film.year, _float(movie.get("popularity")))
+        rank = (year == target_year, _float(movie.get("popularity")))
         if best_rank is None or rank > best_rank:
             best, best_rank = movie, rank
-    if best is None and len(candidates) == 1:
+    if best is None and not strict_title and len(candidates) == 1:
         lone = candidates[0]
-        if _release_year(lone.get("release_date")) == film.year:
+        if (_valid_id(lone)
+                and _release_year(lone.get("release_date")) == target_year):
             best = lone
     return best
 
@@ -368,15 +443,29 @@ def parse(raw: list[tuple[str, str]], due: list[Film], overrides: dict | None = 
             continue
         if film.key not in bodies:
             continue
-        for label, via in ((film.key, "year"), (film.key + ANY_SUFFIX, "any")):
+        clean = stripped_title(film.title)
+        attempts = (
+            (film.key, "year" if film_year(film.year) is not None else "yearless"),
+            (film.key + STRIPPED_SUFFIX, "stripped"),
+            (film.key + ANY_SUFFIX, "any"),
+        )
+        for label, via in attempts:
             if label not in bodies:
                 continue
-            movie = choose(results(bodies[label]), film)
+            if via == "stripped":
+                if not clean:
+                    continue
+                target = Film(film.key, clean, film.year)
+                movie = choose(results(bodies[label]), target, strict_title=True)
+            else:
+                movie = choose(results(bodies[label]), film)
             if movie is not None:
                 out[film.key] = _entry(film, movie, today, via)
                 break
         else:
             out[film.key] = _miss(film, today)
+        if clean and film.key + STRIPPED_SUFFIX in bodies:
+            out[film.key]["retry_query"] = clean
     return out
 
 
@@ -561,6 +650,16 @@ def cleanup(posters_dir, entries: dict[str, dict], today: date) -> list[str]:
 
 
 # ---- orchestration --------------------------------------------------------------------
+def _retire_yearless(entries: dict[str, dict], wanted: dict[str, Film]) -> None:
+    """A dated window identity supersedes, but never blindly inherits, its yearless
+    cache entry. Revalidate the dated identity through the normal matching path."""
+    names = {norm(film.title) for film in wanted.values() if film.year is not None}
+    for key in list(entries):
+        title, sep, suffix = key.rpartition("|")
+        if sep and suffix == YEARLESS and norm(title) in names:
+            del entries[key]
+
+
 def _carry_file_fields(parsed: dict[str, dict], previous: dict[str, dict]) -> None:
     """A metadata refresh must not touch the byte age: an entry whose poster_path stayed the
     same carries over the previous record of the downloaded file — kept, never renewed."""
@@ -609,6 +708,7 @@ def resolve(screenings, *, http, out_dir, today: date, token: str | None = None,
     overrides = load_overrides(docs / config.POSTER_OVERRIDES_FILENAME)
     cache = load_cache(cache_path)
     wanted = films(screenings, year_hints)
+    _retire_yearless(cache, wanted)
     if token is None:
         token = os.environ.get(config.TMDB_READ_TOKEN_ENV) or None
     if not token:
@@ -691,7 +791,7 @@ def _entry(film: Film, movie: dict, today: date, via: str) -> dict:
     path = movie.get("poster_path")
     return {
         "title": film.title,
-        "year": film.year,
+        "year": film_year(film.year),
         "tmdb_id": movie.get("id"),
         "tmdb_title": movie.get("title"),
         "poster_path": path if isinstance(path, str) and path.startswith("/") else None,
@@ -702,6 +802,6 @@ def _entry(film: Film, movie: dict, today: date, via: str) -> dict:
 
 def _miss(film: Film, today: date) -> dict:
     return {
-        "title": film.title, "year": film.year, "tmdb_id": None, "tmdb_title": None,
+        "title": film.title, "year": film_year(film.year), "tmdb_id": None, "tmdb_title": None,
         "poster_path": None, "resolved_at": today.isoformat(), "via": "miss",
     }

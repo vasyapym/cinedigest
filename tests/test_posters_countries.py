@@ -123,7 +123,7 @@ def test_hint_search_details_and_bytes_without_mutating_inputs(tmp_path):
 
 def test_absent_hint_and_explicit_year_keep_existing_identity_rules():
     screening = row()
-    assert posters.films([screening]) == posters.films([screening], None) == {}
+    assert list(posters.films([screening])) == ["морозко|any"]
     assert posters.films([row(1964)], {"морозко": 2000}) == {FILM.key: FILM}
     http = FakeHttp({})
     raw = posters.fetch(http, "tok", [FILM])

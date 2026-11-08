@@ -251,17 +251,35 @@ def test_b2_real_cache_to_cli_render_offline(tmp_path):
     """The shipped contract end-to-end: real JSON envelope → real readers → CLI render, offline."""
     import json as json_lib
     import os as os_lib
-    import shutil
     import subprocess
     import sys
     from pathlib import Path
 
-    snapshot_path = Path(__file__).parents[1] / "docs" / "screenings.json"
-    if not snapshot_path.is_file():
-        pytest.skip("committed snapshot is not in the tree")
     docs = tmp_path / "docs"
     docs.mkdir()
-    shutil.copy(snapshot_path, docs / "screenings.json")
+    snapshot = {
+        "generated_at": "2026-11-08T09:00:00+03:00",
+        "window_start": "2026-11-08",
+        "window_end": "2026-11-08",
+        "statuses": [
+            {"venue": venue, "ok": True, "count": 1, "fetched_at": "2026-11-08T09:00:00+03:00",
+             "stale": False, "suspicious": False, "error": None, "warning": None,
+             "requests": 1, "seconds": 1.0}
+            for venue in ["domkino", "rodina", "avrora", "poravkino", "lenfilm",
+                          "outcinema", "mirage"]
+        ],
+        "screenings": [
+            {"venue": "mirage", "source_id": "m1", "title": "Морозко",
+             "start": "2026-11-08T18:30:00+03:00", "hall": "зал 1",
+             "price_min": None, "price_max": None, "language": None,
+             "tags": [], "url": None, "source_url": None, "extra": {}},
+            {"venue": "mirage", "source_id": "m2", "title": "Рождение империи",
+             "start": "2026-11-08T20:40:00+03:00", "hall": "зал 2",
+             "price_min": None, "price_max": None, "language": None,
+             "tags": [], "url": None, "source_url": None, "extra": {}},
+        ],
+    }
+    (docs / "screenings.json").write_text(json_lib.dumps(snapshot), encoding="utf-8")
     entries = {
         "морозко|1964": {
             "title": "Морозко", "year": 1964, "tmdb_id": 20932,
@@ -288,12 +306,10 @@ def test_b2_real_cache_to_cli_render_offline(tmp_path):
 
     rows = [piece for piece in html.split('<li class="r')[1:]
             if "Мираж на Большом" in piece]
-    ru_rows = [p for p in rows if "Рождение империи" in p]
     su_rows = [p for p in rows if "Морозко" in p]
-    assert ru_rows and su_rows
+    ru_rows = [p for p in rows if "Рождение империи" in p]
+    assert su_rows and ru_rows
+    for piece in su_rows:
+        assert 'data-country-status="other"' in piece
     for piece in ru_rows:
         assert 'data-country-status="Russian"' in piece
-    for piece in su_rows:
-        #ild the window already carries the dated 2026-remake identity (Россия) AND the
-        # cache adds the 1964 one (Soviet Union) — two identities = honest `unknown`.
-        assert 'data-country-status="unknown"' in piece

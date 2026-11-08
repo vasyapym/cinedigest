@@ -100,7 +100,7 @@ def test_films_dedupes_and_keeps_original_title():
             _screening("Морозко", 1964, venue="domkino", original_title="Morozko"),
             _screening("Без года")]
     films = posters.films(rows)
-    assert list(films) == ["морозко|1964"]
+    assert list(films) == ["морозко|1964", "без года|any"]
     assert films["морозко|1964"].original_title == "Morozko"
 
 
