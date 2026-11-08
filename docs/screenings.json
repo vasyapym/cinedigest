@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-08T14:35:11.918048+03:00",
+  "generated_at": "2026-11-08T14:46:45.233250+03:00",
   "window_start": "2026-11-08",
   "window_end": "2026-11-14",
   "statuses": [
@@ -7,85 +7,85 @@
       "venue": "domkino",
       "ok": true,
       "count": 93,
-      "fetched_at": "2026-11-08T14:35:26.313707+03:00",
+      "fetched_at": "2026-11-08T14:47:01.543355+03:00",
       "stale": false,
       "suspicious": false,
       "error": null,
       "warning": null,
       "requests": 7,
-      "seconds": 14.396
+      "seconds": 16.31
     },
     {
       "venue": "rodina",
       "ok": true,
       "count": 118,
-      "fetched_at": "2026-11-08T14:36:16.558078+03:00",
+      "fetched_at": "2026-11-08T14:47:51.970704+03:00",
       "stale": false,
       "suspicious": false,
       "error": null,
       "warning": null,
       "requests": 32,
-      "seconds": 50.244
+      "seconds": 50.427
     },
     {
       "venue": "avrora",
       "ok": true,
       "count": 39,
-      "fetched_at": "2026-11-08T14:36:23.776143+03:00",
+      "fetched_at": "2026-11-08T14:47:59.556854+03:00",
       "stale": false,
       "suspicious": false,
       "error": null,
       "warning": null,
       "requests": 8,
-      "seconds": 7.217
+      "seconds": 7.586
     },
     {
       "venue": "poravkino",
       "ok": true,
-      "count": 87,
-      "fetched_at": "2026-11-08T14:36:30.263875+03:00",
+      "count": 86,
+      "fetched_at": "2026-11-08T14:48:05.468184+03:00",
       "stale": false,
       "suspicious": false,
       "error": null,
       "warning": null,
       "requests": 7,
-      "seconds": 6.488
+      "seconds": 5.911
     },
     {
       "venue": "lenfilm",
       "ok": true,
       "count": 26,
-      "fetched_at": "2026-11-08T14:36:37.373697+03:00",
+      "fetched_at": "2026-11-08T14:48:12.896065+03:00",
       "stale": false,
       "suspicious": false,
       "error": null,
       "warning": null,
       "requests": 9,
-      "seconds": 7.11
+      "seconds": 7.428
     },
     {
       "venue": "outcinema",
       "ok": true,
       "count": 19,
-      "fetched_at": "2026-11-08T14:36:37.819367+03:00",
+      "fetched_at": "2026-11-08T14:48:13.356780+03:00",
       "stale": false,
       "suspicious": false,
       "error": null,
       "warning": null,
       "requests": 1,
-      "seconds": 0.446
+      "seconds": 0.461
     },
     {
       "venue": "mirage",
       "ok": true,
       "count": 131,
-      "fetched_at": "2026-11-08T14:36:45.016630+03:00",
+      "fetched_at": "2026-11-08T14:48:22.615935+03:00",
       "stale": false,
       "suspicious": false,
       "error": null,
       "warning": null,
       "requests": 7,
-      "seconds": 7.197
+      "seconds": 9.259
     }
   ],
   "screenings": [
@@ -472,35 +472,6 @@
       }
     },
     {
-      "venue": "poravkino",
-      "source_id": "44011",
-      "title": "Плетёный муж",
-      "start": "2026-11-08T14:30:00+03:00",
-      "hall": "1",
-      "price_min": 400,
-      "price_max": 400,
-      "language": null,
-      "tags": [],
-      "url": "https://poravkino.ru/",
-      "source_url": "https://poravkino.ru/api/schedule?date=2026-11-08",
-      "extra": {
-        "year": 2026,
-        "country": "США, Великобритания, Австралия",
-        "director": "Алекс Хьюстон Фишер, Элинор Уилсон",
-        "original_title": "Плетеный муж",
-        "duration_min": 110,
-        "age": 18,
-        "genres": [
-          "драма",
-          "комедия",
-          "мелодрама",
-          "фантастика",
-          "фэнтези"
-        ],
-        "is_pushkin": false
-      }
-    },
-    {
       "venue": "domkino",
       "source_id": "8d27698b6917",
       "title": "Барашек в ящике",
@@ -670,7 +641,7 @@
           "театр в кино"
         ],
         "country": "Австрия",
-        "free_places": 82,
+        "free_places": 81,
         "online_sale": true
       }
     },
@@ -765,7 +736,7 @@
           "драма"
         ],
         "country": "Испания",
-        "free_places": 51,
+        "free_places": 49,
         "online_sale": true
       }
     },
@@ -1024,7 +995,7 @@
     },
     {
       "venue": "mirage",
-      "source_id": "ae055d03-c559-46c8-b7b6-58ca532ff458",
+      "source_id": "48f80923bb6c",
       "title": "Кит: Во тьме глубин",
       "start": "2026-11-08T16:50:00+03:00",
       "hall": "6",
@@ -1032,7 +1003,7 @@
       "price_max": null,
       "language": null,
       "tags": [],
-      "url": "https://www.mirage.ru/ticket_new/ae055d03-c559-46c8-b7b6-58ca532ff458/",
+      "url": null,
       "source_url": "https://www.mirage.ru/spb/schedule/08.11.2026/cinema/1/",
       "extra": {
         "genres": [
@@ -1168,7 +1139,7 @@
           "комедия"
         ],
         "country": "США, Великобритания",
-        "free_places": 334,
+        "free_places": 332,
         "online_sale": true
       }
     },
@@ -1428,7 +1399,7 @@
           "комедия"
         ],
         "country": "США, Великобритания",
-        "free_places": 114,
+        "free_places": 112,
         "online_sale": true
       }
     },
