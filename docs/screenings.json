@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-08T12:40:25.238207+03:00",
+  "generated_at": "2026-11-08T13:27:51.889460+03:00",
   "window_start": "2026-11-08",
   "window_end": "2026-11-14",
   "statuses": [
@@ -7,85 +7,85 @@
       "venue": "domkino",
       "ok": true,
       "count": 93,
-      "fetched_at": "2026-11-08T12:40:41.781623+03:00",
+      "fetched_at": "2026-11-08T13:28:09.633391+03:00",
       "stale": false,
       "suspicious": false,
       "error": null,
       "warning": null,
       "requests": 7,
-      "seconds": 16.543
+      "seconds": 17.744
     },
     {
       "venue": "rodina",
       "ok": true,
-      "count": 121,
-      "fetched_at": "2026-11-08T12:41:28.531489+03:00",
+      "count": 120,
+      "fetched_at": "2026-11-08T13:29:01.020060+03:00",
       "stale": false,
       "suspicious": false,
       "error": null,
       "warning": null,
       "requests": 32,
-      "seconds": 46.75
+      "seconds": 51.387
     },
     {
       "venue": "avrora",
       "ok": true,
-      "count": 41,
-      "fetched_at": "2026-11-08T12:41:36.423736+03:00",
+      "count": 40,
+      "fetched_at": "2026-11-08T13:29:09.350604+03:00",
       "stale": false,
       "suspicious": false,
       "error": null,
       "warning": null,
       "requests": 8,
-      "seconds": 7.892
+      "seconds": 8.33
     },
     {
       "venue": "poravkino",
       "ok": true,
-      "count": 93,
-      "fetched_at": "2026-11-08T12:41:42.498960+03:00",
+      "count": 92,
+      "fetched_at": "2026-11-08T13:29:15.514441+03:00",
       "stale": false,
       "suspicious": false,
       "error": null,
       "warning": null,
       "requests": 7,
-      "seconds": 6.075
+      "seconds": 6.164
     },
     {
       "venue": "lenfilm",
       "ok": true,
       "count": 26,
-      "fetched_at": "2026-11-08T12:41:49.807943+03:00",
+      "fetched_at": "2026-11-08T13:29:23.141717+03:00",
       "stale": false,
       "suspicious": false,
       "error": null,
       "warning": null,
       "requests": 9,
-      "seconds": 7.309
+      "seconds": 7.627
     },
     {
       "venue": "outcinema",
       "ok": true,
       "count": 19,
-      "fetched_at": "2026-11-08T12:41:50.310134+03:00",
+      "fetched_at": "2026-11-08T13:29:23.721095+03:00",
       "stale": false,
       "suspicious": false,
       "error": null,
       "warning": null,
       "requests": 1,
-      "seconds": 0.502
+      "seconds": 0.579
     },
     {
       "venue": "mirage",
       "ok": true,
-      "count": 136,
-      "fetched_at": "2026-11-08T12:41:58.699259+03:00",
+      "count": 134,
+      "fetched_at": "2026-11-08T13:29:33.476074+03:00",
       "stale": false,
       "suspicious": false,
       "error": null,
       "warning": null,
       "requests": 7,
-      "seconds": 8.389
+      "seconds": 9.755
     }
   ],
   "screenings": [
@@ -279,27 +279,6 @@
       }
     },
     {
-      "venue": "mirage",
-      "source_id": "f5a352ad-0241-480c-92ed-e815ae5179ed",
-      "title": "Морозко",
-      "start": "2026-11-08T12:00:00+03:00",
-      "hall": "6",
-      "price_min": null,
-      "price_max": null,
-      "language": null,
-      "tags": [],
-      "url": "https://www.mirage.ru/ticket_new/f5a352ad-0241-480c-92ed-e815ae5179ed/",
-      "source_url": "https://www.mirage.ru/spb/schedule/08.11.2026/cinema/1/",
-      "extra": {
-        "genres": [
-          "фэнтези",
-          "семейный"
-        ],
-        "age": "6+",
-        "film_id": 7619
-      }
-    },
-    {
       "venue": "domkino",
       "source_id": "f85bb2c5bc11",
       "title": "Восставший",
@@ -351,57 +330,6 @@
       }
     },
     {
-      "venue": "mirage",
-      "source_id": "2b0aa0d9-e30e-a3a5-5fc2-71ced8364536",
-      "title": "Остров забвения",
-      "start": "2026-11-08T12:30:00+03:00",
-      "hall": "7",
-      "price_min": null,
-      "price_max": null,
-      "language": null,
-      "tags": [],
-      "url": "https://www.mirage.ru/ticket_new/2b0aa0d9-e30e-a3a5-5fc2-71ced8364536/",
-      "source_url": "https://www.mirage.ru/spb/schedule/08.11.2026/cinema/1/",
-      "extra": {
-        "genres": [
-          "комедия",
-          "приключения",
-          "мультфильм",
-          "фэнтези",
-          "семейный"
-        ],
-        "age": "6+",
-        "price_raw": "30000₽",
-        "film_id": 7664
-      }
-    },
-    {
-      "venue": "rodina",
-      "source_id": "a3268c6dc2ca",
-      "title": "Романовы: преданность и предательство",
-      "start": "2026-11-08T12:30:00+03:00",
-      "hall": "Малый 2 зал",
-      "price_min": 250,
-      "price_max": 250,
-      "language": null,
-      "tags": [],
-      "url": "https://rodinakino.ru/events/romanovy-predannost-i-predatelstvo-2026",
-      "source_url": "https://rodinakino.ru/?date=2026/11/08",
-      "extra": {
-        "year": 2026,
-        "age": "16+",
-        "duration_min": 121,
-        "synopsis": "Рассказ о последних годах жизни Императора Всероссийского Николая II, его семьи и близких.",
-        "director": "Василий Чигинский",
-        "genres": [
-          "драма",
-          "история",
-          "биография"
-        ],
-        "country": "Россия"
-      }
-    },
-    {
       "venue": "domkino",
       "source_id": "88b953b06c6f",
       "title": "Непокой",
@@ -423,35 +351,6 @@
           "триллер",
           "анимация"
         ]
-      }
-    },
-    {
-      "venue": "poravkino",
-      "source_id": "44005",
-      "title": "Плетёный муж",
-      "start": "2026-11-08T12:45:00+03:00",
-      "hall": "VIP",
-      "price_min": 550,
-      "price_max": 550,
-      "language": null,
-      "tags": [],
-      "url": "https://poravkino.ru/",
-      "source_url": "https://poravkino.ru/api/schedule?date=2026-11-08",
-      "extra": {
-        "year": 2026,
-        "country": "США, Великобритания, Австралия",
-        "director": "Алекс Хьюстон Фишер, Элинор Уилсон",
-        "original_title": "Плетеный муж",
-        "duration_min": 110,
-        "age": 18,
-        "genres": [
-          "драма",
-          "комедия",
-          "мелодрама",
-          "фантастика",
-          "фэнтези"
-        ],
-        "is_pushkin": false
       }
     },
     {
@@ -522,33 +421,6 @@
         ],
         "age": "6+",
         "film_id": 7624
-      }
-    },
-    {
-      "venue": "avrora",
-      "source_id": "6ae9d52d3f000046009ef458",
-      "title": "Романовы: преданность и предательство",
-      "start": "2026-11-08T13:20:00+03:00",
-      "hall": "Малый",
-      "price_min": 450,
-      "price_max": 450,
-      "language": null,
-      "tags": [],
-      "url": "https://avrora.spb.ru/",
-      "source_url": "https://kinokassa.kinoplan24.ru/api/v2/release/playbill?city_id=2&date=2026-11-08",
-      "extra": {
-        "release_id": 25494,
-        "year": 2026,
-        "duration_min": 121,
-        "age": "16+",
-        "genres": [
-          "биография",
-          "история",
-          "драма"
-        ],
-        "country": "Россия",
-        "free_places": 47,
-        "online_sale": true
       }
     },
     {
@@ -800,7 +672,7 @@
           "историческая драма"
         ],
         "country": "Россия",
-        "free_places": 341,
+        "free_places": 334,
         "online_sale": true
       }
     },
@@ -1072,7 +944,7 @@
           "театр в кино"
         ],
         "country": "Австрия",
-        "free_places": 84,
+        "free_places": 83,
         "online_sale": true
       }
     },
@@ -1168,7 +1040,7 @@
           "драма"
         ],
         "country": "Испания",
-        "free_places": 55,
+        "free_places": 54,
         "online_sale": true
       }
     },
@@ -1428,7 +1300,7 @@
     },
     {
       "venue": "mirage",
-      "source_id": "ae055d03-c559-46c8-b7b6-58ca532ff458",
+      "source_id": "48f80923bb6c",
       "title": "Кит: Во тьме глубин",
       "start": "2026-11-08T16:50:00+03:00",
       "hall": "6",
@@ -1436,7 +1308,7 @@
       "price_max": null,
       "language": null,
       "tags": [],
-      "url": "https://www.mirage.ru/ticket_new/ae055d03-c559-46c8-b7b6-58ca532ff458/",
+      "url": null,
       "source_url": "https://www.mirage.ru/spb/schedule/08.11.2026/cinema/1/",
       "extra": {
         "genres": [
@@ -1572,7 +1444,7 @@
           "комедия"
         ],
         "country": "США, Великобритания",
-        "free_places": 351,
+        "free_places": 348,
         "online_sale": true
       }
     },
@@ -1777,7 +1649,7 @@
           "драма"
         ],
         "country": "Россия",
-        "free_places": 61,
+        "free_places": 53,
         "online_sale": true
       }
     },
@@ -1834,7 +1706,7 @@
           "комедия"
         ],
         "country": "США, Великобритания",
-        "free_places": 123,
+        "free_places": 116,
         "online_sale": true
       }
     },
@@ -2195,7 +2067,7 @@
           "историческая драма"
         ],
         "country": "Россия",
-        "free_places": 365,
+        "free_places": 360,
         "online_sale": true
       }
     },
@@ -2648,7 +2520,7 @@
           "саспенс триллер"
         ],
         "country": "Румыния, Франция, Норвегия, Дания, Финляндия, Швеция",
-        "free_places": 102,
+        "free_places": 100,
         "online_sale": true
       }
     },
@@ -4148,7 +4020,7 @@
           "историческая драма"
         ],
         "country": "Россия",
-        "free_places": 424,
+        "free_places": 422,
         "online_sale": true
       }
     },
@@ -4457,7 +4329,7 @@
       "language": null,
       "tags": [],
       "url": "https://rodinakino.ru/events/romanovy-predannost-i-predatelstvo-2026",
-      "source_url": "https://rodinakino.ru/?date=2026/11/09",
+      "source_url": "https://rodinakino.ru/?date=2026/11/08",
       "extra": {
         "year": 2026,
         "age": "16+",
@@ -9384,7 +9256,7 @@
           "историческая драма"
         ],
         "country": "Россия",
-        "free_places": 425,
+        "free_places": 423,
         "online_sale": true
       }
     },
@@ -10610,7 +10482,7 @@
           "фильм-выставка"
         ],
         "country": "Италия",
-        "free_places": 373,
+        "free_places": 370,
         "online_sale": true
       }
     },
@@ -12365,7 +12237,7 @@
           "драма"
         ],
         "country": "США",
-        "free_places": 361,
+        "free_places": 360,
         "online_sale": true
       }
     },
@@ -12850,7 +12722,7 @@
           "драма"
         ],
         "country": "Россия",
-        "free_places": 189,
+        "free_places": 185,
         "online_sale": true
       }
     },
@@ -13079,7 +12951,7 @@
           "драма"
         ],
         "country": "Швеция, Франция, Великобритания",
-        "free_places": 181,
+        "free_places": 182,
         "online_sale": true
       }
     },
