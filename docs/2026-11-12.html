@@ -35,7 +35,7 @@
   .ctls{display:flex;flex-wrap:wrap;gap:.35rem;padding:.6rem 0 .2rem}
   .chip{font-size:.8rem;padding:.2rem .6rem;border:1px solid var(--line);border-radius:1rem;color:var(--mut);cursor:pointer;user-select:none}
   .chip.vc::before{content:"";display:inline-block;width:.55em;height:.55em;border-radius:50%;margin-right:.35em;background:var(--vc,var(--mut))}
-#v-domkino:checked ~ header label[for="v-domkino"], #v-rodina:checked ~ header label[for="v-rodina"], #v-avrora:checked ~ header label[for="v-avrora"], #v-poravkino:checked ~ header label[for="v-poravkino"], #v-lenfilm:checked ~ header label[for="v-lenfilm"], #v-outcinema:checked ~ header label[for="v-outcinema"], #v-mirage:checked ~ header label[for="v-mirage"], #allday:checked ~ header label[for="allday"]{color:var(--fg);border-color:var(--fg)}
+#v-domkino:checked ~ header label[for="v-domkino"], #v-rodina:checked ~ header label[for="v-rodina"], #v-avrora:checked ~ header label[for="v-avrora"], #v-poravkino:checked ~ header label[for="v-poravkino"], #v-lenfilm:checked ~ header label[for="v-lenfilm"], #v-outcinema:checked ~ header label[for="v-outcinema"], #v-mirage:checked ~ header label[for="v-mirage"], #allday:checked ~ header label[for="allday"], #no-russia:checked ~ header label[for="no-russia"]{color:var(--fg);border-color:var(--fg)}
 #v-domkino:not(:checked) ~ main .list .r[data-v="domkino"]{display:none!important}
 #v-rodina:not(:checked) ~ main .list .r[data-v="rodina"]{display:none!important}
 #v-avrora:not(:checked) ~ main .list .r[data-v="avrora"]{display:none!important}
@@ -43,6 +43,7 @@
 #v-lenfilm:not(:checked) ~ main .list .r[data-v="lenfilm"]{display:none!important}
 #v-outcinema:not(:checked) ~ main .list .r[data-v="outcinema"]{display:none!important}
 #v-mirage:not(:checked) ~ main .list .r[data-v="mirage"]{display:none!important}
+  #no-russia:checked ~ main .list .r[data-country-status="Russian"]{display:none!important}
 .v-domkino{--vc:var(--c-domkino)}
 .v-rodina{--vc:var(--c-rodina)}
 .v-avrora{--vc:var(--c-avrora)}
@@ -92,13 +93,14 @@
 </style>
 </head>
 <body data-today="2026-11-08"
-      data-generated="2026-11-08T06:17:23.486805+03:00"
-      data-generated-human="вс 8 ноября в 06:17">
+      data-generated="2026-11-08T12:24:12.104588+03:00"
+      data-generated-human="вс 8 ноября в 12:24">
 <input type="checkbox" id="allday" class="ctl">
+<input type="checkbox" id="no-russia" class="ctl">
 <input type="checkbox" id="v-domkino" class="ctl" checked> <input type="checkbox" id="v-rodina" class="ctl" checked> <input type="checkbox" id="v-avrora" class="ctl" checked> <input type="checkbox" id="v-poravkino" class="ctl" checked> <input type="checkbox" id="v-lenfilm" class="ctl" checked> <input type="checkbox" id="v-outcinema" class="ctl" checked> <input type="checkbox" id="v-mirage" class="ctl" checked> 
 <header>
   <h1>Кино вечером</h1>
-  <p class="sub">СПб · 7 кинотеатров · собрано вс 8 ноября, 06:17 · вечер = с 18:00</p>
+  <p class="sub">СПб · 7 кинотеатров · собрано вс 8 ноября, 12:24 · вечер = с 18:00</p>
   <p id="stale" class="warn" hidden></p>
 
   <nav class="days" aria-label="Дни">
@@ -112,6 +114,7 @@
   </nav>
   <div class="ctls">
     <label for="allday" class="chip">весь день</label>
+    <label for="no-russia" class="chip" title="Скрыть фильмы с участием России, включая копродукции; СССР не считается Россией; неизвестная страна не исключается" aria-label="нероссийские: скрыть фильмы с участием России, включая копродукции; СССР не считается Россией; неизвестная страна не исключается">нероссийские</label>
 <label for="v-domkino" class="chip vc v-domkino">Дом кино</label> <label for="v-rodina" class="chip vc v-rodina">Родина</label> <label for="v-avrora" class="chip vc v-avrora">Аврора</label> <label for="v-poravkino" class="chip vc v-poravkino">Художественный</label> <label for="v-lenfilm" class="chip vc v-lenfilm">Ленфильм</label> <label for="v-outcinema" class="chip vc v-outcinema">Out Cinema</label> <label for="v-mirage" class="chip vc v-mirage">Мираж на Большом</label>   </div>
 </header>
 
@@ -121,7 +124,8 @@
       <p class="cnt">7 сеансов вечером<span class="dayonly"> · днём ещё 16</span></p>
       <ul class="list">
 <li class="r day"
-      data-v="rodina" data-ts="1794466800">
+      data-v="rodina" data-ts="1794466800"
+      data-country-status="Russian">
     <time datetime="2026-11-12T10:00:00+03:00">10:00</time>
     <div class="b">
       <div class="w">
@@ -130,7 +134,8 @@
 <a href="https://rodinakino.ru/events/zhivaya-kniga-2026">Живая книга</a>      </div>
 <div class="m">2026 · Россия · 104 мин · 6+ · реж. Денис Гуляр · фэнтези, приключения, семейный · Малый 1 зал · 200 ₽</div><details><summary>о фильме</summary><p>После потери отца Рома перестал верить в добро и стал дерзким и непослушным. Вместе с робким младшеклассником Витей они пробираются в дом таинственного старика, где находят волшебные книги с ожившими персонажами. По неосторожности мальчики выпускают на свет злого колдуна. Чтобы спасти друга и вернуть все на свои…</p></details>    </div>
 <img class="p" src="posters/huBvsWOlXvQ3rxPLwkOi3J3WxYj.jpg" alt="" width="46" height="69" loading="lazy" decoding="async">  </li><li class="r day"
-      data-v="rodina" data-ts="1794466800">
+      data-v="rodina" data-ts="1794466800"
+      data-country-status="Russian">
     <time datetime="2026-11-12T10:00:00+03:00">10:00</time>
     <div class="b">
       <div class="w">
@@ -139,7 +144,8 @@
 <a href="https://rodinakino.ru/events/lilya-2026">Лиля</a>      </div>
 <div class="m">2026 · Россия · 146 мин · 18+ · реж. Вера Сторожева · драма, мелодрама · Большой зал · 250 ₽</div><details><summary>о фильме</summary><p>1915 год, Первая мировая война. В Петрограде молодой поэт-футурист Владимир Маяковский знакомится с семейной парой — Лилей и Осипом Бриками. Он читает им свою поэму «Облако в штанах», Лиля и Осип сразу и навсегда влюбляются в поэзию Маяковского, понимая, что перед ними необыкновенный талант, поэтический гений. А…</p></details>    </div>
 <img class="p" src="posters/tAGGymXd54ovIAeJMfXhrsmzRvt.jpg" alt="" width="46" height="69" loading="lazy" decoding="async">  </li><li class="r day"
-      data-v="rodina" data-ts="1794466800">
+      data-v="rodina" data-ts="1794466800"
+      data-country-status="Russian">
     <time datetime="2026-11-12T10:00:00+03:00">10:00</time>
     <div class="b">
       <div class="w">
@@ -148,7 +154,8 @@
 <a href="https://rodinakino.ru/events/novyj-dom-2026">Новый дом</a>      </div>
 <div class="m">2026 · Россия · 101 мин · 18+ · реж. Никита Грушин · драма · Малый 2 зал · 200 ₽</div><details><summary>о фильме</summary><p>После семи лет тюрьмы Анна выходит на свободу. У нее нет ни дома, ни семьи, ни смысла жизни, а чувство вины за прошлое не отпускает ее. Благотворительный фонд помогает устроиться на работу, предоставляет место в общежитии и направляет в группу психологической поддержки. Там Анна встречает Романа, который помогает ей…</p></details>    </div>
   </li><li class="r day"
-      data-v="lenfilm" data-ts="1794473400">
+      data-v="lenfilm" data-ts="1794473400"
+      data-country-status="other">
     <time datetime="2026-11-12T11:50:00+03:00">11:50</time>
     <div class="b">
       <div class="w">
@@ -157,7 +164,8 @@
 <span>Отверженные (версия с субтитрами)</span>      </div>
 <div class="m">Франция · 179 мин · 18+ · исторический, драма · субтитры · зал 1 · 250 ₽</div>    </div>
   </li><li class="r day"
-      data-v="rodina" data-ts="1794473700">
+      data-v="rodina" data-ts="1794473700"
+      data-country-status="other">
     <time datetime="2026-11-12T11:55:00+03:00">11:55</time>
     <div class="b">
       <div class="w">
@@ -166,7 +174,8 @@
 <a href="https://rodinakino.ru/events/sumerki-saga-zatmenie-2010">Сумерки. Сага. Затмение</a>      </div>
 <div class="m">2010 · США · 124 мин · 18+ · реж. Дэвид Слэйд · мелодрама, фэнтези, триллер · Малый 2 зал · 200 ₽</div><details><summary>о фильме</summary><p>Белла пытается разобраться в своих чувствах к Эдварду и Джейкобу. Тем временем в Сиэтле таинственным образом исчезают люди, а армия новорожденных вампиров готовится к нападению. Чтобы защитить Беллу, Эдвард и Джейкоб вынуждены объединиться, несмотря на давнюю вражду между вампирами и оборотнями. Смогут ли они забыть…</p></details>    </div>
 <img class="p" src="posters/40ut2seLFEeyTcan7V2cVjwRvI9.jpg" alt="" width="46" height="69" loading="lazy" decoding="async">  </li><li class="r day"
-      data-v="rodina" data-ts="1794474000">
+      data-v="rodina" data-ts="1794474000"
+      data-country-status="other">
     <time datetime="2026-11-12T12:00:00+03:00">12:00</time>
     <div class="b">
       <div class="w">
@@ -175,7 +184,8 @@
 <a href="https://rodinakino.ru/events/psihopatka-2026">Психопатка</a>      </div>
 <div class="m">2026 · Великобритания, Ирландия · 102 мин · 18+ · реж. Закари Уигон · ужасы, триллер, комедия · Малый 1 зал · 250 ₽</div><details><summary>о фильме</summary><p>1858 год. Эксцентричная Уинифред Нотти считает себя самым адекватным человеком на свете. Желая начать жизнь с чистого листа, она прибывает в уединенное готическое поместье, чтобы стать гувернанткой у пары избалованных детей. Но когда прислуга начинает необъяснимым образом исчезать, хозяева дома всё сильнее подозревают…</p></details>    </div>
 <img class="p" src="posters/fO63NFzTelEXcAsJTvNDFKygSGW.jpg" alt="" width="46" height="69" loading="lazy" decoding="async">  </li><li class="r day"
-      data-v="rodina" data-ts="1794476400">
+      data-v="rodina" data-ts="1794476400"
+      data-country-status="other">
     <time datetime="2026-11-12T12:40:00+03:00">12:40</time>
     <div class="b">
       <div class="w">
@@ -184,7 +194,8 @@
 <a href="https://rodinakino.ru/events/idealnyj-shtorm-2026">Идеальный шторм</a>      </div>
 <div class="m">2026 · Испания · 119 мин · 18+ · реж. Фернандо Труллолс · боевик, триллер, драма · Большой зал · 270 ₽</div><details><summary>о фильме</summary><p>30 декабря 2000 года группа друзей отправляется покорять вершину горы Баландрау. Во время восхождения ясный день неожиданно превращается в свирепую бурю, которая застаёт туристов врасплох. Из-за леденящего ветра и сильного снегопада альпинисты попадают в ловушку и оказываются вынуждены бороться за выживание.</p></details>    </div>
 <img class="p" src="posters/dfSdr4XZo6efeb4a7ig17Ux0NJ7.jpg" alt="" width="46" height="69" loading="lazy" decoding="async">  </li><li class="r day"
-      data-v="rodina" data-ts="1794480900">
+      data-v="rodina" data-ts="1794480900"
+      data-country-status="other">
     <time datetime="2026-11-12T13:55:00+03:00">13:55</time>
     <div class="b">
       <div class="w">
@@ -193,7 +204,8 @@
 <a href="https://rodinakino.ru/events/devichnik-v-spa-2026">Девичник в спа</a>      </div>
 <div class="m">2026 · США · 97 мин · 18+ · реж. Джон Лукас, Скотт Мур · комедия · Малый 1 зал · 250 ₽</div><details><summary>о фильме</summary><p>Три лучшие подруги Джейн, Коко и Софи решают снять стресс на спа-курорте, но все идет не по плану, когда к поездке присоединяется их «лучшая подруга» Мел — и долгожданный отдых становится чуть более экстремальным, чем они ожидали.</p></details>    </div>
 <img class="p" src="posters/pGyuM0qntTdW5g9bRwqH4h7gkms.jpg" alt="" width="46" height="69" loading="lazy" decoding="async">  </li><li class="r day"
-      data-v="rodina" data-ts="1794481800">
+      data-v="rodina" data-ts="1794481800"
+      data-country-status="Russian">
     <time datetime="2026-11-12T14:10:00+03:00">14:10</time>
     <div class="b">
       <div class="w">
@@ -202,7 +214,8 @@
 <a href="https://rodinakino.ru/events/lilya-2026">Лиля</a>      </div>
 <div class="m">2026 · Россия · 146 мин · 18+ · реж. Вера Сторожева · драма, мелодрама · Малый 2 зал · 250 ₽</div><details><summary>о фильме</summary><p>1915 год, Первая мировая война. В Петрограде молодой поэт-футурист Владимир Маяковский знакомится с семейной парой — Лилей и Осипом Бриками. Он читает им свою поэму «Облако в штанах», Лиля и Осип сразу и навсегда влюбляются в поэзию Маяковского, понимая, что перед ними необыкновенный талант, поэтический гений. А…</p></details>    </div>
 <img class="p" src="posters/tAGGymXd54ovIAeJMfXhrsmzRvt.jpg" alt="" width="46" height="69" loading="lazy" decoding="async">  </li><li class="r day"
-      data-v="rodina" data-ts="1794484500">
+      data-v="rodina" data-ts="1794484500"
+      data-country-status="other">
     <time datetime="2026-11-12T14:55:00+03:00">14:55</time>
     <div class="b">
       <div class="w">
@@ -211,7 +224,8 @@
 <a href="https://rodinakino.ru/events/bolshie-gonki-pegas-iii-2026">Большие гонки. Пегас III</a>      </div>
 <div class="m">2026 · Китай · 124 мин · 16+ · реж. Хань Хань · спорт, комедия · Большой зал · 300 ₽</div><details><summary>о фильме</summary><p>После победы в самом известном ралли Азии команда чемпионов вынуждена вновь вернуться в таблицу мирового первенства, став участниками международной гонки. Им предстоит изнуряющая подготовка и длинные, опасные трассы. Параллельно им придется раскрыть командный заговор и победить любой ценой, иначе они могут лишится не…</p></details>    </div>
   </li><li class="r day"
-      data-v="lenfilm" data-ts="1794485400">
+      data-v="lenfilm" data-ts="1794485400"
+      data-country-status="Russian">
     <time datetime="2026-11-12T15:10:00+03:00">15:10</time>
     <div class="b">
       <div class="w">
@@ -220,7 +234,8 @@
 <span>Новый дом</span>      </div>
 <div class="m">2026 · Россия · 101 мин · 18+ · драма · зал 1 · 400 ₽</div>    </div>
 <img class="p" src="posters/fWjZWs6nd7urk7zfQBj4xmCGKAC.jpg" alt="" width="46" height="69" loading="lazy" decoding="async">  </li><li class="r day"
-      data-v="rodina" data-ts="1794487500">
+      data-v="rodina" data-ts="1794487500"
+      data-country-status="other">
     <time datetime="2026-11-12T15:45:00+03:00">15:45</time>
     <div class="b">
       <div class="w">
@@ -229,7 +244,8 @@
 <a href="https://rodinakino.ru/events/nastrojshik-2025">Настройщик</a>      </div>
 <div class="m">2025 · Канада, США · 108 мин · 18+ · реж. Дэниэл Роэр · драма, мелодрама, криминал · Малый 1 зал · 250 ₽</div><details><summary>о фильме</summary><p>Нью-Йорк. Жизнь Ники — страдающего гиперакузией талантливого настройщика фортепиано — переворачивается с ног на голову, когда он обнаруживает, что его навыки и тонкий слух настройки можно применять для взлома сейфов. Когда его пожилой наставник и партнёр Гарри попадает в больницу, парень решает присоединиться к банде…</p></details>    </div>
 <img class="p" src="posters/7oNxg17JawXBMdkuSo7hpThhTZF.jpg" alt="" width="46" height="69" loading="lazy" decoding="async">  </li><li class="r day"
-      data-v="outcinema" data-ts="1794489600">
+      data-v="outcinema" data-ts="1794489600"
+      data-country-status="other">
     <time datetime="2026-11-12T16:20:00+03:00">16:20</time>
     <div class="b">
       <div class="w">
@@ -238,7 +254,8 @@
 <a href="https://kinowidget.kinoplan.ru/seats/8588/10019158/6aef3a3a3f000025002caf3d">ПЬЯНЫЙ АНГЕЛ</a>      </div>
 <div class="m">1948 · Япония · 98 мин · 16+ · реж. Акира Куросава · триллер, драма, мелодрама · японский язык, русские субтитры · 590 ₽ <span class="tag">КУРОСАВА</span></div><details><summary>о фильме</summary><p>Трущобы, отбросы общества и тлеющая надежда на лучшее в поворотном произведении раннего Акиры Куросавы</p></details>    </div>
 <img class="p" src="posters/4Ia3JoPIvpj1j43rFflcPMMlEv.jpg" alt="" width="46" height="69" loading="lazy" decoding="async">  </li><li class="r day"
-      data-v="lenfilm" data-ts="1794492900">
+      data-v="lenfilm" data-ts="1794492900"
+      data-country-status="other">
     <time datetime="2026-11-12T17:15:00+03:00">17:15</time>
     <div class="b">
       <div class="w">
@@ -247,7 +264,8 @@
 <span>Психопатка (версия с субтитрами)</span>      </div>
 <div class="m">2026 · Великобритания · 102 мин · 18+ · комедийный хоррор · субтитры · зал 1 · 400 ₽</div>    </div>
   </li><li class="r day"
-      data-v="rodina" data-ts="1794492900">
+      data-v="rodina" data-ts="1794492900"
+      data-country-status="Russian">
     <time datetime="2026-11-12T17:15:00+03:00">17:15</time>
     <div class="b">
       <div class="w">
@@ -256,7 +274,8 @@
 <a href="https://rodinakino.ru/events/les-hranitel-zhizni-2025">Лес. Хранитель жизни</a>      </div>
 <div class="m">2025 · Россия · 70 мин · 6+ · реж. Ирина Шапман, Владислав Гришин · документальный · Большой зал · 350 ₽</div><details><summary>о фильме</summary><p>Рассказ о первозданных лесах — мире тонких взаимосвязей, которые формировались тысячи лет. Здесь растут кедры, ели, пихты, а на европейском континенте массивы таких лесов сохранились только на севере России.</p></details>    </div>
 <img class="p" src="posters/wEnM92BeOlbgVSDoV5LGeaRG8ZU.jpg" alt="" width="46" height="69" loading="lazy" decoding="async">  </li><li class="r day"
-      data-v="rodina" data-ts="1794494400">
+      data-v="rodina" data-ts="1794494400"
+      data-country-status="Russian">
     <time datetime="2026-11-12T17:40:00+03:00">17:40</time>
     <div class="b">
       <div class="w">
@@ -265,7 +284,8 @@
 <a href="https://rodinakino.ru/events/angelskij-chin-2026">Ангельский чин</a>      </div>
 <div class="m">2026 · Россия · 109 мин · 12+ · реж. Юлия Бобкова · документальный · Малый 1 зал · 300 ₽</div><details><summary>о фильме</summary><p>Рассказ о Новодевичьем монастыре — объекте наследия ЮНЕСКО — и женщинах, посвятивших себя служению.</p></details>    </div>
 <img class="p" src="posters/1rfnCnTKTKp0QOqUAnlI6AHi48l.jpg" alt="" width="46" height="69" loading="lazy" decoding="async">  </li><li class="r"
-      data-v="outcinema" data-ts="1794497100">
+      data-v="outcinema" data-ts="1794497100"
+      data-country-status="other">
     <time datetime="2026-11-12T18:25:00+03:00">18:25</time>
     <div class="b">
       <div class="w">
@@ -274,7 +294,8 @@
 <a href="https://kinowidget.kinoplan.ru/seats/8588/10074150/6aef3a343f00004f002caf38">СЛАДКИЙ ЗАПАХ УСПЕХА</a>      </div>
 <div class="m">1957 · США · 96 мин · 16+ · реж. Александр Маккендрик · нуар, драма · английский язык, русские субтитры · 630 ₽ <span class="tag">НУАР</span></div><details><summary>о фильме</summary><p>В этом едком нуаре Берт Ланкастер и Тони Кёртис создают дуэт двух безжалостных манипуляторов, чья жажда власти и признания оказывается сильнее любых моральных границ</p></details>    </div>
 <img class="p" src="posters/uByvUncXX8esVIUGVydSh4qxdul.jpg" alt="" width="46" height="69" loading="lazy" decoding="async">  </li><li class="r"
-      data-v="rodina" data-ts="1794498000">
+      data-v="rodina" data-ts="1794498000"
+      data-country-status="Russian">
     <time datetime="2026-11-12T18:40:00+03:00">18:40</time>
     <div class="b">
       <div class="w">
@@ -283,7 +304,8 @@
 <a href="https://rodinakino.ru/events/lilya-2026">Лиля</a>      </div>
 <div class="m">2026 · Россия · 146 мин · 18+ · реж. Вера Сторожева · драма, мелодрама · Большой зал · 400 ₽</div><details><summary>о фильме</summary><p>1915 год, Первая мировая война. В Петрограде молодой поэт-футурист Владимир Маяковский знакомится с семейной парой — Лилей и Осипом Бриками. Он читает им свою поэму «Облако в штанах», Лиля и Осип сразу и навсегда влюбляются в поэзию Маяковского, понимая, что перед ними необыкновенный талант, поэтический гений. А…</p></details>    </div>
 <img class="p" src="posters/tAGGymXd54ovIAeJMfXhrsmzRvt.jpg" alt="" width="46" height="69" loading="lazy" decoding="async">  </li><li class="r"
-      data-v="rodina" data-ts="1794501600">
+      data-v="rodina" data-ts="1794501600"
+      data-country-status="Russian">
     <time datetime="2026-11-12T19:40:00+03:00">19:40</time>
     <div class="b">
       <div class="w">
@@ -292,7 +314,8 @@
 <a href="https://rodinakino.ru/events/leto-v-badene-2026">Лето в Бадене</a>      </div>
 <div class="m">2026 · Россия · 80 мин · 18+ · реж. Антон Желнов · драма · Малый 1 зал · 350 ₽</div><details><summary>о фильме</summary><p>Советский интеллигент занимается наукой и медициной, иногда пишет в стол, для себя. Его единственный сын решает уехать из страны навсегда. Это разбивает отцу сердце, ставит крест на карьере и положении в обществе. Потеряв всё, он решается воплотить замысел всей жизни и написать роман о Фёдоре Достоевском. Подобно…</p></details>    </div>
 <img class="p" src="posters/hi1ZUDa3ZP2NG7lkprq6fDmi3Si.jpg" alt="" width="46" height="69" loading="lazy" decoding="async">  </li><li class="r"
-      data-v="outcinema" data-ts="1794504600">
+      data-v="outcinema" data-ts="1794504600"
+      data-country-status="other">
     <time datetime="2026-11-12T20:30:00+03:00">20:30</time>
     <div class="b">
       <div class="w">
@@ -301,7 +324,8 @@
 <a href="https://kinowidget.kinoplan.ru/seats/8588/10041294/6aef3a2c3f000025002caf33">ЧЕЛОВЕК, КОТОРЫЙ СЛИШКОМ МНОГО ЗНАЛ</a>      </div>
 <div class="m">1955 · США · 120 мин · 16+ · реж. Альфред Хичкок · триллер, драма, криминал · английский язык, русские субтитры · 660 ₽ <span class="tag">ХИЧКОК</span></div><details><summary>о фильме</summary><p>Авторемейк одного из ранних британских фильмов Хичкока — триллера о шпионах поневоле</p></details>    </div>
   </li><li class="r"
-      data-v="rodina" data-ts="1794507000">
+      data-v="rodina" data-ts="1794507000"
+      data-country-status="other">
     <time datetime="2026-11-12T21:10:00+03:00">21:10</time>
     <div class="b">
       <div class="w">
@@ -310,7 +334,8 @@
 <a href="https://rodinakino.ru/events/devichnik-v-spa-2026">Девичник в спа</a>      </div>
 <div class="m">2026 · США · 97 мин · 18+ · реж. Джон Лукас, Скотт Мур · комедия · Малый 2 зал · 350 ₽</div><details><summary>о фильме</summary><p>Три лучшие подруги Джейн, Коко и Софи решают снять стресс на спа-курорте, но все идет не по плану, когда к поездке присоединяется их «лучшая подруга» Мел — и долгожданный отдых становится чуть более экстремальным, чем они ожидали.</p></details>    </div>
 <img class="p" src="posters/pGyuM0qntTdW5g9bRwqH4h7gkms.jpg" alt="" width="46" height="69" loading="lazy" decoding="async">  </li><li class="r"
-      data-v="rodina" data-ts="1794507300">
+      data-v="rodina" data-ts="1794507300"
+      data-country-status="Russian">
     <time datetime="2026-11-12T21:15:00+03:00">21:15</time>
     <div class="b">
       <div class="w">
@@ -319,7 +344,8 @@
 <a href="https://rodinakino.ru/events/novyj-dom-2026">Новый дом</a>      </div>
 <div class="m">2026 · Россия · 101 мин · 18+ · реж. Никита Грушин · драма · Малый 1 зал · 350 ₽</div><details><summary>о фильме</summary><p>После семи лет тюрьмы Анна выходит на свободу. У нее нет ни дома, ни семьи, ни смысла жизни, а чувство вины за прошлое не отпускает ее. Благотворительный фонд помогает устроиться на работу, предоставляет место в общежитии и направляет в группу психологической поддержки. Там Анна встречает Романа, который помогает ей…</p></details>    </div>
   </li><li class="r"
-      data-v="rodina" data-ts="1794507600">
+      data-v="rodina" data-ts="1794507600"
+      data-country-status="other">
     <time datetime="2026-11-12T21:20:00+03:00">21:20</time>
     <div class="b">
       <div class="w">
@@ -336,13 +362,13 @@
 <footer id="src">
   <h2>Источники</h2>
   <ul class="st">
-      <li class="ok"><span class="ic" aria-hidden="true">✓</span><b>Дом кино</b> — 93 сеанса · 08.11 06:17 <span class="mut">· 7 запр., 17.1 с</span></li>
-      <li class="ok"><span class="ic" aria-hidden="true">✓</span><b>Родина</b> — 126 сеансов · 08.11 06:18 <span class="mut">· 32 запр., 52.1 с</span></li>
-      <li class="ok"><span class="ic" aria-hidden="true">✓</span><b>Аврора</b> — 43 сеанса · 08.11 06:18 <span class="mut">· 8 запр., 8.7 с</span></li>
-      <li class="ok"><span class="ic" aria-hidden="true">✓</span><b>Художественный</b> — 108 сеансов · 08.11 06:18 <span class="mut">· 7 запр., 6.3 с</span></li>
-      <li class="ok"><span class="ic" aria-hidden="true">✓</span><b>Ленфильм</b> — 27 сеансов · 08.11 06:18 <span class="mut">· 9 запр., 8.0 с</span></li>
-      <li class="ok"><span class="ic" aria-hidden="true">✓</span><b>Out Cinema</b> — 19 сеансов · 08.11 06:18 <span class="mut">· 1 запр., 3.6 с</span></li>
-      <li class="ok"><span class="ic" aria-hidden="true">✓</span><b>Мираж на Большом</b> — 141 сеанс · 08.11 06:19 <span class="mut">· 7 запр., 9.5 с</span></li>
+      <li class="ok"><span class="ic" aria-hidden="true">✓</span><b>Дом кино</b> — 93 сеанса · 08.11 12:24 <span class="mut">· 7 запр., 15.9 с</span></li>
+      <li class="ok"><span class="ic" aria-hidden="true">✓</span><b>Родина</b> — 123 сеанса · 08.11 12:25 <span class="mut">· 32 запр., 52.9 с</span></li>
+      <li class="ok"><span class="ic" aria-hidden="true">✓</span><b>Аврора</b> — 41 сеанс · 08.11 12:25 <span class="mut">· 8 запр., 7.4 с</span></li>
+      <li class="ok"><span class="ic" aria-hidden="true">✓</span><b>Художественный</b> — 94 сеанса · 08.11 12:25 <span class="mut">· 7 запр., 5.9 с</span></li>
+      <li class="ok"><span class="ic" aria-hidden="true">✓</span><b>Ленфильм</b> — 26 сеансов · 08.11 12:25 <span class="mut">· 9 запр., 7.2 с</span></li>
+      <li class="ok"><span class="ic" aria-hidden="true">✓</span><b>Out Cinema</b> — 19 сеансов · 08.11 12:25 <span class="mut">· 1 запр., 0.4 с</span></li>
+      <li class="ok"><span class="ic" aria-hidden="true">✓</span><b>Мираж на Большом</b> — 137 сеансов · 08.11 12:25 <span class="mut">· 7 запр., 8.1 с</span></li>
   </ul>
   <p class="mut">Снимок данных: <a href="screenings.json">screenings.json</a>. Каждый день — отдельная страница. Вечер — сеансы с 18:00; ночные (до 06:00) стоят под предыдущим днём. Прошедшие сеансы приглушены по часам устройства.</p>
   <p class="tmdb"><a href="https://www.themoviedb.org"><img src="tmdb.svg" alt="TMDB"></a>Постеры фильмов — <a href="https://www.themoviedb.org">TMDB</a>. This website uses TMDB and the TMDB APIs but is not endorsed, certified, or otherwise approved by TMDB.</p>

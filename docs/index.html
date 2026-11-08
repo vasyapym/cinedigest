@@ -35,7 +35,7 @@
   .ctls{display:flex;flex-wrap:wrap;gap:.35rem;padding:.6rem 0 .2rem}
   .chip{font-size:.8rem;padding:.2rem .6rem;border:1px solid var(--line);border-radius:1rem;color:var(--mut);cursor:pointer;user-select:none}
   .chip.vc::before{content:"";display:inline-block;width:.55em;height:.55em;border-radius:50%;margin-right:.35em;background:var(--vc,var(--mut))}
-#v-domkino:checked ~ header label[for="v-domkino"], #v-rodina:checked ~ header label[for="v-rodina"], #v-avrora:checked ~ header label[for="v-avrora"], #v-poravkino:checked ~ header label[for="v-poravkino"], #v-lenfilm:checked ~ header label[for="v-lenfilm"], #v-outcinema:checked ~ header label[for="v-outcinema"], #v-mirage:checked ~ header label[for="v-mirage"], #allday:checked ~ header label[for="allday"]{color:var(--fg);border-color:var(--fg)}
+#v-domkino:checked ~ header label[for="v-domkino"], #v-rodina:checked ~ header label[for="v-rodina"], #v-avrora:checked ~ header label[for="v-avrora"], #v-poravkino:checked ~ header label[for="v-poravkino"], #v-lenfilm:checked ~ header label[for="v-lenfilm"], #v-outcinema:checked ~ header label[for="v-outcinema"], #v-mirage:checked ~ header label[for="v-mirage"], #allday:checked ~ header label[for="allday"], #no-russia:checked ~ header label[for="no-russia"]{color:var(--fg);border-color:var(--fg)}
 #v-domkino:not(:checked) ~ main .list .r[data-v="domkino"]{display:none!important}
 #v-rodina:not(:checked) ~ main .list .r[data-v="rodina"]{display:none!important}
 #v-avrora:not(:checked) ~ main .list .r[data-v="avrora"]{display:none!important}
@@ -43,6 +43,7 @@
 #v-lenfilm:not(:checked) ~ main .list .r[data-v="lenfilm"]{display:none!important}
 #v-outcinema:not(:checked) ~ main .list .r[data-v="outcinema"]{display:none!important}
 #v-mirage:not(:checked) ~ main .list .r[data-v="mirage"]{display:none!important}
+  #no-russia:checked ~ main .list .r[data-country-status="Russian"]{display:none!important}
 .v-domkino{--vc:var(--c-domkino)}
 .v-rodina{--vc:var(--c-rodina)}
 .v-avrora{--vc:var(--c-avrora)}
@@ -92,13 +93,14 @@
 </style>
 </head>
 <body data-today="2026-11-08"
-      data-generated="2026-11-08T06:17:23.486805+03:00"
-      data-generated-human="вс 8 ноября в 06:17">
+      data-generated="2026-11-08T12:24:12.104588+03:00"
+      data-generated-human="вс 8 ноября в 12:24">
 <input type="checkbox" id="allday" class="ctl">
+<input type="checkbox" id="no-russia" class="ctl">
 <input type="checkbox" id="v-domkino" class="ctl" checked> <input type="checkbox" id="v-rodina" class="ctl" checked> <input type="checkbox" id="v-avrora" class="ctl" checked> <input type="checkbox" id="v-poravkino" class="ctl" checked> <input type="checkbox" id="v-lenfilm" class="ctl" checked> <input type="checkbox" id="v-outcinema" class="ctl" checked> <input type="checkbox" id="v-mirage" class="ctl" checked> 
 <header>
   <h1>Кино вечером</h1>
-  <p class="sub">СПб · 7 кинотеатров · собрано вс 8 ноября, 06:17 · вечер = с 18:00</p>
+  <p class="sub">СПб · 7 кинотеатров · собрано вс 8 ноября, 12:24 · вечер = с 18:00</p>
   <p id="stale" class="warn" hidden></p>
 
   <nav class="days" aria-label="Дни">
@@ -112,79 +114,18 @@
   </nav>
   <div class="ctls">
     <label for="allday" class="chip">весь день</label>
+    <label for="no-russia" class="chip" title="Скрыть фильмы с участием России, включая копродукции; СССР не считается Россией; неизвестная страна не исключается" aria-label="нероссийские: скрыть фильмы с участием России, включая копродукции; СССР не считается Россией; неизвестная страна не исключается">нероссийские</label>
 <label for="v-domkino" class="chip vc v-domkino">Дом кино</label> <label for="v-rodina" class="chip vc v-rodina">Родина</label> <label for="v-avrora" class="chip vc v-avrora">Аврора</label> <label for="v-poravkino" class="chip vc v-poravkino">Художественный</label> <label for="v-lenfilm" class="chip vc v-lenfilm">Ленфильм</label> <label for="v-outcinema" class="chip vc v-outcinema">Out Cinema</label> <label for="v-mirage" class="chip vc v-mirage">Мираж на Большом</label>   </div>
 </header>
 
 <main>
   <section id="d-2026-11-08" aria-labelledby="h-2026-11-08">
     <h2 id="h-2026-11-08">Сегодня <span class="dt">· вс 8 ноября</span></h2>
-      <p class="cnt">63 сеанса вечером<span class="dayonly"> · днём ещё 93</span></p>
+      <p class="cnt">63 сеанса вечером<span class="dayonly"> · днём ещё 69</span></p>
       <ul class="list">
 <li class="r day"
-      data-v="poravkino" data-ts="1794119400">
-    <time datetime="2026-11-08T09:30:00+03:00">09:30</time>
-    <div class="b">
-      <div class="w">
-<a class="v v-poravkino" href="https://poravkino.ru/">Художественный</a><span class="h">зал 4</span>      </div>
-      <div class="t">
-<span>Морозко</span>      </div>
-<div class="m">2026 · Россия · 115 мин · 6+ · реж. Эдуард Бордуков · семейный, фэнтези · зал 4 · 250 ₽</div>    </div>
-<img class="p" src="posters/ogN4Ul6UnDqRph23g3ZtAexm3M0.jpg" alt="" width="46" height="69" loading="lazy" decoding="async">  </li><li class="r day"
-      data-v="poravkino" data-ts="1794119400">
-    <time datetime="2026-11-08T09:30:00+03:00">09:30</time>
-    <div class="b">
-      <div class="w">
-<a class="v v-poravkino" href="https://poravkino.ru/">Художественный</a><span class="h">Малый синий</span>      </div>
-      <div class="t">
-<span>Настройщик</span>      </div>
-<div class="m">2025 · США, Канада · 115 мин · 18+ · реж. Дэниэл Роэр · драма, криминал, мелодрама · Малый синий · 250 ₽</div>    </div>
-<img class="p" src="posters/7oNxg17JawXBMdkuSo7hpThhTZF.jpg" alt="" width="46" height="69" loading="lazy" decoding="async">  </li><li class="r day"
-      data-v="poravkino" data-ts="1794119400">
-    <time datetime="2026-11-08T09:30:00+03:00">09:30</time>
-    <div class="b">
-      <div class="w">
-<a class="v v-poravkino" href="https://poravkino.ru/">Художественный</a><span class="h">зал 1</span>      </div>
-      <div class="t">
-<span>Рождение империи</span>      </div>
-<div class="m">2026 · Россия · 150 мин · 12+ · реж. Андрей Кравчук, Алексей Нужный · биографический, драма · зал 1 · 250 ₽</div>    </div>
-<img class="p" src="posters/1JbTVMAXpfcez5bFWJpgnwdIAde.jpg" alt="" width="46" height="69" loading="lazy" decoding="async">  </li><li class="r day"
-      data-v="poravkino" data-ts="1794119400">
-    <time datetime="2026-11-08T09:30:00+03:00">09:30</time>
-    <div class="b">
-      <div class="w">
-<a class="v v-poravkino" href="https://poravkino.ru/">Художественный</a><span class="h">Премьер</span>      </div>
-      <div class="t">
-<span>Сказка о потерянном времени</span>      </div>
-<div class="m">2026 · Россия · 90 мин · 6+ · реж. Андрей Никифоров · детский, приключения · Премьер · 250 ₽</div>    </div>
-<img class="p" src="posters/rHIHELSgTGWnDryaoj9Yb15iTkd.jpg" alt="" width="46" height="69" loading="lazy" decoding="async">  </li><li class="r day"
-      data-v="poravkino" data-ts="1794119400">
-    <time datetime="2026-11-08T09:30:00+03:00">09:30</time>
-    <div class="b">
-      <div class="w">
-<a class="v v-poravkino" href="https://poravkino.ru/">Художественный</a><span class="h">зал 2</span>      </div>
-      <div class="t">
-<span>Чудо-Юдо</span>      </div>
-<div class="m">2026 · Россия · 120 мин · 6+ · реж. Серик Бейсеу · приключения, семейный, фэнтези · зал 2 · 250 ₽</div>    </div>
-<img class="p" src="posters/tr2UDGeImwouJh4sP8jk9FrwcPo.jpg" alt="" width="46" height="69" loading="lazy" decoding="async">  </li><li class="r day"
-      data-v="poravkino" data-ts="1794119700">
-    <time datetime="2026-11-08T09:35:00+03:00">09:35</time>
-    <div class="b">
-      <div class="w">
-<a class="v v-poravkino" href="https://poravkino.ru/">Художественный</a><span class="h">зал 3</span>      </div>
-      <div class="t">
-<span>Битва моторов</span>      </div>
-<div class="m">Россия · 155 мин · 12+ · реж. Илья Маланин · драма, приключения · зал 3 · 250 ₽</div>    </div>
-  </li><li class="r day"
-      data-v="poravkino" data-ts="1794119700">
-    <time datetime="2026-11-08T09:35:00+03:00">09:35</time>
-    <div class="b">
-      <div class="w">
-<a class="v v-poravkino" href="https://poravkino.ru/">Художественный</a><span class="h">Малый красный</span>      </div>
-      <div class="t">
-<span>Зверь</span>      </div>
-<div class="m">США · 105 мин · 18+ · реж. Ренни Харлин · боевик, драма, триллер · Малый красный · 250 ₽</div>    </div>
-  </li><li class="r day"
-      data-v="domkino" data-ts="1794121200">
+      data-v="domkino" data-ts="1794121200"
+      data-country-status="other">
     <time datetime="2026-11-08T10:00:00+03:00">10:00</time>
     <div class="b">
       <div class="w">
@@ -193,7 +134,8 @@
 <a href="https://www.domkino.spb.ru/films/tviggi/">Твигги</a><span class="o">Twiggy</span>      </div>
 <div class="m">2024 · Великобритания · 94 мин · 18+ · реж. Сэди Фрост · документальный · дублирование · Сиреневый зал · 300 ₽</div>    </div>
 <img class="p" src="posters/6G6IeQzLrhkmpe2Sr6BLO65biFQ.jpg" alt="" width="46" height="69" loading="lazy" decoding="async">  </li><li class="r day"
-      data-v="domkino" data-ts="1794121500">
+      data-v="domkino" data-ts="1794121500"
+      data-country-status="unknown">
     <time datetime="2026-11-08T10:05:00+03:00">10:05</time>
     <div class="b">
       <div class="w">
@@ -202,43 +144,8 @@
 <a href="https://www.domkino.spb.ru/films/master_vitya_i_motor_sbornik_1_znakomstvo/">Мастер Витя и Мотор. Сборник №1. Знакомство</a>      </div>
 <div class="m">30 мин · 0+ · реж. Артур Меркулов · мультфильм · Малый зал · 200 ₽</div>    </div>
   </li><li class="r day"
-      data-v="rodina" data-ts="1794121500">
-    <time datetime="2026-11-08T10:05:00+03:00">10:05</time>
-    <div class="b">
-      <div class="w">
-<span class="v v-rodina">Родина</span><span class="h">Большой зал</span>      </div>
-      <div class="t">
-<a href="https://rodinakino.ru/events/idealnyj-shtorm-2026">Идеальный шторм</a>      </div>
-<div class="m">2026 · Испания · 119 мин · 18+ · реж. Фернандо Труллолс · боевик, триллер, драма · Большой зал · 250 ₽</div><details><summary>о фильме</summary><p>30 декабря 2000 года группа друзей отправляется покорять вершину горы Баландрау. Во время восхождения ясный день неожиданно превращается в свирепую бурю, которая застаёт туристов врасплох. Из-за леденящего ветра и сильного снегопада альпинисты попадают в ловушку и оказываются вынуждены бороться за выживание.</p></details>    </div>
-<img class="p" src="posters/dfSdr4XZo6efeb4a7ig17Ux0NJ7.jpg" alt="" width="46" height="69" loading="lazy" decoding="async">  </li><li class="r day"
-      data-v="rodina" data-ts="1794121800">
-    <time datetime="2026-11-08T10:10:00+03:00">10:10</time>
-    <div class="b">
-      <div class="w">
-<span class="v v-rodina">Родина</span><span class="h">Малый 2 зал</span>      </div>
-      <div class="t">
-<a href="https://rodinakino.ru/events/bolshie-gonki-pegas-iii-2026">Большие гонки. Пегас III</a>      </div>
-<div class="m">2026 · Китай · 124 мин · 16+ · реж. Хань Хань · спорт, комедия · Малый 2 зал · 250 ₽</div><details><summary>о фильме</summary><p>После победы в самом известном ралли Азии команда чемпионов вынуждена вновь вернуться в таблицу мирового первенства, став участниками международной гонки. Им предстоит изнуряющая подготовка и длинные, опасные трассы. Параллельно им придется раскрыть командный заговор и победить любой ценой, иначе они могут лишится не…</p></details>    </div>
-  </li><li class="r day"
-      data-v="rodina" data-ts="1794122100">
-    <time datetime="2026-11-08T10:15:00+03:00">10:15</time>
-    <div class="b">
-      <div class="w">
-<span class="v v-rodina">Родина</span><span class="h">Малый 1 зал</span>      </div>
-      <div class="t">
-<a href="https://rodinakino.ru/events/zhivaya-kniga-2026">Живая книга</a>      </div>
-<div class="m">2026 · Россия · 104 мин · 6+ · реж. Денис Гуляр · фэнтези, приключения, семейный · Малый 1 зал · 250 ₽</div><details><summary>о фильме</summary><p>После потери отца Рома перестал верить в добро и стал дерзким и непослушным. Вместе с робким младшеклассником Витей они пробираются в дом таинственного старика, где находят волшебные книги с ожившими персонажами. По неосторожности мальчики выпускают на свет злого колдуна. Чтобы спасти друга и вернуть все на свои…</p></details>    </div>
-<img class="p" src="posters/huBvsWOlXvQ3rxPLwkOi3J3WxYj.jpg" alt="" width="46" height="69" loading="lazy" decoding="async">  </li><li class="r day"
-      data-v="poravkino" data-ts="1794123000">
-    <time datetime="2026-11-08T10:30:00+03:00">10:30</time>
-    <div class="b">
-      <div class="w">
-<a class="v v-poravkino" href="https://poravkino.ru/">Художественный</a><span class="h">VIP</span>      </div>
-      <div class="t">
-<span>Тайный дневник Верити</span>      </div>
-<div class="m">2026 · США · 115 мин · 18+ · реж. Майкл Шоуолтер · детектив, драма, криминал · VIP · 450 ₽</div>    </div>
-<img class="p" src="posters/lkcSRoS5FXzzNi13ug6kenL2vi2.jpg" alt="" width="46" height="69" loading="lazy" decoding="async">  </li><li class="r day"
-      data-v="domkino" data-ts="1794123300">
+      data-v="domkino" data-ts="1794123300"
+      data-country-status="other">
     <time datetime="2026-11-08T10:35:00+03:00">10:35</time>
     <div class="b">
       <div class="w">
@@ -247,7 +154,8 @@
 <a href="https://www.domkino.spb.ru/films/otpusk_bez_konca/">Отпуск без конца (субтитры)</a><span class="o">Permanent Vacation</span>      </div>
 <div class="m">1980 · США · 75 мин · 16+ · реж. Джим Джармуш · драма, комедия · английский, русские субтитры · Синий зал · 300 ₽</div>    </div>
 <img class="p" src="posters/jGOJJVscEPK8YT2z2blacHzfuxp.jpg" alt="" width="46" height="69" loading="lazy" decoding="async">  </li><li class="r day"
-      data-v="domkino" data-ts="1794124200">
+      data-v="domkino" data-ts="1794124200"
+      data-country-status="other">
     <time datetime="2026-11-08T10:50:00+03:00">10:50</time>
     <div class="b">
       <div class="w">
@@ -256,7 +164,8 @@
 <a href="https://www.domkino.spb.ru/films/dnevnaya_krasavica_subtitry/">Дневная красавица (субтитры)</a><span class="o">Belle de jour</span>      </div>
 <div class="m">1967 · Италия, Франция · реж. Луис Бунюэль · драма, мелодрама · французский, русские субтитры · Малый зал · 200 ₽</div>    </div>
 <img class="p" src="posters/oUKD5gq6Xo1zaGcQyYXZGes52CH.jpg" alt="" width="46" height="69" loading="lazy" decoding="async">  </li><li class="r day"
-      data-v="domkino" data-ts="1794124500">
+      data-v="domkino" data-ts="1794124500"
+      data-country-status="other">
     <time datetime="2026-11-08T10:55:00+03:00">10:55</time>
     <div class="b">
       <div class="w">
@@ -265,7 +174,8 @@
 <a href="https://www.domkino.spb.ru/films/vykhod_8/">Выход 8</a><span class="o">8番出口</span>      </div>
 <div class="m">2025 · Япония · 95 мин · 16+ · реж. Гэнки Кавамура · триллер · дублирование · Белый зал · 250 ₽</div>    </div>
 <img class="p" src="posters/afORML1iggGkWf8M0Jsf2PPpIHv.jpg" alt="" width="46" height="69" loading="lazy" decoding="async">  </li><li class="r day"
-      data-v="domkino" data-ts="1794124800">
+      data-v="domkino" data-ts="1794124800"
+      data-country-status="other">
     <time datetime="2026-11-08T11:00:00+03:00">11:00</time>
     <div class="b">
       <div class="w">
@@ -274,16 +184,8 @@
 <a href="https://www.domkino.spb.ru/films/bezumny_den_v_kamedi_fransez_subtitry/">Безумный день в Комеди Франсез (субтитры)</a><span class="o">De la Comédie-Française</span>      </div>
 <div class="m">2026 · Франция · 75 мин · 18+ · реж. Мартен Дарондо, Бертран Юскла · комедия · французский, русские субтитры · Большой зал · 300 ₽</div>    </div>
 <img class="p" src="posters/3ykToOKrgIlKBOkxpRscXNAkzET.jpg" alt="" width="46" height="69" loading="lazy" decoding="async">  </li><li class="r day"
-      data-v="mirage" data-ts="1794124800">
-    <time datetime="2026-11-08T11:00:00+03:00">11:00</time>
-    <div class="b">
-      <div class="w">
-<a class="v v-mirage" href="https://www.mirage.ru/ticket_new/f72d2f7b-dc23-4075-acf6-650f32c897ff/">Мираж на Большом</a><span class="h">зал 1</span>      </div>
-      <div class="t">
-<span>Сказка о потерянном времени</span>      </div>
-<div class="m">6+ · приключения, детский · зал 1</div>    </div>
-  </li><li class="r day"
-      data-v="outcinema" data-ts="1794124800">
+      data-v="outcinema" data-ts="1794124800"
+      data-country-status="other">
     <time datetime="2026-11-08T11:00:00+03:00">11:00</time>
     <div class="b">
       <div class="w">
@@ -292,106 +194,8 @@
 <a href="https://kinowidget.kinoplan.ru/seats/8588/10061466/6ae6108b3e00005100a91b47">ВРЕМЯ РАЗВЛЕЧЕНИЙ</a>      </div>
 <div class="m">1967 · Франция, Италия · 125 мин · 12+ · реж. Жак Тати · комедия · французский язык, русские субтитры · 590 ₽ <span class="tag">КЛАССИЧЕСКАЯ КОМЕДИЯ</span></div><details><summary>о фильме</summary><p>Виртуозная визуальная сатира на современную урбанистическую цивилизацию, где каждый тщательно выстроенный кадр превращает обыденность в абсурдный балет человеческой неловкости и технологического хаоса</p></details>    </div>
 <img class="p" src="posters/bgxgIpgFog5GgJXnsgGNVVHCznu.jpg" alt="" width="46" height="69" loading="lazy" decoding="async">  </li><li class="r day"
-      data-v="mirage" data-ts="1794125400">
-    <time datetime="2026-11-08T11:10:00+03:00">11:10</time>
-    <div class="b">
-      <div class="w">
-<a class="v v-mirage" href="https://www.mirage.ru/ticket_new/bc5af9cc-36f8-4edc-a946-7619ca18ec06/">Мираж на Большом</a><span class="h">зал 4</span>      </div>
-      <div class="t">
-<span>Плетеный муж</span>      </div>
-<div class="m">18+ · комедия, фантастика, мелодрама · зал 4</div>    </div>
-  </li><li class="r day"
-      data-v="avrora" data-ts="1794125700">
-    <time datetime="2026-11-08T11:15:00+03:00">11:15</time>
-    <div class="b">
-      <div class="w">
-<a class="v v-avrora" href="https://avrora.spb.ru/">Аврора</a><span class="h">Малый</span>      </div>
-      <div class="t">
-<span>Плетёный муж</span>      </div>
-<div class="m">2026 · США, Великобритания · 105 мин · 18+ · фантастика, фэнтези, мелодрама · Малый · 400 ₽</div>    </div>
-<img class="p" src="posters/ej29DO6sC6IsxQLtYPj4ZxfwCQP.jpg" alt="" width="46" height="69" loading="lazy" decoding="async">  </li><li class="r day"
-      data-v="mirage" data-ts="1794126000">
-    <time datetime="2026-11-08T11:20:00+03:00">11:20</time>
-    <div class="b">
-      <div class="w">
-<a class="v v-mirage" href="https://www.mirage.ru/ticket_new/bce0dcb4-7b3b-49f0-aef4-97ca2e61ec0a/">Мираж на Большом</a><span class="h">зал 3</span>      </div>
-      <div class="t">
-<span>Барашек Шон и чудище лохматое</span>      </div>
-<div class="m">6+ · комедия, мультфильм, семейный · зал 3</div>    </div>
-  </li><li class="r day"
-      data-v="poravkino" data-ts="1794126000">
-    <time datetime="2026-11-08T11:20:00+03:00">11:20</time>
-    <div class="b">
-      <div class="w">
-<a class="v v-poravkino" href="https://poravkino.ru/">Художественный</a><span class="h">Премьер</span>      </div>
-      <div class="t">
-<span>Рождение империи</span>      </div>
-<div class="m">2026 · Россия · 150 мин · 12+ · реж. Андрей Кравчук, Алексей Нужный · биографический, драма · Премьер · 350 ₽</div>    </div>
-<img class="p" src="posters/1JbTVMAXpfcez5bFWJpgnwdIAde.jpg" alt="" width="46" height="69" loading="lazy" decoding="async">  </li><li class="r day"
-      data-v="lenfilm" data-ts="1794126600">
-    <time datetime="2026-11-08T11:30:00+03:00">11:30</time>
-    <div class="b">
-      <div class="w">
-<a class="v v-lenfilm" href="https://www.lenfilm.ru/service/Kinoteatr-Lenfilm/">Ленфильм</a><span class="h">зал 1</span>      </div>
-      <div class="t">
-<span>Отверженные (версия с субтитрами)</span>      </div>
-<div class="m">Франция · 179 мин · 18+ · исторический, драма · субтитры · зал 1 · 250 ₽</div>    </div>
-  </li><li class="r day"
-      data-v="mirage" data-ts="1794126600">
-    <time datetime="2026-11-08T11:30:00+03:00">11:30</time>
-    <div class="b">
-      <div class="w">
-<a class="v v-mirage" href="https://www.mirage.ru/ticket_new/370f5140-ee11-40a9-aa8b-7caa0d79c514/">Мираж на Большом</a><span class="h">зал 2</span>      </div>
-      <div class="t">
-<span>Битва моторов</span>      </div>
-<div class="m">12+ · приключения, драма · зал 2</div>    </div>
-  </li><li class="r day"
-      data-v="avrora" data-ts="1794126900">
-    <time datetime="2026-11-08T11:35:00+03:00">11:35</time>
-    <div class="b">
-      <div class="w">
-<a class="v v-avrora" href="https://avrora.spb.ru/">Аврора</a><span class="h">Большой</span>      </div>
-      <div class="t">
-<span>Жертвоприношение</span>      </div>
-<div class="m">1986 · Швеция, Франция, Великобритания · 149 мин · 18+ · драма · Большой · 400–550 ₽</div>    </div>
-<img class="p" src="posters/uOZ7GiXRDLdJ8jr3ft8uYJCvktV.jpg" alt="" width="46" height="69" loading="lazy" decoding="async">  </li><li class="r day"
-      data-v="poravkino" data-ts="1794126900">
-    <time datetime="2026-11-08T11:35:00+03:00">11:35</time>
-    <div class="b">
-      <div class="w">
-<a class="v v-poravkino" href="https://poravkino.ru/">Художественный</a><span class="h">зал 4</span>      </div>
-      <div class="t">
-<span>Остров забвения</span>      </div>
-<div class="m">2026 · США · 105 мин · 6+ · реж. Джоэль Кроуфорд, Хануэль Меркадо · комедия, мультфильм, приключения · зал 4 · 350 ₽</div>    </div>
-<img class="p" src="posters/cLEsUIvvzEUzoID2FdxTcNJBHwB.jpg" alt="" width="46" height="69" loading="lazy" decoding="async">  </li><li class="r day"
-      data-v="poravkino" data-ts="1794126900">
-    <time datetime="2026-11-08T11:35:00+03:00">11:35</time>
-    <div class="b">
-      <div class="w">
-<a class="v v-poravkino" href="https://poravkino.ru/">Художественный</a><span class="h">Малый красный</span>      </div>
-      <div class="t">
-<span>Романовы: преданность и предательство</span>      </div>
-<div class="m">Россия · 125 мин · 16+ · реж. Василий Чигинский · биографический, драма · Малый красный · 350 ₽</div>    </div>
-  </li><li class="r day"
-      data-v="poravkino" data-ts="1794127500">
-    <time datetime="2026-11-08T11:45:00+03:00">11:45</time>
-    <div class="b">
-      <div class="w">
-<a class="v v-poravkino" href="https://poravkino.ru/">Художественный</a><span class="h">Малый синий</span>      </div>
-      <div class="t">
-<span>Морозко</span>      </div>
-<div class="m">2026 · Россия · 115 мин · 6+ · реж. Эдуард Бордуков · семейный, фэнтези · Малый синий · 350 ₽</div>    </div>
-<img class="p" src="posters/ogN4Ul6UnDqRph23g3ZtAexm3M0.jpg" alt="" width="46" height="69" loading="lazy" decoding="async">  </li><li class="r day"
-      data-v="poravkino" data-ts="1794127500">
-    <time datetime="2026-11-08T11:45:00+03:00">11:45</time>
-    <div class="b">
-      <div class="w">
-<a class="v v-poravkino" href="https://poravkino.ru/">Художественный</a><span class="h">зал 2</span>      </div>
-      <div class="t">
-<span>Сказка о потерянном времени</span>      </div>
-<div class="m">2026 · Россия · 90 мин · 6+ · реж. Андрей Никифоров · детский, приключения · зал 2 · 350 ₽</div>    </div>
-<img class="p" src="posters/rHIHELSgTGWnDryaoj9Yb15iTkd.jpg" alt="" width="46" height="69" loading="lazy" decoding="async">  </li><li class="r day"
-      data-v="domkino" data-ts="1794127800">
+      data-v="domkino" data-ts="1794127800"
+      data-country-status="other">
     <time datetime="2026-11-08T11:50:00+03:00">11:50</time>
     <div class="b">
       <div class="w">
@@ -400,7 +204,8 @@
 <a href="https://www.domkino.spb.ru/films/sentimentalnaya_cennost_subtitry/">Сентиментальная ценность (субтитры)</a><span class="o">Affeksjonsverdi</span>      </div>
 <div class="m">2025 · Норвегия, Германия, Дания, Франция, Швеция, Великобритания · 137 мин · 18+ · реж. Йоаким Триер · драма · оригинальный, русские субтитры · Сиреневый зал · 250 ₽</div>    </div>
 <img class="p" src="posters/bhyEpWjIFnsBoZd2zwhaUvQGN7I.jpg" alt="" width="46" height="69" loading="lazy" decoding="async">  </li><li class="r day"
-      data-v="mirage" data-ts="1794127800">
+      data-v="mirage" data-ts="1794127800"
+      data-country-status="unknown">
     <time datetime="2026-11-08T11:50:00+03:00">11:50</time>
     <div class="b">
       <div class="w">
@@ -409,16 +214,18 @@
 <span>Одиссея</span>      </div>
 <div class="m">18+ · боевик, приключения, фэнтези · зал 5</div>    </div>
   </li><li class="r day"
-      data-v="mirage" data-ts="1794128400">
+      data-v="mirage" data-ts="1794128400"
+      data-country-status="Russian">
     <time datetime="2026-11-08T12:00:00+03:00">12:00</time>
     <div class="b">
       <div class="w">
 <a class="v v-mirage" href="https://www.mirage.ru/ticket_new/f5a352ad-0241-480c-92ed-e815ae5179ed/">Мираж на Большом</a><span class="h">зал 6</span>      </div>
       <div class="t">
 <span>Морозко</span>      </div>
-<div class="m">6+ · фэнтези, семейный · зал 6</div>    </div>
+<div class="m">Россия · 6+ · фэнтези, семейный · зал 6</div>    </div>
   </li><li class="r day"
-      data-v="domkino" data-ts="1794128700">
+      data-v="domkino" data-ts="1794128700"
+      data-country-status="other">
     <time datetime="2026-11-08T12:05:00+03:00">12:05</time>
     <div class="b">
       <div class="w">
@@ -427,16 +234,8 @@
 <a href="https://www.domkino.spb.ru/films/vosstavshiy/">Восставший</a><span class="o">The Uprising</span>      </div>
 <div class="m">2026 · Великобритания, Германия, США · 128 мин · 16+ · реж. Пол Гринграсс · боевик, драма, военный · дублирование · Синий зал · 400 ₽</div>    </div>
 <img class="p" src="posters/uSDqNYQXOGTbWdMMmzMJkXROJDh.jpg" alt="" width="46" height="69" loading="lazy" decoding="async">  </li><li class="r day"
-      data-v="poravkino" data-ts="1794129300">
-    <time datetime="2026-11-08T12:15:00+03:00">12:15</time>
-    <div class="b">
-      <div class="w">
-<a class="v v-poravkino" href="https://poravkino.ru/">Художественный</a><span class="h">зал 1</span>      </div>
-      <div class="t">
-<span>Чудо-Юдо</span>      </div>
-<div class="m">2026 · Россия · 120 мин · 6+ · реж. Серик Бейсеу · приключения, семейный, фэнтези · зал 1 · 350 ₽</div>    </div>
-<img class="p" src="posters/tr2UDGeImwouJh4sP8jk9FrwcPo.jpg" alt="" width="46" height="69" loading="lazy" decoding="async">  </li><li class="r day"
-      data-v="rodina" data-ts="1794129300">
+      data-v="rodina" data-ts="1794129300"
+      data-country-status="other">
     <time datetime="2026-11-08T12:15:00+03:00">12:15</time>
     <div class="b">
       <div class="w">
@@ -445,7 +244,8 @@
 <a href="https://rodinakino.ru/events/nastrojshik-2025">Настройщик</a>      </div>
 <div class="m">2025 · Канада, США · 108 мин · 18+ · реж. Дэниэл Роэр · драма, мелодрама, криминал · Малый 1 зал · 250 ₽</div><details><summary>о фильме</summary><p>Нью-Йорк. Жизнь Ники — страдающего гиперакузией талантливого настройщика фортепиано — переворачивается с ног на голову, когда он обнаруживает, что его навыки и тонкий слух настройки можно применять для взлома сейфов. Когда его пожилой наставник и партнёр Гарри попадает в больницу, парень решает присоединиться к банде…</p></details>    </div>
 <img class="p" src="posters/7oNxg17JawXBMdkuSo7hpThhTZF.jpg" alt="" width="46" height="69" loading="lazy" decoding="async">  </li><li class="r day"
-      data-v="rodina" data-ts="1794129600">
+      data-v="rodina" data-ts="1794129600"
+      data-country-status="Russian">
     <time datetime="2026-11-08T12:20:00+03:00">12:20</time>
     <div class="b">
       <div class="w">
@@ -454,7 +254,8 @@
 <a href="https://rodinakino.ru/events/leto-v-badene-2026">Лето в Бадене</a>      </div>
 <div class="m">2026 · Россия · 80 мин · 18+ · реж. Антон Желнов · драма · Большой зал · 270 ₽</div><details><summary>о фильме</summary><p>Советский интеллигент занимается наукой и медициной, иногда пишет в стол, для себя. Его единственный сын решает уехать из страны навсегда. Это разбивает отцу сердце, ставит крест на карьере и положении в обществе. Потеряв всё, он решается воплотить замысел всей жизни и написать роман о Фёдоре Достоевском. Подобно…</p></details>    </div>
 <img class="p" src="posters/hi1ZUDa3ZP2NG7lkprq6fDmi3Si.jpg" alt="" width="46" height="69" loading="lazy" decoding="async">  </li><li class="r day"
-      data-v="poravkino" data-ts="1794129900">
+      data-v="poravkino" data-ts="1794129900"
+      data-country-status="Russian">
     <time datetime="2026-11-08T12:25:00+03:00">12:25</time>
     <div class="b">
       <div class="w">
@@ -463,7 +264,8 @@
 <span>Битва моторов</span>      </div>
 <div class="m">Россия · 155 мин · 12+ · реж. Илья Маланин · драма, приключения · зал 3 · 350 ₽</div>    </div>
   </li><li class="r day"
-      data-v="domkino" data-ts="1794130200">
+      data-v="domkino" data-ts="1794130200"
+      data-country-status="other">
     <time datetime="2026-11-08T12:30:00+03:00">12:30</time>
     <div class="b">
       <div class="w">
@@ -472,16 +274,18 @@
 <a href="https://www.domkino.spb.ru/films/zapredele/">Запределье (субтитры)</a><span class="o">The Fall</span>      </div>
 <div class="m">2006 · США, ЮАР, Индия · 119 мин · 18+ · реж. Тарсем Сингх · приключения · оригинальный, русские субтитры · Большой зал · 400 ₽</div>    </div>
   </li><li class="r day"
-      data-v="mirage" data-ts="1794130200">
+      data-v="mirage" data-ts="1794130200"
+      data-country-status="other">
     <time datetime="2026-11-08T12:30:00+03:00">12:30</time>
     <div class="b">
       <div class="w">
 <a class="v v-mirage" href="https://www.mirage.ru/ticket_new/2b0aa0d9-e30e-a3a5-5fc2-71ced8364536/">Мираж на Большом</a><span class="h">зал 7</span>      </div>
       <div class="t">
 <span>Остров забвения</span>      </div>
-<div class="m">6+ · комедия, приключения, мультфильм · зал 7</div>    </div>
+<div class="m">США · 6+ · комедия, приключения, мультфильм · зал 7</div>    </div>
   </li><li class="r day"
-      data-v="rodina" data-ts="1794130200">
+      data-v="rodina" data-ts="1794130200"
+      data-country-status="Russian">
     <time datetime="2026-11-08T12:30:00+03:00">12:30</time>
     <div class="b">
       <div class="w">
@@ -490,7 +294,8 @@
 <a href="https://rodinakino.ru/events/romanovy-predannost-i-predatelstvo-2026">Романовы: преданность и предательство</a>      </div>
 <div class="m">2026 · Россия · 121 мин · 16+ · реж. Василий Чигинский · драма, история, биография · Малый 2 зал · 250 ₽</div><details><summary>о фильме</summary><p>Рассказ о последних годах жизни Императора Всероссийского Николая II, его семьи и близких.</p></details>    </div>
 <img class="p" src="posters/tTQRu9b1uJfvTYOKm6tnEeXn6DH.jpg" alt="" width="46" height="69" loading="lazy" decoding="async">  </li><li class="r day"
-      data-v="domkino" data-ts="1794131100">
+      data-v="domkino" data-ts="1794131100"
+      data-country-status="Russian">
     <time datetime="2026-11-08T12:45:00+03:00">12:45</time>
     <div class="b">
       <div class="w">
@@ -499,7 +304,8 @@
 <a href="https://www.domkino.spb.ru/films/nepokoy/">Непокой</a>      </div>
 <div class="m">2026 · Россия · 86 мин · 18+ · реж. Леонид Шмельков · триллер, анимация · оригинальный · Белый зал · 300 ₽</div>    </div>
 <img class="p" src="posters/AnM5IIlW8FytzjnTLkqyQujvkUu.jpg" alt="" width="46" height="69" loading="lazy" decoding="async">  </li><li class="r day"
-      data-v="poravkino" data-ts="1794131100">
+      data-v="poravkino" data-ts="1794131100"
+      data-country-status="other">
     <time datetime="2026-11-08T12:45:00+03:00">12:45</time>
     <div class="b">
       <div class="w">
@@ -508,7 +314,8 @@
 <span>Плетёный муж</span><span class="o">Плетеный муж</span>      </div>
 <div class="m">2026 · США, Великобритания, Австралия · 110 мин · 18+ · реж. Алекс Хьюстон Фишер, Элинор Уилсон · драма, комедия, мелодрама · VIP · 550 ₽</div>    </div>
 <img class="p" src="posters/ej29DO6sC6IsxQLtYPj4ZxfwCQP.jpg" alt="" width="46" height="69" loading="lazy" decoding="async">  </li><li class="r day"
-      data-v="mirage" data-ts="1794131700">
+      data-v="mirage" data-ts="1794131700"
+      data-country-status="unknown">
     <time datetime="2026-11-08T12:55:00+03:00">12:55</time>
     <div class="b">
       <div class="w">
@@ -517,7 +324,8 @@
 <span>Рождение империи</span>      </div>
 <div class="m">12+ · драма, биография, история · зал 1</div>    </div>
   </li><li class="r day"
-      data-v="domkino" data-ts="1794132300">
+      data-v="domkino" data-ts="1794132300"
+      data-country-status="other">
     <time datetime="2026-11-08T13:05:00+03:00">13:05</time>
     <div class="b">
       <div class="w">
@@ -526,34 +334,38 @@
 <a href="https://www.domkino.spb.ru/films/eto_khit_subtitry/">Это хит! (субтитры)</a><span class="o">Power Ballad</span>      </div>
 <div class="m">2026 · Ирландия, США · 97 мин · 18+ · реж. Джон Карни · музыка, драма, комедия · английский, русские субтитры · Малый зал · 250 ₽</div>    </div>
 <img class="p" src="posters/fa4EdkINTMRJXWNsEcs24t4D1QN.jpg" alt="" width="46" height="69" loading="lazy" decoding="async">  </li><li class="r day"
-      data-v="mirage" data-ts="1794132300">
+      data-v="mirage" data-ts="1794132300"
+      data-country-status="Russian">
     <time datetime="2026-11-08T13:05:00+03:00">13:05</time>
     <div class="b">
       <div class="w">
 <a class="v v-mirage" href="https://www.mirage.ru/ticket_new/e3d94c02-6f7f-4d78-a05a-b477fa6d32d7/">Мираж на Большом</a><span class="h">зал 3</span>      </div>
       <div class="t">
 <span>Чудо-Юдо</span>      </div>
-<div class="m">6+ · приключения, фэнтези, семейный · зал 3</div>    </div>
+<div class="m">Россия · 6+ · приключения, фэнтези, семейный · зал 3</div>    </div>
   </li><li class="r day"
-      data-v="avrora" data-ts="1794133200">
+      data-v="avrora" data-ts="1794133200"
+      data-country-status="Russian">
     <time datetime="2026-11-08T13:20:00+03:00">13:20</time>
     <div class="b">
       <div class="w">
 <a class="v v-avrora" href="https://avrora.spb.ru/">Аврора</a><span class="h">Малый</span>      </div>
       <div class="t">
 <span>Романовы: преданность и предательство</span>      </div>
-<div class="m">2026 · Россия · 121 мин · 16+ · биография, история, драма · Малый · 450 ₽</div>    </div>
+<div class="m">2026 · Россия · 121 мин · 16+ · биография, история, драма · Малый · 450 ₽ · осталось 50 мест</div>    </div>
 <img class="p" src="posters/tTQRu9b1uJfvTYOKm6tnEeXn6DH.jpg" alt="" width="46" height="69" loading="lazy" decoding="async">  </li><li class="r day"
-      data-v="mirage" data-ts="1794133500">
+      data-v="mirage" data-ts="1794133500"
+      data-country-status="other">
     <time datetime="2026-11-08T13:25:00+03:00">13:25</time>
     <div class="b">
       <div class="w">
 <a class="v v-mirage" href="https://www.mirage.ru/ticket_new/ca7a8129-9745-4dea-859e-3f03d9885be5/">Мираж на Большом</a><span class="h">зал 4</span>      </div>
       <div class="t">
 <span>Тайный дневник Верити</span>      </div>
-<div class="m">18+ · детектив, триллер, драма · зал 4</div>    </div>
+<div class="m">США · 18+ · детектив, триллер, драма · зал 4</div>    </div>
   </li><li class="r day"
-      data-v="outcinema" data-ts="1794133800">
+      data-v="outcinema" data-ts="1794133800"
+      data-country-status="other">
     <time datetime="2026-11-08T13:30:00+03:00">13:30</time>
     <div class="b">
       <div class="w">
@@ -562,7 +374,8 @@
 <a href="https://kinowidget.kinoplan.ru/seats/8588/10054094/6ae610963e00005100a91b5d">КТО БОИТСЯ ВИРДЖИНИИ ВУЛФ?</a>      </div>
 <div class="m">1966 · США · 131 мин · 16+ · реж. Майк Николс · драма · английский язык, русские субтитры · 590 ₽ <span class="tag">ЭЛИЗАБЕТ ТЕЙЛОР</span></div><details><summary>о фильме</summary><p>Напряженная психологическая драма о супружеской паре, чьи болезненные отношения, наполненные манипуляциями и эмоциональными играми, раскрываются в течение одной ночи, вовлекая молодую пару в их разрушительный мир</p></details>    </div>
 <img class="p" src="posters/bHqhXLTyX9BLKwe9uWO0k2SLxcj.jpg" alt="" width="46" height="69" loading="lazy" decoding="async">  </li><li class="r day"
-      data-v="poravkino" data-ts="1794133800">
+      data-v="poravkino" data-ts="1794133800"
+      data-country-status="Russian">
     <time datetime="2026-11-08T13:30:00+03:00">13:30</time>
     <div class="b">
       <div class="w">
@@ -571,7 +384,8 @@
 <span>Рождение империи</span>      </div>
 <div class="m">2026 · Россия · 150 мин · 12+ · реж. Андрей Кравчук, Алексей Нужный · биографический, драма · зал 2 · 350 ₽</div>    </div>
 <img class="p" src="posters/1JbTVMAXpfcez5bFWJpgnwdIAde.jpg" alt="" width="46" height="69" loading="lazy" decoding="async">  </li><li class="r day"
-      data-v="poravkino" data-ts="1794134400">
+      data-v="poravkino" data-ts="1794134400"
+      data-country-status="other">
     <time datetime="2026-11-08T13:40:00+03:00">13:40</time>
     <div class="b">
       <div class="w">
@@ -580,7 +394,8 @@
 <span>Сумерки. Сага. Затмение</span>      </div>
 <div class="m">2010 · США · 130 мин · 18+ · реж. Дэвид Слэйд · мелодрама, триллер, фэнтези · зал 4 · 350 ₽</div>    </div>
 <img class="p" src="posters/40ut2seLFEeyTcan7V2cVjwRvI9.jpg" alt="" width="46" height="69" loading="lazy" decoding="async">  </li><li class="r day"
-      data-v="poravkino" data-ts="1794134700">
+      data-v="poravkino" data-ts="1794134700"
+      data-country-status="other">
     <time datetime="2026-11-08T13:45:00+03:00">13:45</time>
     <div class="b">
       <div class="w">
@@ -589,7 +404,8 @@
 <span>Роллинг Лауд. Дикое веселье</span>      </div>
 <div class="m">2026 · США · 100 мин · 18+ · реж. Джереми Гарелик · комедия · Малый синий · 350 ₽</div>    </div>
 <img class="p" src="posters/mA2IIbx6hJd51m5JdHKPxBh4tSn.jpg" alt="" width="46" height="69" loading="lazy" decoding="async">  </li><li class="r day"
-      data-v="poravkino" data-ts="1794135300">
+      data-v="poravkino" data-ts="1794135300"
+      data-country-status="other">
     <time datetime="2026-11-08T13:55:00+03:00">13:55</time>
     <div class="b">
       <div class="w">
@@ -598,7 +414,8 @@
 <span>Отверженные</span>      </div>
 <div class="m">2026 · Франция · 180 мин · 18+ · реж. Фред Кавайе · драма, мелодрама · Малый красный · 350 ₽</div>    </div>
 <img class="p" src="posters/b9RR1u16vsLe8e45IRqsQAmZHsg.jpg" alt="" width="46" height="69" loading="lazy" decoding="async">  </li><li class="r day"
-      data-v="rodina" data-ts="1794135300">
+      data-v="rodina" data-ts="1794135300"
+      data-country-status="Russian">
     <time datetime="2026-11-08T13:55:00+03:00">13:55</time>
     <div class="b">
       <div class="w">
@@ -607,7 +424,8 @@
 <a href="https://rodinakino.ru/events/rozhdenie-imperii-2026">Рождение империи</a>      </div>
 <div class="m">2026 · Пушкинская карта, Россия · 140 мин · 12+ · реж. Андрей Кравчук · история, биография, драма · Большой зал · 300 ₽</div><details><summary>о фильме</summary><p>Вернувшись на родину после Великого посольства, Петр Первый вступает в затяжную войну со Швецией за выход к морю. На пути к победе его ожидают серьёзные испытания, разочарования, обман и предательства.</p></details>    </div>
 <img class="p" src="posters/1JbTVMAXpfcez5bFWJpgnwdIAde.jpg" alt="" width="46" height="69" loading="lazy" decoding="async">  </li><li class="r day"
-      data-v="poravkino" data-ts="1794136200">
+      data-v="poravkino" data-ts="1794136200"
+      data-country-status="Russian">
     <time datetime="2026-11-08T14:10:00+03:00">14:10</time>
     <div class="b">
       <div class="w">
@@ -616,7 +434,8 @@
 <span>Рождение империи</span>      </div>
 <div class="m">2026 · Россия · 150 мин · 12+ · реж. Андрей Кравчук, Алексей Нужный · биографический, драма · Премьер · 400 ₽</div>    </div>
 <img class="p" src="posters/1JbTVMAXpfcez5bFWJpgnwdIAde.jpg" alt="" width="46" height="69" loading="lazy" decoding="async">  </li><li class="r day"
-      data-v="rodina" data-ts="1794136500">
+      data-v="rodina" data-ts="1794136500"
+      data-country-status="Russian">
     <time datetime="2026-11-08T14:15:00+03:00">14:15</time>
     <div class="b">
       <div class="w">
@@ -625,7 +444,8 @@
 <a href="https://rodinakino.ru/events/bitva-motorov-2026">Битва моторов</a>      </div>
 <div class="m">2026 · Пушкинская карта, Россия · 144 мин · 12+ · реж. Илья Маланин · приключения, драма · Малый 1 зал · 250 ₽</div><details><summary>о фильме</summary><p>1908 год. Автолюбитель Андрей Нагель находит поддержку у инженера Дмитрия Бондарева. Вместе они собирают команду единомышленников и приступают к разработке автомобиля «Руссо-Балт». Когда проект оказывается под угрозой, Нагель принимает рискованное решение — доказать жизнеспособность их машины в легендарном Ралли…</p></details>    </div>
 <img class="p" src="posters/oxvc4t0IzHUnkQGfYqUAbLV7zY8.jpg" alt="" width="46" height="69" loading="lazy" decoding="async">  </li><li class="r day"
-      data-v="avrora" data-ts="1794137100">
+      data-v="avrora" data-ts="1794137100"
+      data-country-status="Russian">
     <time datetime="2026-11-08T14:25:00+03:00">14:25</time>
     <div class="b">
       <div class="w">
@@ -634,7 +454,8 @@
 <span>Рождение империи</span>      </div>
 <div class="m">2026 · Россия · 140 мин · 12+ · историческая драма · Большой · 450–600 ₽</div>    </div>
 <img class="p" src="posters/1JbTVMAXpfcez5bFWJpgnwdIAde.jpg" alt="" width="46" height="69" loading="lazy" decoding="async">  </li><li class="r day"
-      data-v="domkino" data-ts="1794137100">
+      data-v="domkino" data-ts="1794137100"
+      data-country-status="other">
     <time datetime="2026-11-08T14:25:00+03:00">14:25</time>
     <div class="b">
       <div class="w">
@@ -643,25 +464,28 @@
 <a href="https://www.domkino.spb.ru/films/postoronniy/">Посторонний (субтитры)</a><span class="o">L&#39;Étranger</span>      </div>
 <div class="m">2025 · Франция · 122 мин · 18+ · реж. Франсуа Озон · драма · оригинальный, русские субтитры · Сиреневый зал · 350 ₽</div>    </div>
 <img class="p" src="posters/gji9ScexriPBpYoK5ZWWOp72hyx.jpg" alt="" width="46" height="69" loading="lazy" decoding="async">  </li><li class="r day"
-      data-v="domkino" data-ts="1794137400">
+      data-v="domkino" data-ts="1794137400"
+      data-country-status="other">
     <time datetime="2026-11-08T14:30:00+03:00">14:30</time>
     <div class="b">
       <div class="w">
 <span class="v v-domkino">Дом кино</span><span class="h">Синий зал</span>      </div>
       <div class="t">
 <a href="https://www.domkino.spb.ru/films/bezumny_den_v_kamedi_fransez/">Безумный день в Комеди Франсез</a><span class="o">De la Comédie-Française</span>      </div>
-<div class="m">75 мин · 18+ · реж. Мартен Дарондо, Бертран Юскла · комедия · дублирование · Синий зал · 400 ₽</div>    </div>
+<div class="m">Франция · 75 мин · 18+ · реж. Мартен Дарондо, Бертран Юскла · комедия · дублирование · Синий зал · 400 ₽</div>    </div>
   </li><li class="r day"
-      data-v="mirage" data-ts="1794137400">
+      data-v="mirage" data-ts="1794137400"
+      data-country-status="other">
     <time datetime="2026-11-08T14:30:00+03:00">14:30</time>
     <div class="b">
       <div class="w">
 <a class="v v-mirage" href="https://www.mirage.ru/ticket_new/48ea2d6c-80d2-46b8-ad67-cc48ebc09d55/">Мираж на Большом</a><span class="h">зал 2</span>      </div>
       <div class="t">
 <span>Сумерки. Сага. Затмение</span>      </div>
-<div class="m">18+ · триллер, мелодрама, фэнтези · зал 2</div>    </div>
+<div class="m">США · 18+ · триллер, мелодрама, фэнтези · зал 2</div>    </div>
   </li><li class="r day"
-      data-v="poravkino" data-ts="1794137400">
+      data-v="poravkino" data-ts="1794137400"
+      data-country-status="other">
     <time datetime="2026-11-08T14:30:00+03:00">14:30</time>
     <div class="b">
       <div class="w">
@@ -670,7 +494,8 @@
 <span>Плетёный муж</span><span class="o">Плетеный муж</span>      </div>
 <div class="m">2026 · США, Великобритания, Австралия · 110 мин · 18+ · реж. Алекс Хьюстон Фишер, Элинор Уилсон · драма, комедия, мелодрама · зал 1 · 400 ₽</div>    </div>
 <img class="p" src="posters/ej29DO6sC6IsxQLtYPj4ZxfwCQP.jpg" alt="" width="46" height="69" loading="lazy" decoding="async">  </li><li class="r day"
-      data-v="domkino" data-ts="1794138000">
+      data-v="domkino" data-ts="1794138000"
+      data-country-status="other">
     <time datetime="2026-11-08T14:40:00+03:00">14:40</time>
     <div class="b">
       <div class="w">
@@ -679,7 +504,8 @@
 <a href="https://www.domkino.spb.ru/films/barashek_v_yaschike/">Барашек в ящике</a><span class="o">箱の中の羊</span>      </div>
 <div class="m">2026 · Япония · 126 мин · 18+ · реж. Хирокадзу Корээда · фэнтези, драма · дублирование · Белый зал · 300 ₽</div>    </div>
 <img class="p" src="posters/aUeOpkCfGJHgQYFy89vTb0OvgWF.jpg" alt="" width="46" height="69" loading="lazy" decoding="async">  </li><li class="r day"
-      data-v="mirage" data-ts="1794138000">
+      data-v="mirage" data-ts="1794138000"
+      data-country-status="unknown">
     <time datetime="2026-11-08T14:40:00+03:00">14:40</time>
     <div class="b">
       <div class="w">
@@ -688,7 +514,8 @@
 <span>Битва моторов</span>      </div>
 <div class="m">12+ · приключения, драма · зал 7</div>    </div>
   </li><li class="r day"
-      data-v="domkino" data-ts="1794138300">
+      data-v="domkino" data-ts="1794138300"
+      data-country-status="other">
     <time datetime="2026-11-08T14:45:00+03:00">14:45</time>
     <div class="b">
       <div class="w">
@@ -697,7 +524,8 @@
 <a href="https://www.domkino.spb.ru/films/vkuskill/">Вкускилл</a><span class="o">チルド</span>      </div>
 <div class="m">2026 · Япония · 88 мин · 18+ · реж. Юсукэ Ивасаки · ужасы · дублирование · Большой зал · 400 ₽</div>    </div>
 <img class="p" src="posters/7FJ4jD5R9Y7BgYIvd4RG3N8ZpkX.jpg" alt="" width="46" height="69" loading="lazy" decoding="async">  </li><li class="r day"
-      data-v="rodina" data-ts="1794138600">
+      data-v="rodina" data-ts="1794138600"
+      data-country-status="other">
     <time datetime="2026-11-08T14:50:00+03:00">14:50</time>
     <div class="b">
       <div class="w">
@@ -706,7 +534,8 @@
 <a href="https://rodinakino.ru/events/sumerki-saga-zatmenie-2010">Сумерки. Сага. Затмение</a>      </div>
 <div class="m">2010 · США · 124 мин · 18+ · реж. Дэвид Слэйд · мелодрама, фэнтези, триллер · Малый 2 зал · 250 ₽</div><details><summary>о фильме</summary><p>Белла пытается разобраться в своих чувствах к Эдварду и Джейкобу. Тем временем в Сиэтле таинственным образом исчезают люди, а армия новорожденных вампиров готовится к нападению. Чтобы защитить Беллу, Эдвард и Джейкоб вынуждены объединиться, несмотря на давнюю вражду между вампирами и оборотнями. Смогут ли они забыть…</p></details>    </div>
 <img class="p" src="posters/40ut2seLFEeyTcan7V2cVjwRvI9.jpg" alt="" width="46" height="69" loading="lazy" decoding="async">  </li><li class="r day"
-      data-v="poravkino" data-ts="1794138900">
+      data-v="poravkino" data-ts="1794138900"
+      data-country-status="other">
     <time datetime="2026-11-08T14:55:00+03:00">14:55</time>
     <div class="b">
       <div class="w">
@@ -715,7 +544,8 @@
 <span>Диггер</span>      </div>
 <div class="m">США, Великобритания, Мексика · 130 мин · 18+ · реж. Алехандро Гонсалес Иньярриту · драма, комедия · VIP · 650 ₽</div>    </div>
   </li><li class="r day"
-      data-v="domkino" data-ts="1794139200">
+      data-v="domkino" data-ts="1794139200"
+      data-country-status="other">
     <time datetime="2026-11-08T15:00:00+03:00">15:00</time>
     <div class="b">
       <div class="w">
@@ -724,7 +554,8 @@
 <a href="https://www.domkino.spb.ru/films/chastnaya_zhizn_subtitry/">Частная жизнь (субтитры)</a><span class="o">Vie privée</span>      </div>
 <div class="m">2025 · Франция · 103 мин · 18+ · реж. Ребекка Злотовски · детектив · французский, русские субтитры · Малый зал · 250 ₽</div>    </div>
 <img class="p" src="posters/A1gwYE2GBC15M4VNu89u3hiXLdQ.jpg" alt="" width="46" height="69" loading="lazy" decoding="async">  </li><li class="r day"
-      data-v="lenfilm" data-ts="1794139200">
+      data-v="lenfilm" data-ts="1794139200"
+      data-country-status="other">
     <time datetime="2026-11-08T15:00:00+03:00">15:00</time>
     <div class="b">
       <div class="w">
@@ -733,7 +564,8 @@
 <span>TheatreHD: Курентзис: Кармен</span>      </div>
 <div class="m">2026 · Австрия · 180 мин · 18+ · опера, театр в кино · субтитры · зал 1 · 1000 ₽</div>    </div>
   </li><li class="r day"
-      data-v="mirage" data-ts="1794140100">
+      data-v="mirage" data-ts="1794140100"
+      data-country-status="unknown">
     <time datetime="2026-11-08T15:15:00+03:00">15:15</time>
     <div class="b">
       <div class="w">
@@ -742,7 +574,8 @@
 <span>Одиссея</span>      </div>
 <div class="m">18+ · боевик, приключения, фэнтези · зал 5</div>    </div>
   </li><li class="r day"
-      data-v="poravkino" data-ts="1794140100">
+      data-v="poravkino" data-ts="1794140100"
+      data-country-status="Russian">
     <time datetime="2026-11-08T15:15:00+03:00">15:15</time>
     <div class="b">
       <div class="w">
@@ -751,7 +584,8 @@
 <span>Битва моторов</span>      </div>
 <div class="m">Россия · 155 мин · 12+ · реж. Илья Маланин · драма, приключения · зал 3 · 400 ₽</div>    </div>
   </li><li class="r day"
-      data-v="mirage" data-ts="1794140700">
+      data-v="mirage" data-ts="1794140700"
+      data-country-status="unknown">
     <time datetime="2026-11-08T15:25:00+03:00">15:25</time>
     <div class="b">
       <div class="w">
@@ -760,7 +594,8 @@
 <span>Человек-паук: Новый день</span>      </div>
 <div class="m">12+ · боевик, фантастика, приключения · зал 3</div>    </div>
   </li><li class="r day"
-      data-v="avrora" data-ts="1794141600">
+      data-v="avrora" data-ts="1794141600"
+      data-country-status="other">
     <time datetime="2026-11-08T15:40:00+03:00">15:40</time>
     <div class="b">
       <div class="w">
@@ -769,7 +604,8 @@
 <span>Любовь моя</span>      </div>
 <div class="m">2026 · Испания · 135 мин · 18+ · драма · русский · Малый · 500 ₽</div>    </div>
 <img class="p" src="posters/9FwnoA8GfNMjSmp4pTFDWTiSETB.jpg" alt="" width="46" height="69" loading="lazy" decoding="async">  </li><li class="r day"
-      data-v="poravkino" data-ts="1794141600">
+      data-v="poravkino" data-ts="1794141600"
+      data-country-status="Russian">
     <time datetime="2026-11-08T15:40:00+03:00">15:40</time>
     <div class="b">
       <div class="w">
@@ -778,7 +614,8 @@
 <span>Рождение империи</span>      </div>
 <div class="m">2026 · Россия · 150 мин · 12+ · реж. Андрей Кравчук, Алексей Нужный · биографический, драма · Малый синий · 400 ₽</div>    </div>
 <img class="p" src="posters/1JbTVMAXpfcez5bFWJpgnwdIAde.jpg" alt="" width="46" height="69" loading="lazy" decoding="async">  </li><li class="r day"
-      data-v="mirage" data-ts="1794141900">
+      data-v="mirage" data-ts="1794141900"
+      data-country-status="unknown">
     <time datetime="2026-11-08T15:45:00+03:00">15:45</time>
     <div class="b">
       <div class="w">
@@ -787,7 +624,8 @@
 <span>Плетеный муж</span>      </div>
 <div class="m">18+ · комедия, фантастика, мелодрама · зал 4</div>    </div>
   </li><li class="r day"
-      data-v="mirage" data-ts="1794142500">
+      data-v="mirage" data-ts="1794142500"
+      data-country-status="unknown">
     <time datetime="2026-11-08T15:55:00+03:00">15:55</time>
     <div class="b">
       <div class="w">
@@ -796,7 +634,8 @@
 <span>Рождение империи</span>      </div>
 <div class="m">12+ · драма, биография, история · зал 1</div>    </div>
   </li><li class="r day"
-      data-v="domkino" data-ts="1794142800">
+      data-v="domkino" data-ts="1794142800"
+      data-country-status="other">
     <time datetime="2026-11-08T16:00:00+03:00">16:00</time>
     <div class="b">
       <div class="w">
@@ -805,7 +644,8 @@
 <a href="https://www.domkino.spb.ru/films/ford/">Фьорд</a><span class="o">Fjord</span>      </div>
 <div class="m">2026 · Румыния, Франция, Норвегия, Дания, Финляндия, Швеция · 146 мин · 18+ · реж. Кристиан Мунджиу · драма, триллер · дублирование · Синий зал · 450 ₽</div>    </div>
 <img class="p" src="posters/kDAwTzpCmW3EXmVei5yHI5Bfr6U.jpg" alt="" width="46" height="69" loading="lazy" decoding="async">  </li><li class="r day"
-      data-v="poravkino" data-ts="1794143400">
+      data-v="poravkino" data-ts="1794143400"
+      data-country-status="other">
     <time datetime="2026-11-08T16:10:00+03:00">16:10</time>
     <div class="b">
       <div class="w">
@@ -814,7 +654,8 @@
 <span>Клэйфейс</span>      </div>
 <div class="m">США, Великобритания · 110 мин · 18+ · реж. Джеймс Уоткинс · фантастика, боевик · зал 4 · 500 ₽</div>    </div>
   </li><li class="r day"
-      data-v="poravkino" data-ts="1794143700">
+      data-v="poravkino" data-ts="1794143700"
+      data-country-status="Russian">
     <time datetime="2026-11-08T16:15:00+03:00">16:15</time>
     <div class="b">
       <div class="w">
@@ -823,7 +664,8 @@
 <span>Рождение империи</span>      </div>
 <div class="m">2026 · Россия · 150 мин · 12+ · реж. Андрей Кравчук, Алексей Нужный · биографический, драма · зал 2 · 450 ₽</div>    </div>
 <img class="p" src="posters/1JbTVMAXpfcez5bFWJpgnwdIAde.jpg" alt="" width="46" height="69" loading="lazy" decoding="async">  </li><li class="r day"
-      data-v="domkino" data-ts="1794144600">
+      data-v="domkino" data-ts="1794144600"
+      data-country-status="other">
     <time datetime="2026-11-08T16:30:00+03:00">16:30</time>
     <div class="b">
       <div class="w">
@@ -832,7 +674,8 @@
 <a href="https://www.domkino.spb.ru/films/plet_ny_muzh/">Плетёный муж</a><span class="o">Wicker</span>      </div>
 <div class="m">2026 · США, Великобритания · 106 мин · 18+ · реж. Алекс Хьюстон Фишер, Элинор Уилсон · фантастика, фэнтези, мелодрама · дублирование · Большой зал · 400 ₽</div>    </div>
 <img class="p" src="posters/ej29DO6sC6IsxQLtYPj4ZxfwCQP.jpg" alt="" width="46" height="69" loading="lazy" decoding="async">  </li><li class="r day"
-      data-v="poravkino" data-ts="1794144900">
+      data-v="poravkino" data-ts="1794144900"
+      data-country-status="other">
     <time datetime="2026-11-08T16:35:00+03:00">16:35</time>
     <div class="b">
       <div class="w">
@@ -841,7 +684,8 @@
 <span>Плетёный муж</span><span class="o">Плетеный муж</span>      </div>
 <div class="m">2026 · США, Великобритания, Австралия · 110 мин · 18+ · реж. Алекс Хьюстон Фишер, Элинор Уилсон · драма, комедия, мелодрама · зал 1 · 450 ₽</div>    </div>
 <img class="p" src="posters/ej29DO6sC6IsxQLtYPj4ZxfwCQP.jpg" alt="" width="46" height="69" loading="lazy" decoding="async">  </li><li class="r day"
-      data-v="rodina" data-ts="1794145200">
+      data-v="rodina" data-ts="1794145200"
+      data-country-status="other">
     <time datetime="2026-11-08T16:40:00+03:00">16:40</time>
     <div class="b">
       <div class="w">
@@ -850,7 +694,8 @@
 <a href="https://rodinakino.ru/events/bolshie-gonki-pegas-iii-2026">Большие гонки. Пегас III</a>      </div>
 <div class="m">2026 · Китай · 124 мин · 16+ · реж. Хань Хань · спорт, комедия · Большой зал · 350 ₽</div><details><summary>о фильме</summary><p>После победы в самом известном ралли Азии команда чемпионов вынуждена вновь вернуться в таблицу мирового первенства, став участниками международной гонки. Им предстоит изнуряющая подготовка и длинные, опасные трассы. Параллельно им придется раскрыть командный заговор и победить любой ценой, иначе они могут лишится не…</p></details>    </div>
   </li><li class="r day"
-      data-v="domkino" data-ts="1794145500">
+      data-v="domkino" data-ts="1794145500"
+      data-country-status="other">
     <time datetime="2026-11-08T16:45:00+03:00">16:45</time>
     <div class="b">
       <div class="w">
@@ -859,7 +704,8 @@
 <a href="https://www.domkino.spb.ru/films/toni_subtitry/">Тони (субтитры)</a><span class="o">Tony</span>      </div>
 <div class="m">2026 · США · 106 мин · 18+ · реж. Мэтт Джонсон · комедия, драма · английский, русские субтитры · Сиреневый зал · 350 ₽</div>    </div>
 <img class="p" src="posters/gB7mAm5WLxp4iIwQs3dj3OOgN2m.jpg" alt="" width="46" height="69" loading="lazy" decoding="async">  </li><li class="r day"
-      data-v="mirage" data-ts="1794145800">
+      data-v="mirage" data-ts="1794145800"
+      data-country-status="unknown">
     <time datetime="2026-11-08T16:50:00+03:00">16:50</time>
     <div class="b">
       <div class="w">
@@ -868,7 +714,8 @@
 <span>Кит: Во тьме глубин</span>      </div>
 <div class="m">18+ · триллер, драма · зал 6</div>    </div>
   </li><li class="r day"
-      data-v="rodina" data-ts="1794146100">
+      data-v="rodina" data-ts="1794146100"
+      data-country-status="Russian">
     <time datetime="2026-11-08T16:55:00+03:00">16:55</time>
     <div class="b">
       <div class="w">
@@ -877,7 +724,8 @@
 <a href="https://rodinakino.ru/events/zhivaya-kniga-2026">Живая книга</a>      </div>
 <div class="m">2026 · Россия · 104 мин · 6+ · реж. Денис Гуляр · фэнтези, приключения, семейный · Малый 1 зал · 300 ₽</div><details><summary>о фильме</summary><p>После потери отца Рома перестал верить в добро и стал дерзким и непослушным. Вместе с робким младшеклассником Витей они пробираются в дом таинственного старика, где находят волшебные книги с ожившими персонажами. По неосторожности мальчики выпускают на свет злого колдуна. Чтобы спасти друга и вернуть все на свои…</p></details>    </div>
 <img class="p" src="posters/huBvsWOlXvQ3rxPLwkOi3J3WxYj.jpg" alt="" width="46" height="69" loading="lazy" decoding="async">  </li><li class="r day"
-      data-v="domkino" data-ts="1794146400">
+      data-v="domkino" data-ts="1794146400"
+      data-country-status="other">
     <time datetime="2026-11-08T17:00:00+03:00">17:00</time>
     <div class="b">
       <div class="w">
@@ -886,7 +734,8 @@
 <a href="https://www.domkino.spb.ru/films/pyaty_element_subtitry/">Пятый элемент (субтитры)</a><span class="o">The Fifth Element</span>      </div>
 <div class="m">1997 · Франция, Великобритания · 126 мин · 18+ · реж. Люк Бессон · комедия, триллер, фантастика · английский, русские субтитры · Малый зал · 250 ₽</div>    </div>
   </li><li class="r day"
-      data-v="mirage" data-ts="1794146400">
+      data-v="mirage" data-ts="1794146400"
+      data-country-status="unknown">
     <time datetime="2026-11-08T17:00:00+03:00">17:00</time>
     <div class="b">
       <div class="w">
@@ -895,7 +744,8 @@
 <span>Рождение империи</span>      </div>
 <div class="m">12+ · драма, биография, история · зал 2</div>    </div>
   </li><li class="r day"
-      data-v="poravkino" data-ts="1794146400">
+      data-v="poravkino" data-ts="1794146400"
+      data-country-status="Russian">
     <time datetime="2026-11-08T17:00:00+03:00">17:00</time>
     <div class="b">
       <div class="w">
@@ -904,7 +754,8 @@
 <span>Рождение империи</span>      </div>
 <div class="m">2026 · Россия · 150 мин · 12+ · реж. Андрей Кравчук, Алексей Нужный · биографический, драма · Премьер · 450 ₽</div>    </div>
 <img class="p" src="posters/1JbTVMAXpfcez5bFWJpgnwdIAde.jpg" alt="" width="46" height="69" loading="lazy" decoding="async">  </li><li class="r day"
-      data-v="avrora" data-ts="1794146700">
+      data-v="avrora" data-ts="1794146700"
+      data-country-status="other">
     <time datetime="2026-11-08T17:05:00+03:00">17:05</time>
     <div class="b">
       <div class="w">
@@ -913,7 +764,8 @@
 <span>Плетёный муж</span>      </div>
 <div class="m">2026 · США, Великобритания · 105 мин · 18+ · фантастика, фэнтези, мелодрама · Большой · 550–700 ₽</div>    </div>
 <img class="p" src="posters/ej29DO6sC6IsxQLtYPj4ZxfwCQP.jpg" alt="" width="46" height="69" loading="lazy" decoding="async">  </li><li class="r day"
-      data-v="domkino" data-ts="1794146700">
+      data-v="domkino" data-ts="1794146700"
+      data-country-status="other">
     <time datetime="2026-11-08T17:05:00+03:00">17:05</time>
     <div class="b">
       <div class="w">
@@ -922,7 +774,8 @@
 <a href="https://www.domkino.spb.ru/films/izgoi759684/">Изгои</a><span class="o">The Outsiders</span>      </div>
 <div class="m">1983 · США, Франция · 91 мин · 18+ · реж. Фрэнсис Форд Коппола · драма, криминал · Белый зал · 300 ₽</div>    </div>
 <img class="p" src="posters/68XmLIWfSBdDcyxsXc1hDBZevQB.jpg" alt="" width="46" height="69" loading="lazy" decoding="async">  </li><li class="r day"
-      data-v="poravkino" data-ts="1794147000">
+      data-v="poravkino" data-ts="1794147000"
+      data-country-status="Russian">
     <time datetime="2026-11-08T17:10:00+03:00">17:10</time>
     <div class="b">
       <div class="w">
@@ -931,7 +784,8 @@
 <span>Четыре жизни Петра Мамонова</span>      </div>
 <div class="m">2026 · Россия · 125 мин · 18+ · реж. Павел Лунгин · документальный, биографический · Малый красный · 450 ₽</div>    </div>
 <img class="p" src="posters/rmIQQN159fzmTZulMjYiEPl9PdA.jpg" alt="" width="46" height="69" loading="lazy" decoding="async">  </li><li class="r day"
-      data-v="rodina" data-ts="1794147300">
+      data-v="rodina" data-ts="1794147300"
+      data-country-status="other">
     <time datetime="2026-11-08T17:15:00+03:00">17:15</time>
     <div class="b">
       <div class="w">
@@ -940,7 +794,8 @@
 <a href="https://rodinakino.ru/events/idealnyj-shtorm-2026">Идеальный шторм</a>      </div>
 <div class="m">2026 · Испания · 119 мин · 18+ · реж. Фернандо Труллолс · боевик, триллер, драма · Малый 2 зал · 300 ₽</div><details><summary>о фильме</summary><p>30 декабря 2000 года группа друзей отправляется покорять вершину горы Баландрау. Во время восхождения ясный день неожиданно превращается в свирепую бурю, которая застаёт туристов врасплох. Из-за леденящего ветра и сильного снегопада альпинисты попадают в ловушку и оказываются вынуждены бороться за выживание.</p></details>    </div>
 <img class="p" src="posters/dfSdr4XZo6efeb4a7ig17Ux0NJ7.jpg" alt="" width="46" height="69" loading="lazy" decoding="async">  </li><li class="r day"
-      data-v="poravkino" data-ts="1794147600">
+      data-v="poravkino" data-ts="1794147600"
+      data-country-status="other">
     <time datetime="2026-11-08T17:20:00+03:00">17:20</time>
     <div class="b">
       <div class="w">
@@ -949,25 +804,28 @@
 <span>Сердце зверя</span>      </div>
 <div class="m">США · 100 мин · 16+ · реж. Дэвид Эйр · боевик, драма, приключения · VIP · 700 ₽</div>    </div>
   </li><li class="r day"
-      data-v="mirage" data-ts="1794149100">
+      data-v="mirage" data-ts="1794149100"
+      data-country-status="other">
     <time datetime="2026-11-08T17:45:00+03:00">17:45</time>
     <div class="b">
       <div class="w">
 <a class="v v-mirage" href="https://www.mirage.ru/ticket_new/01846ae4-7065-1e97-d2f7-3fce979406a9/">Мираж на Большом</a><span class="h">зал 7</span>      </div>
       <div class="t">
 <span>Настройщик</span>      </div>
-<div class="m">18+ · мелодрама, драма, криминал · зал 7</div>    </div>
+<div class="m">Канада, США · 18+ · мелодрама, драма, криминал · зал 7</div>    </div>
   </li><li class="r"
-      data-v="mirage" data-ts="1794150000">
+      data-v="mirage" data-ts="1794150000"
+      data-country-status="other">
     <time datetime="2026-11-08T18:00:00+03:00">18:00</time>
     <div class="b">
       <div class="w">
 <a class="v v-mirage" href="https://www.mirage.ru/ticket_new/80224031-3a4a-4ab9-8d1a-323d3d5e7c70/">Мираж на Большом</a><span class="h">зал 4</span>      </div>
       <div class="t">
 <span>Тайный дневник Верити</span>      </div>
-<div class="m">18+ · детектив, триллер, драма · зал 4</div>    </div>
+<div class="m">США · 18+ · детектив, триллер, драма · зал 4</div>    </div>
   </li><li class="r"
-      data-v="poravkino" data-ts="1794150300">
+      data-v="poravkino" data-ts="1794150300"
+      data-country-status="Russian">
     <time datetime="2026-11-08T18:05:00+03:00">18:05</time>
     <div class="b">
       <div class="w">
@@ -976,7 +834,8 @@
 <span>Битва моторов</span>      </div>
 <div class="m">Россия · 155 мин · 12+ · реж. Илья Маланин · драма, приключения · зал 3 · 480 ₽</div>    </div>
   </li><li class="r"
-      data-v="avrora" data-ts="1794150900">
+      data-v="avrora" data-ts="1794150900"
+      data-country-status="Russian">
     <time datetime="2026-11-08T18:15:00+03:00">18:15</time>
     <div class="b">
       <div class="w">
@@ -985,7 +844,8 @@
 <span>Битва моторов</span>      </div>
 <div class="m">2026 · Россия · 144 мин · 12+ · приключения, драма · Малый · 550 ₽</div>    </div>
 <img class="p" src="posters/oxvc4t0IzHUnkQGfYqUAbLV7zY8.jpg" alt="" width="46" height="69" loading="lazy" decoding="async">  </li><li class="r"
-      data-v="poravkino" data-ts="1794150900">
+      data-v="poravkino" data-ts="1794150900"
+      data-country-status="other">
     <time datetime="2026-11-08T18:15:00+03:00">18:15</time>
     <div class="b">
       <div class="w">
@@ -994,7 +854,8 @@
 <span>Сумерки. Сага. Затмение</span>      </div>
 <div class="m">2010 · США · 130 мин · 18+ · реж. Дэвид Слэйд · мелодрама, триллер, фэнтези · зал 4 · 480 ₽</div>    </div>
 <img class="p" src="posters/40ut2seLFEeyTcan7V2cVjwRvI9.jpg" alt="" width="46" height="69" loading="lazy" decoding="async">  </li><li class="r"
-      data-v="lenfilm" data-ts="1794151200">
+      data-v="lenfilm" data-ts="1794151200"
+      data-country-status="other">
     <time datetime="2026-11-08T18:20:00+03:00">18:20</time>
     <div class="b">
       <div class="w">
@@ -1003,16 +864,18 @@
 <span>Плетёный муж</span>      </div>
 <div class="m">2026 · США, Великобритания · 105 мин · 18+ · фантастика, фэнтези, мелодрама · субтитры · зал 1 · 450 ₽</div>    </div>
 <img class="p" src="posters/ej29DO6sC6IsxQLtYPj4ZxfwCQP.jpg" alt="" width="46" height="69" loading="lazy" decoding="async">  </li><li class="r"
-      data-v="mirage" data-ts="1794151200">
+      data-v="mirage" data-ts="1794151200"
+      data-country-status="other">
     <time datetime="2026-11-08T18:20:00+03:00">18:20</time>
     <div class="b">
       <div class="w">
 <a class="v v-mirage" href="https://www.mirage.ru/ticket_new/a44e9bc9-d4ca-4375-9b4b-66ada0f71025/">Мираж на Большом</a><span class="h">зал 3</span>      </div>
       <div class="t">
 <span>Роллинг Лауд. Дикое веселье</span>      </div>
-<div class="m">18+ · комедия · зал 3</div>    </div>
+<div class="m">США · 18+ · комедия · зал 3</div>    </div>
   </li><li class="r"
-      data-v="domkino" data-ts="1794151800">
+      data-v="domkino" data-ts="1794151800"
+      data-country-status="Russian">
     <time datetime="2026-11-08T18:30:00+03:00">18:30</time>
     <div class="b">
       <div class="w">
@@ -1021,7 +884,8 @@
 <a href="https://www.domkino.spb.ru/films/navar/">Навар</a>      </div>
 <div class="m">2025 · Россия · 85 мин · 18+ · реж. Артур Григорьев · криминал, триллер · Большой зал · 500 ₽</div>    </div>
 <img class="p" src="posters/AoS76k8UGPMZwf128Z7hCnHcv7K.jpg" alt="" width="46" height="69" loading="lazy" decoding="async">  </li><li class="r"
-      data-v="outcinema" data-ts="1794151800">
+      data-v="outcinema" data-ts="1794151800"
+      data-country-status="other">
     <time datetime="2026-11-08T18:30:00+03:00">18:30</time>
     <div class="b">
       <div class="w">
@@ -1030,7 +894,8 @@
 <a href="https://kinowidget.kinoplan.ru/seats/8588/10075992/6ae610b43f00009700ec1aaa">БЛЕДНЫЙ ЦВЕТОК</a>      </div>
 <div class="m">1964 · Япония · 96 мин · 18+ · реж. Масахиро Синода · криминал, нуар, драма · японский язык, русские субтитры · 660 ₽ <span class="tag">ЯПОНСКАЯ НОВАЯ ВОЛНА</span></div><details><summary>о фильме</summary><p>Изысканная и трагическая история о якудза, который выходит из тюрьмы после долгого срока и влюбляется в одержимую риском и смертельно опасную девушку, чья жажда острых ощущений приводит к неумолимо мрачному финалу</p></details>    </div>
 <img class="p" src="posters/tYG4fjaGaC3HyOwI1iG1XvzCdO3.jpg" alt="" width="46" height="69" loading="lazy" decoding="async">  </li><li class="r"
-      data-v="poravkino" data-ts="1794151800">
+      data-v="poravkino" data-ts="1794151800"
+      data-country-status="other">
     <time datetime="2026-11-08T18:30:00+03:00">18:30</time>
     <div class="b">
       <div class="w">
@@ -1039,7 +904,8 @@
 <span>Любовь моя</span>      </div>
 <div class="m">Франция, Испания · 135 мин · 18+ · реж. Родриго Сорогойен · драма · Малый синий · 480 ₽</div>    </div>
   </li><li class="r"
-      data-v="mirage" data-ts="1794152400">
+      data-v="mirage" data-ts="1794152400"
+      data-country-status="unknown">
     <time datetime="2026-11-08T18:40:00+03:00">18:40</time>
     <div class="b">
       <div class="w">
@@ -1048,7 +914,8 @@
 <span>Одиссея</span>      </div>
 <div class="m">18+ · боевик, приключения, фэнтези · зал 5</div>    </div>
   </li><li class="r"
-      data-v="domkino" data-ts="1794152700">
+      data-v="domkino" data-ts="1794152700"
+      data-country-status="other">
     <time datetime="2026-11-08T18:45:00+03:00">18:45</time>
     <div class="b">
       <div class="w">
@@ -1057,7 +924,8 @@
 <a href="https://www.domkino.spb.ru/films/vkuskill_subtitry/">Вкускилл (субтитры)</a><span class="o">チルド</span>      </div>
 <div class="m">2026 · Япония · 88 мин · 18+ · реж. Юсукэ Ивасаки · ужасы · оригинальный, русские субтитры · Синий зал · 500 ₽</div>    </div>
 <img class="p" src="posters/7FJ4jD5R9Y7BgYIvd4RG3N8ZpkX.jpg" alt="" width="46" height="69" loading="lazy" decoding="async">  </li><li class="r"
-      data-v="poravkino" data-ts="1794152700">
+      data-v="poravkino" data-ts="1794152700"
+      data-country-status="Russian">
     <time datetime="2026-11-08T18:45:00+03:00">18:45</time>
     <div class="b">
       <div class="w">
@@ -1066,7 +934,8 @@
 <span>Рождение империи</span>      </div>
 <div class="m">2026 · Россия · 150 мин · 12+ · реж. Андрей Кравчук, Алексей Нужный · биографический, драма · зал 1 · 480 ₽</div>    </div>
 <img class="p" src="posters/1JbTVMAXpfcez5bFWJpgnwdIAde.jpg" alt="" width="46" height="69" loading="lazy" decoding="async">  </li><li class="r"
-      data-v="mirage" data-ts="1794153000">
+      data-v="mirage" data-ts="1794153000"
+      data-country-status="unknown">
     <time datetime="2026-11-08T18:50:00+03:00">18:50</time>
     <div class="b">
       <div class="w">
@@ -1075,7 +944,8 @@
 <span>Битва моторов</span>      </div>
 <div class="m">12+ · приключения, драма · зал 1</div>    </div>
   </li><li class="r"
-      data-v="domkino" data-ts="1794153300">
+      data-v="domkino" data-ts="1794153300"
+      data-country-status="other">
     <time datetime="2026-11-08T18:55:00+03:00">18:55</time>
     <div class="b">
       <div class="w">
@@ -1084,7 +954,8 @@
 <a href="https://www.domkino.spb.ru/films/cveta_vremeni/">Цвета времени</a><span class="o">La venue de l&#39;avenir</span>      </div>
 <div class="m">2025 · Франция · 126 мин · 16+ · реж. Седрик Клапиш · комедия, детектив, драма · дублирование · Белый зал · 350 ₽</div>    </div>
 <img class="p" src="posters/tHBmVPGlV7K5MLYEzqbBZz1vbRB.jpg" alt="" width="46" height="69" loading="lazy" decoding="async">  </li><li class="r"
-      data-v="domkino" data-ts="1794153600">
+      data-v="domkino" data-ts="1794153600"
+      data-country-status="other">
     <time datetime="2026-11-08T19:00:00+03:00">19:00</time>
     <div class="b">
       <div class="w">
@@ -1093,16 +964,18 @@
 <a href="https://www.domkino.spb.ru/films/muzhchina_i_zhenschina_subtitry/">Мужчина и женщина (субтитры)</a><span class="o">Un homme et une femme</span>      </div>
 <div class="m">1966 · Франция · 103 мин · 16+ · реж. Клод Лелуш · драма · оригинальный, русские субтитры · Сиреневый зал · 400 ₽</div>    </div>
 <img class="p" src="posters/pf48G21NCF2BrfzFt5Xl9kONO78.jpg" alt="" width="46" height="69" loading="lazy" decoding="async">  </li><li class="r"
-      data-v="mirage" data-ts="1794153600">
+      data-v="mirage" data-ts="1794153600"
+      data-country-status="other">
     <time datetime="2026-11-08T19:00:00+03:00">19:00</time>
     <div class="b">
       <div class="w">
 <a class="v v-mirage" href="https://www.mirage.ru/ticket_new/122ecef0-b27c-42ba-bc3c-af5c2dcf2b80/">Мираж на Большом</a><span class="h">зал 6</span>      </div>
       <div class="t">
 <span>Отверженные</span>      </div>
-<div class="m">18+ · мелодрама, драма · зал 6</div>    </div>
+<div class="m">Франция · 18+ · мелодрама, драма · зал 6</div>    </div>
   </li><li class="r"
-      data-v="poravkino" data-ts="1794153600">
+      data-v="poravkino" data-ts="1794153600"
+      data-country-status="other">
     <time datetime="2026-11-08T19:00:00+03:00">19:00</time>
     <div class="b">
       <div class="w">
@@ -1111,7 +984,8 @@
 <span>Плетёный муж</span><span class="o">Плетеный муж</span>      </div>
 <div class="m">2026 · США, Великобритания, Австралия · 110 мин · 18+ · реж. Алекс Хьюстон Фишер, Элинор Уилсон · драма, комедия, мелодрама · зал 2 · 480 ₽</div>    </div>
 <img class="p" src="posters/ej29DO6sC6IsxQLtYPj4ZxfwCQP.jpg" alt="" width="46" height="69" loading="lazy" decoding="async">  </li><li class="r"
-      data-v="rodina" data-ts="1794153600">
+      data-v="rodina" data-ts="1794153600"
+      data-country-status="Russian">
     <time datetime="2026-11-08T19:00:00+03:00">19:00</time>
     <div class="b">
       <div class="w">
@@ -1120,7 +994,8 @@
 <a href="https://rodinakino.ru/events/menya-pozhiraet-sobstvennaya-krovat-2026">Меня пожирает собственная кровать</a>      </div>
 <div class="m">2026 · Россия · 73 мин · 18+ · реж. Вячеслав Иванов · комедия, драма · Малый 1 зал · 350 ₽</div><details><summary>о фильме</summary><p>Рамаз и Лиза часто проводят время вместе — дегустация газировки, прослушивание электронной музыки, разговоры обо всем и ни о чем. Рамаз мечтает угостить Лизу ананасами, она же дарит ему футболку для дома. В поисках контакта друг с другом они утопают в предметном мире и неловких ситуациях.</p></details>    </div>
 <img class="p" src="posters/nqhtgyt3u14kTGLwj7o1eHNtPqU.jpg" alt="" width="46" height="69" loading="lazy" decoding="async">  </li><li class="r"
-      data-v="rodina" data-ts="1794153600">
+      data-v="rodina" data-ts="1794153600"
+      data-country-status="other">
     <time datetime="2026-11-08T19:00:00+03:00">19:00</time>
     <div class="b">
       <div class="w">
@@ -1129,7 +1004,8 @@
 <a href="https://rodinakino.ru/events/chelovek-slon-artpokaz-1980">Человек-слон. АртПоказ</a>      </div>
 <div class="m">1980 · США, Великобритания · 123 мин · 18+ · реж. Дэвид Линч · драма, биография · субтитры · Большой зал · 550 ₽</div><details><summary>о фильме</summary><p>Доктор Тривз находит Джона Меррика в шоу уродцев. Внешность его настолько ужасающая, что ему приходится носить просторное одеяние, чтобы никто не увидел его пугающих наростов по всему телу. Забрав Меррика в больницу после очередного избиения хозяином, Тривз с удивлением обнаруживает в нем человека интеллектуально…</p></details>    </div>
   </li><li class="r"
-      data-v="avrora" data-ts="1794154200">
+      data-v="avrora" data-ts="1794154200"
+      data-country-status="Russian">
     <time datetime="2026-11-08T19:10:00+03:00">19:10</time>
     <div class="b">
       <div class="w">
@@ -1138,7 +1014,8 @@
 <span>Рождение империи</span>      </div>
 <div class="m">2026 · Россия · 140 мин · 12+ · историческая драма · Большой · 550–700 ₽</div>    </div>
 <img class="p" src="posters/1JbTVMAXpfcez5bFWJpgnwdIAde.jpg" alt="" width="46" height="69" loading="lazy" decoding="async">  </li><li class="r"
-      data-v="poravkino" data-ts="1794154500">
+      data-v="poravkino" data-ts="1794154500"
+      data-country-status="other">
     <time datetime="2026-11-08T19:15:00+03:00">19:15</time>
     <div class="b">
       <div class="w">
@@ -1147,7 +1024,8 @@
 <span>Тайный дневник Верити</span>      </div>
 <div class="m">2026 · США · 115 мин · 18+ · реж. Майкл Шоуолтер · детектив, драма, криминал · VIP · 900 ₽</div>    </div>
 <img class="p" src="posters/lkcSRoS5FXzzNi13ug6kenL2vi2.jpg" alt="" width="46" height="69" loading="lazy" decoding="async">  </li><li class="r"
-      data-v="domkino" data-ts="1794155100">
+      data-v="domkino" data-ts="1794155100"
+      data-country-status="other">
     <time datetime="2026-11-08T19:25:00+03:00">19:25</time>
     <div class="b">
       <div class="w">
@@ -1156,7 +1034,8 @@
 <a href="https://www.domkino.spb.ru/films/yayco_angela/">Яйцо ангела</a><span class="o">天使のたまご</span>      </div>
 <div class="m">1985 · Япония · 71 мин · 12+ · реж. Мамору Осии · аниме · дублирование · Малый зал · 300 ₽</div>    </div>
 <img class="p" src="posters/nY2E6sC6LMFgtL2vIHikRWsfSGZ.jpg" alt="" width="46" height="69" loading="lazy" decoding="async">  </li><li class="r"
-      data-v="poravkino" data-ts="1794155400">
+      data-v="poravkino" data-ts="1794155400"
+      data-country-status="other">
     <time datetime="2026-11-08T19:30:00+03:00">19:30</time>
     <div class="b">
       <div class="w">
@@ -1165,7 +1044,8 @@
 <span>Настройщик</span>      </div>
 <div class="m">2025 · США, Канада · 115 мин · 18+ · реж. Дэниэл Роэр · драма, криминал, мелодрама · Малый красный · 480 ₽</div>    </div>
 <img class="p" src="posters/7oNxg17JawXBMdkuSo7hpThhTZF.jpg" alt="" width="46" height="69" loading="lazy" decoding="async">  </li><li class="r"
-      data-v="rodina" data-ts="1794155400">
+      data-v="rodina" data-ts="1794155400"
+      data-country-status="Russian">
     <time datetime="2026-11-08T19:30:00+03:00">19:30</time>
     <div class="b">
       <div class="w">
@@ -1174,16 +1054,18 @@
 <a href="https://rodinakino.ru/events/leto-v-badene-2026">Лето в Бадене</a>      </div>
 <div class="m">2026 · Россия · 80 мин · 18+ · реж. Антон Желнов · драма · Малый 2 зал · 350 ₽</div><details><summary>о фильме</summary><p>Советский интеллигент занимается наукой и медициной, иногда пишет в стол, для себя. Его единственный сын решает уехать из страны навсегда. Это разбивает отцу сердце, ставит крест на карьере и положении в обществе. Потеряв всё, он решается воплотить замысел всей жизни и написать роман о Фёдоре Достоевском. Подобно…</p></details>    </div>
 <img class="p" src="posters/hi1ZUDa3ZP2NG7lkprq6fDmi3Si.jpg" alt="" width="46" height="69" loading="lazy" decoding="async">  </li><li class="r"
-      data-v="mirage" data-ts="1794156600">
+      data-v="mirage" data-ts="1794156600"
+      data-country-status="other">
     <time datetime="2026-11-08T19:50:00+03:00">19:50</time>
     <div class="b">
       <div class="w">
 <a class="v v-mirage" href="https://www.mirage.ru/ticket_new/a0b4830b-4a52-476f-8338-4babfd2a1203/">Мираж на Большом</a><span class="h">зал 2</span>      </div>
       <div class="t">
 <span>Сумерки. Сага. Затмение</span>      </div>
-<div class="m">18+ · триллер, мелодрама, фэнтези · зал 2</div>    </div>
+<div class="m">США · 18+ · триллер, мелодрама, фэнтези · зал 2</div>    </div>
   </li><li class="r"
-      data-v="poravkino" data-ts="1794156600">
+      data-v="poravkino" data-ts="1794156600"
+      data-country-status="Russian">
     <time datetime="2026-11-08T19:50:00+03:00">19:50</time>
     <div class="b">
       <div class="w">
@@ -1192,7 +1074,8 @@
 <span>Рождение империи</span>      </div>
 <div class="m">2026 · Россия · 150 мин · 12+ · реж. Андрей Кравчук, Алексей Нужный · биографический, драма · Премьер · 480 ₽</div>    </div>
 <img class="p" src="posters/1JbTVMAXpfcez5bFWJpgnwdIAde.jpg" alt="" width="46" height="69" loading="lazy" decoding="async">  </li><li class="r"
-      data-v="domkino" data-ts="1794157800">
+      data-v="domkino" data-ts="1794157800"
+      data-country-status="other">
     <time datetime="2026-11-08T20:10:00+03:00">20:10</time>
     <div class="b">
       <div class="w">
@@ -1201,16 +1084,18 @@
 <a href="https://www.domkino.spb.ru/films/ford_subtitry/">Фьорд (субтитры)</a><span class="o">Fjord</span>      </div>
 <div class="m">2026 · Румыния, Франция, Норвегия, Дания, Финляндия, Швеция · 146 мин · 18+ · реж. Кристиан Мунджиу · триллер, драма · оригинальный, русские субтитры · Большой зал · 550 ₽</div>    </div>
 <img class="p" src="posters/kDAwTzpCmW3EXmVei5yHI5Bfr6U.jpg" alt="" width="46" height="69" loading="lazy" decoding="async">  </li><li class="r"
-      data-v="mirage" data-ts="1794157800">
+      data-v="mirage" data-ts="1794157800"
+      data-country-status="other">
     <time datetime="2026-11-08T20:10:00+03:00">20:10</time>
     <div class="b">
       <div class="w">
 <a class="v v-mirage" href="https://www.mirage.ru/ticket_new/da647c54-9dde-572c-2c5e-dc4f5bef039c/">Мираж на Большом</a><span class="h">зал 7</span>      </div>
       <div class="t">
 <span>Идеальный шторм</span>      </div>
-<div class="m">18+ · боевик, триллер, драма · зал 7</div>    </div>
+<div class="m">Испания · 18+ · боевик, триллер, драма · зал 7</div>    </div>
   </li><li class="r"
-      data-v="mirage" data-ts="1794158400">
+      data-v="mirage" data-ts="1794158400"
+      data-country-status="unknown">
     <time datetime="2026-11-08T20:20:00+03:00">20:20</time>
     <div class="b">
       <div class="w">
@@ -1219,7 +1104,8 @@
 <span>Плетеный муж</span>      </div>
 <div class="m">18+ · комедия, фантастика, мелодрама · зал 4</div>    </div>
   </li><li class="r"
-      data-v="rodina" data-ts="1794158700">
+      data-v="rodina" data-ts="1794158700"
+      data-country-status="Russian">
     <time datetime="2026-11-08T20:25:00+03:00">20:25</time>
     <div class="b">
       <div class="w">
@@ -1228,7 +1114,8 @@
 <a href="https://rodinakino.ru/events/rozhdenie-imperii-2026">Рождение империи</a>      </div>
 <div class="m">2026 · Пушкинская карта, Россия · 140 мин · 12+ · реж. Андрей Кравчук · история, биография, драма · Малый 1 зал · 350 ₽</div><details><summary>о фильме</summary><p>Вернувшись на родину после Великого посольства, Петр Первый вступает в затяжную войну со Швецией за выход к морю. На пути к победе его ожидают серьёзные испытания, разочарования, обман и предательства.</p></details>    </div>
 <img class="p" src="posters/1JbTVMAXpfcez5bFWJpgnwdIAde.jpg" alt="" width="46" height="69" loading="lazy" decoding="async">  </li><li class="r"
-      data-v="lenfilm" data-ts="1794159000">
+      data-v="lenfilm" data-ts="1794159000"
+      data-country-status="other">
     <time datetime="2026-11-08T20:30:00+03:00">20:30</time>
     <div class="b">
       <div class="w">
@@ -1237,16 +1124,18 @@
 <span>Фьорд (версия с субтитрами)</span>      </div>
 <div class="m">2026 · Румыния, Франция, Норвегия, Дания, Финляндия, Швеция · 146 мин · 18+ · триллер, драма · субтитры · зал 1 · 450 ₽</div>    </div>
   </li><li class="r"
-      data-v="mirage" data-ts="1794159000">
+      data-v="mirage" data-ts="1794159000"
+      data-country-status="other">
     <time datetime="2026-11-08T20:30:00+03:00">20:30</time>
     <div class="b">
       <div class="w">
 <a class="v v-mirage" href="https://www.mirage.ru/ticket_new/2ca289bd-8679-49e5-a612-9cbf144d1c2e/">Мираж на Большом</a><span class="h">зал 3</span>      </div>
       <div class="t">
 <span>Настройщик</span>      </div>
-<div class="m">18+ · мелодрама, драма, криминал · зал 3</div>    </div>
+<div class="m">Канада, США · 18+ · мелодрама, драма, криминал · зал 3</div>    </div>
   </li><li class="r"
-      data-v="domkino" data-ts="1794159300">
+      data-v="domkino" data-ts="1794159300"
+      data-country-status="other">
     <time datetime="2026-11-08T20:35:00+03:00">20:35</time>
     <div class="b">
       <div class="w">
@@ -1255,7 +1144,8 @@
 <a href="https://www.domkino.spb.ru/films/zhertvoprinoshenie_subtitry/">Жертвоприношение (субтитры)</a><span class="o">Offret</span>      </div>
 <div class="m">1986 · Швеция, Франция, Великобритания · 149 мин · 18+ · реж. Андрей Тарковский · драма · оригинальный, русские субтитры · Синий зал · 550 ₽</div>    </div>
 <img class="p" src="posters/uOZ7GiXRDLdJ8jr3ft8uYJCvktV.jpg" alt="" width="46" height="69" loading="lazy" decoding="async">  </li><li class="r"
-      data-v="outcinema" data-ts="1794159300">
+      data-v="outcinema" data-ts="1794159300"
+      data-country-status="other">
     <time datetime="2026-11-08T20:35:00+03:00">20:35</time>
     <div class="b">
       <div class="w">
@@ -1264,7 +1154,8 @@
 <a href="https://kinowidget.kinoplan.ru/seats/8588/10084608/6ae610ca3f00005200ec1f2f">КРИК (ПРЕМЬЕРА)</a>      </div>
 <div class="m">1957 · Италия, Япония · 116 мин · 16+ · реж. Микеланджело Антониони · драма · итальянский язык, русские субтитры · 690 ₽ <span class="tag">АНТОНИОНИ</span></div><details><summary>о фильме</summary><p>После того как Ирма отвергает своего возлюбленного Альдо, он пускается в бесцельные скитания по долине реки По в тщетной надежде найти новую любовь и смысл жизни</p></details>    </div>
   </li><li class="r"
-      data-v="poravkino" data-ts="1794159600">
+      data-v="poravkino" data-ts="1794159600"
+      data-country-status="other">
     <time datetime="2026-11-08T20:40:00+03:00">20:40</time>
     <div class="b">
       <div class="w">
@@ -1273,7 +1164,8 @@
 <span>Клэйфейс</span>      </div>
 <div class="m">США, Великобритания · 110 мин · 18+ · реж. Джеймс Уоткинс · фантастика, боевик · зал 4 · 550 ₽</div>    </div>
   </li><li class="r"
-      data-v="domkino" data-ts="1794160500">
+      data-v="domkino" data-ts="1794160500"
+      data-country-status="other">
     <time datetime="2026-11-08T20:55:00+03:00">20:55</time>
     <div class="b">
       <div class="w">
@@ -1282,7 +1174,8 @@
 <a href="https://www.domkino.spb.ru/films/falshivomonetik/">Фальшивомонетчик</a><span class="o">L&#39;affaire Bojarski</span>      </div>
 <div class="m">2025 · Франция · 120 мин · 18+ · реж. Жан-Поль Саломе · драма, биография · дублирование · Малый зал · 300 ₽</div>    </div>
 <img class="p" src="posters/floSDR9UzvdMEdbnzUdmaXL4qKA.jpg" alt="" width="46" height="69" loading="lazy" decoding="async">  </li><li class="r"
-      data-v="poravkino" data-ts="1794160500">
+      data-v="poravkino" data-ts="1794160500"
+      data-country-status="other">
     <time datetime="2026-11-08T20:55:00+03:00">20:55</time>
     <div class="b">
       <div class="w">
@@ -1291,7 +1184,8 @@
 <span>Плетёный муж</span><span class="o">Плетеный муж</span>      </div>
 <div class="m">2026 · США, Великобритания, Австралия · 110 мин · 18+ · реж. Алекс Хьюстон Фишер, Элинор Уилсон · драма, комедия, мелодрама · зал 3 · 480 ₽</div>    </div>
 <img class="p" src="posters/ej29DO6sC6IsxQLtYPj4ZxfwCQP.jpg" alt="" width="46" height="69" loading="lazy" decoding="async">  </li><li class="r"
-      data-v="avrora" data-ts="1794160800">
+      data-v="avrora" data-ts="1794160800"
+      data-country-status="other">
     <time datetime="2026-11-08T21:00:00+03:00">21:00</time>
     <div class="b">
       <div class="w">
@@ -1300,7 +1194,8 @@
 <span>Фьорд</span>      </div>
 <div class="m">2026 · Румыния, Франция, Норвегия, Дания, Финляндия, Швеция · 146 мин · 18+ · драма, саспенс триллер · Малый · 550 ₽</div>    </div>
 <img class="p" src="posters/kDAwTzpCmW3EXmVei5yHI5Bfr6U.jpg" alt="" width="46" height="69" loading="lazy" decoding="async">  </li><li class="r"
-      data-v="domkino" data-ts="1794160800">
+      data-v="domkino" data-ts="1794160800"
+      data-country-status="other">
     <time datetime="2026-11-08T21:00:00+03:00">21:00</time>
     <div class="b">
       <div class="w">
@@ -1309,7 +1204,8 @@
 <a href="https://www.domkino.spb.ru/films/idealnye_dni/">Идеальные дни</a><span class="o">Perfect Days</span>      </div>
 <div class="m">2023 · Япония, Германия · 123 мин · 18+ · реж. Вим Вендерс · комедия, драма · дублирование · Сиреневый зал · 400 ₽</div>    </div>
 <img class="p" src="posters/sujrVgNoj9wjc8TR9WU3DmdBIR4.jpg" alt="" width="46" height="69" loading="lazy" decoding="async">  </li><li class="r"
-      data-v="poravkino" data-ts="1794160800">
+      data-v="poravkino" data-ts="1794160800"
+      data-country-status="Russian">
     <time datetime="2026-11-08T21:00:00+03:00">21:00</time>
     <div class="b">
       <div class="w">
@@ -1318,7 +1214,8 @@
 <span>Рождение империи</span>      </div>
 <div class="m">2026 · Россия · 150 мин · 12+ · реж. Андрей Кравчук, Алексей Нужный · биографический, драма · Малый синий · 480 ₽</div>    </div>
 <img class="p" src="posters/1JbTVMAXpfcez5bFWJpgnwdIAde.jpg" alt="" width="46" height="69" loading="lazy" decoding="async">  </li><li class="r"
-      data-v="poravkino" data-ts="1794161100">
+      data-v="poravkino" data-ts="1794161100"
+      data-country-status="other">
     <time datetime="2026-11-08T21:05:00+03:00">21:05</time>
     <div class="b">
       <div class="w">
@@ -1327,7 +1224,8 @@
 <span>Сумерки. Сага. Затмение</span>      </div>
 <div class="m">2010 · США · 130 мин · 18+ · реж. Дэвид Слэйд · мелодрама, триллер, фэнтези · зал 2 · 480 ₽</div>    </div>
 <img class="p" src="posters/40ut2seLFEeyTcan7V2cVjwRvI9.jpg" alt="" width="46" height="69" loading="lazy" decoding="async">  </li><li class="r"
-      data-v="rodina" data-ts="1794161100">
+      data-v="rodina" data-ts="1794161100"
+      data-country-status="other">
     <time datetime="2026-11-08T21:05:00+03:00">21:05</time>
     <div class="b">
       <div class="w">
@@ -1336,7 +1234,8 @@
 <a href="https://rodinakino.ru/events/nastrojshik-2025">Настройщик</a>      </div>
 <div class="m">2025 · Канада, США · 108 мин · 18+ · реж. Дэниэл Роэр · драма, мелодрама, криминал · Малый 2 зал · 350 ₽</div><details><summary>о фильме</summary><p>Нью-Йорк. Жизнь Ники — страдающего гиперакузией талантливого настройщика фортепиано — переворачивается с ног на голову, когда он обнаруживает, что его навыки и тонкий слух настройки можно применять для взлома сейфов. Когда его пожилой наставник и партнёр Гарри попадает в больницу, парень решает присоединиться к банде…</p></details>    </div>
 <img class="p" src="posters/7oNxg17JawXBMdkuSo7hpThhTZF.jpg" alt="" width="46" height="69" loading="lazy" decoding="async">  </li><li class="r"
-      data-v="domkino" data-ts="1794162000">
+      data-v="domkino" data-ts="1794162000"
+      data-country-status="other">
     <time datetime="2026-11-08T21:20:00+03:00">21:20</time>
     <div class="b">
       <div class="w">
@@ -1345,7 +1244,8 @@
 <a href="https://www.domkino.spb.ru/films/do_vstrechi_v_toskane/">До встречи в Тоскане</a><span class="o">Before We Leave Tuscany</span>      </div>
 <div class="m">2026 · США · 97 мин · 12+ · реж. Петер Шайки, Адель Шайки-Вёрёш · приключения, мелодрама · Белый зал · 350 ₽</div>    </div>
 <img class="p" src="posters/5Y2Ej3SWnCQRAgBx0AlJKM9iQUX.jpg" alt="" width="46" height="69" loading="lazy" decoding="async">  </li><li class="r"
-      data-v="rodina" data-ts="1794162300">
+      data-v="rodina" data-ts="1794162300"
+      data-country-status="other">
     <time datetime="2026-11-08T21:25:00+03:00">21:25</time>
     <div class="b">
       <div class="w">
@@ -1354,7 +1254,8 @@
 <a href="https://rodinakino.ru/events/bezumnyj-den-v-komedi-fransez-2026">Безумный день в Комеди Франсез</a>      </div>
 <div class="m">2026 · Франция · 75 мин · 18+ · реж. Мартен Дарондо, Бертран Юскла · комедия · субтитры · Большой зал · 600 ₽</div><details><summary>о фильме</summary><p>День премьеры «Макбета» в «Комеди Франсез» превращается в череду катастроф, но начинающему режиссёру Нине и исполнителям главных ролей во что бы то ни стало нужно сыграть спектакль, ведь от его успеха зависит будущее театра.</p></details>    </div>
 <img class="p" src="posters/3ykToOKrgIlKBOkxpRscXNAkzET.jpg" alt="" width="46" height="69" loading="lazy" decoding="async">  </li><li class="r"
-      data-v="poravkino" data-ts="1794162600">
+      data-v="poravkino" data-ts="1794162600"
+      data-country-status="other">
     <time datetime="2026-11-08T21:30:00+03:00">21:30</time>
     <div class="b">
       <div class="w">
@@ -1363,7 +1264,8 @@
 <span>Плетёный муж</span><span class="o">Плетеный муж</span>      </div>
 <div class="m">2026 · США, Великобритания, Австралия · 110 мин · 18+ · реж. Алекс Хьюстон Фишер, Элинор Уилсон · драма, комедия, мелодрама · VIP · 900 ₽</div>    </div>
 <img class="p" src="posters/ej29DO6sC6IsxQLtYPj4ZxfwCQP.jpg" alt="" width="46" height="69" loading="lazy" decoding="async">  </li><li class="r"
-      data-v="poravkino" data-ts="1794162600">
+      data-v="poravkino" data-ts="1794162600"
+      data-country-status="other">
     <time datetime="2026-11-08T21:30:00+03:00">21:30</time>
     <div class="b">
       <div class="w">
@@ -1372,7 +1274,8 @@
 <span>Тайный дневник Верити</span>      </div>
 <div class="m">2026 · США · 115 мин · 18+ · реж. Майкл Шоуолтер · детектив, драма, криминал · зал 1 · 550 ₽</div>    </div>
 <img class="p" src="posters/lkcSRoS5FXzzNi13ug6kenL2vi2.jpg" alt="" width="46" height="69" loading="lazy" decoding="async">  </li><li class="r"
-      data-v="poravkino" data-ts="1794163200">
+      data-v="poravkino" data-ts="1794163200"
+      data-country-status="other">
     <time datetime="2026-11-08T21:40:00+03:00">21:40</time>
     <div class="b">
       <div class="w">
@@ -1381,7 +1284,8 @@
 <span>Роллинг Лауд. Дикое веселье</span>      </div>
 <div class="m">2026 · США · 100 мин · 18+ · реж. Джереми Гарелик · комедия · Малый красный · 480 ₽</div>    </div>
 <img class="p" src="posters/mA2IIbx6hJd51m5JdHKPxBh4tSn.jpg" alt="" width="46" height="69" loading="lazy" decoding="async">  </li><li class="r"
-      data-v="avrora" data-ts="1794163800">
+      data-v="avrora" data-ts="1794163800"
+      data-country-status="other">
     <time datetime="2026-11-08T21:50:00+03:00">21:50</time>
     <div class="b">
       <div class="w">
@@ -1390,7 +1294,8 @@
 <span>Плетёный муж</span>      </div>
 <div class="m">2026 · США, Великобритания · 105 мин · 18+ · фантастика, фэнтези, мелодрама · субтитры · Большой · 550–700 ₽</div>    </div>
 <img class="p" src="posters/ej29DO6sC6IsxQLtYPj4ZxfwCQP.jpg" alt="" width="46" height="69" loading="lazy" decoding="async">  </li><li class="r"
-      data-v="mirage" data-ts="1794163800">
+      data-v="mirage" data-ts="1794163800"
+      data-country-status="unknown">
     <time datetime="2026-11-08T21:50:00+03:00">21:50</time>
     <div class="b">
       <div class="w">
@@ -1399,7 +1304,8 @@
 <span>Битва моторов</span>      </div>
 <div class="m">12+ · приключения, драма · зал 1</div>    </div>
   </li><li class="r"
-      data-v="mirage" data-ts="1794164400">
+      data-v="mirage" data-ts="1794164400"
+      data-country-status="unknown">
     <time datetime="2026-11-08T22:00:00+03:00">22:00</time>
     <div class="b">
       <div class="w">
@@ -1408,7 +1314,8 @@
 <span>Одиссея</span>      </div>
 <div class="m">18+ · боевик, приключения, фэнтези · зал 5</div>    </div>
   </li><li class="r"
-      data-v="mirage" data-ts="1794165600">
+      data-v="mirage" data-ts="1794165600"
+      data-country-status="unknown">
     <time datetime="2026-11-08T22:20:00+03:00">22:20</time>
     <div class="b">
       <div class="w">
@@ -1417,34 +1324,38 @@
 <span>Кит: Во тьме глубин</span>      </div>
 <div class="m">18+ · триллер, драма · зал 6</div>    </div>
   </li><li class="r"
-      data-v="mirage" data-ts="1794165900">
+      data-v="mirage" data-ts="1794165900"
+      data-country-status="other">
     <time datetime="2026-11-08T22:25:00+03:00">22:25</time>
     <div class="b">
       <div class="w">
 <a class="v v-mirage" href="https://www.mirage.ru/ticket_new/9caf1502-0ada-45fb-a242-cb719a557b48/">Мираж на Большом</a><span class="h">зал 2</span>      </div>
       <div class="t">
 <span>Обитель зла</span>      </div>
-<div class="m">18+ · ужасы · зал 2</div>    </div>
+<div class="m">США, Германия · 18+ · ужасы · зал 2</div>    </div>
   </li><li class="r"
-      data-v="mirage" data-ts="1794166200">
+      data-v="mirage" data-ts="1794166200"
+      data-country-status="other">
     <time datetime="2026-11-08T22:30:00+03:00">22:30</time>
     <div class="b">
       <div class="w">
 <a class="v v-mirage" href="https://www.mirage.ru/ticket_new/1a4ab15f-37a1-d234-1d94-7a9996ddfbf7/">Мираж на Большом</a><span class="h">зал 7</span>      </div>
       <div class="t">
 <span>Роллинг Лауд. Дикое веселье</span>      </div>
-<div class="m">18+ · комедия · зал 7</div>    </div>
+<div class="m">США · 18+ · комедия · зал 7</div>    </div>
   </li><li class="r"
-      data-v="mirage" data-ts="1794166500">
+      data-v="mirage" data-ts="1794166500"
+      data-country-status="other">
     <time datetime="2026-11-08T22:35:00+03:00">22:35</time>
     <div class="b">
       <div class="w">
 <a class="v v-mirage" href="https://www.mirage.ru/ticket_new/4f3b1dc6-b7cb-4380-bed6-196ab2a69c72/">Мираж на Большом</a><span class="h">зал 4</span>      </div>
       <div class="t">
 <span>Тайный дневник Верити</span>      </div>
-<div class="m">18+ · детектив, триллер, драма · зал 4</div>    </div>
+<div class="m">США · 18+ · детектив, триллер, драма · зал 4</div>    </div>
   </li><li class="r"
-      data-v="poravkino" data-ts="1794166800">
+      data-v="poravkino" data-ts="1794166800"
+      data-country-status="Russian">
     <time datetime="2026-11-08T22:40:00+03:00">22:40</time>
     <div class="b">
       <div class="w">
@@ -1453,7 +1364,8 @@
 <span>Рождение империи</span>      </div>
 <div class="m">2026 · Россия · 150 мин · 12+ · реж. Андрей Кравчук, Алексей Нужный · биографический, драма · Премьер · 450 ₽</div>    </div>
 <img class="p" src="posters/1JbTVMAXpfcez5bFWJpgnwdIAde.jpg" alt="" width="46" height="69" loading="lazy" decoding="async">  </li><li class="r"
-      data-v="mirage" data-ts="1794167100">
+      data-v="mirage" data-ts="1794167100"
+      data-country-status="unknown">
     <time datetime="2026-11-08T22:45:00+03:00">22:45</time>
     <div class="b">
       <div class="w">
@@ -1462,7 +1374,8 @@
 <span>Сайлент Хилл</span>      </div>
 <div class="m">18+ · детектив, ужасы, хеллоуин на большом · зал 3</div>    </div>
   </li><li class="r"
-      data-v="poravkino" data-ts="1794167400">
+      data-v="poravkino" data-ts="1794167400"
+      data-country-status="other">
     <time datetime="2026-11-08T22:50:00+03:00">22:50</time>
     <div class="b">
       <div class="w">
@@ -1471,7 +1384,8 @@
 <span>Клэйфейс</span>      </div>
 <div class="m">США, Великобритания · 110 мин · 18+ · реж. Джеймс Уоткинс · фантастика, боевик · зал 4 · 450 ₽</div>    </div>
   </li><li class="r"
-      data-v="poravkino" data-ts="1794168300">
+      data-v="poravkino" data-ts="1794168300"
+      data-country-status="other">
     <time datetime="2026-11-08T23:05:00+03:00">23:05</time>
     <div class="b">
       <div class="w">
@@ -1480,7 +1394,8 @@
 <span>Обитель зла</span>      </div>
 <div class="m">США, Германия · 95 мин · 18+ · реж. Зак Креггер · ужасы · зал 3 · 350 ₽</div>    </div>
   </li><li class="r"
-      data-v="poravkino" data-ts="1794169800">
+      data-v="poravkino" data-ts="1794169800"
+      data-country-status="other">
     <time datetime="2026-11-08T23:30:00+03:00">23:30</time>
     <div class="b">
       <div class="w">
@@ -1489,7 +1404,8 @@
 <span>Сумерки. Сага. Затмение</span>      </div>
 <div class="m">2010 · США · 130 мин · 18+ · реж. Дэвид Слэйд · мелодрама, триллер, фэнтези · зал 2 · 350 ₽</div>    </div>
 <img class="p" src="posters/40ut2seLFEeyTcan7V2cVjwRvI9.jpg" alt="" width="46" height="69" loading="lazy" decoding="async">  </li><li class="r"
-      data-v="poravkino" data-ts="1794170100">
+      data-v="poravkino" data-ts="1794170100"
+      data-country-status="other">
     <time datetime="2026-11-08T23:35:00+03:00">23:35</time>
     <div class="b">
       <div class="w">
@@ -1498,7 +1414,8 @@
 <span>Настройщик</span>      </div>
 <div class="m">2025 · США, Канада · 115 мин · 18+ · реж. Дэниэл Роэр · драма, криминал, мелодрама · Малый красный · 350 ₽</div>    </div>
 <img class="p" src="posters/7oNxg17JawXBMdkuSo7hpThhTZF.jpg" alt="" width="46" height="69" loading="lazy" decoding="async">  </li><li class="r"
-      data-v="poravkino" data-ts="1794170100">
+      data-v="poravkino" data-ts="1794170100"
+      data-country-status="other">
     <time datetime="2026-11-08T23:35:00+03:00">23:35</time>
     <div class="b">
       <div class="w">
@@ -1507,7 +1424,8 @@
 <span>Сердце зверя</span>      </div>
 <div class="m">США · 100 мин · 16+ · реж. Дэвид Эйр · боевик, драма, приключения · VIP · 600 ₽</div>    </div>
   </li><li class="r"
-      data-v="poravkino" data-ts="1794170400">
+      data-v="poravkino" data-ts="1794170400"
+      data-country-status="other">
     <time datetime="2026-11-08T23:40:00+03:00">23:40</time>
     <div class="b">
       <div class="w">
@@ -1516,7 +1434,8 @@
 <span>Тайный дневник Верити</span>      </div>
 <div class="m">2026 · США · 115 мин · 18+ · реж. Майкл Шоуолтер · детектив, драма, криминал · зал 1 · 350 ₽</div>    </div>
 <img class="p" src="posters/lkcSRoS5FXzzNi13ug6kenL2vi2.jpg" alt="" width="46" height="69" loading="lazy" decoding="async">  </li><li class="r"
-      data-v="poravkino" data-ts="1794170700">
+      data-v="poravkino" data-ts="1794170700"
+      data-country-status="other">
     <time datetime="2026-11-08T23:45:00+03:00">23:45</time>
     <div class="b">
       <div class="w">
@@ -1533,13 +1452,13 @@
 <footer id="src">
   <h2>Источники</h2>
   <ul class="st">
-      <li class="ok"><span class="ic" aria-hidden="true">✓</span><b>Дом кино</b> — 93 сеанса · 08.11 06:17 <span class="mut">· 7 запр., 17.1 с</span></li>
-      <li class="ok"><span class="ic" aria-hidden="true">✓</span><b>Родина</b> — 126 сеансов · 08.11 06:18 <span class="mut">· 32 запр., 52.1 с</span></li>
-      <li class="ok"><span class="ic" aria-hidden="true">✓</span><b>Аврора</b> — 43 сеанса · 08.11 06:18 <span class="mut">· 8 запр., 8.7 с</span></li>
-      <li class="ok"><span class="ic" aria-hidden="true">✓</span><b>Художественный</b> — 108 сеансов · 08.11 06:18 <span class="mut">· 7 запр., 6.3 с</span></li>
-      <li class="ok"><span class="ic" aria-hidden="true">✓</span><b>Ленфильм</b> — 27 сеансов · 08.11 06:18 <span class="mut">· 9 запр., 8.0 с</span></li>
-      <li class="ok"><span class="ic" aria-hidden="true">✓</span><b>Out Cinema</b> — 19 сеансов · 08.11 06:18 <span class="mut">· 1 запр., 3.6 с</span></li>
-      <li class="ok"><span class="ic" aria-hidden="true">✓</span><b>Мираж на Большом</b> — 141 сеанс · 08.11 06:19 <span class="mut">· 7 запр., 9.5 с</span></li>
+      <li class="ok"><span class="ic" aria-hidden="true">✓</span><b>Дом кино</b> — 93 сеанса · 08.11 12:24 <span class="mut">· 7 запр., 15.9 с</span></li>
+      <li class="ok"><span class="ic" aria-hidden="true">✓</span><b>Родина</b> — 123 сеанса · 08.11 12:25 <span class="mut">· 32 запр., 52.9 с</span></li>
+      <li class="ok"><span class="ic" aria-hidden="true">✓</span><b>Аврора</b> — 41 сеанс · 08.11 12:25 <span class="mut">· 8 запр., 7.4 с</span></li>
+      <li class="ok"><span class="ic" aria-hidden="true">✓</span><b>Художественный</b> — 94 сеанса · 08.11 12:25 <span class="mut">· 7 запр., 5.9 с</span></li>
+      <li class="ok"><span class="ic" aria-hidden="true">✓</span><b>Ленфильм</b> — 26 сеансов · 08.11 12:25 <span class="mut">· 9 запр., 7.2 с</span></li>
+      <li class="ok"><span class="ic" aria-hidden="true">✓</span><b>Out Cinema</b> — 19 сеансов · 08.11 12:25 <span class="mut">· 1 запр., 0.4 с</span></li>
+      <li class="ok"><span class="ic" aria-hidden="true">✓</span><b>Мираж на Большом</b> — 137 сеансов · 08.11 12:25 <span class="mut">· 7 запр., 8.1 с</span></li>
   </ul>
   <p class="mut">Снимок данных: <a href="screenings.json">screenings.json</a>. Каждый день — отдельная страница. Вечер — сеансы с 18:00; ночные (до 06:00) стоят под предыдущим днём. Прошедшие сеансы приглушены по часам устройства.</p>
   <p class="tmdb"><a href="https://www.themoviedb.org"><img src="tmdb.svg" alt="TMDB"></a>Постеры фильмов — <a href="https://www.themoviedb.org">TMDB</a>. This website uses TMDB and the TMDB APIs but is not endorsed, certified, or otherwise approved by TMDB.</p>
