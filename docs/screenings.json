@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-09T14:38:42.610921+03:00",
+  "generated_at": "2026-11-09T15:50:38.353757+03:00",
   "window_start": "2026-11-09",
   "window_end": "2026-11-15",
   "statuses": [
@@ -7,85 +7,85 @@
       "venue": "domkino",
       "ok": true,
       "count": 62,
-      "fetched_at": "2026-11-09T14:38:59.066959+03:00",
+      "fetched_at": "2026-11-09T15:51:10.345652+03:00",
       "stale": false,
       "suspicious": false,
       "error": null,
       "warning": null,
       "requests": 7,
-      "seconds": 16.456
+      "seconds": 31.992
     },
     {
       "venue": "rodina",
       "ok": true,
-      "count": 118,
-      "fetched_at": "2026-11-09T14:39:52.525898+03:00",
+      "count": 117,
+      "fetched_at": "2026-11-09T15:51:59.656836+03:00",
       "stale": false,
       "suspicious": false,
       "error": null,
       "warning": null,
       "requests": 33,
-      "seconds": 53.459
+      "seconds": 49.311
     },
     {
       "venue": "avrora",
       "ok": true,
-      "count": 31,
-      "fetched_at": "2026-11-09T14:40:01.226425+03:00",
+      "count": 29,
+      "fetched_at": "2026-11-09T15:52:06.865892+03:00",
       "stale": false,
       "suspicious": false,
       "error": null,
       "warning": null,
       "requests": 8,
-      "seconds": 8.7
+      "seconds": 7.208
     },
     {
       "venue": "poravkino",
       "ok": true,
-      "count": 86,
-      "fetched_at": "2026-11-09T14:40:07.540051+03:00",
+      "count": 83,
+      "fetched_at": "2026-11-09T15:52:12.458421+03:00",
       "stale": false,
       "suspicious": false,
       "error": null,
       "warning": null,
       "requests": 7,
-      "seconds": 6.314
+      "seconds": 5.593
     },
     {
       "venue": "lenfilm",
       "ok": true,
-      "count": 26,
-      "fetched_at": "2026-11-09T14:40:15.330831+03:00",
+      "count": 25,
+      "fetched_at": "2026-11-09T15:52:19.613916+03:00",
       "stale": false,
       "suspicious": false,
       "error": null,
       "warning": null,
       "requests": 9,
-      "seconds": 7.791
+      "seconds": 7.155
     },
     {
       "venue": "outcinema",
       "ok": true,
-      "count": 18,
-      "fetched_at": "2026-11-09T14:40:16.034863+03:00",
+      "count": 19,
+      "fetched_at": "2026-11-09T15:52:20.194420+03:00",
       "stale": false,
       "suspicious": false,
       "error": null,
       "warning": null,
       "requests": 1,
-      "seconds": 0.704
+      "seconds": 0.58
     },
     {
       "venue": "mirage",
       "ok": true,
-      "count": 96,
-      "fetched_at": "2026-11-09T14:40:25.336985+03:00",
+      "count": 93,
+      "fetched_at": "2026-11-09T15:52:30.776892+03:00",
       "stale": false,
       "suspicious": false,
       "error": null,
       "warning": null,
       "requests": 7,
-      "seconds": 9.302
+      "seconds": 10.582
     }
   ],
   "screenings": [
@@ -163,146 +163,6 @@
       }
     },
     {
-      "venue": "mirage",
-      "source_id": "f6c02642-4bc3-4958-814e-6d75d3b6a4ec",
-      "title": "Кит: Во тьме глубин",
-      "start": "2026-11-09T14:10:00+03:00",
-      "hall": "6",
-      "price_min": null,
-      "price_max": null,
-      "language": null,
-      "tags": [],
-      "url": "https://www.mirage.ru/ticket_new/f6c02642-4bc3-4958-814e-6d75d3b6a4ec/",
-      "source_url": "https://www.mirage.ru/spb/schedule/09.11.2026/cinema/1/",
-      "extra": {
-        "genres": [
-          "триллер",
-          "драма"
-        ],
-        "age": "18+",
-        "film_id": 7675
-      }
-    },
-    {
-      "venue": "rodina",
-      "source_id": "9eb44e28a67a",
-      "title": "Битва моторов",
-      "start": "2026-11-09T14:25:00+03:00",
-      "hall": "Малый 1 зал",
-      "price_min": 200,
-      "price_max": 200,
-      "language": null,
-      "tags": [],
-      "url": "https://rodinakino.ru/events/bitva-motorov-2026",
-      "source_url": "https://rodinakino.ru/?date=2026/11/09",
-      "extra": {
-        "year": 2026,
-        "age": "12+",
-        "duration_min": 144,
-        "synopsis": "1908 год. Автолюбитель Андрей Нагель находит поддержку у инженера Дмитрия Бондарева. Вместе они собирают команду единомышленников и приступают к разработке автомобиля «Руссо-Балт». Когда проект оказывается под угрозой, Нагель принимает рискованное решение — доказать жизнеспособность их машины в легендарном Ралли…",
-        "director": "Илья Маланин",
-        "genres": [
-          "приключения",
-          "драма"
-        ],
-        "country": "Пушкинская карта, Россия"
-      }
-    },
-    {
-      "venue": "mirage",
-      "source_id": "04872f24-0c4f-4469-89b2-cfae3d8832c6",
-      "title": "Сумерки. Сага. Затмение",
-      "start": "2026-11-09T14:30:00+03:00",
-      "hall": "2",
-      "price_min": null,
-      "price_max": null,
-      "language": null,
-      "tags": [],
-      "url": "https://www.mirage.ru/ticket_new/04872f24-0c4f-4469-89b2-cfae3d8832c6/",
-      "source_url": "https://www.mirage.ru/spb/schedule/09.11.2026/cinema/1/",
-      "extra": {
-        "genres": [
-          "триллер",
-          "мелодрама",
-          "фэнтези"
-        ],
-        "age": "18+",
-        "film_id": 7658
-      }
-    },
-    {
-      "venue": "mirage",
-      "source_id": "44bf89b6-3173-d40f-b39f-9842e308b3f9",
-      "title": "Битва моторов",
-      "start": "2026-11-09T14:40:00+03:00",
-      "hall": "7",
-      "price_min": null,
-      "price_max": null,
-      "language": null,
-      "tags": [],
-      "url": "https://www.mirage.ru/ticket_new/44bf89b6-3173-d40f-b39f-9842e308b3f9/",
-      "source_url": "https://www.mirage.ru/spb/schedule/09.11.2026/cinema/1/",
-      "extra": {
-        "genres": [
-          "приключения",
-          "драма"
-        ],
-        "age": "12+",
-        "price_raw": "35000₽",
-        "film_id": 7531
-      }
-    },
-    {
-      "venue": "avrora",
-      "source_id": "6aec51fa4000005300f3743d",
-      "title": "Любовь моя",
-      "start": "2026-11-09T14:50:00+03:00",
-      "hall": "Малый",
-      "price_min": 400,
-      "price_max": 400,
-      "language": "Русский",
-      "tags": [],
-      "url": "https://avrora.spb.ru/",
-      "source_url": "https://kinokassa.kinoplan24.ru/api/v2/release/playbill?city_id=2&date=2026-11-09",
-      "extra": {
-        "release_id": 26048,
-        "year": 2026,
-        "duration_min": 135,
-        "age": "18+",
-        "genres": [
-          "драма"
-        ],
-        "country": "Испания",
-        "free_places": 99,
-        "online_sale": true
-      }
-    },
-    {
-      "venue": "poravkino",
-      "source_id": "44066",
-      "title": "Диггер",
-      "start": "2026-11-09T14:55:00+03:00",
-      "hall": "VIP",
-      "price_min": 650,
-      "price_max": 650,
-      "language": null,
-      "tags": [],
-      "url": "https://poravkino.ru/",
-      "source_url": "https://poravkino.ru/api/schedule?date=2026-11-09",
-      "extra": {
-        "country": "США, Великобритания, Мексика",
-        "director": "Алехандро Гонсалес Иньярриту",
-        "original_title": "Диггер",
-        "duration_min": 130,
-        "age": 18,
-        "genres": [
-          "драма",
-          "комедия"
-        ],
-        "is_pushkin": false
-      }
-    },
-    {
       "venue": "domkino",
       "source_id": "36ba1a988516",
       "title": "Плетеный муж (субтитры)",
@@ -330,33 +190,6 @@
       }
     },
     {
-      "venue": "lenfilm",
-      "source_id": "6ae0792b3e00004d003b88e7",
-      "title": "Любовь моя (оригинальная версия с субтитрами)",
-      "start": "2026-11-09T15:05:00+03:00",
-      "hall": "1",
-      "price_min": 400,
-      "price_max": 400,
-      "language": "SUB",
-      "tags": [
-        "SUB"
-      ],
-      "url": "https://www.lenfilm.ru/service/Kinoteatr-Lenfilm/",
-      "source_url": "https://kinokassa.kinoplan24.ru/api/v2/release/playbill?cinema_id=2387&date=2026-11-09",
-      "extra": {
-        "release_id": 26049,
-        "year": 2026,
-        "duration_min": 135,
-        "age": "18+",
-        "genres": [
-          "драма"
-        ],
-        "country": "Испания",
-        "free_places": 184,
-        "online_sale": true
-      }
-    },
-    {
       "venue": "mirage",
       "source_id": "47a216d4-9094-4ae1-92b6-31b7d97d401f",
       "title": "Одиссея",
@@ -376,31 +209,6 @@
         ],
         "age": "18+",
         "film_id": 7450
-      }
-    },
-    {
-      "venue": "poravkino",
-      "source_id": "44067",
-      "title": "Битва моторов",
-      "start": "2026-11-09T15:15:00+03:00",
-      "hall": "3",
-      "price_min": 330,
-      "price_max": 330,
-      "language": null,
-      "tags": [],
-      "url": "https://poravkino.ru/",
-      "source_url": "https://poravkino.ru/api/schedule?date=2026-11-09",
-      "extra": {
-        "country": "Россия",
-        "director": "Илья Маланин",
-        "original_title": "Битва моторов",
-        "duration_min": 155,
-        "age": 12,
-        "genres": [
-          "драма",
-          "приключения"
-        ],
-        "is_pushkin": false
       }
     },
     {
@@ -445,58 +253,6 @@
         ],
         "age": "12+",
         "film_id": 7451
-      }
-    },
-    {
-      "venue": "poravkino",
-      "source_id": "44068",
-      "title": "Рождение империи",
-      "start": "2026-11-09T15:40:00+03:00",
-      "hall": "Малый синий",
-      "price_min": 330,
-      "price_max": 330,
-      "language": null,
-      "tags": [],
-      "url": "https://poravkino.ru/",
-      "source_url": "https://poravkino.ru/api/schedule?date=2026-11-09",
-      "extra": {
-        "year": 2026,
-        "country": "Россия",
-        "director": "Андрей Кравчук, Алексей Нужный",
-        "original_title": "Рождение империи",
-        "duration_min": 150,
-        "age": 12,
-        "genres": [
-          "биографический",
-          "драма"
-        ],
-        "is_pushkin": false
-      }
-    },
-    {
-      "venue": "avrora",
-      "source_id": "6aec4d543f00004300cf0f64",
-      "title": "Битва моторов",
-      "start": "2026-11-09T15:45:00+03:00",
-      "hall": "Большой",
-      "price_min": 450,
-      "price_max": 600,
-      "language": null,
-      "tags": [],
-      "url": "https://avrora.spb.ru/",
-      "source_url": "https://kinokassa.kinoplan24.ru/api/v2/release/playbill?city_id=2&date=2026-11-09",
-      "extra": {
-        "release_id": 22696,
-        "year": 2026,
-        "duration_min": 144,
-        "age": "12+",
-        "genres": [
-          "приключения",
-          "драма"
-        ],
-        "country": "Россия",
-        "free_places": 417,
-        "online_sale": true
       }
     },
     {
@@ -1070,7 +826,7 @@
           "историческая драма"
         ],
         "country": "Россия",
-        "free_places": 189,
+        "free_places": 187,
         "online_sale": true
       }
     },
@@ -1240,7 +996,7 @@
           "историческая драма"
         ],
         "country": "Россия",
-        "free_places": 415,
+        "free_places": 410,
         "online_sale": true
       }
     },
@@ -1612,7 +1368,7 @@
           "театр в кино"
         ],
         "country": "Россия",
-        "free_places": 62,
+        "free_places": 61,
         "online_sale": true
       }
     },
@@ -2089,7 +1845,7 @@
           "драма"
         ],
         "country": "Румыния, Франция, Норвегия, Дания, Финляндия, Швеция",
-        "free_places": 414,
+        "free_places": 412,
         "online_sale": true
       }
     },
@@ -2923,7 +2679,7 @@
           "историческая драма"
         ],
         "country": "Россия",
-        "free_places": 419,
+        "free_places": 418,
         "online_sale": true
       }
     },
@@ -3346,7 +3102,7 @@
           "семейный"
         ],
         "age": "6+",
-        "price_raw": "25000₽",
+        "price_raw": "35000₽",
         "film_id": 7664
       }
     },
@@ -3758,7 +3514,7 @@
       "language": null,
       "tags": [],
       "url": "https://rodinakino.ru/events/bitva-motorov-2026",
-      "source_url": "https://rodinakino.ru/?date=2026/11/10",
+      "source_url": "https://rodinakino.ru/?date=2026/11/09",
       "extra": {
         "year": 2026,
         "age": "12+",
@@ -3916,7 +3672,7 @@
           "драма"
         ],
         "age": "12+",
-        "price_raw": "35000₽",
+        "price_raw": "40000₽",
         "film_id": 7531
       }
     },
@@ -4611,7 +4367,7 @@
           "драма"
         ],
         "country": "Россия",
-        "free_places": 416,
+        "free_places": 415,
         "online_sale": true
       }
     },
@@ -4710,7 +4466,7 @@
           "криминал"
         ],
         "age": "18+",
-        "price_raw": "45000₽",
+        "price_raw": "50000₽",
         "film_id": 7656
       }
     },
@@ -5397,7 +5153,7 @@
           "драма"
         ],
         "age": "18+",
-        "price_raw": "45000₽",
+        "price_raw": "50000₽",
         "film_id": 7654
       }
     },
@@ -6019,7 +5775,7 @@
           "комедия"
         ],
         "age": "18+",
-        "price_raw": "45000₽",
+        "price_raw": "50000₽",
         "film_id": 7657
       }
     },
@@ -6490,7 +6246,7 @@
           "историческая драма"
         ],
         "country": "Россия",
-        "free_places": 420,
+        "free_places": 418,
         "online_sale": true
       }
     },
@@ -6592,7 +6348,7 @@
           "семейный"
         ],
         "age": "6+",
-        "price_raw": "25000₽",
+        "price_raw": "35000₽",
         "film_id": 7664
       }
     },
@@ -6902,7 +6658,7 @@
           "драма"
         ],
         "age": "12+",
-        "price_raw": "35000₽",
+        "price_raw": "40000₽",
         "film_id": 7531
       }
     },
@@ -7481,7 +7237,7 @@
           "криминал"
         ],
         "age": "18+",
-        "price_raw": "45000₽",
+        "price_raw": "50000₽",
         "film_id": 7656
       }
     },
@@ -7716,7 +7472,7 @@
           "фильм-выставка"
         ],
         "country": "Италия",
-        "free_places": 363,
+        "free_places": 362,
         "online_sale": true
       }
     },
@@ -7880,7 +7636,7 @@
           "драма"
         ],
         "age": "18+",
-        "price_raw": "45000₽",
+        "price_raw": "50000₽",
         "film_id": 7654
       }
     },
@@ -8223,7 +7979,7 @@
           "драма"
         ],
         "country": "Россия",
-        "free_places": 102,
+        "free_places": 100,
         "online_sale": true
       }
     },
@@ -8286,7 +8042,7 @@
           "комедия"
         ],
         "age": "18+",
-        "price_raw": "45000₽",
+        "price_raw": "50000₽",
         "film_id": 7657
       }
     },
@@ -9390,7 +9146,7 @@
         "year": 2026,
         "duration_min": 25,
         "age": "18+",
-        "free_places": 189,
+        "free_places": 190,
         "online_sale": true
       }
     },
@@ -10841,6 +10597,30 @@
           "документальный"
         ],
         "country": "Россия"
+      }
+    },
+    {
+      "venue": "outcinema",
+      "source_id": "490884907713",
+      "title": "КОРОВА (ПРЕМЬЕРА)",
+      "start": "2026-11-15T20:00:00+03:00",
+      "hall": null,
+      "price_min": 690,
+      "price_max": 690,
+      "language": "На язык",
+      "tags": [
+        "ИРАНСКАЯ НОВАЯ ВОЛНА"
+      ],
+      "url": "https://kinowidget.kinoplan.ru/seats/8588/10084969/6aedac383f000089002c1ff6",
+      "source_url": "https://store.tildaapi.com/api/getproductslist/?storepartuid=292580911081&recid=496330277",
+      "extra": {
+        "synopsis": "Эталонная картина иранской «новой волны» рассказывает о крестьянине, который после потери обожаемой коровы отказывается принять утрату и в своём безумии перевоплощается в животное",
+        "director": "Дарьюш Мехрджуи",
+        "country": "Иран",
+        "year": 1969,
+        "duration_min": 104,
+        "age": "16+",
+        "genres": "драма"
       }
     },
     {
