@@ -395,7 +395,9 @@
         "United States of America"
       ],
       "country_at": "2026-11-08",
-      "country_via": "tmdb:5279"
+      "country_via": "tmdb:5279",
+      "file": "sKM5KAv4yAN8Zs7HLG6us33OE9x.jpg",
+      "file_downloaded_at": "2026-11-10"
     },
     "госфорд парк|2001": {
       "title": "Госфорд Парк",
@@ -406,7 +408,7 @@
       "resolved_at": "2026-11-05",
       "via": "year",
       "file": "sKM5KAv4yAN8Zs7HLG6us33OE9x.jpg",
-      "file_downloaded_at": "2026-11-05"
+      "file_downloaded_at": "2026-11-10"
     },
     "гражданин кейн|1941": {
       "title": "ГРАЖДАНИН КЕЙН",
@@ -1446,6 +1448,24 @@
       "resolved_at": "2026-11-08",
       "via": "miss"
     },
+    "рокки это я версия с субтитрами|2026": {
+      "title": "Рокки – это я (версия с субтитрами)",
+      "year": 2026,
+      "tmdb_id": 1286656,
+      "tmdb_title": "Рокки — это я",
+      "poster_path": "/1ix2T9PtEYzuOMT10VrsFmYxBPS.jpg",
+      "resolved_at": "2026-11-10",
+      "via": "stripped",
+      "retry_query": "Рокки – это я",
+      "country": [
+        "United States of America",
+        "Australia"
+      ],
+      "country_at": "2026-11-10",
+      "country_via": "tmdb:1286656",
+      "file": "1ix2T9PtEYzuOMT10VrsFmYxBPS.jpg",
+      "file_downloaded_at": "2026-11-10"
+    },
     "рокко и его братья|1960": {
       "title": "РОККО И ЕГО БРАТЬЯ",
       "year": 1960,
@@ -1607,21 +1627,21 @@
       "file": "40ut2seLFEeyTcan7V2cVjwRvI9.jpg",
       "file_downloaded_at": "2026-11-05"
     },
-    "сумерки сага новолуние|any": {
+    "сумерки сага новолуние|2009": {
       "title": "Сумерки. Сага. Новолуние",
-      "year": null,
+      "year": 2009,
       "tmdb_id": 18239,
       "tmdb_title": "Сумерки. Сага. Новолуние",
       "poster_path": "/qOkJ1pvQnDTqg0V1HNMZ5IqKyAI.jpg",
-      "resolved_at": "2026-11-08",
-      "via": "yearless",
+      "resolved_at": "2026-11-10",
+      "via": "year",
       "country": [
         "United States of America"
       ],
-      "country_at": "2026-11-08",
+      "country_at": "2026-11-10",
       "country_via": "tmdb:18239",
       "file": "qOkJ1pvQnDTqg0V1HNMZ5IqKyAI.jpg",
-      "file_downloaded_at": "2026-11-08"
+      "file_downloaded_at": "2026-11-10"
     },
     "сущность субтитры|2025": {
       "title": "Сущность (субтитры)",
