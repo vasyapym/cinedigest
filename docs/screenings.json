@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-10T15:37:55.660651+03:00",
+  "generated_at": "2026-11-10T16:34:03.151574+03:00",
   "window_start": "2026-11-10",
   "window_end": "2026-11-16",
   "statuses": [
@@ -7,85 +7,85 @@
       "venue": "domkino",
       "ok": true,
       "count": 40,
-      "fetched_at": "2026-11-10T15:38:09.696608+03:00",
+      "fetched_at": "2026-11-10T16:34:19.603412+03:00",
       "stale": false,
       "suspicious": false,
       "error": null,
       "warning": null,
       "requests": 7,
-      "seconds": 14.036
+      "seconds": 16.452
     },
     {
       "venue": "rodina",
       "ok": true,
       "count": 101,
-      "fetched_at": "2026-11-10T15:39:03.369782+03:00",
+      "fetched_at": "2026-11-10T16:35:17.150228+03:00",
       "stale": false,
       "suspicious": false,
       "error": null,
       "warning": null,
       "requests": 33,
-      "seconds": 53.673
+      "seconds": 57.547
     },
     {
       "venue": "avrora",
       "ok": true,
       "count": 58,
-      "fetched_at": "2026-11-10T15:39:10.703864+03:00",
+      "fetched_at": "2026-11-10T16:35:30.035697+03:00",
       "stale": false,
       "suspicious": false,
       "error": null,
       "warning": null,
-      "requests": 8,
-      "seconds": 7.333
+      "requests": 10,
+      "seconds": 12.885
     },
     {
       "venue": "poravkino",
       "ok": true,
-      "count": 84,
-      "fetched_at": "2026-11-10T15:39:16.235926+03:00",
+      "count": 81,
+      "fetched_at": "2026-11-10T16:35:36.216433+03:00",
       "stale": false,
       "suspicious": false,
       "error": null,
       "warning": null,
       "requests": 7,
-      "seconds": 5.532
+      "seconds": 6.181
     },
     {
       "venue": "lenfilm",
       "ok": true,
       "count": 25,
-      "fetched_at": "2026-11-10T15:39:23.509175+03:00",
+      "fetched_at": "2026-11-10T16:35:43.667334+03:00",
       "stale": false,
       "suspicious": false,
       "error": null,
       "warning": null,
       "requests": 9,
-      "seconds": 7.273
+      "seconds": 7.451
     },
     {
       "venue": "outcinema",
       "ok": true,
       "count": 16,
-      "fetched_at": "2026-11-10T15:39:23.904833+03:00",
+      "fetched_at": "2026-11-10T16:35:44.142052+03:00",
       "stale": false,
       "suspicious": false,
       "error": null,
       "warning": null,
       "requests": 1,
-      "seconds": 0.396
+      "seconds": 0.475
     },
     {
       "venue": "mirage",
       "ok": true,
-      "count": 59,
-      "fetched_at": "2026-11-10T15:39:32.044293+03:00",
+      "count": 56,
+      "fetched_at": "2026-11-10T16:35:53.348436+03:00",
       "stale": false,
       "suspicious": false,
       "error": null,
       "warning": null,
       "requests": 7,
-      "seconds": 8.139
+      "seconds": 9.206
     }
   ],
   "screenings": [
@@ -209,74 +209,6 @@
       }
     },
     {
-      "venue": "mirage",
-      "source_id": "449a455f-c9fe-45ea-8f8c-6af9b548022f",
-      "title": "Плетеный муж",
-      "start": "2026-11-10T15:00:00+03:00",
-      "hall": "4",
-      "price_min": null,
-      "price_max": null,
-      "language": null,
-      "tags": [],
-      "url": "https://www.mirage.ru/ticket_new/449a455f-c9fe-45ea-8f8c-6af9b548022f/",
-      "source_url": "https://www.mirage.ru/spb/schedule/10.11.2026/cinema/1/",
-      "extra": {
-        "genres": [
-          "комедия",
-          "фантастика",
-          "мелодрама",
-          "фэнтези"
-        ],
-        "age": "18+",
-        "film_id": 7618
-      }
-    },
-    {
-      "venue": "mirage",
-      "source_id": "bb004643-0487-4319-ba21-7091da7e08c3",
-      "title": "Одиссея",
-      "start": "2026-11-10T15:15:00+03:00",
-      "hall": "5",
-      "price_min": null,
-      "price_max": null,
-      "language": null,
-      "tags": [],
-      "url": "https://www.mirage.ru/ticket_new/bb004643-0487-4319-ba21-7091da7e08c3/",
-      "source_url": "https://www.mirage.ru/spb/schedule/10.11.2026/cinema/1/",
-      "extra": {
-        "genres": [
-          "боевик",
-          "приключения",
-          "фэнтези"
-        ],
-        "age": "18+",
-        "film_id": 7450
-      }
-    },
-    {
-      "venue": "mirage",
-      "source_id": "8989d4a5-37ea-439e-8594-0529485787e8",
-      "title": "Человек-паук: Новый день",
-      "start": "2026-11-10T15:25:00+03:00",
-      "hall": "3",
-      "price_min": null,
-      "price_max": null,
-      "language": null,
-      "tags": [],
-      "url": "https://www.mirage.ru/ticket_new/8989d4a5-37ea-439e-8594-0529485787e8/",
-      "source_url": "https://www.mirage.ru/spb/schedule/10.11.2026/cinema/1/",
-      "extra": {
-        "genres": [
-          "боевик",
-          "фантастика",
-          "приключения",
-          "фэнтези"
-        ],
-        "age": "12+",
-        "film_id": 7451
-      }
-    },
-    {
       "venue": "domkino",
       "source_id": "ac5cd819cafc",
       "title": "Безумный день в Комеди Франсез (субтитры)",
@@ -298,32 +230,6 @@
         "genres": [
           "комедия"
         ]
-      }
-    },
-    {
-      "venue": "poravkino",
-      "source_id": "44122",
-      "title": "Рождение империи",
-      "start": "2026-11-10T15:40:00+03:00",
-      "hall": "Малый синий",
-      "price_min": 330,
-      "price_max": 330,
-      "language": null,
-      "tags": [],
-      "url": "https://poravkino.ru/",
-      "source_url": "https://poravkino.ru/api/schedule?date=2026-11-10",
-      "extra": {
-        "year": 2026,
-        "country": "Россия",
-        "director": "Андрей Кравчук, Алексей Нужный",
-        "original_title": "Рождение империи",
-        "duration_min": 150,
-        "age": 12,
-        "genres": [
-          "биографический",
-          "драма"
-        ],
-        "is_pushkin": false
       }
     },
     {
@@ -415,57 +321,6 @@
       }
     },
     {
-      "venue": "poravkino",
-      "source_id": "44123",
-      "title": "Клэйфейс",
-      "start": "2026-11-10T16:10:00+03:00",
-      "hall": "4",
-      "price_min": 400,
-      "price_max": 400,
-      "language": null,
-      "tags": [],
-      "url": "https://poravkino.ru/",
-      "source_url": "https://poravkino.ru/api/schedule?date=2026-11-10",
-      "extra": {
-        "country": "США, Великобритания",
-        "director": "Джеймс Уоткинс",
-        "original_title": "Клэйфейс",
-        "duration_min": 110,
-        "age": 18,
-        "genres": [
-          "фантастика",
-          "боевик"
-        ],
-        "is_pushkin": false
-      }
-    },
-    {
-      "venue": "poravkino",
-      "source_id": "44124",
-      "title": "Рождение империи",
-      "start": "2026-11-10T16:15:00+03:00",
-      "hall": "2",
-      "price_min": 400,
-      "price_max": 400,
-      "language": null,
-      "tags": [],
-      "url": "https://poravkino.ru/",
-      "source_url": "https://poravkino.ru/api/schedule?date=2026-11-10",
-      "extra": {
-        "year": 2026,
-        "country": "Россия",
-        "director": "Андрей Кравчук, Алексей Нужный",
-        "original_title": "Рождение империи",
-        "duration_min": 150,
-        "age": 12,
-        "genres": [
-          "биографический",
-          "драма"
-        ],
-        "is_pushkin": false
-      }
-    },
-    {
       "venue": "mirage",
       "source_id": "c0df7c31-ea4d-4b04-9a3b-e41d64bc0ed1",
       "title": "Сумерки. Сага. Новолуние",
@@ -509,7 +364,7 @@
           "драма"
         ],
         "country": "Россия",
-        "free_places": 89,
+        "free_places": 79,
         "online_sale": true
       }
     },
@@ -619,7 +474,7 @@
           "комедия"
         ],
         "country": "США, Великобритания",
-        "free_places": 179,
+        "free_places": 176,
         "online_sale": true
       }
     },
@@ -797,7 +652,7 @@
           "драма"
         ],
         "country": "Россия",
-        "free_places": 396,
+        "free_places": 388,
         "online_sale": true
       }
     },
@@ -1090,7 +945,7 @@
         "duration_min": 124,
         "age": "18+",
         "country": "США",
-        "free_places": 83,
+        "free_places": 77,
         "online_sale": true
       }
     },
@@ -1207,7 +1062,7 @@
           "мультфильм"
         ],
         "country": "Китай",
-        "free_places": 184,
+        "free_places": 183,
         "online_sale": true
       }
     },
@@ -1387,7 +1242,7 @@
           "комедийный хоррор"
         ],
         "country": "Великобритания",
-        "free_places": 272,
+        "free_places": 268,
         "online_sale": true
       }
     },
@@ -1837,7 +1692,7 @@
         "duration_min": 124,
         "age": "18+",
         "country": "США",
-        "free_places": 186,
+        "free_places": 184,
         "online_sale": true
       }
     },
@@ -2093,7 +1948,7 @@
           "комедия"
         ],
         "country": "США, Великобритания",
-        "free_places": 415,
+        "free_places": 412,
         "online_sale": true
       }
     },
@@ -4796,7 +4651,7 @@
           "фильм-выставка"
         ],
         "country": "Италия",
-        "free_places": 330,
+        "free_places": 324,
         "online_sale": true
       }
     },
@@ -5604,7 +5459,7 @@
           "драма"
         ],
         "country": "Россия",
-        "free_places": 93,
+        "free_places": 91,
         "online_sale": true
       }
     },
@@ -6907,7 +6762,7 @@
         "duration_min": 124,
         "age": "18+",
         "country": "США",
-        "free_places": 110,
+        "free_places": 106,
         "online_sale": true
       }
     },
@@ -6994,8 +6849,8 @@
       "title": "Фьорд (версия с субтитрами)",
       "start": "2026-11-13T12:15:00+03:00",
       "hall": "1",
-      "price_min": 300,
-      "price_max": 300,
+      "price_min": 500,
+      "price_max": 500,
       "language": null,
       "tags": [
         "SUB"
@@ -7172,7 +7027,7 @@
           "комедия"
         ],
         "country": "США, Великобритания",
-        "free_places": 188,
+        "free_places": 187,
         "online_sale": true
       }
     },
@@ -8038,7 +7893,7 @@
           "драма"
         ],
         "country": "Румыния, Франция, Норвегия, Дания, Финляндия, Швеция",
-        "free_places": 186,
+        "free_places": 184,
         "online_sale": true
       }
     },
@@ -8162,7 +8017,7 @@
           "биография"
         ],
         "country": "Россия",
-        "free_places": 420,
+        "free_places": 419,
         "online_sale": true
       }
     },
@@ -8344,7 +8199,7 @@
           "комедия"
         ],
         "country": "США, Великобритания",
-        "free_places": 421,
+        "free_places": 420,
         "online_sale": true
       }
     },
@@ -8421,7 +8276,7 @@
           "биография"
         ],
         "country": "Россия",
-        "free_places": 109,
+        "free_places": 108,
         "online_sale": true
       }
     },
@@ -8777,7 +8632,7 @@
           "драма"
         ],
         "country": "Франция",
-        "free_places": 188,
+        "free_places": 187,
         "online_sale": true
       }
     },
@@ -9363,7 +9218,7 @@
           "драма"
         ],
         "country": "США",
-        "free_places": 160,
+        "free_places": 158,
         "online_sale": true
       }
     },
