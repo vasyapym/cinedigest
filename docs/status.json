@@ -3,84 +3,84 @@
     "venue": "domkino",
     "ok": true,
     "count": 60,
-    "fetched_at": "2026-11-11T14:52:00.379379+03:00",
+    "fetched_at": "2026-11-11T15:47:54.229828+03:00",
     "stale": false,
     "suspicious": false,
     "error": null,
     "warning": null,
     "requests": 7,
-    "seconds": 13.705
+    "seconds": 14.465
   },
   {
     "venue": "rodina",
     "ok": true,
-    "count": 85,
-    "fetched_at": "2026-11-11T14:52:51.132067+03:00",
+    "count": 84,
+    "fetched_at": "2026-11-11T15:48:44.063903+03:00",
     "stale": false,
     "suspicious": false,
     "error": null,
     "warning": null,
-    "requests": 32,
-    "seconds": 50.753
+    "requests": 31,
+    "seconds": 49.834
   },
   {
     "venue": "avrora",
-    "ok": false,
-    "count": 49,
-    "fetched_at": "2026-11-11T14:03:48.215142+03:00",
-    "stale": true,
+    "ok": true,
+    "count": 47,
+    "fetched_at": "2026-11-11T15:48:51.125933+03:00",
+    "stale": false,
     "suspicious": false,
-    "error": "parse failed: ValueError: avrora 2026-11-11: body is not valid JSON",
+    "error": null,
     "warning": null,
     "requests": 8,
-    "seconds": 6.145
+    "seconds": 7.061
   },
   {
     "venue": "poravkino",
     "ok": true,
-    "count": 34,
-    "fetched_at": "2026-11-11T14:53:02.895527+03:00",
+    "count": 32,
+    "fetched_at": "2026-11-11T15:48:57.033902+03:00",
     "stale": false,
     "suspicious": false,
     "error": null,
     "warning": null,
     "requests": 7,
-    "seconds": 5.617
+    "seconds": 5.908
   },
   {
     "venue": "lenfilm",
-    "ok": false,
+    "ok": true,
     "count": 26,
-    "fetched_at": "2026-11-11T14:04:01.077163+03:00",
-    "stale": true,
+    "fetched_at": "2026-11-11T15:49:04.401354+03:00",
+    "stale": false,
     "suspicious": false,
-    "error": "fetch failed: ValueError: lenfilm app: body is not valid JSON",
+    "error": null,
     "warning": null,
-    "requests": 1,
-    "seconds": 0.091
+    "requests": 9,
+    "seconds": 7.367
   },
   {
     "venue": "outcinema",
     "ok": true,
     "count": 13,
-    "fetched_at": "2026-11-11T14:53:03.349653+03:00",
+    "fetched_at": "2026-11-11T15:49:05.133574+03:00",
     "stale": false,
     "suspicious": false,
     "error": null,
     "warning": null,
     "requests": 1,
-    "seconds": 0.363
+    "seconds": 0.732
   },
   {
     "venue": "mirage",
     "ok": true,
-    "count": 176,
-    "fetched_at": "2026-11-11T14:53:11.379901+03:00",
+    "count": 173,
+    "fetched_at": "2026-11-11T15:49:13.378953+03:00",
     "stale": false,
     "suspicious": false,
     "error": null,
     "warning": null,
     "requests": 7,
-    "seconds": 8.03
+    "seconds": 8.245
   }
 ]
