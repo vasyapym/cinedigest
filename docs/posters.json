@@ -254,6 +254,23 @@
       "resolved_at": "2026-11-08",
       "via": "miss"
     },
+    "ветка сирени|2007": {
+      "title": "Ветка сирени",
+      "year": 2007,
+      "tmdb_id": 410141,
+      "tmdb_title": "Ветка сирени",
+      "poster_path": "/bmYP8qEx0C6hVZ7SxGn58zM9Pb.jpg",
+      "resolved_at": "2026-11-11",
+      "via": "year",
+      "country": [
+        "Luxembourg",
+        "Russia"
+      ],
+      "country_at": "2026-11-11",
+      "country_via": "tmdb:410141",
+      "file": "bmYP8qEx0C6hVZ7SxGn58zM9Pb.jpg",
+      "file_downloaded_at": "2026-11-11"
+    },
     "вкускилл субтитры|2026": {
       "title": "Вкускилл (субтитры)",
       "year": 2026,
@@ -342,6 +359,24 @@
       "file": "afORML1iggGkWf8M0Jsf2PPpIHv.jpg",
       "file_downloaded_at": "2026-11-05"
     },
+    "гарри поттер и тайная комната|any": {
+      "title": "Гарри Поттер и Тайная комната",
+      "year": null,
+      "tmdb_id": 672,
+      "tmdb_title": "Гарри Поттер и Тайная комната",
+      "poster_path": "/33Wj3LSyoAqtqkeh7YXcVMvTQzc.jpg",
+      "resolved_at": "2026-11-11",
+      "via": "yearless",
+      "country": [
+        "United Kingdom",
+        "United States of America",
+        "Germany"
+      ],
+      "country_at": "2026-11-11",
+      "country_via": "tmdb:672",
+      "file": "33Wj3LSyoAqtqkeh7YXcVMvTQzc.jpg",
+      "file_downloaded_at": "2026-11-11"
+    },
     "глубокий сон|1946": {
       "title": "ГЛУБОКИЙ СОН",
       "year": 1946,
@@ -369,6 +404,24 @@
       "country_via": "tmdb:985",
       "file": "cl1jZJMaWDOaWWSGo6n6GE5RCxY.jpg",
       "file_downloaded_at": "2026-11-08"
+    },
+    "горец субтитры|1986": {
+      "title": "Горец (субтитры)",
+      "year": 1986,
+      "tmdb_id": 8009,
+      "tmdb_title": "Горец",
+      "poster_path": "/6i46VuUWseqX8d4QAI9XldNzS5s.jpg",
+      "resolved_at": "2026-11-11",
+      "via": "stripped",
+      "retry_query": "Горец",
+      "country": [
+        "United Kingdom",
+        "United States of America"
+      ],
+      "country_at": "2026-11-11",
+      "country_via": "tmdb:8009",
+      "file": "6i46VuUWseqX8d4QAI9XldNzS5s.jpg",
+      "file_downloaded_at": "2026-11-11"
     },
     "горец|1986": {
       "title": "Горец",
@@ -452,6 +505,23 @@
       "file": "pGyuM0qntTdW5g9bRwqH4h7gkms.jpg",
       "file_downloaded_at": "2026-11-06"
     },
+    "демонолог|2026": {
+      "title": "Демонолог",
+      "year": 2026,
+      "tmdb_id": 1629051,
+      "tmdb_title": "Демонолог",
+      "poster_path": "/ajei0WHnv2WElW3XczgjOboSSIE.jpg",
+      "resolved_at": "2026-11-11",
+      "via": "year",
+      "country": [
+        "Japan",
+        "United States of America"
+      ],
+      "country_at": "2026-11-11",
+      "country_via": "tmdb:1629051",
+      "file": "ajei0WHnv2WElW3XczgjOboSSIE.jpg",
+      "file_downloaded_at": "2026-11-11"
+    },
     "диггер|any": {
       "title": "Диггер",
       "year": null,
@@ -494,6 +564,39 @@
       "file": "5Y2Ej3SWnCQRAgBx0AlJKM9iQUX.jpg",
       "file_downloaded_at": "2026-11-05"
     },
+    "добро пожаловать в декорадо субтитры|2025": {
+      "title": "Добро пожаловать в Декорадо (субтитры)",
+      "year": 2025,
+      "tmdb_id": 1061771,
+      "tmdb_title": "Добро пожаловать в Декорадо",
+      "poster_path": "/1C1uHgC5w2hLsGNDrjWjF4lGk3C.jpg",
+      "resolved_at": "2026-11-11",
+      "via": "stripped",
+      "retry_query": "Добро пожаловать в Декорадо",
+      "country": [
+        "Spain"
+      ],
+      "country_at": "2026-11-11",
+      "country_via": "tmdb:1061771",
+      "file": "1C1uHgC5w2hLsGNDrjWjF4lGk3C.jpg",
+      "file_downloaded_at": "2026-11-11"
+    },
+    "добро пожаловать в декорадо|2025": {
+      "title": "Добро пожаловать в Декорадо",
+      "year": 2025,
+      "tmdb_id": 1061771,
+      "tmdb_title": "Добро пожаловать в Декорадо",
+      "poster_path": "/1C1uHgC5w2hLsGNDrjWjF4lGk3C.jpg",
+      "resolved_at": "2026-11-11",
+      "via": "year",
+      "country": [
+        "Spain"
+      ],
+      "country_at": "2026-11-11",
+      "country_via": "tmdb:1061771",
+      "file": "1C1uHgC5w2hLsGNDrjWjF4lGk3C.jpg",
+      "file_downloaded_at": "2026-11-11"
+    },
     "дурная слава|1946": {
       "title": "ДУРНАЯ СЛАВА",
       "year": 1946,
@@ -515,6 +618,43 @@
       "via": "year",
       "file": "jnuoTz8lcTF3er8XhaJtpe0viis.jpg",
       "file_downloaded_at": "2026-11-08"
+    },
+    "ее личный ад субтитры|2026": {
+      "title": "Её личный ад (субтитры)",
+      "year": 2026,
+      "tmdb_id": 1469342,
+      "tmdb_title": "Её личный ад",
+      "poster_path": "/vskIGrwH7li7btlgkpuPF8VVACS.jpg",
+      "resolved_at": "2026-11-11",
+      "via": "stripped",
+      "retry_query": "Её личный ад",
+      "country": [
+        "United States of America",
+        "Denmark",
+        "United Kingdom"
+      ],
+      "country_at": "2026-11-11",
+      "country_via": "tmdb:1469342",
+      "file": "vskIGrwH7li7btlgkpuPF8VVACS.jpg",
+      "file_downloaded_at": "2026-11-11"
+    },
+    "ешь молись худей|2025": {
+      "title": "Ешь. Молись. Худей",
+      "year": 2025,
+      "tmdb_id": 1363387,
+      "tmdb_title": "Ешь. Молись. Худей",
+      "poster_path": "/uRUCL96wOEBaa8ex3ekgXChPYZJ.jpg",
+      "resolved_at": "2026-11-11",
+      "via": "any",
+      "country": [
+        "Australia",
+        "Finland",
+        "United States of America"
+      ],
+      "country_at": "2026-11-11",
+      "country_via": "tmdb:1363387",
+      "file": "uRUCL96wOEBaa8ex3ekgXChPYZJ.jpg",
+      "file_downloaded_at": "2026-11-11"
     },
     "жертвоприношение субтитры|1986": {
       "title": "Жертвоприношение (субтитры)",
@@ -569,6 +709,31 @@
       "resolved_at": "2026-11-08",
       "via": "miss",
       "retry_query": "Запределье"
+    },
+    "запределье|2006": {
+      "title": "Запределье",
+      "year": 2006,
+      "tmdb_id": null,
+      "tmdb_title": null,
+      "poster_path": null,
+      "resolved_at": "2026-11-11",
+      "via": "miss"
+    },
+    "зверодвиж|any": {
+      "title": "Зверодвиж",
+      "year": null,
+      "tmdb_id": 1658136,
+      "tmdb_title": "Зверодвиж",
+      "poster_path": "/lpc1z69ycoQ8ond8PXmsal7MMfQ.jpg",
+      "resolved_at": "2026-11-11",
+      "via": "yearless",
+      "country": [
+        "China"
+      ],
+      "country_at": "2026-11-11",
+      "country_via": "tmdb:1658136",
+      "file": "lpc1z69ycoQ8ond8PXmsal7MMfQ.jpg",
+      "file_downloaded_at": "2026-11-11"
     },
     "зверь|any": {
       "title": "Зверь",
@@ -724,6 +889,15 @@
       "file": "r2ib7b2QRLRlb8g7K2QI2rfFgeA.jpg",
       "file_downloaded_at": "2026-11-08"
     },
+    "кокошка жизнь для искусства|2017": {
+      "title": "Кокошка: Жизнь для искусства",
+      "year": 2017,
+      "tmdb_id": null,
+      "tmdb_title": null,
+      "poster_path": null,
+      "resolved_at": "2026-11-11",
+      "via": "miss"
+    },
     "колония субтитры|2026": {
       "title": "Колония (субтитры)",
       "year": 2026,
@@ -751,6 +925,15 @@
       "tmdb_title": null,
       "poster_path": null,
       "resolved_at": "2026-11-09",
+      "via": "miss"
+    },
+    "кот в шляпе|any": {
+      "title": "Кот в шляпе",
+      "year": null,
+      "tmdb_id": null,
+      "tmdb_title": null,
+      "poster_path": null,
+      "resolved_at": "2026-11-11",
       "via": "miss"
     },
     "крик премьера|1957": {
@@ -852,6 +1035,15 @@
       "via": "year",
       "file": "tAGGymXd54ovIAeJMfXhrsmzRvt.jpg",
       "file_downloaded_at": "2026-11-06"
+    },
+    "лучшее лето в жизни|any": {
+      "title": "Лучшее лето в жизни",
+      "year": null,
+      "tmdb_id": null,
+      "tmdb_title": null,
+      "poster_path": null,
+      "resolved_at": "2026-11-11",
+      "via": "miss"
     },
     "любовь моя оригинальная версия с субтитрами|2026": {
       "title": "Любовь моя (оригинальная версия с субтитрами)",
@@ -1192,6 +1384,23 @@
       "via": "year",
       "file": "bw84eOxjZFGt6I6GOYWLVMiLNCT.jpg",
       "file_downloaded_at": "2026-11-05"
+    },
+    "патерсон субтитры|2016": {
+      "title": "Патерсон (субтитры)",
+      "year": 2016,
+      "tmdb_id": 370755,
+      "tmdb_title": "Патерсон",
+      "poster_path": "/apFJb9w2NyTJTi7zAsZGiyBJUKG.jpg",
+      "resolved_at": "2026-11-11",
+      "via": "stripped",
+      "retry_query": "Патерсон",
+      "country": [
+        "United States of America",
+        "Germany",
+        "France"
+      ],
+      "country_at": "2026-11-11",
+      "country_via": "tmdb:370755"
     },
     "патерсон|2016": {
       "title": "Патерсон",
