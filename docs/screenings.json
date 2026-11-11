@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-11T14:02:34.401686+03:00",
+  "generated_at": "2026-11-11T14:51:46.674248+03:00",
   "window_start": "2026-11-11",
   "window_end": "2026-11-17",
   "statuses": [
@@ -7,111 +7,88 @@
       "venue": "domkino",
       "ok": true,
       "count": 60,
-      "fetched_at": "2026-11-11T14:02:48.906271+03:00",
+      "fetched_at": "2026-11-11T14:52:00.379379+03:00",
       "stale": false,
       "suspicious": false,
       "error": null,
       "warning": null,
       "requests": 7,
-      "seconds": 14.505
+      "seconds": 13.705
     },
     {
       "venue": "rodina",
       "ok": true,
-      "count": 87,
-      "fetched_at": "2026-11-11T14:03:38.604035+03:00",
+      "count": 85,
+      "fetched_at": "2026-11-11T14:52:51.132067+03:00",
       "stale": false,
       "suspicious": false,
       "error": null,
       "warning": null,
-      "requests": 33,
-      "seconds": 49.698
+      "requests": 32,
+      "seconds": 50.753
     },
     {
       "venue": "avrora",
-      "ok": true,
+      "ok": false,
       "count": 49,
       "fetched_at": "2026-11-11T14:03:48.215142+03:00",
-      "stale": false,
+      "stale": true,
       "suspicious": false,
-      "error": null,
+      "error": "parse failed: ValueError: avrora 2026-11-11: body is not valid JSON",
       "warning": null,
       "requests": 8,
-      "seconds": 9.61
+      "seconds": 6.145
     },
     {
       "venue": "poravkino",
       "ok": true,
-      "count": 36,
-      "fetched_at": "2026-11-11T14:03:53.906360+03:00",
+      "count": 34,
+      "fetched_at": "2026-11-11T14:53:02.895527+03:00",
       "stale": false,
       "suspicious": false,
       "error": null,
       "warning": null,
       "requests": 7,
-      "seconds": 5.691
+      "seconds": 5.617
     },
     {
       "venue": "lenfilm",
-      "ok": true,
+      "ok": false,
       "count": 26,
       "fetched_at": "2026-11-11T14:04:01.077163+03:00",
-      "stale": false,
+      "stale": true,
       "suspicious": false,
-      "error": null,
+      "error": "fetch failed: ValueError: lenfilm app: body is not valid JSON",
       "warning": null,
-      "requests": 9,
-      "seconds": 7.171
+      "requests": 1,
+      "seconds": 0.091
     },
     {
       "venue": "outcinema",
       "ok": true,
       "count": 13,
-      "fetched_at": "2026-11-11T14:04:01.603840+03:00",
+      "fetched_at": "2026-11-11T14:53:03.349653+03:00",
       "stale": false,
       "suspicious": false,
       "error": null,
       "warning": null,
       "requests": 1,
-      "seconds": 0.527
+      "seconds": 0.363
     },
     {
       "venue": "mirage",
       "ok": true,
-      "count": 177,
-      "fetched_at": "2026-11-11T14:04:09.894665+03:00",
+      "count": 176,
+      "fetched_at": "2026-11-11T14:53:11.379901+03:00",
       "stale": false,
       "suspicious": false,
       "error": null,
       "warning": null,
       "requests": 7,
-      "seconds": 8.291
+      "seconds": 8.03
     }
   ],
   "screenings": [
-    {
-      "venue": "mirage",
-      "source_id": "9b148f51-ecba-4537-b747-78d5233cdb84",
-      "title": "Тайный дневник Верити",
-      "start": "2026-11-11T13:25:00+03:00",
-      "hall": "4",
-      "price_min": null,
-      "price_max": null,
-      "language": null,
-      "tags": [],
-      "url": "https://www.mirage.ru/ticket_new/9b148f51-ecba-4537-b747-78d5233cdb84/",
-      "source_url": "https://www.mirage.ru/spb/schedule/11.11.2026/cinema/1/",
-      "extra": {
-        "genres": [
-          "детектив",
-          "триллер",
-          "драма",
-          "криминал"
-        ],
-        "age": "18+",
-        "film_id": 7628
-      }
-    },
     {
       "venue": "domkino",
       "source_id": "6c9c54bfac09",
@@ -159,57 +136,6 @@
       }
     },
     {
-      "venue": "poravkino",
-      "source_id": "44172",
-      "title": "Рождение империи",
-      "start": "2026-11-11T14:10:00+03:00",
-      "hall": "Премьер",
-      "price_min": 330,
-      "price_max": 330,
-      "language": null,
-      "tags": [],
-      "url": "https://poravkino.ru/",
-      "source_url": "https://poravkino.ru/api/schedule?date=2026-11-11",
-      "extra": {
-        "year": 2026,
-        "country": "Россия",
-        "director": "Андрей Кравчук, Алексей Нужный",
-        "original_title": "Рождение империи",
-        "duration_min": 150,
-        "age": 12,
-        "genres": [
-          "биографический",
-          "драма"
-        ],
-        "is_pushkin": false
-      }
-    },
-    {
-      "venue": "rodina",
-      "source_id": "ee30965d928d",
-      "title": "Большие гонки. Пегас III",
-      "start": "2026-11-11T14:10:00+03:00",
-      "hall": "Большой зал",
-      "price_min": 300,
-      "price_max": 300,
-      "language": null,
-      "tags": [],
-      "url": "https://rodinakino.ru/events/bolshie-gonki-pegas-iii-2026",
-      "source_url": "https://rodinakino.ru/?date=2026/11/11",
-      "extra": {
-        "year": 2026,
-        "age": "16+",
-        "duration_min": 124,
-        "synopsis": "После победы в самом известном ралли Азии команда чемпионов вынуждена вновь вернуться в таблицу мирового первенства, став участниками международной гонки. Им предстоит изнуряющая подготовка и длинные, опасные трассы. Параллельно им придется раскрыть командный заговор и победить любой ценой, иначе они могут лишится не…",
-        "director": "Хань Хань",
-        "genres": [
-          "спорт",
-          "комедия"
-        ],
-        "country": "Китай"
-      }
-    },
-    {
       "venue": "avrora",
       "source_id": "6aec500f3f00005000cf1485",
       "title": "Плетёный муж",
@@ -235,31 +161,6 @@
         "country": "США, Великобритания",
         "free_places": 399,
         "online_sale": true
-      }
-    },
-    {
-      "venue": "rodina",
-      "source_id": "832ffcb570ba",
-      "title": "Битва моторов",
-      "start": "2026-11-11T14:15:00+03:00",
-      "hall": "Малый 1 зал",
-      "price_min": 250,
-      "price_max": 250,
-      "language": null,
-      "tags": [],
-      "url": "https://rodinakino.ru/events/bitva-motorov-2026",
-      "source_url": "https://rodinakino.ru/?date=2026/11/11",
-      "extra": {
-        "year": 2026,
-        "age": "12+",
-        "duration_min": 144,
-        "synopsis": "1908 год. Автолюбитель Андрей Нагель находит поддержку у инженера Дмитрия Бондарева. Вместе они собирают команду единомышленников и приступают к разработке автомобиля «Руссо-Балт». Когда проект оказывается под угрозой, Нагель принимает рискованное решение — доказать жизнеспособность их машины в легендарном Ралли…",
-        "director": "Илья Маланин",
-        "genres": [
-          "приключения",
-          "драма"
-        ],
-        "country": "Пушкинская карта, Россия"
       }
     },
     {
@@ -306,35 +207,6 @@
         ],
         "age": "18+",
         "film_id": 7658
-      }
-    },
-    {
-      "venue": "poravkino",
-      "source_id": "44173",
-      "title": "Плетёный муж",
-      "start": "2026-11-11T14:30:00+03:00",
-      "hall": "1",
-      "price_min": 330,
-      "price_max": 330,
-      "language": null,
-      "tags": [],
-      "url": "https://poravkino.ru/",
-      "source_url": "https://poravkino.ru/api/schedule?date=2026-11-11",
-      "extra": {
-        "year": 2026,
-        "country": "США, Великобритания, Австралия",
-        "director": "Алекс Хьюстон Фишер, Элинор Уилсон",
-        "original_title": "Плетеный муж",
-        "duration_min": 110,
-        "age": 18,
-        "genres": [
-          "драма",
-          "комедия",
-          "мелодрама",
-          "фантастика",
-          "фэнтези"
-        ],
-        "is_pushkin": false
       }
     },
     {
