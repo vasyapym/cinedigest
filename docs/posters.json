@@ -357,6 +357,15 @@
       "file": "uPnCL5Moa9zRPy3BEf8m63OdXVA.jpg",
       "file_downloaded_at": "2026-11-08"
     },
+    "встреча с максимом|1941": {
+      "title": "Встреча с Максимом",
+      "year": 1941,
+      "tmdb_id": null,
+      "tmdb_title": null,
+      "poster_path": null,
+      "resolved_at": "2026-11-12",
+      "via": "miss"
+    },
     "выход 8|2025": {
       "title": "Выход 8",
       "year": 2025,
@@ -1213,6 +1222,15 @@
       "file": "ogN4Ul6UnDqRph23g3ZtAexm3M0.jpg",
       "file_downloaded_at": "2026-11-05"
     },
+    "моя крылатая россия|2026": {
+      "title": "Моя крылатая Россия",
+      "year": 2026,
+      "tmdb_id": null,
+      "tmdb_title": null,
+      "poster_path": null,
+      "resolved_at": "2026-11-12",
+      "via": "miss"
+    },
     "мужчина и женщина субтитры|1966": {
       "title": "Мужчина и женщина (субтитры)",
       "year": 1966,
@@ -1267,6 +1285,24 @@
       "via": "year",
       "file": "3b5uFBKGWwJF36rUlGL5mdtj9AU.jpg",
       "file_downloaded_at": "2026-11-05"
+    },
+    "на ярком солнце субтитры|1960": {
+      "title": "На ярком солнце (субтитры)",
+      "year": 1960,
+      "tmdb_id": 10363,
+      "tmdb_title": "На ярком солнце",
+      "poster_path": "/pbYERp2oS1dO6HLhg4ufWwA7PaN.jpg",
+      "resolved_at": "2026-11-12",
+      "via": "stripped",
+      "retry_query": "На ярком солнце",
+      "country": [
+        "France",
+        "Italy"
+      ],
+      "country_at": "2026-11-12",
+      "country_via": "tmdb:10363",
+      "file": "pbYERp2oS1dO6HLhg4ufWwA7PaN.jpg",
+      "file_downloaded_at": "2026-11-12"
     },
     "на ярком солнце|1960": {
       "title": "На ярком солнце",
@@ -1586,6 +1622,15 @@
       "via": "year",
       "file": "gbhq0zQE9POxzq92zejRYectFUX.jpg",
       "file_downloaded_at": "2026-11-05"
+    },
+    "прекрасное далеко|2000": {
+      "title": "Прекрасное далеко",
+      "year": 2000,
+      "tmdb_id": null,
+      "tmdb_title": null,
+      "poster_path": null,
+      "resolved_at": "2026-11-12",
+      "via": "miss"
     },
     "простая история артпоказ|1999": {
       "title": "Простая история. АртПоказ",
@@ -2120,6 +2165,22 @@
       "via": "year",
       "file": "tHBmVPGlV7K5MLYEzqbBZz1vbRB.jpg",
       "file_downloaded_at": "2026-11-05"
+    },
+    "чапаев с нами|1941": {
+      "title": "Чапаев с нами",
+      "year": 1941,
+      "tmdb_id": 884753,
+      "tmdb_title": "Чапаев с нами",
+      "poster_path": "/lJJmTCVqumUX1WJpbHxxNxIoGUf.jpg",
+      "resolved_at": "2026-11-12",
+      "via": "year",
+      "country": [
+        "Soviet Union"
+      ],
+      "country_at": "2026-11-12",
+      "country_via": "tmdb:884753",
+      "file": "lJJmTCVqumUX1WJpbHxxNxIoGUf.jpg",
+      "file_downloaded_at": "2026-11-12"
     },
     "частная жизнь субтитры|2025": {
       "title": "Частная жизнь (субтитры)",
