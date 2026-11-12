@@ -3,6 +3,15 @@
   "_source": "https://www.themoviedb.org",
   "_purge": "delete this file and the docs/posters/ folder to purge the served poster cache; entries older than 180 days are dropped on every save and image files share the same retention limit (see file_downloaded_at)",
   "films": {
+    "theatrehd берлинская опера трубадур|2013": {
+      "title": "TheatreHD: Берлинская опера: Трубадур",
+      "year": 2013,
+      "tmdb_id": null,
+      "tmdb_title": null,
+      "poster_path": null,
+      "resolved_at": "2026-11-12",
+      "via": "miss"
+    },
     "theatrehd курентзис кармен|2026": {
       "title": "TheatreHD: Курентзис: Кармен",
       "year": 2026,
@@ -1036,14 +1045,21 @@
       "file": "tAGGymXd54ovIAeJMfXhrsmzRvt.jpg",
       "file_downloaded_at": "2026-11-06"
     },
-    "лучшее лето в жизни|any": {
+    "лучшее лето в жизни|2025": {
       "title": "Лучшее лето в жизни",
-      "year": null,
-      "tmdb_id": null,
-      "tmdb_title": null,
-      "poster_path": null,
-      "resolved_at": "2026-11-11",
-      "via": "miss"
+      "year": 2025,
+      "tmdb_id": 1701947,
+      "tmdb_title": "Лучшее лето в жизни",
+      "poster_path": "/xZJLLY8DkBUdYQyKpeg8L86yS8s.jpg",
+      "resolved_at": "2026-11-12",
+      "via": "any",
+      "country": [
+        "Russia"
+      ],
+      "country_at": "2026-11-12",
+      "country_via": "tmdb:1701947",
+      "file": "xZJLLY8DkBUdYQyKpeg8L86yS8s.jpg",
+      "file_downloaded_at": "2026-11-12"
     },
     "любовь моя оригинальная версия с субтитрами|2026": {
       "title": "Любовь моя (оригинальная версия с субтитрами)",
@@ -1739,6 +1755,15 @@
       "file": "b0jyFGbAnJftxVMBKQtR56nf949.jpg",
       "file_downloaded_at": "2026-11-08"
     },
+    "семейная история в объективе трех режиссеров|any": {
+      "title": "Семейная история в объективе трех режиссеров",
+      "year": null,
+      "tmdb_id": null,
+      "tmdb_title": null,
+      "poster_path": null,
+      "resolved_at": "2026-11-12",
+      "via": "miss"
+    },
     "сентиментальная ценность субтитры|2025": {
       "title": "Сентиментальная ценность (субтитры)",
       "year": 2025,
@@ -1862,6 +1887,15 @@
       "via": "any",
       "file": "uAs0VN7VtdDL0VZ80hIu5qa9Ydf.jpg",
       "file_downloaded_at": "2026-11-05"
+    },
+    "таинственные импрессионисты|2019": {
+      "title": "Таинственные импрессионисты",
+      "year": 2019,
+      "tmdb_id": null,
+      "tmdb_title": null,
+      "poster_path": null,
+      "resolved_at": "2026-11-12",
+      "via": "miss"
     },
     "тайный дневник верити|2026": {
       "title": "Тайный дневник Верити",
