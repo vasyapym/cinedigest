@@ -2,85 +2,85 @@
   {
     "venue": "domkino",
     "ok": true,
-    "count": 69,
-    "fetched_at": "2026-11-13T14:04:46.208027+03:00",
+    "count": 81,
+    "fetched_at": "2026-11-13T15:11:15.003918+03:00",
     "stale": false,
     "suspicious": false,
     "error": null,
     "warning": null,
     "requests": 7,
-    "seconds": 14.374
+    "seconds": 14.092
   },
   {
     "venue": "rodina",
     "ok": true,
-    "count": 121,
-    "fetched_at": "2026-11-13T14:05:46.516826+03:00",
+    "count": 118,
+    "fetched_at": "2026-11-13T15:12:11.529315+03:00",
     "stale": false,
     "suspicious": false,
     "error": null,
     "warning": null,
     "requests": 35,
-    "seconds": 60.309
+    "seconds": 56.525
   },
   {
     "venue": "avrora",
-    "ok": false,
-    "count": 61,
-    "fetched_at": "2026-11-13T06:18:49.832485+03:00",
-    "stale": true,
+    "ok": true,
+    "count": 57,
+    "fetched_at": "2026-11-13T15:12:18.725311+03:00",
+    "stale": false,
     "suspicious": false,
-    "error": "parse failed: ValueError: avrora 2026-11-13: body is not valid JSON",
+    "error": null,
     "warning": null,
     "requests": 8,
-    "seconds": 6.914
+    "seconds": 7.193
   },
   {
     "venue": "poravkino",
     "ok": true,
-    "count": 35,
-    "fetched_at": "2026-11-13T14:05:59.890134+03:00",
+    "count": 190,
+    "fetched_at": "2026-11-13T15:12:25.464618+03:00",
     "stale": false,
     "suspicious": false,
     "error": null,
     "warning": null,
     "requests": 7,
-    "seconds": 6.456
+    "seconds": 6.739
   },
   {
     "venue": "lenfilm",
-    "ok": false,
-    "count": 27,
-    "fetched_at": "2026-11-13T06:19:04.083371+03:00",
-    "stale": true,
+    "ok": true,
+    "count": 28,
+    "fetched_at": "2026-11-13T15:12:32.889590+03:00",
+    "stale": false,
     "suspicious": false,
-    "error": "fetch failed: ValueError: lenfilm app: body is not valid JSON",
+    "error": null,
     "warning": null,
-    "requests": 1,
-    "seconds": 0.108
+    "requests": 9,
+    "seconds": 7.425
   },
   {
     "venue": "outcinema",
     "ok": true,
     "count": 8,
-    "fetched_at": "2026-11-13T14:06:00.581467+03:00",
+    "fetched_at": "2026-11-13T15:12:33.265941+03:00",
     "stale": false,
     "suspicious": false,
     "error": null,
     "warning": null,
     "requests": 1,
-    "seconds": 0.583
+    "seconds": 0.376
   },
   {
     "venue": "mirage",
     "ok": true,
-    "count": 105,
-    "fetched_at": "2026-11-13T14:06:09.129854+03:00",
+    "count": 101,
+    "fetched_at": "2026-11-13T15:12:41.921692+03:00",
     "stale": false,
     "suspicious": false,
     "error": null,
     "warning": null,
     "requests": 7,
-    "seconds": 8.548
+    "seconds": 8.656
   }
 ]
