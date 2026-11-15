@@ -3,6 +3,15 @@
   "_source": "https://www.themoviedb.org",
   "_purge": "delete this file and the docs/posters/ folder to purge the served poster cache; entries older than 180 days are dropped on every save and image files share the same retention limit (see file_downloaded_at)",
   "films": {
+    "theatrehd баден баден любовный напиток|2012": {
+      "title": "TheatreHD: Баден-Баден: Любовный напиток",
+      "year": 2012,
+      "tmdb_id": null,
+      "tmdb_title": null,
+      "poster_path": null,
+      "resolved_at": "2026-11-15",
+      "via": "miss"
+    },
     "theatrehd берлинская опера трубадур|2013": {
       "title": "TheatreHD: Берлинская опера: Трубадур",
       "year": 2013,
@@ -411,6 +420,22 @@
       "country_via": "tmdb:672",
       "file": "33Wj3LSyoAqtqkeh7YXcVMvTQzc.jpg",
       "file_downloaded_at": "2026-11-11"
+    },
+    "гив ми либерти|2019": {
+      "title": "Гив ми либерти",
+      "year": 2019,
+      "tmdb_id": 565720,
+      "tmdb_title": "Гив ми либерти",
+      "poster_path": "/i88KVsVjMvjjIDQSydFgI1Uv4mJ.jpg",
+      "resolved_at": "2026-11-15",
+      "via": "year",
+      "country": [
+        "United States of America"
+      ],
+      "country_at": "2026-11-15",
+      "country_via": "tmdb:565720",
+      "file": "i88KVsVjMvjjIDQSydFgI1Uv4mJ.jpg",
+      "file_downloaded_at": "2026-11-15"
     },
     "глубокий сон|1946": {
       "title": "ГЛУБОКИЙ СОН",
@@ -1700,6 +1725,15 @@
       "file": "8HAEmx8nLJMGYMOyhMWw49ynxPn.jpg",
       "file_downloaded_at": "2026-11-05"
     },
+    "последние книги xvii фестиваль бразильского кино|2025": {
+      "title": "Последние книги. XVII Фестиваль бразильского кино",
+      "year": 2025,
+      "tmdb_id": null,
+      "tmdb_title": null,
+      "poster_path": null,
+      "resolved_at": "2026-11-15",
+      "via": "miss"
+    },
     "посторонний субтитры|2025": {
       "title": "Посторонний (субтитры)",
       "year": 2025,
@@ -2054,6 +2088,15 @@
       "via": "any",
       "file": "b3AfV6Pr0s3kXiXh5wgMGTkpIov.jpg",
       "file_downloaded_at": "2026-11-05"
+    },
+    "старые грабители xvii фестиваль бразильского кино|2026": {
+      "title": "Старые грабители. XVII Фестиваль бразильского кино",
+      "year": 2026,
+      "tmdb_id": null,
+      "tmdb_title": null,
+      "poster_path": null,
+      "resolved_at": "2026-11-15",
+      "via": "miss"
     },
     "страх сцены|1950": {
       "title": "СТРАХ СЦЕНЫ",
