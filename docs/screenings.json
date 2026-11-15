@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-15T13:59:29.520920+03:00",
+  "generated_at": "2026-11-15T14:56:39.771004+03:00",
   "window_start": "2026-11-15",
   "window_end": "2026-11-21",
   "statuses": [
@@ -7,85 +7,85 @@
       "venue": "domkino",
       "ok": true,
       "count": 87,
-      "fetched_at": "2026-11-15T13:59:45.728657+03:00",
+      "fetched_at": "2026-11-15T14:56:52.057117+03:00",
       "stale": false,
       "suspicious": false,
       "error": null,
       "warning": null,
       "requests": 7,
-      "seconds": 16.208
+      "seconds": 12.286
     },
     {
       "venue": "rodina",
       "ok": true,
-      "count": 119,
-      "fetched_at": "2026-11-15T14:00:44.484627+03:00",
+      "count": 118,
+      "fetched_at": "2026-11-15T14:57:46.183741+03:00",
       "stale": false,
       "suspicious": false,
       "error": null,
       "warning": null,
       "requests": 36,
-      "seconds": 58.756
+      "seconds": 54.127
     },
     {
       "venue": "avrora",
       "ok": true,
-      "count": 39,
-      "fetched_at": "2026-11-15T14:00:52.572050+03:00",
+      "count": 38,
+      "fetched_at": "2026-11-15T14:57:52.747515+03:00",
       "stale": false,
       "suspicious": false,
       "error": null,
       "warning": null,
       "requests": 8,
-      "seconds": 8.087
+      "seconds": 6.563
     },
     {
       "venue": "poravkino",
       "ok": true,
-      "count": 91,
-      "fetched_at": "2026-11-15T14:01:00.250325+03:00",
+      "count": 88,
+      "fetched_at": "2026-11-15T14:57:58.367573+03:00",
       "stale": false,
       "suspicious": false,
       "error": null,
       "warning": null,
       "requests": 7,
-      "seconds": 7.678
+      "seconds": 5.62
     },
     {
       "venue": "lenfilm",
       "ok": true,
       "count": 25,
-      "fetched_at": "2026-11-15T14:01:07.745445+03:00",
+      "fetched_at": "2026-11-15T14:58:05.225077+03:00",
       "stale": false,
       "suspicious": false,
       "error": null,
       "warning": null,
       "requests": 9,
-      "seconds": 7.495
+      "seconds": 6.857
     },
     {
       "venue": "outcinema",
       "ok": true,
       "count": 14,
-      "fetched_at": "2026-11-15T14:01:08.446421+03:00",
+      "fetched_at": "2026-11-15T14:58:05.493104+03:00",
       "stale": false,
       "suspicious": false,
       "error": null,
       "warning": null,
       "requests": 1,
-      "seconds": 0.701
+      "seconds": 0.268
     },
     {
       "venue": "mirage",
       "ok": true,
-      "count": 133,
-      "fetched_at": "2026-11-15T14:01:16.744214+03:00",
+      "count": 131,
+      "fetched_at": "2026-11-15T14:58:13.160592+03:00",
       "stale": false,
       "suspicious": false,
       "error": null,
       "warning": null,
       "requests": 7,
-      "seconds": 8.298
+      "seconds": 7.667
     }
   ],
   "screenings": [
@@ -409,51 +409,6 @@
     },
     {
       "venue": "mirage",
-      "source_id": "d80ecdad-b213-428c-8a3d-547cb7568b1d",
-      "title": "Тайный дневник Верити",
-      "start": "2026-11-15T13:25:00+03:00",
-      "hall": "4",
-      "price_min": null,
-      "price_max": null,
-      "language": null,
-      "tags": [],
-      "url": "https://www.mirage.ru/ticket_new/d80ecdad-b213-428c-8a3d-547cb7568b1d/",
-      "source_url": "https://www.mirage.ru/spb/schedule/15.11.2026/cinema/1/",
-      "extra": {
-        "genres": [
-          "детектив",
-          "триллер",
-          "драма",
-          "криминал"
-        ],
-        "age": "18+",
-        "film_id": 7628
-      }
-    },
-    {
-      "venue": "mirage",
-      "source_id": "20ebf93d-b7d5-47ae-bd86-cd8660f742b5",
-      "title": "Рождение империи",
-      "start": "2026-11-15T13:45:00+03:00",
-      "hall": "1",
-      "price_min": null,
-      "price_max": null,
-      "language": null,
-      "tags": [],
-      "url": "https://www.mirage.ru/ticket_new/20ebf93d-b7d5-47ae-bd86-cd8660f742b5/",
-      "source_url": "https://www.mirage.ru/spb/schedule/15.11.2026/cinema/1/",
-      "extra": {
-        "genres": [
-          "драма",
-          "биография",
-          "история"
-        ],
-        "age": "12+",
-        "film_id": 7643
-      }
-    },
-    {
-      "venue": "mirage",
       "source_id": "754c32eb-39c6-dfd8-b7c9-7531a459937c",
       "title": "Кот в шляпе",
       "start": "2026-11-15T14:10:00+03:00",
@@ -478,58 +433,6 @@
       }
     },
     {
-      "venue": "poravkino",
-      "source_id": "44381",
-      "title": "Рождение империи",
-      "start": "2026-11-15T14:10:00+03:00",
-      "hall": "Премьер",
-      "price_min": 400,
-      "price_max": 400,
-      "language": null,
-      "tags": [],
-      "url": "https://poravkino.ru/",
-      "source_url": "https://poravkino.ru/api/schedule?date=2026-11-15",
-      "extra": {
-        "year": 2026,
-        "country": "Россия",
-        "director": "Андрей Кравчук, Алексей Нужный",
-        "original_title": "Рождение империи",
-        "duration_min": 150,
-        "age": 12,
-        "genres": [
-          "биографический",
-          "драма"
-        ],
-        "is_pushkin": false
-      }
-    },
-    {
-      "venue": "avrora",
-      "source_id": "6af1b1c93c0000b500288dc5",
-      "title": "Лиля",
-      "start": "2026-11-15T14:20:00+03:00",
-      "hall": "Большой",
-      "price_min": 450,
-      "price_max": 600,
-      "language": null,
-      "tags": [],
-      "url": "https://avrora.spb.ru/",
-      "source_url": "https://kinokassa.kinoplan24.ru/api/v2/release/playbill?city_id=2&date=2026-11-15",
-      "extra": {
-        "release_id": 26080,
-        "year": 2026,
-        "duration_min": 145,
-        "age": "18+",
-        "genres": [
-          "драма",
-          "биография"
-        ],
-        "country": "Россия",
-        "free_places": 179,
-        "online_sale": true
-      }
-    },
-    {
       "venue": "mirage",
       "source_id": "dcea2b91-87bf-4068-a761-8323686fa343",
       "title": "Сумерки. Сага. Затмение",
@@ -549,58 +452,6 @@
         ],
         "age": "18+",
         "film_id": 7658
-      }
-    },
-    {
-      "venue": "poravkino",
-      "source_id": "44382",
-      "title": "Сумерки. Сага. Затмение",
-      "start": "2026-11-15T14:20:00+03:00",
-      "hall": "4",
-      "price_min": 400,
-      "price_max": 400,
-      "language": null,
-      "tags": [],
-      "url": "https://poravkino.ru/",
-      "source_url": "https://poravkino.ru/api/schedule?date=2026-11-15",
-      "extra": {
-        "year": 2010,
-        "country": "США",
-        "director": "Дэвид Слэйд",
-        "original_title": "Сумерки. Сага. Затмение",
-        "duration_min": 130,
-        "age": 18,
-        "genres": [
-          "мелодрама",
-          "триллер",
-          "фэнтези"
-        ],
-        "is_pushkin": false
-      }
-    },
-    {
-      "venue": "poravkino",
-      "source_id": "44383",
-      "title": "Битва моторов",
-      "start": "2026-11-15T14:30:00+03:00",
-      "hall": "1",
-      "price_min": 400,
-      "price_max": 400,
-      "language": null,
-      "tags": [],
-      "url": "https://poravkino.ru/",
-      "source_url": "https://poravkino.ru/api/schedule?date=2026-11-15",
-      "extra": {
-        "country": "Россия",
-        "director": "Илья Маланин",
-        "original_title": "Битва моторов",
-        "duration_min": 155,
-        "age": 12,
-        "genres": [
-          "драма",
-          "приключения"
-        ],
-        "is_pushkin": false
       }
     },
     {
@@ -645,31 +496,6 @@
         ],
         "age": "18+",
         "film_id": 7652
-      }
-    },
-    {
-      "venue": "rodina",
-      "source_id": "60d84e8e5638",
-      "title": "Лиля",
-      "start": "2026-11-15T14:35:00+03:00",
-      "hall": "Большой зал",
-      "price_min": 300,
-      "price_max": 300,
-      "language": null,
-      "tags": [],
-      "url": "https://rodinakino.ru/events/lilya-2026",
-      "source_url": "https://rodinakino.ru/?date=2026/11/15",
-      "extra": {
-        "year": 2026,
-        "age": "18+",
-        "duration_min": 146,
-        "synopsis": "1915 год, Первая мировая война. В Петрограде молодой поэт-футурист Владимир Маяковский знакомится с семейной парой — Лилей и Осипом Бриками. Он читает им свою поэму «Облако в штанах», Лиля и Осип сразу и навсегда влюбляются в поэзию Маяковского, понимая, что перед ними необыкновенный талант, поэтический гений. А…",
-        "director": "Вера Сторожева",
-        "genres": [
-          "драма",
-          "мелодрама"
-        ],
-        "country": "Россия"
       }
     },
     {
@@ -742,7 +568,7 @@
           "концерт"
         ],
         "country": "Австрия",
-        "free_places": 188,
+        "free_places": 182,
         "online_sale": true
       }
     },
@@ -893,7 +719,7 @@
           "драма"
         ],
         "country": "Россия",
-        "free_places": 24,
+        "free_places": 23,
         "online_sale": true
       }
     },
@@ -1314,7 +1140,7 @@
           "историческая драма"
         ],
         "country": "Россия",
-        "free_places": 339,
+        "free_places": 333,
         "online_sale": true
       }
     },
@@ -1368,7 +1194,7 @@
           "комедийный хоррор"
         ],
         "country": "Великобритания",
-        "free_places": 172,
+        "free_places": 171,
         "online_sale": true
       }
     },
@@ -1543,7 +1369,7 @@
           "документальный"
         ],
         "country": "Германия, Австрия",
-        "free_places": 31,
+        "free_places": 29,
         "online_sale": true
       }
     },
@@ -1917,7 +1743,7 @@
           "драма"
         ],
         "country": "Россия",
-        "free_places": 95,
+        "free_places": 94,
         "online_sale": true
       }
     },
@@ -2048,7 +1874,7 @@
           "драма"
         ],
         "country": "США",
-        "free_places": 123,
+        "free_places": 124,
         "online_sale": true
       }
     },
@@ -2076,7 +1902,7 @@
           "комедия"
         ],
         "country": "США, Великобритания",
-        "free_places": 375,
+        "free_places": 367,
         "online_sale": true
       }
     },
@@ -2440,7 +2266,7 @@
           "биография"
         ],
         "country": "Россия",
-        "free_places": 87,
+        "free_places": 85,
         "online_sale": true
       }
     },
@@ -5483,7 +5309,7 @@
           "документальный"
         ],
         "country": "Россия",
-        "free_places": 121,
+        "free_places": 119,
         "online_sale": true
       }
     },
@@ -5899,7 +5725,7 @@
           "драма"
         ],
         "country": "Россия",
-        "free_places": 108,
+        "free_places": 105,
         "online_sale": true
       }
     },
@@ -6309,7 +6135,7 @@
           "комедия"
         ],
         "country": "США, Великобритания",
-        "free_places": 437,
+        "free_places": 435,
         "online_sale": true
       }
     },
@@ -9584,7 +9410,7 @@
           "драма"
         ],
         "country": "США",
-        "free_places": 178,
+        "free_places": 175,
         "online_sale": true
       }
     },
@@ -10159,7 +9985,7 @@
           "музейный фильм"
         ],
         "country": "Италия",
-        "free_places": 309,
+        "free_places": 303,
         "online_sale": true
       }
     },
@@ -11295,7 +11121,7 @@
           "документальный"
         ],
         "country": "Испания",
-        "free_places": 378,
+        "free_places": 377,
         "online_sale": true
       }
     },
@@ -12302,7 +12128,7 @@
           "драма"
         ],
         "country": "США",
-        "free_places": 49,
+        "free_places": 48,
         "online_sale": true
       }
     },
