@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-17T14:56:55.891811+03:00",
+  "generated_at": "2026-11-17T16:23:07.431089+03:00",
   "window_start": "2026-11-17",
   "window_end": "2026-11-23",
   "statuses": [
@@ -7,85 +7,85 @@
       "venue": "domkino",
       "ok": true,
       "count": 89,
-      "fetched_at": "2026-11-17T14:57:11.331678+03:00",
+      "fetched_at": "2026-11-17T16:23:25.786949+03:00",
       "stale": false,
       "suspicious": false,
       "error": null,
       "warning": null,
       "requests": 7,
-      "seconds": 15.44
+      "seconds": 18.356
     },
     {
       "venue": "rodina",
       "ok": true,
-      "count": 97,
-      "fetched_at": "2026-11-17T14:58:10.986982+03:00",
+      "count": 95,
+      "fetched_at": "2026-11-17T16:24:28.781442+03:00",
       "stale": false,
       "suspicious": false,
       "error": null,
       "warning": null,
       "requests": 37,
-      "seconds": 59.655
+      "seconds": 62.994
     },
     {
       "venue": "avrora",
       "ok": true,
-      "count": 55,
-      "fetched_at": "2026-11-17T14:58:18.303050+03:00",
+      "count": 54,
+      "fetched_at": "2026-11-17T16:24:36.765859+03:00",
       "stale": false,
       "suspicious": false,
       "error": null,
       "warning": null,
       "requests": 8,
-      "seconds": 7.316
+      "seconds": 7.984
     },
     {
       "venue": "poravkino",
       "ok": true,
-      "count": 88,
-      "fetched_at": "2026-11-17T14:58:24.370466+03:00",
+      "count": 84,
+      "fetched_at": "2026-11-17T16:24:43.002282+03:00",
       "stale": false,
       "suspicious": false,
       "error": null,
       "warning": null,
       "requests": 7,
-      "seconds": 6.067
+      "seconds": 6.236
     },
     {
       "venue": "lenfilm",
       "ok": true,
-      "count": 26,
-      "fetched_at": "2026-11-17T14:58:31.949716+03:00",
+      "count": 25,
+      "fetched_at": "2026-11-17T16:24:50.775541+03:00",
       "stale": false,
       "suspicious": false,
       "error": null,
       "warning": null,
       "requests": 9,
-      "seconds": 7.579
+      "seconds": 7.773
     },
     {
       "venue": "outcinema",
       "ok": true,
       "count": 12,
-      "fetched_at": "2026-11-17T14:58:32.253430+03:00",
+      "fetched_at": "2026-11-17T16:24:51.321816+03:00",
       "stale": false,
       "suspicious": false,
       "error": null,
       "warning": null,
       "requests": 1,
-      "seconds": 0.304
+      "seconds": 0.546
     },
     {
       "venue": "mirage",
       "ok": true,
-      "count": 59,
-      "fetched_at": "2026-11-17T14:58:40.879934+03:00",
+      "count": 56,
+      "fetched_at": "2026-11-17T16:25:00.359702+03:00",
       "stale": false,
       "suspicious": false,
       "error": null,
       "warning": null,
       "requests": 7,
-      "seconds": 8.626
+      "seconds": 9.038
     }
   ],
   "screenings": [
@@ -114,28 +114,6 @@
       }
     },
     {
-      "venue": "mirage",
-      "source_id": "56d44d47-e20a-4eee-a19d-87330268ff4a",
-      "title": "Сумерки. Сага. Затмение",
-      "start": "2026-11-17T14:20:00+03:00",
-      "hall": "2",
-      "price_min": null,
-      "price_max": null,
-      "language": null,
-      "tags": [],
-      "url": "https://www.mirage.ru/ticket_new/56d44d47-e20a-4eee-a19d-87330268ff4a/",
-      "source_url": "https://www.mirage.ru/spb/schedule/17.11.2026/cinema/1/",
-      "extra": {
-        "genres": [
-          "триллер",
-          "мелодрама",
-          "фэнтези"
-        ],
-        "age": "18+",
-        "film_id": 7658
-      }
-    },
-    {
       "venue": "domkino",
       "source_id": "b2f57a047df1",
       "title": "Ангельский чин",
@@ -156,27 +134,6 @@
         "genres": [
           "документальный"
         ]
-      }
-    },
-    {
-      "venue": "mirage",
-      "source_id": "2222367c-d433-45f8-8b44-f9e8cb87b709",
-      "title": "Лиля",
-      "start": "2026-11-17T14:25:00+03:00",
-      "hall": "4",
-      "price_min": null,
-      "price_max": null,
-      "language": null,
-      "tags": [],
-      "url": "https://www.mirage.ru/ticket_new/2222367c-d433-45f8-8b44-f9e8cb87b709/",
-      "source_url": "https://www.mirage.ru/spb/schedule/17.11.2026/cinema/1/",
-      "extra": {
-        "genres": [
-          "драма",
-          "биография"
-        ],
-        "age": "18+",
-        "film_id": 7679
       }
     },
     {
@@ -203,58 +160,6 @@
           "боевик",
           "приключения"
         ]
-      }
-    },
-    {
-      "venue": "rodina",
-      "source_id": "79a4d98ef343",
-      "title": "Айтматов",
-      "start": "2026-11-17T14:45:00+03:00",
-      "hall": "Малый 2 зал",
-      "price_min": 250,
-      "price_max": 250,
-      "language": null,
-      "tags": [],
-      "url": "https://rodinakino.ru/events/ajtmatov-2026",
-      "source_url": "https://rodinakino.ru/?date=2026/11/17",
-      "extra": {
-        "year": 2026,
-        "age": "16+",
-        "duration_min": 105,
-        "synopsis": "1979 год. Всемирно известный советский писатель Чингиз Айтматов завершает роман «И дольше века длится день», публикация которого оказывается под угрозой из-за цензуры. Во время поездки в Европу перед ним открывается возможность навсегда остаться на Западе, где его ждут свобода творчества, мировое признание и жизнь без…",
-        "director": "Каныбек Калматов",
-        "genres": [
-          "драма",
-          "биография"
-        ],
-        "country": "Кыргызстан"
-      }
-    },
-    {
-      "venue": "lenfilm",
-      "source_id": "6aec5f9d3f00004400868ccc",
-      "title": "Отверженные (версия с субтитрами)",
-      "start": "2026-11-17T14:50:00+03:00",
-      "hall": "1",
-      "price_min": 400,
-      "price_max": 400,
-      "language": null,
-      "tags": [
-        "SUB"
-      ],
-      "url": "https://www.lenfilm.ru/service/Kinoteatr-Lenfilm/",
-      "source_url": "https://kinokassa.kinoplan24.ru/api/v2/release/playbill?cinema_id=2387&date=2026-11-17",
-      "extra": {
-        "release_id": 25742,
-        "duration_min": 179,
-        "age": "18+",
-        "genres": [
-          "исторический",
-          "драма"
-        ],
-        "country": "Франция",
-        "free_places": 191,
-        "online_sale": true
       }
     },
     {
@@ -306,60 +211,6 @@
       }
     },
     {
-      "venue": "poravkino",
-      "source_id": "44495",
-      "title": "Девичник в спа",
-      "start": "2026-11-17T15:05:00+03:00",
-      "hall": "Малый красный",
-      "price_min": 330,
-      "price_max": 330,
-      "language": null,
-      "tags": [],
-      "url": "https://poravkino.ru/",
-      "source_url": "https://poravkino.ru/api/schedule?date=2026-11-17",
-      "extra": {
-        "year": 2026,
-        "country": "США",
-        "director": "Джон Лукас, Скотт Мур",
-        "original_title": "Девичник в спа",
-        "duration_min": 100,
-        "age": 18,
-        "genres": [
-          "комедия"
-        ],
-        "is_pushkin": false
-      }
-    },
-    {
-      "venue": "poravkino",
-      "source_id": "44494",
-      "title": "Плетёный муж",
-      "start": "2026-11-17T15:05:00+03:00",
-      "hall": "VIP",
-      "price_min": 650,
-      "price_max": 650,
-      "language": null,
-      "tags": [],
-      "url": "https://poravkino.ru/",
-      "source_url": "https://poravkino.ru/api/schedule?date=2026-11-17",
-      "extra": {
-        "year": 2026,
-        "country": "США, Великобритания, Австралия",
-        "director": "Алекс Хьюстон Фишер, Элинор Уилсон",
-        "original_title": "Плетеный муж",
-        "duration_min": 110,
-        "age": 18,
-        "genres": [
-          "драма",
-          "комедия",
-          "мелодрама",
-          "фантастика",
-          "фэнтези"
-        ],
-        "is_pushkin": false
-      }
-    },
-    {
       "venue": "domkino",
       "source_id": "586a7d6e31d5",
       "title": "Безумный день в Комеди Франсез (субтитры)",
@@ -381,136 +232,6 @@
         "genres": [
           "комедия"
         ]
-      }
-    },
-    {
-      "venue": "mirage",
-      "source_id": "b1ecb938-c392-4adc-acba-43f86f97ab21",
-      "title": "Одиссея",
-      "start": "2026-11-17T15:10:00+03:00",
-      "hall": "5",
-      "price_min": null,
-      "price_max": null,
-      "language": null,
-      "tags": [],
-      "url": "https://www.mirage.ru/ticket_new/b1ecb938-c392-4adc-acba-43f86f97ab21/",
-      "source_url": "https://www.mirage.ru/spb/schedule/17.11.2026/cinema/1/",
-      "extra": {
-        "genres": [
-          "боевик",
-          "приключения",
-          "фэнтези"
-        ],
-        "age": "18+",
-        "film_id": 7450
-      }
-    },
-    {
-      "venue": "avrora",
-      "source_id": "6af49670400000450067c98c",
-      "title": "Отверженные",
-      "start": "2026-11-17T15:30:00+03:00",
-      "hall": "Малый",
-      "price_min": 450,
-      "price_max": 450,
-      "language": null,
-      "tags": [],
-      "url": "https://avrora.spb.ru/",
-      "source_url": "https://kinokassa.kinoplan24.ru/api/v2/release/playbill?city_id=2&date=2026-11-17",
-      "extra": {
-        "release_id": 24083,
-        "year": 2026,
-        "duration_min": 173,
-        "age": "18+",
-        "genres": [
-          "исторический",
-          "драма"
-        ],
-        "country": "Франция",
-        "free_places": 101,
-        "online_sale": true
-      }
-    },
-    {
-      "venue": "poravkino",
-      "source_id": "44496",
-      "title": "Рождение империи",
-      "start": "2026-11-17T15:35:00+03:00",
-      "hall": "Малый синий",
-      "price_min": 330,
-      "price_max": 330,
-      "language": null,
-      "tags": [],
-      "url": "https://poravkino.ru/",
-      "source_url": "https://poravkino.ru/api/schedule?date=2026-11-17",
-      "extra": {
-        "year": 2026,
-        "country": "Россия",
-        "director": "Андрей Кравчук, Алексей Нужный",
-        "original_title": "Рождение империи",
-        "duration_min": 150,
-        "age": 12,
-        "genres": [
-          "биографический",
-          "драма"
-        ],
-        "is_pushkin": false
-      }
-    },
-    {
-      "venue": "rodina",
-      "source_id": "1d35980cd118",
-      "title": "Настройщик",
-      "start": "2026-11-17T15:40:00+03:00",
-      "hall": "Малый 1 зал",
-      "price_min": 250,
-      "price_max": 250,
-      "language": null,
-      "tags": [],
-      "url": "https://rodinakino.ru/events/nastrojshik-2025",
-      "source_url": "https://rodinakino.ru/?date=2026/11/17",
-      "extra": {
-        "year": 2025,
-        "age": "18+",
-        "duration_min": 108,
-        "synopsis": "Нью-Йорк. Жизнь Ники — страдающего гиперакузией талантливого настройщика фортепиано — переворачивается с ног на голову, когда он обнаруживает, что его навыки и тонкий слух настройки можно применять для взлома сейфов. Когда его пожилой наставник и партнёр Гарри попадает в больницу, парень решает присоединиться к банде…",
-        "director": "Дэниэл Роэр",
-        "genres": [
-          "драма",
-          "мелодрама",
-          "криминал",
-          "музыка"
-        ],
-        "country": "Канада, США"
-      }
-    },
-    {
-      "venue": "poravkino",
-      "source_id": "44497",
-      "title": "Кот в шляпе",
-      "start": "2026-11-17T15:50:00+03:00",
-      "hall": "3",
-      "price_min": 330,
-      "price_max": 330,
-      "language": null,
-      "tags": [],
-      "url": "https://poravkino.ru/",
-      "source_url": "https://poravkino.ru/api/schedule?date=2026-11-17",
-      "extra": {
-        "year": 2026,
-        "country": "США",
-        "director": "Алессандро Карлони, Эрика Ривинойя",
-        "original_title": "Кот в шляпе",
-        "duration_min": 110,
-        "age": 6,
-        "genres": [
-          "комедия",
-          "мультфильм",
-          "приключения",
-          "семейный",
-          "фэнтези"
-        ],
-        "is_pushkin": false
       }
     },
     {
@@ -706,7 +427,7 @@
           "биография"
         ],
         "country": "Россия",
-        "free_places": 419,
+        "free_places": 400,
         "online_sale": true
       }
     },
@@ -1102,7 +823,7 @@
           "драма"
         ],
         "country": "Россия",
-        "free_places": 187,
+        "free_places": 186,
         "online_sale": true
       }
     },
@@ -1548,7 +1269,7 @@
           "комедия"
         ],
         "country": "США, Великобритания",
-        "free_places": 362,
+        "free_places": 354,
         "online_sale": true
       }
     },
@@ -1718,7 +1439,7 @@
           "драма"
         ],
         "country": "Швеция, Франция, Великобритания",
-        "free_places": 175,
+        "free_places": 174,
         "online_sale": true
       }
     },
@@ -1892,7 +1613,7 @@
           "историческая драма"
         ],
         "country": "Россия",
-        "free_places": 90,
+        "free_places": 92,
         "online_sale": true
       }
     },
@@ -3270,7 +2991,7 @@
           "драма"
         ],
         "country": "Россия",
-        "free_places": 434,
+        "free_places": 432,
         "online_sale": true
       }
     },
@@ -3298,7 +3019,7 @@
           "драма"
         ],
         "country": "Румыния, Франция, Норвегия, Дания, Финляндия, Швеция",
-        "free_places": 182,
+        "free_places": 180,
         "online_sale": true
       }
     },
@@ -3338,7 +3059,7 @@
       "language": null,
       "tags": [],
       "url": "https://rodinakino.ru/events/ajtmatov-2026",
-      "source_url": "https://rodinakino.ru/?date=2026/11/18",
+      "source_url": "https://rodinakino.ru/?date=2026/11/17",
       "extra": {
         "year": 2026,
         "age": "16+",
@@ -3961,7 +3682,7 @@
       "language": null,
       "tags": [],
       "url": "https://rodinakino.ru/events/nastrojshik-2025",
-      "source_url": "https://rodinakino.ru/?date=2026/11/18",
+      "source_url": "https://rodinakino.ru/?date=2026/11/17",
       "extra": {
         "year": 2025,
         "age": "18+",
@@ -4050,7 +3771,7 @@
           "драма"
         ],
         "country": "Швеция, Франция, Великобритания",
-        "free_places": 194,
+        "free_places": 193,
         "online_sale": true
       }
     },
@@ -4864,7 +4585,7 @@
           "музейный фильм"
         ],
         "country": "Италия",
-        "free_places": 253,
+        "free_places": 246,
         "online_sale": true
       }
     },
@@ -5351,7 +5072,7 @@
           "биография"
         ],
         "country": "Россия",
-        "free_places": 428,
+        "free_places": 426,
         "online_sale": true
       }
     },
@@ -7192,7 +6913,7 @@
           "драма"
         ],
         "country": "США",
-        "free_places": 411,
+        "free_places": 402,
         "online_sale": true
       }
     },
@@ -7578,7 +7299,7 @@
           "историческая драма"
         ],
         "country": "Россия",
-        "free_places": 110,
+        "free_places": 108,
         "online_sale": true
       }
     },
@@ -8672,7 +8393,7 @@
           "драма"
         ],
         "country": "США",
-        "free_places": 403,
+        "free_places": 389,
         "online_sale": true
       }
     },
@@ -8952,7 +8673,7 @@
           "драма"
         ],
         "country": "США",
-        "free_places": 105,
+        "free_places": 103,
         "online_sale": true
       }
     },
@@ -9001,7 +8722,7 @@
           "драма"
         ],
         "country": "Россия",
-        "free_places": 185,
+        "free_places": 183,
         "online_sale": true
       }
     },
@@ -9411,7 +9132,7 @@
           "драма"
         ],
         "country": "США",
-        "free_places": 411,
+        "free_places": 407,
         "online_sale": true
       }
     },
@@ -10138,7 +9859,7 @@
           "драма"
         ],
         "country": "США",
-        "free_places": 427,
+        "free_places": 426,
         "online_sale": true
       }
     },
@@ -10167,7 +9888,7 @@
           "драма"
         ],
         "country": "США",
-        "free_places": 78,
+        "free_places": 76,
         "online_sale": true
       }
     },
@@ -10440,7 +10161,7 @@
           "драма"
         ],
         "country": "Великобритания, Германия, Греция, Франция",
-        "free_places": 168,
+        "free_places": 166,
         "online_sale": true
       }
     },
@@ -10704,7 +10425,7 @@
           "драма"
         ],
         "country": "США",
-        "free_places": 165,
+        "free_places": 164,
         "online_sale": true
       }
     }
