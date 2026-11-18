@@ -657,14 +657,14 @@
       "file": "pGyuM0qntTdW5g9bRwqH4h7gkms.jpg",
       "file_downloaded_at": "2026-11-06"
     },
-    "дедмобиль|any": {
+    "дедмобиль|2026": {
       "title": "Дедмобиль",
-      "year": null,
+      "year": 2026,
       "tmdb_id": 1580804,
       "tmdb_title": "Дедмобиль",
       "poster_path": "/gqiWDmlCjRgjZfxdpNkIWA2VWRv.jpg",
       "resolved_at": "2026-11-18",
-      "via": "yearless",
+      "via": "year",
       "country": [
         "Russia"
       ],
@@ -2342,14 +2342,22 @@
       "file": "rHIHELSgTGWnDryaoj9Yb15iTkd.jpg",
       "file_downloaded_at": "2026-11-05"
     },
-    "скрудж|any": {
+    "скрудж|2026": {
       "title": "Скрудж",
-      "year": null,
-      "tmdb_id": null,
-      "tmdb_title": null,
-      "poster_path": null,
+      "year": 2026,
+      "tmdb_id": 1567605,
+      "tmdb_title": "Скрудж",
+      "poster_path": "/mjLPW28Vqi1HXfa9JY3V0xfUdGa.jpg",
       "resolved_at": "2026-11-18",
-      "via": "miss"
+      "via": "year",
+      "country": [
+        "United States of America",
+        "United Kingdom"
+      ],
+      "country_at": "2026-11-18",
+      "country_via": "tmdb:1567605",
+      "file": "mjLPW28Vqi1HXfa9JY3V0xfUdGa.jpg",
+      "file_downloaded_at": "2026-11-18"
     },
     "сладкий запах успеха|1957": {
       "title": "СЛАДКИЙ ЗАПАХ УСПЕХА",
@@ -2551,14 +2559,14 @@
       "file": "auBQctM42AUd1QeKK4T1nQ0ELBb.jpg",
       "file_downloaded_at": "2026-11-15"
     },
-    "турбозавры суперфильм|any": {
+    "турбозавры суперфильм|2026": {
       "title": "Турбозавры. Суперфильм",
-      "year": null,
+      "year": 2026,
       "tmdb_id": 1592531,
       "tmdb_title": "Турбозавры. Суперфильм",
       "poster_path": "/8Rnp6IvPsIttZZpO6heIHUnF2oS.jpg",
       "resolved_at": "2026-11-18",
-      "via": "yearless",
+      "via": "year",
       "country": [
         "Russia"
       ],
