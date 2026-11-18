@@ -3,6 +3,22 @@
   "_source": "https://www.themoviedb.org",
   "_purge": "delete this file and the docs/posters/ folder to purge the served poster cache; entries older than 180 days are dropped on every save and image files share the same retention limit (see file_downloaded_at)",
   "films": {
+    "28 панфиловцев|2016": {
+      "title": "28 панфиловцев",
+      "year": 2016,
+      "tmdb_id": 427342,
+      "tmdb_title": "28 панфиловцев",
+      "poster_path": "/pz8nkkOOEioD9sB1S2Oa0qoFGgI.jpg",
+      "resolved_at": "2026-11-18",
+      "via": "year",
+      "country": [
+        "Russia"
+      ],
+      "country_at": "2026-11-18",
+      "country_via": "tmdb:427342",
+      "file": "pz8nkkOOEioD9sB1S2Oa0qoFGgI.jpg",
+      "file_downloaded_at": "2026-11-18"
+    },
     "theatrehd баден баден любовный напиток|2012": {
       "title": "TheatreHD: Баден-Баден: Любовный напиток",
       "year": 2012,
@@ -607,6 +623,22 @@
       "via": "year",
       "file": "pGyuM0qntTdW5g9bRwqH4h7gkms.jpg",
       "file_downloaded_at": "2026-11-06"
+    },
+    "дедмобиль|any": {
+      "title": "Дедмобиль",
+      "year": null,
+      "tmdb_id": 1580804,
+      "tmdb_title": "Дедмобиль",
+      "poster_path": "/gqiWDmlCjRgjZfxdpNkIWA2VWRv.jpg",
+      "resolved_at": "2026-11-18",
+      "via": "yearless",
+      "country": [
+        "Russia"
+      ],
+      "country_at": "2026-11-18",
+      "country_via": "tmdb:1580804",
+      "file": "gqiWDmlCjRgjZfxdpNkIWA2VWRv.jpg",
+      "file_downloaded_at": "2026-11-18"
     },
     "демонолог|2026": {
       "title": "Демонолог",
@@ -1535,6 +1567,22 @@
       "file": "7oNxg17JawXBMdkuSo7hpThhTZF.jpg",
       "file_downloaded_at": "2026-11-05"
     },
+    "не горюй|1969": {
+      "title": "Не горюй!",
+      "year": 1969,
+      "tmdb_id": 27922,
+      "tmdb_title": "Не горюй!",
+      "poster_path": "/2IPcSewQCAZqrMoHPZX0NAaJGnK.jpg",
+      "resolved_at": "2026-11-18",
+      "via": "any",
+      "country": [
+        "Soviet Union"
+      ],
+      "country_at": "2026-11-18",
+      "country_via": "tmdb:27922",
+      "file": "2IPcSewQCAZqrMoHPZX0NAaJGnK.jpg",
+      "file_downloaded_at": "2026-11-18"
+    },
     "непокой|2026": {
       "title": "Непокой",
       "year": 2026,
@@ -2261,6 +2309,15 @@
       "file": "rHIHELSgTGWnDryaoj9Yb15iTkd.jpg",
       "file_downloaded_at": "2026-11-05"
     },
+    "скрудж|any": {
+      "title": "Скрудж",
+      "year": null,
+      "tmdb_id": null,
+      "tmdb_title": null,
+      "poster_path": null,
+      "resolved_at": "2026-11-18",
+      "via": "miss"
+    },
     "сладкий запах успеха|1957": {
       "title": "СЛАДКИЙ ЗАПАХ УСПЕХА",
       "year": 1957,
@@ -2460,6 +2517,22 @@
       "country_via": "tmdb:702",
       "file": "auBQctM42AUd1QeKK4T1nQ0ELBb.jpg",
       "file_downloaded_at": "2026-11-15"
+    },
+    "турбозавры суперфильм|any": {
+      "title": "Турбозавры. Суперфильм",
+      "year": null,
+      "tmdb_id": 1592531,
+      "tmdb_title": "Турбозавры. Суперфильм",
+      "poster_path": "/8Rnp6IvPsIttZZpO6heIHUnF2oS.jpg",
+      "resolved_at": "2026-11-18",
+      "via": "yearless",
+      "country": [
+        "Russia"
+      ],
+      "country_at": "2026-11-18",
+      "country_via": "tmdb:1592531",
+      "file": "8Rnp6IvPsIttZZpO6heIHUnF2oS.jpg",
+      "file_downloaded_at": "2026-11-18"
     },
     "убийство|1967": {
       "title": "УБИЙСТВО",
