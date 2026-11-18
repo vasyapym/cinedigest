@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-18T16:01:48.329201+03:00",
+  "generated_at": "2026-11-18T17:11:53.709162+03:00",
   "window_start": "2026-11-18",
   "window_end": "2026-11-24",
   "statuses": [
@@ -7,85 +7,85 @@
       "venue": "domkino",
       "ok": true,
       "count": 69,
-      "fetched_at": "2026-11-18T16:02:01.167794+03:00",
+      "fetched_at": "2026-11-18T17:12:11.011218+03:00",
       "stale": false,
       "suspicious": false,
       "error": null,
       "warning": null,
       "requests": 7,
-      "seconds": 12.839
+      "seconds": 17.302
     },
     {
       "venue": "rodina",
       "ok": true,
       "count": 78,
-      "fetched_at": "2026-11-18T16:02:52.587348+03:00",
+      "fetched_at": "2026-11-18T17:13:03.531175+03:00",
       "stale": false,
       "suspicious": false,
       "error": null,
       "warning": null,
       "requests": 33,
-      "seconds": 51.42
+      "seconds": 52.52
     },
     {
       "venue": "avrora",
       "ok": true,
-      "count": 45,
-      "fetched_at": "2026-11-18T16:02:59.226458+03:00",
+      "count": 44,
+      "fetched_at": "2026-11-18T17:13:11.367662+03:00",
       "stale": false,
       "suspicious": false,
       "error": null,
       "warning": null,
       "requests": 8,
-      "seconds": 6.638
+      "seconds": 7.836
     },
     {
       "venue": "poravkino",
       "ok": true,
-      "count": 86,
-      "fetched_at": "2026-11-18T16:03:04.878124+03:00",
+      "count": 82,
+      "fetched_at": "2026-11-18T17:13:17.417072+03:00",
       "stale": false,
       "suspicious": false,
       "error": null,
       "warning": null,
       "requests": 7,
-      "seconds": 5.652
+      "seconds": 6.049
     },
     {
       "venue": "lenfilm",
       "ok": true,
-      "count": 24,
-      "fetched_at": "2026-11-18T16:03:11.105699+03:00",
+      "count": 36,
+      "fetched_at": "2026-11-18T17:13:24.212454+03:00",
       "stale": false,
       "suspicious": false,
       "error": null,
       "warning": null,
       "requests": 8,
-      "seconds": 6.228
+      "seconds": 6.795
     },
     {
       "venue": "outcinema",
       "ok": true,
       "count": 10,
-      "fetched_at": "2026-11-18T16:03:11.770704+03:00",
+      "fetched_at": "2026-11-18T17:13:24.758241+03:00",
       "stale": false,
       "suspicious": false,
       "error": null,
       "warning": null,
       "requests": 1,
-      "seconds": 0.665
+      "seconds": 0.546
     },
     {
       "venue": "mirage",
       "ok": true,
-      "count": 161,
-      "fetched_at": "2026-11-18T16:03:19.703825+03:00",
+      "count": 158,
+      "fetched_at": "2026-11-18T17:13:33.788931+03:00",
       "stale": false,
       "suspicious": false,
       "error": null,
       "warning": null,
       "requests": 7,
-      "seconds": 7.933
+      "seconds": 9.031
     }
   ],
   "screenings": [
@@ -266,51 +266,6 @@
       }
     },
     {
-      "venue": "mirage",
-      "source_id": "9e6e8dcd-e4f9-4fbc-9e8f-e314e3dbde8a",
-      "title": "Лиля",
-      "start": "2026-11-18T16:00:00+03:00",
-      "hall": "4",
-      "price_min": null,
-      "price_max": null,
-      "language": null,
-      "tags": [],
-      "url": "https://www.mirage.ru/ticket_new/9e6e8dcd-e4f9-4fbc-9e8f-e314e3dbde8a/",
-      "source_url": "https://www.mirage.ru/spb/schedule/18.11.2026/cinema/1/",
-      "extra": {
-        "genres": [
-          "драма",
-          "биография"
-        ],
-        "age": "18+",
-        "film_id": 7679
-      }
-    },
-    {
-      "venue": "mirage",
-      "source_id": "1d9ab939-2dc8-4489-9552-9efa39910cb7",
-      "title": "Кот в шляпе",
-      "start": "2026-11-18T16:10:00+03:00",
-      "hall": "3",
-      "price_min": null,
-      "price_max": null,
-      "language": null,
-      "tags": [],
-      "url": "https://www.mirage.ru/ticket_new/1d9ab939-2dc8-4489-9552-9efa39910cb7/",
-      "source_url": "https://www.mirage.ru/spb/schedule/18.11.2026/cinema/1/",
-      "extra": {
-        "genres": [
-          "комедия",
-          "приключения",
-          "мультфильм",
-          "фэнтези",
-          "семейный"
-        ],
-        "age": "6+",
-        "film_id": 7694
-      }
-    },
-    {
       "venue": "domkino",
       "source_id": "84c0ead138d9",
       "title": "Жертвоприношение (субтитры)",
@@ -358,27 +313,6 @@
     },
     {
       "venue": "mirage",
-      "source_id": "c34a7191-f6e9-9480-68b8-3e7179ea3da8",
-      "title": "Девичник в спа",
-      "start": "2026-11-18T16:20:00+03:00",
-      "hall": "7",
-      "price_min": null,
-      "price_max": null,
-      "language": null,
-      "tags": [],
-      "url": "https://www.mirage.ru/ticket_new/c34a7191-f6e9-9480-68b8-3e7179ea3da8/",
-      "source_url": "https://www.mirage.ru/spb/schedule/18.11.2026/cinema/1/",
-      "extra": {
-        "genres": [
-          "комедия"
-        ],
-        "age": "18+",
-        "price_raw": "40000₽",
-        "film_id": 7674
-      }
-    },
-    {
-      "venue": "mirage",
       "source_id": "5b5c1822-bdf3-456e-8b61-bcb75cef3bec",
       "title": "Психопатка",
       "start": "2026-11-18T16:35:00+03:00",
@@ -397,86 +331,6 @@
         ],
         "age": "18+",
         "film_id": 7683
-      }
-    },
-    {
-      "venue": "poravkino",
-      "source_id": "44553",
-      "title": "Психопатка",
-      "start": "2026-11-18T16:35:00+03:00",
-      "hall": "2",
-      "price_min": 400,
-      "price_max": 400,
-      "language": null,
-      "tags": [],
-      "url": "https://poravkino.ru/",
-      "source_url": "https://poravkino.ru/api/schedule?date=2026-11-18",
-      "extra": {
-        "year": 2026,
-        "country": "Великобритания, Ирландия",
-        "director": "Закари Уигон",
-        "original_title": "Психопатка",
-        "duration_min": 110,
-        "age": 18,
-        "genres": [
-          "комедия",
-          "триллер",
-          "ужасы"
-        ],
-        "is_pushkin": false
-      }
-    },
-    {
-      "venue": "poravkino",
-      "source_id": "44554",
-      "title": "Клэйфейс",
-      "start": "2026-11-18T16:45:00+03:00",
-      "hall": "4",
-      "price_min": 400,
-      "price_max": 400,
-      "language": null,
-      "tags": [],
-      "url": "https://poravkino.ru/",
-      "source_url": "https://poravkino.ru/api/schedule?date=2026-11-18",
-      "extra": {
-        "country": "США, Великобритания",
-        "director": "Джеймс Уоткинс",
-        "original_title": "Клэйфейс",
-        "duration_min": 110,
-        "age": 18,
-        "genres": [
-          "фантастика",
-          "боевик"
-        ],
-        "is_pushkin": false
-      }
-    },
-    {
-      "venue": "avrora",
-      "source_id": "6af48e743f000045008965ab",
-      "title": "Плетёный муж",
-      "start": "2026-11-18T16:55:00+03:00",
-      "hall": "Большой",
-      "price_min": 500,
-      "price_max": 650,
-      "language": null,
-      "tags": [],
-      "url": "https://avrora.spb.ru/",
-      "source_url": "https://kinokassa.kinoplan24.ru/api/v2/release/playbill?city_id=2&date=2026-11-18",
-      "extra": {
-        "release_id": 25872,
-        "year": 2026,
-        "duration_min": 105,
-        "age": "18+",
-        "genres": [
-          "фантастика",
-          "фэнтези",
-          "мелодрама",
-          "комедия"
-        ],
-        "country": "США, Великобритания",
-        "free_places": 410,
-        "online_sale": true
       }
     },
     {
@@ -522,58 +376,6 @@
         ],
         "age": "18+",
         "film_id": 7556
-      }
-    },
-    {
-      "venue": "poravkino",
-      "source_id": "44555",
-      "title": "Рождение империи",
-      "start": "2026-11-18T17:00:00+03:00",
-      "hall": "Премьер",
-      "price_min": 400,
-      "price_max": 400,
-      "language": null,
-      "tags": [],
-      "url": "https://poravkino.ru/",
-      "source_url": "https://poravkino.ru/api/schedule?date=2026-11-18",
-      "extra": {
-        "year": 2026,
-        "country": "Россия",
-        "director": "Андрей Кравчук, Алексей Нужный",
-        "original_title": "Рождение империи",
-        "duration_min": 150,
-        "age": 12,
-        "genres": [
-          "биографический",
-          "драма"
-        ],
-        "is_pushkin": false
-      }
-    },
-    {
-      "venue": "poravkino",
-      "source_id": "44556",
-      "title": "Четыре жизни Петра Мамонова",
-      "start": "2026-11-18T17:05:00+03:00",
-      "hall": "Малый красный",
-      "price_min": 400,
-      "price_max": 400,
-      "language": null,
-      "tags": [],
-      "url": "https://poravkino.ru/",
-      "source_url": "https://poravkino.ru/api/schedule?date=2026-11-18",
-      "extra": {
-        "year": 2026,
-        "country": "Россия",
-        "director": "Павел Лунгин",
-        "original_title": "Четыре жизни Петра Мамонова",
-        "duration_min": 125,
-        "age": 18,
-        "genres": [
-          "документальный",
-          "биографический"
-        ],
-        "is_pushkin": false
       }
     },
     {
@@ -997,7 +799,7 @@
           "музейный фильм"
         ],
         "country": "Италия",
-        "free_places": 198,
+        "free_places": 196,
         "online_sale": true
       }
     },
@@ -1509,7 +1311,7 @@
           "биография"
         ],
         "country": "Россия",
-        "free_places": 417,
+        "free_places": 415,
         "online_sale": true
       }
     },
@@ -1830,7 +1632,7 @@
           "комедийный хоррор"
         ],
         "country": "Великобритания",
-        "free_places": 100,
+        "free_places": 97,
         "online_sale": true
       }
     },
@@ -2339,6 +2141,27 @@
       }
     },
     {
+      "venue": "lenfilm",
+      "source_id": "6afdae183f0000480029c17f",
+      "title": "Чапаев с нами",
+      "start": "2026-11-19T10:00:00+03:00",
+      "hall": "1",
+      "price_min": 250,
+      "price_max": 250,
+      "language": null,
+      "tags": [],
+      "url": "https://www.lenfilm.ru/service/Kinoteatr-Lenfilm/",
+      "source_url": "https://kinokassa.kinoplan24.ru/api/v2/release/playbill?cinema_id=2387&date=2026-11-19",
+      "extra": {
+        "release_id": 10083671,
+        "year": 1941,
+        "duration_min": 9,
+        "age": "0+",
+        "free_places": 194,
+        "online_sale": true
+      }
+    },
+    {
       "venue": "rodina",
       "source_id": "8661895794f1",
       "title": "Айтматов",
@@ -2389,6 +2212,48 @@
       }
     },
     {
+      "venue": "lenfilm",
+      "source_id": "6afdae143d00004e00ada5cd",
+      "title": "Чапаев с нами",
+      "start": "2026-11-19T10:20:00+03:00",
+      "hall": "1",
+      "price_min": 250,
+      "price_max": 250,
+      "language": null,
+      "tags": [],
+      "url": "https://www.lenfilm.ru/service/Kinoteatr-Lenfilm/",
+      "source_url": "https://kinokassa.kinoplan24.ru/api/v2/release/playbill?cinema_id=2387&date=2026-11-19",
+      "extra": {
+        "release_id": 10083671,
+        "year": 1941,
+        "duration_min": 9,
+        "age": "0+",
+        "free_places": 194,
+        "online_sale": true
+      }
+    },
+    {
+      "venue": "lenfilm",
+      "source_id": "6afdae0e3b0000bd0004c0ce",
+      "title": "Чапаев с нами",
+      "start": "2026-11-19T10:35:00+03:00",
+      "hall": "1",
+      "price_min": 250,
+      "price_max": 250,
+      "language": null,
+      "tags": [],
+      "url": "https://www.lenfilm.ru/service/Kinoteatr-Lenfilm/",
+      "source_url": "https://kinokassa.kinoplan24.ru/api/v2/release/playbill?cinema_id=2387&date=2026-11-19",
+      "extra": {
+        "release_id": 10083671,
+        "year": 1941,
+        "duration_min": 9,
+        "age": "0+",
+        "free_places": 194,
+        "online_sale": true
+      }
+    },
+    {
       "venue": "poravkino",
       "source_id": "44591",
       "title": "Диггер",
@@ -2414,6 +2279,27 @@
       }
     },
     {
+      "venue": "lenfilm",
+      "source_id": "6afdae0b3b00004d0004bfe7",
+      "title": "Чапаев с нами",
+      "start": "2026-11-19T10:55:00+03:00",
+      "hall": "1",
+      "price_min": 250,
+      "price_max": 250,
+      "language": null,
+      "tags": [],
+      "url": "https://www.lenfilm.ru/service/Kinoteatr-Lenfilm/",
+      "source_url": "https://kinokassa.kinoplan24.ru/api/v2/release/playbill?cinema_id=2387&date=2026-11-19",
+      "extra": {
+        "release_id": 10083671,
+        "year": 1941,
+        "duration_min": 9,
+        "age": "0+",
+        "free_places": 194,
+        "online_sale": true
+      }
+    },
+    {
       "venue": "mirage",
       "source_id": "eb30dbca-0eec-4a4c-9de3-3249f96437f1",
       "title": "Лиля",
@@ -2432,6 +2318,28 @@
         ],
         "age": "18+",
         "film_id": 7679
+      }
+    },
+    {
+      "venue": "lenfilm",
+      "source_id": "6afdace93f0000460029c103",
+      "title": "Прекрасное далеко",
+      "start": "2026-11-19T11:10:00+03:00",
+      "hall": "1",
+      "price_min": 250,
+      "price_max": 250,
+      "language": null,
+      "tags": [],
+      "url": "https://www.lenfilm.ru/service/Kinoteatr-Lenfilm/",
+      "source_url": "https://kinokassa.kinoplan24.ru/api/v2/release/playbill?cinema_id=2387&date=2026-11-19",
+      "extra": {
+        "release_id": 10083515,
+        "year": 2000,
+        "duration_min": 20,
+        "age": "0+",
+        "country": "Россия",
+        "free_places": 194,
+        "online_sale": true
       }
     },
     {
@@ -2578,7 +2486,7 @@
           "драма"
         ],
         "country": "США",
-        "free_places": 431,
+        "free_places": 428,
         "online_sale": true
       }
     },
@@ -3163,7 +3071,7 @@
           "историческая драма"
         ],
         "country": "Россия",
-        "free_places": 94,
+        "free_places": 92,
         "online_sale": true
       }
     },
@@ -4002,7 +3910,7 @@
           "драма"
         ],
         "country": "США",
-        "free_places": 99,
+        "free_places": 97,
         "online_sale": true
       }
     },
@@ -4253,7 +4161,7 @@
           "комедия"
         ],
         "country": "США, Великобритания",
-        "free_places": 423,
+        "free_places": 421,
         "online_sale": true
       }
     },
@@ -4548,7 +4456,7 @@
           "биография"
         ],
         "country": "Россия",
-        "free_places": 89,
+        "free_places": 88,
         "online_sale": true
       }
     },
@@ -5145,7 +5053,7 @@
           "драма"
         ],
         "country": "США",
-        "free_places": 377,
+        "free_places": 374,
         "online_sale": true
       }
     },
@@ -5403,6 +5311,28 @@
         ],
         "country": "Франция, США, Польша, Италия",
         "free_places": 110,
+        "online_sale": true
+      }
+    },
+    {
+      "venue": "lenfilm",
+      "source_id": "6afdae283f0000490029c188",
+      "title": "Прекрасное далеко",
+      "start": "2026-11-19T21:50:00+03:00",
+      "hall": "1",
+      "price_min": 450,
+      "price_max": 450,
+      "language": null,
+      "tags": [],
+      "url": "https://www.lenfilm.ru/service/Kinoteatr-Lenfilm/",
+      "source_url": "https://kinokassa.kinoplan24.ru/api/v2/release/playbill?cinema_id=2387&date=2026-11-19",
+      "extra": {
+        "release_id": 10083515,
+        "year": 2000,
+        "duration_min": 20,
+        "age": "0+",
+        "country": "Россия",
+        "free_places": 194,
         "online_sale": true
       }
     },
@@ -5821,6 +5751,27 @@
       }
     },
     {
+      "venue": "lenfilm",
+      "source_id": "6afdaecf3d0000a700ada679",
+      "title": "Вокзал",
+      "start": "2026-11-20T10:05:00+03:00",
+      "hall": "1",
+      "price_min": 250,
+      "price_max": 250,
+      "language": null,
+      "tags": [],
+      "url": "https://www.lenfilm.ru/service/Kinoteatr-Lenfilm/",
+      "source_url": "https://kinokassa.kinoplan24.ru/api/v2/release/playbill?cinema_id=2387&date=2026-11-20",
+      "extra": {
+        "release_id": 10083934,
+        "year": 2001,
+        "duration_min": 18,
+        "age": "0+",
+        "free_places": 194,
+        "online_sale": true
+      }
+    },
+    {
       "venue": "domkino",
       "source_id": "1adffd8a2e11",
       "title": "Изгои",
@@ -5867,6 +5818,48 @@
         "genres": [
           "триллер"
         ]
+      }
+    },
+    {
+      "venue": "lenfilm",
+      "source_id": "6afdaeca3f00004f0029c210",
+      "title": "Встреча с Максимом",
+      "start": "2026-11-20T10:25:00+03:00",
+      "hall": "1",
+      "price_min": 250,
+      "price_max": 250,
+      "language": null,
+      "tags": [],
+      "url": "https://www.lenfilm.ru/service/Kinoteatr-Lenfilm/",
+      "source_url": "https://kinokassa.kinoplan24.ru/api/v2/release/playbill?cinema_id=2387&date=2026-11-20",
+      "extra": {
+        "release_id": 10083933,
+        "year": 1941,
+        "duration_min": 9,
+        "age": "0+",
+        "free_places": 194,
+        "online_sale": true
+      }
+    },
+    {
+      "venue": "lenfilm",
+      "source_id": "6afdaec73b0000a80004c182",
+      "title": "Встреча с Максимом",
+      "start": "2026-11-20T10:40:00+03:00",
+      "hall": "1",
+      "price_min": 250,
+      "price_max": 250,
+      "language": null,
+      "tags": [],
+      "url": "https://www.lenfilm.ru/service/Kinoteatr-Lenfilm/",
+      "source_url": "https://kinokassa.kinoplan24.ru/api/v2/release/playbill?cinema_id=2387&date=2026-11-20",
+      "extra": {
+        "release_id": 10083933,
+        "year": 1941,
+        "duration_min": 9,
+        "age": "0+",
+        "free_places": 194,
+        "online_sale": true
       }
     },
     {
@@ -5945,6 +5938,27 @@
       }
     },
     {
+      "venue": "lenfilm",
+      "source_id": "6afdaeb73d0000a700ada669",
+      "title": "Встреча с Максимом",
+      "start": "2026-11-20T10:55:00+03:00",
+      "hall": "1",
+      "price_min": 250,
+      "price_max": 250,
+      "language": null,
+      "tags": [],
+      "url": "https://www.lenfilm.ru/service/Kinoteatr-Lenfilm/",
+      "source_url": "https://kinokassa.kinoplan24.ru/api/v2/release/playbill?cinema_id=2387&date=2026-11-20",
+      "extra": {
+        "release_id": 10083933,
+        "year": 1941,
+        "duration_min": 9,
+        "age": "0+",
+        "free_places": 194,
+        "online_sale": true
+      }
+    },
+    {
       "venue": "mirage",
       "source_id": "3e1d520b-4f01-4ad5-8e8f-6425add98a65",
       "title": "Лиля",
@@ -5963,6 +5977,27 @@
         ],
         "age": "18+",
         "film_id": 7679
+      }
+    },
+    {
+      "venue": "lenfilm",
+      "source_id": "6afdaeb43d00005000ada666",
+      "title": "Встреча с Максимом",
+      "start": "2026-11-20T11:05:00+03:00",
+      "hall": "1",
+      "price_min": 250,
+      "price_max": 250,
+      "language": null,
+      "tags": [],
+      "url": "https://www.lenfilm.ru/service/Kinoteatr-Lenfilm/",
+      "source_url": "https://kinokassa.kinoplan24.ru/api/v2/release/playbill?cinema_id=2387&date=2026-11-20",
+      "extra": {
+        "release_id": 10083933,
+        "year": 1941,
+        "duration_min": 9,
+        "age": "0+",
+        "free_places": 194,
+        "online_sale": true
       }
     },
     {
@@ -6000,6 +6035,27 @@
         ],
         "age": "12+",
         "film_id": 7531
+      }
+    },
+    {
+      "venue": "lenfilm",
+      "source_id": "6afdae613f00004f0029c1bd",
+      "title": "Вокзал",
+      "start": "2026-11-20T11:20:00+03:00",
+      "hall": "1",
+      "price_min": 250,
+      "price_max": 250,
+      "language": null,
+      "tags": [],
+      "url": "https://www.lenfilm.ru/service/Kinoteatr-Lenfilm/",
+      "source_url": "https://kinokassa.kinoplan24.ru/api/v2/release/playbill?cinema_id=2387&date=2026-11-20",
+      "extra": {
+        "release_id": 10083934,
+        "year": 2001,
+        "duration_min": 18,
+        "age": "0+",
+        "free_places": 194,
+        "online_sale": true
       }
     },
     {
@@ -6045,7 +6101,7 @@
           "историческая драма"
         ],
         "country": "Россия",
-        "free_places": 104,
+        "free_places": 103,
         "online_sale": true
       }
     },
@@ -6327,7 +6383,7 @@
           "комедия"
         ],
         "country": "США, Великобритания",
-        "free_places": 439,
+        "free_places": 437,
         "online_sale": true
       }
     },
@@ -7642,7 +7698,7 @@
           "драма"
         ],
         "country": "США",
-        "free_places": 38,
+        "free_places": 36,
         "online_sale": true
       }
     },
@@ -7717,7 +7773,7 @@
           "драма"
         ],
         "country": "США",
-        "free_places": 336,
+        "free_places": 332,
         "online_sale": true
       }
     },
@@ -8150,7 +8206,7 @@
           "драма"
         ],
         "country": "США",
-        "free_places": 101,
+        "free_places": 97,
         "online_sale": true
       }
     },
@@ -8432,7 +8488,7 @@
           "драма"
         ],
         "country": "Россия",
-        "free_places": 433,
+        "free_places": 429,
         "online_sale": true
       }
     },
@@ -8717,7 +8773,7 @@
           "биография"
         ],
         "country": "Россия",
-        "free_places": 414,
+        "free_places": 410,
         "online_sale": true
       }
     },
@@ -8794,7 +8850,7 @@
           "драма"
         ],
         "country": "США",
-        "free_places": 12,
+        "free_places": 14,
         "online_sale": true
       }
     },
@@ -9052,7 +9108,7 @@
           "драма"
         ],
         "country": "США",
-        "free_places": 332,
+        "free_places": 329,
         "online_sale": true
       }
     },
@@ -10520,7 +10576,7 @@
           "драма"
         ],
         "country": "США",
-        "free_places": 59,
+        "free_places": 55,
         "online_sale": true
       }
     },
@@ -10550,7 +10606,7 @@
           "комедия"
         ],
         "country": "США, Великобритания",
-        "free_places": 91,
+        "free_places": 89,
         "online_sale": true
       }
     },
@@ -11133,7 +11189,7 @@
           "драма"
         ],
         "country": "США",
-        "free_places": 104,
+        "free_places": 102,
         "online_sale": true
       }
     },
@@ -11452,7 +11508,7 @@
           "драма"
         ],
         "country": "США",
-        "free_places": 150,
+        "free_places": 149,
         "online_sale": true
       }
     },
