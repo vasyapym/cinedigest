@@ -1270,11 +1270,21 @@
     "курочка пух и прах субтитры|2025": {
       "title": "Курочка. Пух и прах (субтитры)",
       "year": 2025,
-      "tmdb_id": null,
-      "tmdb_title": null,
-      "poster_path": null,
-      "resolved_at": "2026-11-05",
-      "via": "miss"
+      "tmdb_id": 1382513,
+      "tmdb_title": "Курочка. Пух и прах",
+      "poster_path": "/snLmkWF2jG6lnMrqioHHs9uaWU8.jpg",
+      "resolved_at": "2026-11-19",
+      "via": "stripped",
+      "retry_query": "Курочка. Пух и прах",
+      "country": [
+        "Germany",
+        "Hungary",
+        "Greece"
+      ],
+      "country_at": "2026-11-19",
+      "country_via": "tmdb:1382513",
+      "file": "snLmkWF2jG6lnMrqioHHs9uaWU8.jpg",
+      "file_downloaded_at": "2026-11-19"
     },
     "легенды леса субтитры|2025": {
       "title": "Легенды леса (субтитры)",
@@ -1405,6 +1415,16 @@
       "poster_path": null,
       "resolved_at": "2026-11-05",
       "via": "miss"
+    },
+    "любовь моя субтитры|any": {
+      "title": "Любовь моя (субтитры)",
+      "year": null,
+      "tmdb_id": null,
+      "tmdb_title": null,
+      "poster_path": null,
+      "resolved_at": "2026-11-19",
+      "via": "miss",
+      "retry_query": "Любовь моя"
     },
     "любовь моя|2026": {
       "title": "Любовь моя",
@@ -1898,7 +1918,7 @@
       "tmdb_id": null,
       "tmdb_title": null,
       "poster_path": null,
-      "resolved_at": "2026-11-05",
+      "resolved_at": "2026-11-19",
       "via": "miss"
     },
     "план ле корбюзье буэнос айрес|2022": {
