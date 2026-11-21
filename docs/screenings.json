@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-21T15:37:19.823774+03:00",
+  "generated_at": "2026-11-21T16:32:19.095928+03:00",
   "window_start": "2026-11-21",
   "window_end": "2026-11-27",
   "statuses": [
@@ -7,85 +7,85 @@
       "venue": "domkino",
       "ok": true,
       "count": 119,
-      "fetched_at": "2026-11-21T15:37:39.817546+03:00",
+      "fetched_at": "2026-11-21T16:32:33.390579+03:00",
       "stale": false,
       "suspicious": false,
       "error": null,
       "warning": null,
       "requests": 7,
-      "seconds": 19.994
+      "seconds": 14.295
     },
     {
       "venue": "rodina",
       "ok": true,
-      "count": 106,
-      "fetched_at": "2026-11-21T15:38:39.988726+03:00",
+      "count": 104,
+      "fetched_at": "2026-11-21T16:33:29.777176+03:00",
       "stale": false,
       "suspicious": false,
       "error": null,
       "warning": null,
       "requests": 35,
-      "seconds": 60.171
+      "seconds": 56.387
     },
     {
       "venue": "avrora",
       "ok": true,
       "count": 47,
-      "fetched_at": "2026-11-21T15:38:47.954325+03:00",
+      "fetched_at": "2026-11-21T16:33:38.082504+03:00",
       "stale": false,
       "suspicious": false,
       "error": null,
       "warning": null,
       "requests": 8,
-      "seconds": 7.962
+      "seconds": 8.302
     },
     {
       "venue": "poravkino",
       "ok": true,
-      "count": 140,
-      "fetched_at": "2026-11-21T15:38:53.879612+03:00",
+      "count": 139,
+      "fetched_at": "2026-11-21T16:33:43.713566+03:00",
       "stale": false,
       "suspicious": false,
       "error": null,
       "warning": null,
       "requests": 7,
-      "seconds": 5.925
+      "seconds": 5.631
     },
     {
       "venue": "lenfilm",
       "ok": true,
-      "count": 26,
-      "fetched_at": "2026-11-21T15:39:01.385761+03:00",
+      "count": 25,
+      "fetched_at": "2026-11-21T16:33:50.869804+03:00",
       "stale": false,
       "suspicious": false,
       "error": null,
       "warning": null,
       "requests": 9,
-      "seconds": 7.506
+      "seconds": 7.156
     },
     {
       "venue": "outcinema",
       "ok": true,
       "count": 5,
-      "fetched_at": "2026-11-21T15:39:01.821262+03:00",
+      "fetched_at": "2026-11-21T16:33:51.239472+03:00",
       "stale": false,
       "suspicious": false,
       "error": null,
       "warning": null,
       "requests": 1,
-      "seconds": 0.435
+      "seconds": 0.37
     },
     {
       "venue": "mirage",
       "ok": true,
-      "count": 172,
-      "fetched_at": "2026-11-21T15:39:10.547137+03:00",
+      "count": 171,
+      "fetched_at": "2026-11-21T16:33:59.884883+03:00",
       "stale": false,
       "suspicious": false,
       "error": null,
       "warning": null,
       "requests": 7,
-      "seconds": 8.726
+      "seconds": 8.645
     }
   ],
   "screenings": [
@@ -408,112 +408,6 @@
       }
     },
     {
-      "venue": "mirage",
-      "source_id": "b28d48a5-4b9e-457e-ac06-478100054068",
-      "title": "Одиссея",
-      "start": "2026-11-21T15:20:00+03:00",
-      "hall": "5",
-      "price_min": null,
-      "price_max": null,
-      "language": null,
-      "tags": [],
-      "url": "https://www.mirage.ru/ticket_new/b28d48a5-4b9e-457e-ac06-478100054068/",
-      "source_url": "https://www.mirage.ru/spb/schedule/21.11.2026/cinema/1/",
-      "extra": {
-        "genres": [
-          "боевик",
-          "приключения",
-          "фэнтези"
-        ],
-        "age": "18+",
-        "film_id": 7450
-      }
-    },
-    {
-      "venue": "rodina",
-      "source_id": "9829d4148689",
-      "title": "Психопатка",
-      "start": "2026-11-21T15:25:00+03:00",
-      "hall": "Большой зал",
-      "price_min": 300,
-      "price_max": 300,
-      "language": null,
-      "tags": [],
-      "url": "https://rodinakino.ru/events/psihopatka-2026",
-      "source_url": "https://rodinakino.ru/?date=2026/11/21",
-      "extra": {
-        "year": 2026,
-        "age": "18+",
-        "duration_min": 102,
-        "synopsis": "1858 год. Эксцентричная Уинифред Нотти считает себя самым адекватным человеком на свете. Желая начать жизнь с чистого листа, она прибывает в уединенное готическое поместье, чтобы стать гувернанткой у пары избалованных детей. Но когда прислуга начинает необъяснимым образом исчезать, хозяева дома всё сильнее подозревают…",
-        "director": "Закари Уигон",
-        "genres": [
-          "ужасы",
-          "триллер",
-          "комедия"
-        ],
-        "country": "Великобритания, Ирландия"
-      }
-    },
-    {
-      "venue": "lenfilm",
-      "source_id": "6add0b4c3f0000b700a204ae",
-      "title": "Увидеть всё (версия с субтитрами)",
-      "start": "2026-11-21T15:40:00+03:00",
-      "hall": "1",
-      "price_min": 600,
-      "price_max": 600,
-      "language": null,
-      "tags": [
-        "SUB"
-      ],
-      "url": "https://www.lenfilm.ru/service/Kinoteatr-Lenfilm/",
-      "source_url": "https://kinokassa.kinoplan24.ru/api/v2/release/playbill?cinema_id=2387&date=2026-11-21",
-      "extra": {
-        "release_id": 26250,
-        "year": 2026,
-        "duration_min": 174,
-        "age": "18+",
-        "genres": [
-          "комедия",
-          "документальный",
-          "драма"
-        ],
-        "country": "США",
-        "free_places": 0,
-        "online_sale": true
-      }
-    },
-    {
-      "venue": "poravkino",
-      "source_id": "44718",
-      "title": "Плетёный муж",
-      "start": "2026-11-21T15:40:00+03:00",
-      "hall": "3",
-      "price_min": 400,
-      "price_max": 400,
-      "language": null,
-      "tags": [],
-      "url": "https://poravkino.ru/",
-      "source_url": "https://poravkino.ru/api/schedule?date=2026-11-21",
-      "extra": {
-        "year": 2026,
-        "country": "США, Великобритания, Австралия",
-        "director": "Алекс Хьюстон Фишер, Элинор Уилсон",
-        "original_title": "Плетеный муж",
-        "duration_min": 110,
-        "age": 18,
-        "genres": [
-          "драма",
-          "комедия",
-          "мелодрама",
-          "фантастика",
-          "фэнтези"
-        ],
-        "is_pushkin": false
-      }
-    },
-    {
       "venue": "domkino",
       "source_id": "4c87bb165267",
       "title": "Фьорд",
@@ -558,30 +452,6 @@
         "age": "18+",
         "price_raw": "40000₽",
         "film_id": 7692
-      }
-    },
-    {
-      "venue": "rodina",
-      "source_id": "9bb3b2cfc5d4",
-      "title": "Ангельский чин",
-      "start": "2026-11-21T15:55:00+03:00",
-      "hall": "Малый 1 зал",
-      "price_min": 300,
-      "price_max": 300,
-      "language": null,
-      "tags": [],
-      "url": "https://rodinakino.ru/events/angelskij-chin-2026",
-      "source_url": "https://rodinakino.ru/?date=2026/11/21",
-      "extra": {
-        "year": 2026,
-        "age": "12+",
-        "duration_min": 109,
-        "synopsis": "Рассказ о Новодевичьем монастыре — объекте наследия ЮНЕСКО — и женщинах, посвятивших себя служению.",
-        "director": "Юлия Бобкова",
-        "genres": [
-          "документальный"
-        ],
-        "country": "Россия"
       }
     },
     {
@@ -785,7 +655,7 @@
     },
     {
       "venue": "mirage",
-      "source_id": "bb06c8015a34",
+      "source_id": "61aca23c-b805-48df-babd-d9114eeaa0b6",
       "title": "Лиля",
       "start": "2026-11-21T16:40:00+03:00",
       "hall": "6",
@@ -793,7 +663,7 @@
       "price_max": null,
       "language": null,
       "tags": [],
-      "url": null,
+      "url": "https://www.mirage.ru/ticket_new/61aca23c-b805-48df-babd-d9114eeaa0b6/",
       "source_url": "https://www.mirage.ru/spb/schedule/21.11.2026/cinema/1/",
       "extra": {
         "genres": [
@@ -826,7 +696,7 @@
           "драма"
         ],
         "country": "Франция, США, Польша, Италия",
-        "free_places": 55,
+        "free_places": 44,
         "online_sale": true
       }
     },
@@ -1056,7 +926,7 @@
           "драма"
         ],
         "country": "США",
-        "free_places": 54,
+        "free_places": 38,
         "online_sale": true
       }
     },
@@ -1367,7 +1237,7 @@
           "комедия"
         ],
         "country": "США",
-        "free_places": 9,
+        "free_places": 11,
         "online_sale": true
       }
     },
@@ -1490,7 +1360,7 @@
     },
     {
       "venue": "mirage",
-      "source_id": "95626d25-b1cf-4b40-bb03-605a69579c34",
+      "source_id": "84cf3a3a6c77",
       "title": "Скрудж",
       "start": "2026-11-21T19:30:00+03:00",
       "hall": "4",
@@ -1498,7 +1368,7 @@
       "price_max": null,
       "language": null,
       "tags": [],
-      "url": "https://www.mirage.ru/ticket_new/95626d25-b1cf-4b40-bb03-605a69579c34/",
+      "url": null,
       "source_url": "https://www.mirage.ru/spb/schedule/21.11.2026/cinema/1/",
       "extra": {
         "genres": [
@@ -1538,7 +1408,7 @@
     },
     {
       "venue": "mirage",
-      "source_id": "51d4a7f51d95",
+      "source_id": "264cac55-31f2-40f5-9bda-b1e443d3e7b1",
       "title": "Рокки – это я",
       "start": "2026-11-21T19:35:00+03:00",
       "hall": "6",
@@ -1546,7 +1416,7 @@
       "price_max": null,
       "language": null,
       "tags": [],
-      "url": null,
+      "url": "https://www.mirage.ru/ticket_new/264cac55-31f2-40f5-9bda-b1e443d3e7b1/",
       "source_url": "https://www.mirage.ru/spb/schedule/21.11.2026/cinema/1/",
       "extra": {
         "genres": [
@@ -1783,7 +1653,7 @@
           "биография"
         ],
         "country": "Россия",
-        "free_places": 410,
+        "free_places": 409,
         "online_sale": true
       }
     },
@@ -2688,7 +2558,7 @@
       "language": null,
       "tags": [],
       "url": "https://rodinakino.ru/events/angelskij-chin-2026",
-      "source_url": "https://rodinakino.ru/?date=2026/11/22",
+      "source_url": "https://rodinakino.ru/?date=2026/11/21",
       "extra": {
         "year": 2026,
         "age": "12+",
@@ -2817,7 +2687,7 @@
           "драма"
         ],
         "country": "США",
-        "free_places": 429,
+        "free_places": 428,
         "online_sale": true
       }
     },
@@ -3430,7 +3300,7 @@
           "драма"
         ],
         "country": "США",
-        "free_places": 154,
+        "free_places": 153,
         "online_sale": true
       }
     },
@@ -3480,7 +3350,7 @@
           "биография"
         ],
         "country": "Россия",
-        "free_places": 365,
+        "free_places": 360,
         "online_sale": true
       }
     },
@@ -3735,7 +3605,7 @@
           "историческая драма"
         ],
         "country": "Россия",
-        "free_places": 44,
+        "free_places": 36,
         "online_sale": true
       }
     },
@@ -4261,7 +4131,7 @@
           "драма"
         ],
         "country": "США",
-        "free_places": 328,
+        "free_places": 317,
         "online_sale": true
       }
     },
@@ -4880,7 +4750,7 @@
       "language": null,
       "tags": [],
       "url": "https://rodinakino.ru/events/psihopatka-2026",
-      "source_url": "https://rodinakino.ru/?date=2026/11/22",
+      "source_url": "https://rodinakino.ru/?date=2026/11/21",
       "extra": {
         "year": 2026,
         "age": "18+",
@@ -4937,7 +4807,7 @@
           "драма"
         ],
         "country": "США",
-        "free_places": 86,
+        "free_places": 84,
         "online_sale": true
       }
     },
@@ -5600,7 +5470,7 @@
           "драма"
         ],
         "country": "США",
-        "free_places": 60,
+        "free_places": 57,
         "online_sale": true
       }
     },
@@ -8712,7 +8582,7 @@
           "драма"
         ],
         "country": "США",
-        "free_places": 132,
+        "free_places": 133,
         "online_sale": true
       }
     },
@@ -9515,7 +9385,7 @@
           "комедия"
         ],
         "country": "США, Великобритания",
-        "free_places": 439,
+        "free_places": 437,
         "online_sale": true
       }
     },
@@ -10054,7 +9924,7 @@
           "драма"
         ],
         "country": "США",
-        "free_places": 179,
+        "free_places": 177,
         "online_sale": true
       }
     },
@@ -13274,7 +13144,7 @@
           "шоу"
         ],
         "country": "Италия",
-        "free_places": 305,
+        "free_places": 304,
         "online_sale": true
       }
     },
@@ -13981,7 +13851,7 @@
           "документальный"
         ],
         "country": "Россия",
-        "free_places": 194,
+        "free_places": 192,
         "online_sale": true
       }
     },
@@ -14453,7 +14323,7 @@
           "романтическая комедия"
         ],
         "country": "Великобритания, Франция, Ирландия, США",
-        "free_places": 143,
+        "free_places": 142,
         "online_sale": true
       }
     },
@@ -15024,7 +14894,7 @@
           "драма"
         ],
         "country": "Ирландия, Молдова, Казахстан",
-        "free_places": 31,
+        "free_places": 30,
         "online_sale": true
       }
     },
