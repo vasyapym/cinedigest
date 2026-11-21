@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-21T06:17:23.742986+03:00",
+  "generated_at": "2026-11-21T14:10:00.458805+03:00",
   "window_start": "2026-11-21",
   "window_end": "2026-11-27",
   "statuses": [
@@ -7,277 +7,88 @@
       "venue": "domkino",
       "ok": true,
       "count": 119,
-      "fetched_at": "2026-11-21T06:17:37.783440+03:00",
+      "fetched_at": "2026-11-21T14:10:17.543233+03:00",
       "stale": false,
       "suspicious": false,
       "error": null,
       "warning": null,
       "requests": 7,
-      "seconds": 14.04
+      "seconds": 17.084
     },
     {
       "venue": "rodina",
       "ok": true,
-      "count": 113,
-      "fetched_at": "2026-11-21T06:18:29.836813+03:00",
+      "count": 107,
+      "fetched_at": "2026-11-21T14:11:17.343338+03:00",
       "stale": false,
       "suspicious": false,
       "error": null,
       "warning": null,
       "requests": 35,
-      "seconds": 52.053
+      "seconds": 59.8
     },
     {
       "venue": "avrora",
       "ok": true,
-      "count": 52,
-      "fetched_at": "2026-11-21T06:18:36.730818+03:00",
+      "count": 48,
+      "fetched_at": "2026-11-21T14:11:25.771016+03:00",
       "stale": false,
       "suspicious": false,
       "error": null,
       "warning": null,
       "requests": 8,
-      "seconds": 6.891
+      "seconds": 8.425
     },
     {
       "venue": "poravkino",
       "ok": true,
-      "count": 165,
-      "fetched_at": "2026-11-21T06:18:42.407817+03:00",
+      "count": 145,
+      "fetched_at": "2026-11-21T14:11:31.810358+03:00",
       "stale": false,
       "suspicious": false,
       "error": null,
       "warning": null,
       "requests": 7,
-      "seconds": 5.677
+      "seconds": 6.039
     },
     {
       "venue": "lenfilm",
       "ok": true,
-      "count": 28,
-      "fetched_at": "2026-11-21T06:18:49.482392+03:00",
+      "count": 26,
+      "fetched_at": "2026-11-21T14:11:39.550786+03:00",
       "stale": false,
       "suspicious": false,
       "error": null,
       "warning": null,
       "requests": 9,
-      "seconds": 7.075
+      "seconds": 7.74
     },
     {
       "venue": "outcinema",
       "ok": true,
       "count": 5,
-      "fetched_at": "2026-11-21T06:18:49.888015+03:00",
+      "fetched_at": "2026-11-21T14:11:40.154398+03:00",
       "stale": false,
       "suspicious": false,
       "error": null,
       "warning": null,
       "requests": 1,
-      "seconds": 0.406
+      "seconds": 0.604
     },
     {
       "venue": "mirage",
       "ok": true,
-      "count": 181,
-      "fetched_at": "2026-11-21T06:18:58.522335+03:00",
+      "count": 173,
+      "fetched_at": "2026-11-21T14:11:49.486500+03:00",
       "stale": false,
       "suspicious": false,
       "error": null,
       "warning": null,
       "requests": 7,
-      "seconds": 8.634
+      "seconds": 9.332
     }
   ],
   "screenings": [
-    {
-      "venue": "poravkino",
-      "source_id": "44694",
-      "title": "Дедмобиль",
-      "start": "2026-11-21T09:30:00+03:00",
-      "hall": "Малый синий",
-      "price_min": 250,
-      "price_max": 250,
-      "language": null,
-      "tags": [],
-      "url": "https://poravkino.ru/",
-      "source_url": "https://poravkino.ru/api/schedule?date=2026-11-21",
-      "extra": {
-        "year": 2026,
-        "country": "Россия",
-        "director": "Владимир Котт",
-        "original_title": "Дедмобиль",
-        "duration_min": 95,
-        "age": 12,
-        "genres": [
-          "комедия",
-          "семейный"
-        ],
-        "is_pushkin": false
-      }
-    },
-    {
-      "venue": "poravkino",
-      "source_id": "44696",
-      "title": "Лучшее лето в жизни",
-      "start": "2026-11-21T09:30:00+03:00",
-      "hall": "Малый красный",
-      "price_min": 250,
-      "price_max": 250,
-      "language": null,
-      "tags": [],
-      "url": "https://poravkino.ru/",
-      "source_url": "https://poravkino.ru/api/schedule?date=2026-11-21",
-      "extra": {
-        "year": 2025,
-        "country": "Россия",
-        "director": "Андрей Никифоров",
-        "original_title": "Лучшее лето в жизни",
-        "duration_min": 90,
-        "age": 12,
-        "genres": [
-          "детектив",
-          "комедия"
-        ],
-        "is_pushkin": false
-      }
-    },
-    {
-      "venue": "poravkino",
-      "source_id": "44693",
-      "title": "Рождение империи",
-      "start": "2026-11-21T09:30:00+03:00",
-      "hall": "1",
-      "price_min": 250,
-      "price_max": 250,
-      "language": null,
-      "tags": [],
-      "url": "https://poravkino.ru/",
-      "source_url": "https://poravkino.ru/api/schedule?date=2026-11-21",
-      "extra": {
-        "year": 2026,
-        "country": "Россия",
-        "director": "Андрей Кравчук, Алексей Нужный",
-        "original_title": "Рождение империи",
-        "duration_min": 150,
-        "age": 12,
-        "genres": [
-          "биографический",
-          "драма"
-        ],
-        "is_pushkin": false
-      }
-    },
-    {
-      "venue": "poravkino",
-      "source_id": "44695",
-      "title": "Турбозавры. Суперфильм",
-      "start": "2026-11-21T09:30:00+03:00",
-      "hall": "2",
-      "price_min": 250,
-      "price_max": 250,
-      "language": null,
-      "tags": [],
-      "url": "https://poravkino.ru/",
-      "source_url": "https://poravkino.ru/api/schedule?date=2026-11-21",
-      "extra": {
-        "year": 2026,
-        "country": "Россия",
-        "director": "Алексей Цицилин, Тимур Трофимов",
-        "original_title": "Турбозавры. Суперфильм",
-        "duration_min": 85,
-        "age": 0,
-        "genres": [
-          "детский",
-          "мультфильм",
-          "приключения",
-          "семейный",
-          "фантастика"
-        ],
-        "is_pushkin": false
-      }
-    },
-    {
-      "venue": "poravkino",
-      "source_id": "44698",
-      "title": "Девичник в спа",
-      "start": "2026-11-21T09:35:00+03:00",
-      "hall": "4",
-      "price_min": 250,
-      "price_max": 250,
-      "language": null,
-      "tags": [],
-      "url": "https://poravkino.ru/",
-      "source_url": "https://poravkino.ru/api/schedule?date=2026-11-21",
-      "extra": {
-        "year": 2026,
-        "country": "США",
-        "director": "Джон Лукас, Скотт Мур",
-        "original_title": "Девичник в спа",
-        "duration_min": 100,
-        "age": 18,
-        "genres": [
-          "комедия"
-        ],
-        "is_pushkin": false
-      }
-    },
-    {
-      "venue": "poravkino",
-      "source_id": "44697",
-      "title": "Кот в шляпе",
-      "start": "2026-11-21T09:35:00+03:00",
-      "hall": "3",
-      "price_min": 250,
-      "price_max": 250,
-      "language": null,
-      "tags": [],
-      "url": "https://poravkino.ru/",
-      "source_url": "https://poravkino.ru/api/schedule?date=2026-11-21",
-      "extra": {
-        "year": 2026,
-        "country": "США",
-        "director": "Алессандро Карлони, Эрика Ривинойя",
-        "original_title": "Кот в шляпе",
-        "duration_min": 110,
-        "age": 6,
-        "genres": [
-          "комедия",
-          "мультфильм",
-          "приключения",
-          "семейный",
-          "фэнтези"
-        ],
-        "is_pushkin": false
-      }
-    },
-    {
-      "venue": "poravkino",
-      "source_id": "44699",
-      "title": "Скрудж",
-      "start": "2026-11-21T09:40:00+03:00",
-      "hall": "Премьер",
-      "price_min": 300,
-      "price_max": 300,
-      "language": null,
-      "tags": [],
-      "url": "https://poravkino.ru/",
-      "source_url": "https://poravkino.ru/api/schedule?date=2026-11-21",
-      "extra": {
-        "year": 2026,
-        "country": "США, Великобритания",
-        "director": "Тай Уэст",
-        "original_title": "Скрудж",
-        "duration_min": 115,
-        "age": 12,
-        "genres": [
-          "драма",
-          "комедия",
-          "триллер",
-          "фэнтези"
-        ],
-        "is_pushkin": false
-      }
-    },
     {
       "venue": "domkino",
       "source_id": "2035f544e064",
@@ -300,32 +111,6 @@
         "genres": [
           "аниме"
         ]
-      }
-    },
-    {
-      "venue": "rodina",
-      "source_id": "23e871acd02a",
-      "title": "Колотун и волшебное королевство",
-      "start": "2026-11-21T10:00:00+03:00",
-      "hall": "Малый 2 зал",
-      "price_min": 250,
-      "price_max": 250,
-      "language": null,
-      "tags": [],
-      "url": "https://rodinakino.ru/events/kolotun-i-volshebnoe-korolevstvo-2026",
-      "source_url": "https://rodinakino.ru/?date=2026/11/21",
-      "extra": {
-        "year": 2026,
-        "age": "6+",
-        "duration_min": 116,
-        "synopsis": "Ссора в машине, случайный сугроб — и вот мама, папа и сын Снегиревы уже не в пробке по дороге на новогодний праздник, а в волшебном королевстве. Они нечаянно выпускают из заточения злого мага Колотуна, а с магами, особенно злыми, шутки плохи. Теперь, чтобы вернуться домой и спасти оба мира, Снегиревым предстоит…",
-        "director": "Олег Гусев",
-        "genres": [
-          "фэнтези",
-          "приключения",
-          "семейный"
-        ],
-        "country": "Пушкинская карта, Россия"
       }
     },
     {
@@ -355,60 +140,6 @@
       }
     },
     {
-      "venue": "poravkino",
-      "source_id": "44700",
-      "title": "Увидеть всё",
-      "start": "2026-11-21T10:20:00+03:00",
-      "hall": "VIP",
-      "price_min": 450,
-      "price_max": 450,
-      "language": null,
-      "tags": [],
-      "url": "https://poravkino.ru/",
-      "source_url": "https://poravkino.ru/api/schedule?date=2026-11-21",
-      "extra": {
-        "year": 2026,
-        "country": "США",
-        "director": "Нэйтан Филдер, Лэнс Оппенгейм",
-        "original_title": "Увидеть всё",
-        "duration_min": 180,
-        "age": 18,
-        "genres": [
-          "биографический",
-          "документальный"
-        ],
-        "is_pushkin": false
-      }
-    },
-    {
-      "venue": "avrora",
-      "source_id": "6afaded53f0000aa00a24482",
-      "title": "Плетёный муж",
-      "start": "2026-11-21T10:35:00+03:00",
-      "hall": "Большой",
-      "price_min": 400,
-      "price_max": 550,
-      "language": null,
-      "tags": [],
-      "url": "https://avrora.spb.ru/",
-      "source_url": "https://kinokassa.kinoplan24.ru/api/v2/release/playbill?city_id=2&date=2026-11-21",
-      "extra": {
-        "release_id": 25872,
-        "year": 2026,
-        "duration_min": 105,
-        "age": "18+",
-        "genres": [
-          "фантастика",
-          "фэнтези",
-          "мелодрама",
-          "комедия"
-        ],
-        "country": "США, Великобритания",
-        "free_places": 415,
-        "online_sale": true
-      }
-    },
-    {
       "venue": "domkino",
       "source_id": "bcd42d495dcc",
       "title": "Грация",
@@ -430,82 +161,6 @@
         "genres": [
           "драма"
         ]
-      }
-    },
-    {
-      "venue": "rodina",
-      "source_id": "3f8b98b7443c",
-      "title": "Новый дом",
-      "start": "2026-11-21T10:35:00+03:00",
-      "hall": "Большой зал",
-      "price_min": 250,
-      "price_max": 250,
-      "language": null,
-      "tags": [],
-      "url": "https://rodinakino.ru/events/novyj-dom-2026",
-      "source_url": "https://rodinakino.ru/?date=2026/11/21",
-      "extra": {
-        "year": 2026,
-        "age": "18+",
-        "duration_min": 101,
-        "synopsis": "После семи лет тюрьмы Анна выходит на свободу. У нее нет ни дома, ни семьи, ни смысла жизни, а чувство вины за прошлое не отпускает ее. Благотворительный фонд помогает устроиться на работу, предоставляет место в общежитии и направляет в группу психологической поддержки. Там Анна встречает Романа, который помогает ей…",
-        "director": "Никита Грушин",
-        "genres": [
-          "драма"
-        ],
-        "country": "Россия"
-      }
-    },
-    {
-      "venue": "rodina",
-      "source_id": "79d304c513a7",
-      "title": "Увидеть всё",
-      "start": "2026-11-21T10:40:00+03:00",
-      "hall": "Малый 1 зал",
-      "price_min": 250,
-      "price_max": 250,
-      "language": null,
-      "tags": [],
-      "url": "https://rodinakino.ru/events/uvidet-vsyo-2026",
-      "source_url": "https://rodinakino.ru/?date=2026/11/21",
-      "extra": {
-        "year": 2026,
-        "age": "18+",
-        "duration_min": 174,
-        "synopsis": "Элизабет Холмс была одной из самых молодых миллиардерш мира, пока её компания не оказалась в центре крупнейшего мошеннического скандала в истории Кремниевой долины. Потеряв всё своё состояние и получив тюремный срок, за месяц до заключения она приглашает в свой дом съёмочную группу во главе с комиком-авангардистом. Но…",
-        "director": "Нэйтан Филдер, Ланс Оппенгейм",
-        "genres": [
-          "документальный",
-          "биография"
-        ],
-        "country": "США"
-      }
-    },
-    {
-      "venue": "avrora",
-      "source_id": "6afadeb03c00004c0063b9b7",
-      "title": "Увидеть всё",
-      "start": "2026-11-21T10:50:00+03:00",
-      "hall": "Малый",
-      "price_min": 400,
-      "price_max": 400,
-      "language": null,
-      "tags": [],
-      "url": "https://avrora.spb.ru/",
-      "source_url": "https://kinokassa.kinoplan24.ru/api/v2/release/playbill?city_id=2&date=2026-11-21",
-      "extra": {
-        "release_id": 26248,
-        "year": 2026,
-        "duration_min": 174,
-        "age": "18+",
-        "genres": [
-          "комедия",
-          "документальный",
-          "драма"
-        ],
-        "country": "США",
-        "free_places": 69,
-        "online_sale": true
       }
     },
     {
@@ -556,100 +211,6 @@
       }
     },
     {
-      "venue": "mirage",
-      "source_id": "b73cb0ba-da79-48ec-8bd2-0dbfd5325d26",
-      "title": "Битва моторов",
-      "start": "2026-11-21T11:10:00+03:00",
-      "hall": "6",
-      "price_min": null,
-      "price_max": null,
-      "language": null,
-      "tags": [],
-      "url": "https://www.mirage.ru/ticket_new/b73cb0ba-da79-48ec-8bd2-0dbfd5325d26/",
-      "source_url": "https://www.mirage.ru/spb/schedule/21.11.2026/cinema/1/",
-      "extra": {
-        "genres": [
-          "приключения",
-          "драма"
-        ],
-        "age": "12+",
-        "film_id": 7531
-      }
-    },
-    {
-      "venue": "poravkino",
-      "source_id": "44701",
-      "title": "Лиля",
-      "start": "2026-11-21T11:10:00+03:00",
-      "hall": "2",
-      "price_min": 350,
-      "price_max": 350,
-      "language": null,
-      "tags": [],
-      "url": "https://poravkino.ru/",
-      "source_url": "https://poravkino.ru/api/schedule?date=2026-11-21",
-      "extra": {
-        "year": 2026,
-        "country": "Россия",
-        "director": "Вера Сторожева",
-        "original_title": "Лиля",
-        "duration_min": 150,
-        "age": 18,
-        "genres": [
-          "драма",
-          "мелодрама"
-        ],
-        "is_pushkin": false
-      }
-    },
-    {
-      "venue": "poravkino",
-      "source_id": "44702",
-      "title": "Девичник в спа",
-      "start": "2026-11-21T11:15:00+03:00",
-      "hall": "Малый красный",
-      "price_min": 350,
-      "price_max": 350,
-      "language": null,
-      "tags": [],
-      "url": "https://poravkino.ru/",
-      "source_url": "https://poravkino.ru/api/schedule?date=2026-11-21",
-      "extra": {
-        "year": 2026,
-        "country": "США",
-        "director": "Джон Лукас, Скотт Мур",
-        "original_title": "Девичник в спа",
-        "duration_min": 100,
-        "age": 18,
-        "genres": [
-          "комедия"
-        ],
-        "is_pushkin": false
-      }
-    },
-    {
-      "venue": "mirage",
-      "source_id": "1facf547-d858-4413-b903-98d040363db7",
-      "title": "Турбозавры. Суперфильм",
-      "start": "2026-11-21T11:20:00+03:00",
-      "hall": "2",
-      "price_min": null,
-      "price_max": null,
-      "language": null,
-      "tags": [],
-      "url": "https://www.mirage.ru/ticket_new/1facf547-d858-4413-b903-98d040363db7/",
-      "source_url": "https://www.mirage.ru/spb/schedule/21.11.2026/cinema/1/",
-      "extra": {
-        "genres": [
-          "фантастика",
-          "приключения",
-          "мультфильм"
-        ],
-        "age": "0+",
-        "film_id": 7693
-      }
-    },
-    {
       "venue": "domkino",
       "source_id": "10f7e4de2d91",
       "title": "Жертвоприношение",
@@ -671,32 +232,6 @@
         "genres": [
           "драма"
         ]
-      }
-    },
-    {
-      "venue": "poravkino",
-      "source_id": "44703",
-      "title": "Дедмобиль",
-      "start": "2026-11-21T11:25:00+03:00",
-      "hall": "Малый синий",
-      "price_min": 350,
-      "price_max": 350,
-      "language": null,
-      "tags": [],
-      "url": "https://poravkino.ru/",
-      "source_url": "https://poravkino.ru/api/schedule?date=2026-11-21",
-      "extra": {
-        "year": 2026,
-        "country": "Россия",
-        "director": "Владимир Котт",
-        "original_title": "Дедмобиль",
-        "duration_min": 95,
-        "age": 12,
-        "genres": [
-          "комедия",
-          "семейный"
-        ],
-        "is_pushkin": false
       }
     },
     {
@@ -724,230 +259,6 @@
       }
     },
     {
-      "venue": "mirage",
-      "source_id": "f3557b45-0021-4599-8f1c-5555284d9ca4",
-      "title": "Кот в шляпе",
-      "start": "2026-11-21T11:30:00+03:00",
-      "hall": "3",
-      "price_min": null,
-      "price_max": null,
-      "language": null,
-      "tags": [],
-      "url": "https://www.mirage.ru/ticket_new/f3557b45-0021-4599-8f1c-5555284d9ca4/",
-      "source_url": "https://www.mirage.ru/spb/schedule/21.11.2026/cinema/1/",
-      "extra": {
-        "genres": [
-          "комедия",
-          "приключения",
-          "мультфильм",
-          "фэнтези",
-          "семейный"
-        ],
-        "age": "6+",
-        "film_id": 7694
-      }
-    },
-    {
-      "venue": "poravkino",
-      "source_id": "44704",
-      "title": "Рождение империи",
-      "start": "2026-11-21T11:35:00+03:00",
-      "hall": "4",
-      "price_min": 350,
-      "price_max": 350,
-      "language": null,
-      "tags": [],
-      "url": "https://poravkino.ru/",
-      "source_url": "https://poravkino.ru/api/schedule?date=2026-11-21",
-      "extra": {
-        "year": 2026,
-        "country": "Россия",
-        "director": "Андрей Кравчук, Алексей Нужный",
-        "original_title": "Рождение империи",
-        "duration_min": 150,
-        "age": 12,
-        "genres": [
-          "биографический",
-          "драма"
-        ],
-        "is_pushkin": false
-      }
-    },
-    {
-      "venue": "mirage",
-      "source_id": "48fd3f66-2efd-4cdf-9dc0-bfd16d436ab1",
-      "title": "Годзилла: Минус ноль",
-      "start": "2026-11-21T11:40:00+03:00",
-      "hall": "1",
-      "price_min": null,
-      "price_max": null,
-      "language": null,
-      "tags": [],
-      "url": "https://www.mirage.ru/ticket_new/48fd3f66-2efd-4cdf-9dc0-bfd16d436ab1/",
-      "source_url": "https://www.mirage.ru/spb/schedule/21.11.2026/cinema/1/",
-      "extra": {
-        "genres": [
-          "боевик",
-          "фантастика",
-          "драма"
-        ],
-        "age": "18+",
-        "film_id": 7700
-      }
-    },
-    {
-      "venue": "lenfilm",
-      "source_id": "6af198953c00004f00285dac",
-      "title": "Лето в Бадене",
-      "start": "2026-11-21T11:45:00+03:00",
-      "hall": "1",
-      "price_min": 250,
-      "price_max": 250,
-      "language": null,
-      "tags": [],
-      "url": "https://www.lenfilm.ru/service/Kinoteatr-Lenfilm/",
-      "source_url": "https://kinokassa.kinoplan24.ru/api/v2/release/playbill?cinema_id=2387&date=2026-11-21",
-      "extra": {
-        "release_id": 26051,
-        "year": 2026,
-        "duration_min": 73,
-        "age": "18+",
-        "genres": [
-          "драма"
-        ],
-        "country": "Россия",
-        "free_places": 155,
-        "online_sale": true
-      }
-    },
-    {
-      "venue": "poravkino",
-      "source_id": "44705",
-      "title": "Турбозавры. Суперфильм",
-      "start": "2026-11-21T11:45:00+03:00",
-      "hall": "3",
-      "price_min": 350,
-      "price_max": 350,
-      "language": null,
-      "tags": [],
-      "url": "https://poravkino.ru/",
-      "source_url": "https://poravkino.ru/api/schedule?date=2026-11-21",
-      "extra": {
-        "year": 2026,
-        "country": "Россия",
-        "director": "Алексей Цицилин, Тимур Трофимов",
-        "original_title": "Турбозавры. Суперфильм",
-        "duration_min": 85,
-        "age": 0,
-        "genres": [
-          "детский",
-          "мультфильм",
-          "приключения",
-          "семейный",
-          "фантастика"
-        ],
-        "is_pushkin": false
-      }
-    },
-    {
-      "venue": "mirage",
-      "source_id": "fcd2463a-0af6-4f91-8d4c-51c963492222",
-      "title": "Рождение империи",
-      "start": "2026-11-21T11:50:00+03:00",
-      "hall": "4",
-      "price_min": null,
-      "price_max": null,
-      "language": null,
-      "tags": [],
-      "url": "https://www.mirage.ru/ticket_new/fcd2463a-0af6-4f91-8d4c-51c963492222/",
-      "source_url": "https://www.mirage.ru/spb/schedule/21.11.2026/cinema/1/",
-      "extra": {
-        "genres": [
-          "драма",
-          "биография",
-          "история"
-        ],
-        "age": "12+",
-        "film_id": 7643
-      }
-    },
-    {
-      "venue": "rodina",
-      "source_id": "63f3e25aa62d",
-      "title": "Рождение империи",
-      "start": "2026-11-21T11:50:00+03:00",
-      "hall": "Малый 2 зал",
-      "price_min": 250,
-      "price_max": 250,
-      "language": null,
-      "tags": [],
-      "url": "https://rodinakino.ru/events/rozhdenie-imperii-2026",
-      "source_url": "https://rodinakino.ru/?date=2026/11/21",
-      "extra": {
-        "year": 2026,
-        "age": "12+",
-        "duration_min": 140,
-        "synopsis": "Вернувшись на родину после Великого посольства, Петр Первый вступает в затяжную войну со Швецией за выход к морю. На пути к победе его ожидают серьёзные испытания, разочарования, обман и предательства.",
-        "director": "Андрей Кравчук",
-        "genres": [
-          "история",
-          "биография",
-          "драма"
-        ],
-        "country": "Пушкинская карта, Россия"
-      }
-    },
-    {
-      "venue": "poravkino",
-      "source_id": "44706",
-      "title": "Скрудж",
-      "start": "2026-11-21T11:55:00+03:00",
-      "hall": "Премьер",
-      "price_min": 400,
-      "price_max": 400,
-      "language": null,
-      "tags": [],
-      "url": "https://poravkino.ru/",
-      "source_url": "https://poravkino.ru/api/schedule?date=2026-11-21",
-      "extra": {
-        "year": 2026,
-        "country": "США, Великобритания",
-        "director": "Тай Уэст",
-        "original_title": "Скрудж",
-        "duration_min": 115,
-        "age": 12,
-        "genres": [
-          "драма",
-          "комедия",
-          "триллер",
-          "фэнтези"
-        ],
-        "is_pushkin": false
-      }
-    },
-    {
-      "venue": "mirage",
-      "source_id": "d4fa0a83-c169-40f4-a6d1-fe9ec3f07b33",
-      "title": "Одиссея",
-      "start": "2026-11-21T12:00:00+03:00",
-      "hall": "5",
-      "price_min": null,
-      "price_max": null,
-      "language": null,
-      "tags": [],
-      "url": "https://www.mirage.ru/ticket_new/d4fa0a83-c169-40f4-a6d1-fe9ec3f07b33/",
-      "source_url": "https://www.mirage.ru/spb/schedule/21.11.2026/cinema/1/",
-      "extra": {
-        "genres": [
-          "боевик",
-          "приключения",
-          "фэнтези"
-        ],
-        "age": "18+",
-        "film_id": 7450
-      }
-    },
-    {
       "venue": "domkino",
       "source_id": "05bd0d4c27fc",
       "title": "Дневная красавица",
@@ -969,105 +280,6 @@
         "genres": [
           "мелодрама"
         ]
-      }
-    },
-    {
-      "venue": "mirage",
-      "source_id": "166cee72-e93a-9920-07a8-9b39eb29628b",
-      "title": "Лучшее лето в жизни",
-      "start": "2026-11-21T12:10:00+03:00",
-      "hall": "7",
-      "price_min": null,
-      "price_max": null,
-      "language": null,
-      "tags": [],
-      "url": "https://www.mirage.ru/ticket_new/166cee72-e93a-9920-07a8-9b39eb29628b/",
-      "source_url": "https://www.mirage.ru/spb/schedule/21.11.2026/cinema/1/",
-      "extra": {
-        "genres": [
-          "комедия",
-          "детектив"
-        ],
-        "age": "12+",
-        "price_raw": "35000₽",
-        "film_id": 7680
-      }
-    },
-    {
-      "venue": "poravkino",
-      "source_id": "44707",
-      "title": "Битва моторов",
-      "start": "2026-11-21T12:15:00+03:00",
-      "hall": "1",
-      "price_min": 350,
-      "price_max": 350,
-      "language": null,
-      "tags": [],
-      "url": "https://poravkino.ru/",
-      "source_url": "https://poravkino.ru/api/schedule?date=2026-11-21",
-      "extra": {
-        "country": "Россия",
-        "director": "Илья Маланин",
-        "original_title": "Битва моторов",
-        "duration_min": 155,
-        "age": 12,
-        "genres": [
-          "драма",
-          "приключения"
-        ],
-        "is_pushkin": false
-      }
-    },
-    {
-      "venue": "rodina",
-      "source_id": "2c42d89a3237",
-      "title": "Лиля",
-      "start": "2026-11-21T12:35:00+03:00",
-      "hall": "Большой зал",
-      "price_min": 270,
-      "price_max": 270,
-      "language": null,
-      "tags": [],
-      "url": "https://rodinakino.ru/events/lilya-2026",
-      "source_url": "https://rodinakino.ru/?date=2026/11/21",
-      "extra": {
-        "year": 2026,
-        "age": "18+",
-        "duration_min": 146,
-        "synopsis": "1915 год, Первая мировая война. В Петрограде молодой поэт-футурист Владимир Маяковский знакомится с семейной парой — Лилей и Осипом Бриками. Он читает им свою поэму «Облако в штанах», Лиля и Осип сразу и навсегда влюбляются в поэзию Маяковского, понимая, что перед ними необыкновенный талант, поэтический гений. А…",
-        "director": "Вера Сторожева",
-        "genres": [
-          "драма",
-          "мелодрама"
-        ],
-        "country": "Россия"
-      }
-    },
-    {
-      "venue": "avrora",
-      "source_id": "6afadec03f00002d00d51708",
-      "title": "Романовы: преданность и предательство",
-      "start": "2026-11-21T12:40:00+03:00",
-      "hall": "Большой",
-      "price_min": 450,
-      "price_max": 600,
-      "language": null,
-      "tags": [],
-      "url": "https://avrora.spb.ru/",
-      "source_url": "https://kinokassa.kinoplan24.ru/api/v2/release/playbill?city_id=2&date=2026-11-21",
-      "extra": {
-        "release_id": 25494,
-        "year": 2026,
-        "duration_min": 121,
-        "age": "16+",
-        "genres": [
-          "биография",
-          "история",
-          "драма"
-        ],
-        "country": "Россия",
-        "free_places": 411,
-        "online_sale": true
       }
     },
     {
@@ -1123,28 +335,6 @@
       }
     },
     {
-      "venue": "mirage",
-      "source_id": "da02a1ab-c16a-4b53-9d6c-0c0a2fa2f0e6",
-      "title": "Увидеть всё",
-      "start": "2026-11-21T13:10:00+03:00",
-      "hall": "2",
-      "price_min": null,
-      "price_max": null,
-      "language": null,
-      "tags": [],
-      "url": "https://www.mirage.ru/ticket_new/da02a1ab-c16a-4b53-9d6c-0c0a2fa2f0e6/",
-      "source_url": "https://www.mirage.ru/spb/schedule/21.11.2026/cinema/1/",
-      "extra": {
-        "genres": [
-          "комедия",
-          "драма",
-          "документальный"
-        ],
-        "age": "18+",
-        "film_id": 7660
-      }
-    },
-    {
       "venue": "outcinema",
       "source_id": "411838507492",
       "title": "СИРЕНА С «МИССИСИПИ»",
@@ -1193,145 +383,6 @@
       }
     },
     {
-      "venue": "poravkino",
-      "source_id": "44708",
-      "title": "Увидеть всё",
-      "start": "2026-11-21T13:15:00+03:00",
-      "hall": "Малый красный",
-      "price_min": 350,
-      "price_max": 350,
-      "language": null,
-      "tags": [],
-      "url": "https://poravkino.ru/",
-      "source_url": "https://poravkino.ru/api/schedule?date=2026-11-21",
-      "extra": {
-        "year": 2026,
-        "country": "США",
-        "director": "Нэйтан Филдер, Лэнс Оппенгейм",
-        "original_title": "Увидеть всё",
-        "duration_min": 180,
-        "age": 18,
-        "genres": [
-          "биографический",
-          "документальный"
-        ],
-        "is_pushkin": false
-      }
-    },
-    {
-      "venue": "lenfilm",
-      "source_id": "6aedabf43f000053002c1fbe",
-      "title": "Патерсон",
-      "start": "2026-11-21T13:20:00+03:00",
-      "hall": "1",
-      "price_min": 300,
-      "price_max": 300,
-      "language": null,
-      "tags": [
-        "SUB"
-      ],
-      "url": "https://www.lenfilm.ru/service/Kinoteatr-Lenfilm/",
-      "source_url": "https://kinokassa.kinoplan24.ru/api/v2/release/playbill?cinema_id=2387&date=2026-11-21",
-      "extra": {
-        "release_id": 8140,
-        "year": 2016,
-        "duration_min": 117,
-        "age": "18+",
-        "genres": [
-          "комедия",
-          "драма"
-        ],
-        "country": "США",
-        "free_places": 173,
-        "online_sale": true
-      }
-    },
-    {
-      "venue": "poravkino",
-      "source_id": "44709",
-      "title": "Турбозавры. Суперфильм",
-      "start": "2026-11-21T13:20:00+03:00",
-      "hall": "Малый синий",
-      "price_min": 350,
-      "price_max": 350,
-      "language": null,
-      "tags": [],
-      "url": "https://poravkino.ru/",
-      "source_url": "https://poravkino.ru/api/schedule?date=2026-11-21",
-      "extra": {
-        "year": 2026,
-        "country": "Россия",
-        "director": "Алексей Цицилин, Тимур Трофимов",
-        "original_title": "Турбозавры. Суперфильм",
-        "duration_min": 85,
-        "age": 0,
-        "genres": [
-          "детский",
-          "мультфильм",
-          "приключения",
-          "семейный",
-          "фантастика"
-        ],
-        "is_pushkin": false
-      }
-    },
-    {
-      "venue": "poravkino",
-      "source_id": "44710",
-      "title": "Кот в шляпе",
-      "start": "2026-11-21T13:30:00+03:00",
-      "hall": "3",
-      "price_min": 350,
-      "price_max": 350,
-      "language": null,
-      "tags": [],
-      "url": "https://poravkino.ru/",
-      "source_url": "https://poravkino.ru/api/schedule?date=2026-11-21",
-      "extra": {
-        "year": 2026,
-        "country": "США",
-        "director": "Алессандро Карлони, Эрика Ривинойя",
-        "original_title": "Кот в шляпе",
-        "duration_min": 110,
-        "age": 6,
-        "genres": [
-          "комедия",
-          "мультфильм",
-          "приключения",
-          "семейный",
-          "фэнтези"
-        ],
-        "is_pushkin": false
-      }
-    },
-    {
-      "venue": "poravkino",
-      "source_id": "44711",
-      "title": "Сердце зверя",
-      "start": "2026-11-21T13:35:00+03:00",
-      "hall": "VIP",
-      "price_min": 550,
-      "price_max": 550,
-      "language": null,
-      "tags": [],
-      "url": "https://poravkino.ru/",
-      "source_url": "https://poravkino.ru/api/schedule?date=2026-11-21",
-      "extra": {
-        "country": "США",
-        "director": "Дэвид Эйр",
-        "original_title": "Сердце зверя",
-        "duration_min": 100,
-        "age": 16,
-        "genres": [
-          "боевик",
-          "драма",
-          "приключения",
-          "триллер"
-        ],
-        "is_pushkin": false
-      }
-    },
-    {
       "venue": "mirage",
       "source_id": "394ea971-49f5-4591-8bd3-ca06589f053d",
       "title": "Колотун и Волшебное королевство",
@@ -1351,57 +402,6 @@
         ],
         "age": "6+",
         "film_id": 7689
-      }
-    },
-    {
-      "venue": "poravkino",
-      "source_id": "44712",
-      "title": "Лиля",
-      "start": "2026-11-21T13:55:00+03:00",
-      "hall": "2",
-      "price_min": 350,
-      "price_max": 350,
-      "language": null,
-      "tags": [],
-      "url": "https://poravkino.ru/",
-      "source_url": "https://poravkino.ru/api/schedule?date=2026-11-21",
-      "extra": {
-        "year": 2026,
-        "country": "Россия",
-        "director": "Вера Сторожева",
-        "original_title": "Лиля",
-        "duration_min": 150,
-        "age": 18,
-        "genres": [
-          "драма",
-          "мелодрама"
-        ],
-        "is_pushkin": false
-      }
-    },
-    {
-      "venue": "rodina",
-      "source_id": "564d224379ea",
-      "title": "Айтматов",
-      "start": "2026-11-21T13:55:00+03:00",
-      "hall": "Малый 1 зал",
-      "price_min": 250,
-      "price_max": 250,
-      "language": null,
-      "tags": [],
-      "url": "https://rodinakino.ru/events/ajtmatov-2026",
-      "source_url": "https://rodinakino.ru/?date=2026/11/21",
-      "extra": {
-        "year": 2026,
-        "age": "16+",
-        "duration_min": 105,
-        "synopsis": "1979 год. Всемирно известный советский писатель Чингиз Айтматов завершает роман «И дольше века длится день», публикация которого оказывается под угрозой из-за цензуры. Во время поездки в Европу перед ним открывается возможность навсегда остаться на Западе, где его ждут свобода творчества, мировое признание и жизнь без…",
-        "director": "Каныбек Калматов",
-        "genres": [
-          "драма",
-          "биография"
-        ],
-        "country": "Кыргызстан"
       }
     },
     {
@@ -1425,31 +425,6 @@
         "age": "0+",
         "price_raw": "40000₽",
         "film_id": 7693
-      }
-    },
-    {
-      "venue": "avrora",
-      "source_id": "6afade363c0000a70063b90c",
-      "title": "Рождение империи",
-      "start": "2026-11-21T14:05:00+03:00",
-      "hall": "Малый",
-      "price_min": 450,
-      "price_max": 450,
-      "language": null,
-      "tags": [],
-      "url": "https://avrora.spb.ru/",
-      "source_url": "https://kinokassa.kinoplan24.ru/api/v2/release/playbill?city_id=2&date=2026-11-21",
-      "extra": {
-        "release_id": 14748,
-        "year": 2026,
-        "duration_min": 140,
-        "age": "12+",
-        "genres": [
-          "историческая драма"
-        ],
-        "country": "Россия",
-        "free_places": 6,
-        "online_sale": true
       }
     },
     {
@@ -1601,7 +576,7 @@
     },
     {
       "venue": "mirage",
-      "source_id": "35b1ae19-e815-472e-b68b-a6c5336dc7a4",
+      "source_id": "e04ccfcddc01",
       "title": "Скрудж",
       "start": "2026-11-21T14:50:00+03:00",
       "hall": "4",
@@ -1609,7 +584,7 @@
       "price_max": null,
       "language": null,
       "tags": [],
-      "url": "https://www.mirage.ru/ticket_new/35b1ae19-e815-472e-b68b-a6c5336dc7a4/",
+      "url": null,
       "source_url": "https://www.mirage.ru/spb/schedule/21.11.2026/cinema/1/",
       "extra": {
         "genres": [
@@ -1643,7 +618,7 @@
           "биография"
         ],
         "country": "Россия",
-        "free_places": 295,
+        "free_places": 239,
         "online_sale": true
       }
     },
@@ -1701,7 +676,7 @@
     },
     {
       "venue": "mirage",
-      "source_id": "b28d48a5-4b9e-457e-ac06-478100054068",
+      "source_id": "54fce7aefcd3",
       "title": "Одиссея",
       "start": "2026-11-21T15:20:00+03:00",
       "hall": "5",
@@ -1709,7 +684,7 @@
       "price_max": null,
       "language": null,
       "tags": [],
-      "url": "https://www.mirage.ru/ticket_new/b28d48a5-4b9e-457e-ac06-478100054068/",
+      "url": null,
       "source_url": "https://www.mirage.ru/spb/schedule/21.11.2026/cinema/1/",
       "extra": {
         "genres": [
@@ -1798,7 +773,7 @@
           "драма"
         ],
         "country": "США",
-        "free_places": 0,
+        "free_places": 1,
         "online_sale": true
       }
     },
@@ -2144,7 +1119,7 @@
           "драма"
         ],
         "country": "Франция, США, Польша, Италия",
-        "free_places": 72,
+        "free_places": 59,
         "online_sale": true
       }
     },
@@ -2251,7 +1226,7 @@
     },
     {
       "venue": "mirage",
-      "source_id": "2bf61247-e8a5-42b2-8182-ca59132ed14e",
+      "source_id": "8d83dd349ceb",
       "title": "Скрудж",
       "start": "2026-11-21T17:10:00+03:00",
       "hall": "4",
@@ -2259,7 +1234,7 @@
       "price_max": null,
       "language": null,
       "tags": [],
-      "url": "https://www.mirage.ru/ticket_new/2bf61247-e8a5-42b2-8182-ca59132ed14e/",
+      "url": null,
       "source_url": "https://www.mirage.ru/spb/schedule/21.11.2026/cinema/1/",
       "extra": {
         "genres": [
@@ -2374,7 +1349,7 @@
           "драма"
         ],
         "country": "США",
-        "free_places": 130,
+        "free_places": 81,
         "online_sale": true
       }
     },
@@ -2659,7 +1634,7 @@
           "опера"
         ],
         "country": "Германия",
-        "free_places": 63,
+        "free_places": 55,
         "online_sale": true
       }
     },
@@ -2685,7 +1660,7 @@
           "комедия"
         ],
         "country": "США",
-        "free_places": 1,
+        "free_places": 6,
         "online_sale": true
       }
     },
@@ -3101,7 +2076,7 @@
           "биография"
         ],
         "country": "Россия",
-        "free_places": 420,
+        "free_places": 409,
         "online_sale": true
       }
     },
@@ -3955,7 +2930,7 @@
       "language": null,
       "tags": [],
       "url": "https://rodinakino.ru/events/ajtmatov-2026",
-      "source_url": "https://rodinakino.ru/?date=2026/11/22",
+      "source_url": "https://rodinakino.ru/?date=2026/11/21",
       "extra": {
         "year": 2026,
         "age": "16+",
@@ -3980,7 +2955,7 @@
       "language": null,
       "tags": [],
       "url": "https://rodinakino.ru/events/kolotun-i-volshebnoe-korolevstvo-2026",
-      "source_url": "https://rodinakino.ru/?date=2026/11/22",
+      "source_url": "https://rodinakino.ru/?date=2026/11/21",
       "extra": {
         "year": 2026,
         "age": "6+",
@@ -4135,7 +3110,7 @@
           "драма"
         ],
         "country": "США",
-        "free_places": 432,
+        "free_places": 429,
         "online_sale": true
       }
     },
@@ -4327,7 +3302,7 @@
           "драма"
         ],
         "country": "Франция, США, Польша, Италия",
-        "free_places": 105,
+        "free_places": 101,
         "online_sale": true
       }
     },
@@ -4748,7 +3723,7 @@
           "драма"
         ],
         "country": "США",
-        "free_places": 156,
+        "free_places": 154,
         "online_sale": true
       }
     },
@@ -4798,7 +3773,7 @@
           "биография"
         ],
         "country": "Россия",
-        "free_places": 383,
+        "free_places": 373,
         "online_sale": true
       }
     },
@@ -4967,7 +3942,7 @@
       "language": null,
       "tags": [],
       "url": "https://rodinakino.ru/events/uvidet-vsyo-2026",
-      "source_url": "https://rodinakino.ru/?date=2026/11/22",
+      "source_url": "https://rodinakino.ru/?date=2026/11/21",
       "extra": {
         "year": 2026,
         "age": "18+",
@@ -5053,7 +4028,7 @@
           "историческая драма"
         ],
         "country": "Россия",
-        "free_places": 66,
+        "free_places": 55,
         "online_sale": true
       }
     },
@@ -5486,7 +4461,7 @@
       "language": null,
       "tags": [],
       "url": "https://rodinakino.ru/events/rozhdenie-imperii-2026",
-      "source_url": "https://rodinakino.ru/?date=2026/11/22",
+      "source_url": "https://rodinakino.ru/?date=2026/11/21",
       "extra": {
         "year": 2026,
         "age": "12+",
@@ -5579,7 +4554,7 @@
           "драма"
         ],
         "country": "США",
-        "free_places": 344,
+        "free_places": 336,
         "online_sale": true
       }
     },
@@ -5703,7 +4678,7 @@
           "драма"
         ],
         "country": "США",
-        "free_places": 18,
+        "free_places": 15,
         "online_sale": true
       }
     },
@@ -5733,7 +4708,7 @@
           "комедия"
         ],
         "country": "США, Великобритания",
-        "free_places": 54,
+        "free_places": 49,
         "online_sale": true
       }
     },
@@ -5898,7 +4873,7 @@
       "language": null,
       "tags": [],
       "url": "https://rodinakino.ru/events/novyj-dom-2026",
-      "source_url": "https://rodinakino.ru/?date=2026/11/22",
+      "source_url": "https://rodinakino.ru/?date=2026/11/21",
       "extra": {
         "year": 2026,
         "age": "18+",
@@ -6255,7 +5230,7 @@
           "драма"
         ],
         "country": "США",
-        "free_places": 90,
+        "free_places": 88,
         "online_sale": true
       }
     },
@@ -6722,7 +5697,7 @@
           "драма"
         ],
         "country": "Великобритания, Германия, Греция, Франция",
-        "free_places": 140,
+        "free_places": 138,
         "online_sale": true
       }
     },
@@ -6918,7 +5893,7 @@
           "драма"
         ],
         "country": "США",
-        "free_places": 67,
+        "free_places": 63,
         "online_sale": true
       }
     },
@@ -7937,7 +6912,7 @@
           "биография"
         ],
         "country": "Россия",
-        "free_places": 435,
+        "free_places": 434,
         "online_sale": true
       }
     },
@@ -8263,7 +7238,7 @@
           "драма"
         ],
         "country": "Швеция, Франция, Великобритания",
-        "free_places": 191,
+        "free_places": 187,
         "online_sale": true
       }
     },
@@ -12615,7 +11590,7 @@
           "драма"
         ],
         "country": "Россия",
-        "free_places": 47,
+        "free_places": 48,
         "online_sale": true
       }
     },
@@ -12715,7 +11690,7 @@
           "комедия"
         ],
         "country": "США, Великобритания",
-        "free_places": 432,
+        "free_places": 430,
         "online_sale": true
       }
     },
@@ -14592,7 +13567,7 @@
           "шоу"
         ],
         "country": "Италия",
-        "free_places": 308,
+        "free_places": 305,
         "online_sale": true
       }
     },
@@ -14626,8 +13601,8 @@
       "title": "Виталий Мельников. Судьба режиссёра",
       "start": "2026-11-25T19:00:00+03:00",
       "hall": "1",
-      "price_min": 450,
-      "price_max": 450,
+      "price_min": 200,
+      "price_max": 200,
       "language": null,
       "tags": [],
       "url": "https://www.lenfilm.ru/service/Kinoteatr-Lenfilm/",
@@ -14636,7 +13611,7 @@
         "release_id": 25515,
         "year": 2026,
         "country": "Россия",
-        "free_places": 194,
+        "free_places": 192,
         "online_sale": true
       }
     },
@@ -15427,7 +14402,7 @@
           "комедия"
         ],
         "country": "США, Великобритания",
-        "free_places": 194,
+        "free_places": 192,
         "online_sale": true
       }
     },
@@ -15727,7 +14702,7 @@
           "романтическая комедия"
         ],
         "country": "Великобритания, Франция, Ирландия, США",
-        "free_places": 149,
+        "free_places": 147,
         "online_sale": true
       }
     },
@@ -16276,7 +15251,7 @@
           "драма"
         ],
         "country": "Ирландия, Молдова, Казахстан",
-        "free_places": 32,
+        "free_places": 31,
         "online_sale": true
       }
     },
