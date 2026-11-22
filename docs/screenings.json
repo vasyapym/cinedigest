@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-22T15:34:22.474788+03:00",
+  "generated_at": "2026-11-22T16:25:39.540619+03:00",
   "window_start": "2026-11-22",
   "window_end": "2026-11-28",
   "statuses": [
@@ -7,85 +7,85 @@
       "venue": "domkino",
       "ok": true,
       "count": 95,
-      "fetched_at": "2026-11-22T15:34:41.836165+03:00",
+      "fetched_at": "2026-11-22T16:25:55.579448+03:00",
       "stale": false,
       "suspicious": false,
       "error": null,
       "warning": null,
       "requests": 7,
-      "seconds": 19.361
+      "seconds": 16.039
     },
     {
       "venue": "rodina",
       "ok": true,
-      "count": 104,
-      "fetched_at": "2026-11-22T15:35:38.272177+03:00",
+      "count": 103,
+      "fetched_at": "2026-11-22T16:26:48.405646+03:00",
       "stale": false,
       "suspicious": false,
       "error": null,
       "warning": null,
       "requests": 33,
-      "seconds": 56.436
+      "seconds": 52.826
     },
     {
       "venue": "avrora",
       "ok": true,
-      "count": 39,
-      "fetched_at": "2026-11-22T15:35:46.121989+03:00",
+      "count": 38,
+      "fetched_at": "2026-11-22T16:26:55.744005+03:00",
       "stale": false,
       "suspicious": false,
       "error": null,
       "warning": null,
       "requests": 8,
-      "seconds": 7.847
+      "seconds": 7.335
     },
     {
       "venue": "poravkino",
       "ok": true,
-      "count": 85,
-      "fetched_at": "2026-11-22T15:35:52.157192+03:00",
+      "count": 84,
+      "fetched_at": "2026-11-22T16:27:01.436161+03:00",
       "stale": false,
       "suspicious": false,
       "error": null,
       "warning": null,
       "requests": 7,
-      "seconds": 6.035
+      "seconds": 5.692
     },
     {
       "venue": "lenfilm",
       "ok": true,
       "count": 25,
-      "fetched_at": "2026-11-22T15:35:59.809584+03:00",
+      "fetched_at": "2026-11-22T16:27:08.504500+03:00",
       "stale": false,
       "suspicious": false,
       "error": null,
       "warning": null,
       "requests": 9,
-      "seconds": 7.652
+      "seconds": 7.068
     },
     {
       "venue": "outcinema",
       "ok": true,
       "count": 3,
-      "fetched_at": "2026-11-22T15:36:01.290494+03:00",
+      "fetched_at": "2026-11-22T16:27:08.876824+03:00",
       "stale": false,
       "suspicious": false,
       "error": null,
       "warning": null,
       "requests": 1,
-      "seconds": 1.481
+      "seconds": 0.372
     },
     {
       "venue": "mirage",
       "ok": true,
       "count": 142,
-      "fetched_at": "2026-11-22T15:36:10.509152+03:00",
+      "fetched_at": "2026-11-22T16:27:17.447449+03:00",
       "stale": false,
       "suspicious": false,
       "error": null,
       "warning": null,
       "requests": 7,
-      "seconds": 9.219
+      "seconds": 8.571
     }
   ],
   "screenings": [
@@ -452,88 +452,6 @@
       }
     },
     {
-      "venue": "rodina",
-      "source_id": "08ef39cdd77c",
-      "title": "Рождение империи",
-      "start": "2026-11-22T15:25:00+03:00",
-      "hall": "Малый 2 зал",
-      "price_min": 300,
-      "price_max": 300,
-      "language": null,
-      "tags": [],
-      "url": "https://rodinakino.ru/events/rozhdenie-imperii-2026",
-      "source_url": "https://rodinakino.ru/?date=2026/11/22",
-      "extra": {
-        "year": 2026,
-        "age": "12+",
-        "duration_min": 140,
-        "synopsis": "Вернувшись на родину после Великого посольства, Петр Первый вступает в затяжную войну со Швецией за выход к морю. На пути к победе его ожидают серьёзные испытания, разочарования, обман и предательства.",
-        "director": "Андрей Кравчук",
-        "genres": [
-          "история",
-          "биография",
-          "драма"
-        ],
-        "country": "Пушкинская карта, Россия"
-      }
-    },
-    {
-      "venue": "poravkino",
-      "source_id": "44772",
-      "title": "Плетёный муж",
-      "start": "2026-11-22T15:40:00+03:00",
-      "hall": "3",
-      "price_min": 400,
-      "price_max": 400,
-      "language": null,
-      "tags": [],
-      "url": "https://poravkino.ru/",
-      "source_url": "https://poravkino.ru/api/schedule?date=2026-11-22",
-      "extra": {
-        "year": 2026,
-        "country": "США, Великобритания, Австралия",
-        "director": "Алекс Хьюстон Фишер, Элинор Уилсон",
-        "original_title": "Плетеный муж",
-        "duration_min": 110,
-        "age": 18,
-        "genres": [
-          "драма",
-          "комедия",
-          "мелодрама",
-          "фантастика",
-          "фэнтези"
-        ],
-        "is_pushkin": false
-      }
-    },
-    {
-      "venue": "avrora",
-      "source_id": "6afae05a3f0000bb00d51ad2",
-      "title": "Увидеть всё",
-      "start": "2026-11-22T15:45:00+03:00",
-      "hall": "Большой",
-      "price_min": 500,
-      "price_max": 650,
-      "language": null,
-      "tags": [],
-      "url": "https://avrora.spb.ru/",
-      "source_url": "https://kinokassa.kinoplan24.ru/api/v2/release/playbill?city_id=2&date=2026-11-22",
-      "extra": {
-        "release_id": 26248,
-        "year": 2026,
-        "duration_min": 174,
-        "age": "18+",
-        "genres": [
-          "комедия",
-          "документальный",
-          "драма"
-        ],
-        "country": "США",
-        "free_places": 169,
-        "online_sale": true
-      }
-    },
-    {
       "venue": "mirage",
       "source_id": "1f029c1e-1aba-af06-0580-7b7f91552d36",
       "title": "Рокки – это я",
@@ -653,7 +571,7 @@
           "драма"
         ],
         "country": "США",
-        "free_places": 5,
+        "free_places": 0,
         "online_sale": true
       }
     },
@@ -683,7 +601,7 @@
           "комедия"
         ],
         "country": "США, Великобритания",
-        "free_places": 3,
+        "free_places": 0,
         "online_sale": true
       }
     },
@@ -1205,7 +1123,7 @@
           "драма"
         ],
         "country": "США",
-        "free_places": 46,
+        "free_places": 42,
         "online_sale": true
       }
     },
@@ -1356,7 +1274,7 @@
           "биография"
         ],
         "country": "Россия",
-        "free_places": 349,
+        "free_places": 343,
         "online_sale": true
       }
     },
@@ -1552,7 +1470,7 @@
     },
     {
       "venue": "mirage",
-      "source_id": "c66cbf3a-394a-4d2b-ba70-4b19b9ca0805",
+      "source_id": "32ac0ceb3fe9",
       "title": "Скрудж",
       "start": "2026-11-22T19:30:00+03:00",
       "hall": "4",
@@ -1560,7 +1478,7 @@
       "price_max": null,
       "language": null,
       "tags": [],
-      "url": "https://www.mirage.ru/ticket_new/c66cbf3a-394a-4d2b-ba70-4b19b9ca0805/",
+      "url": null,
       "source_url": "https://www.mirage.ru/spb/schedule/22.11.2026/cinema/1/",
       "extra": {
         "genres": [
@@ -1672,7 +1590,7 @@
           "драма"
         ],
         "country": "Великобритания, Германия, Греция, Франция",
-        "free_places": 128,
+        "free_places": 127,
         "online_sale": true
       }
     },
@@ -1752,7 +1670,7 @@
     },
     {
       "venue": "mirage",
-      "source_id": "751f6175e447",
+      "source_id": "8c9e99c1-fa7d-474e-a2ca-0d3e8f619240",
       "title": "Одиссея",
       "start": "2026-11-22T20:00:00+03:00",
       "hall": "5",
@@ -1760,7 +1678,7 @@
       "price_max": null,
       "language": null,
       "tags": [],
-      "url": null,
+      "url": "https://www.mirage.ru/ticket_new/8c9e99c1-fa7d-474e-a2ca-0d3e8f619240/",
       "source_url": "https://www.mirage.ru/spb/schedule/22.11.2026/cinema/1/",
       "extra": {
         "genres": [
@@ -1868,7 +1786,7 @@
           "драма"
         ],
         "country": "США",
-        "free_places": 15,
+        "free_places": 11,
         "online_sale": true
       }
     },
@@ -3121,7 +3039,7 @@
       "language": null,
       "tags": [],
       "url": "https://rodinakino.ru/events/rozhdenie-imperii-2026",
-      "source_url": "https://rodinakino.ru/?date=2026/11/23",
+      "source_url": "https://rodinakino.ru/?date=2026/11/22",
       "extra": {
         "year": 2026,
         "age": "12+",
@@ -4852,7 +4770,7 @@
           "драма"
         ],
         "country": "США",
-        "free_places": 420,
+        "free_places": 417,
         "online_sale": true
       }
     },
@@ -4980,7 +4898,7 @@
           "драма"
         ],
         "country": "США",
-        "free_places": 132,
+        "free_places": 130,
         "online_sale": true
       }
     },
@@ -5783,7 +5701,7 @@
           "комедия"
         ],
         "country": "США, Великобритания",
-        "free_places": 439,
+        "free_places": 437,
         "online_sale": true
       }
     },
@@ -7540,7 +7458,7 @@
           "комедия"
         ],
         "country": "СССР",
-        "free_places": 56,
+        "free_places": 55,
         "online_sale": true
       }
     },
@@ -7565,7 +7483,7 @@
           "драма"
         ],
         "country": "Россия",
-        "free_places": 44,
+        "free_places": 43,
         "online_sale": true
       }
     },
@@ -8615,7 +8533,7 @@
           "драма"
         ],
         "country": "США",
-        "free_places": 188,
+        "free_places": 186,
         "online_sale": true
       }
     },
@@ -9542,7 +9460,7 @@
           "шоу"
         ],
         "country": "Италия",
-        "free_places": 301,
+        "free_places": 296,
         "online_sale": true
       }
     },
@@ -10506,7 +10424,7 @@
           "драма"
         ],
         "country": "США",
-        "free_places": 169,
+        "free_places": 168,
         "online_sale": true
       }
     },
