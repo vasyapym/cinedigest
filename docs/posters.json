@@ -73,6 +73,15 @@
       "resolved_at": "2026-11-05",
       "via": "miss"
     },
+    "theatrehd сказки пушкина|2020": {
+      "title": "TheatreHD: Сказки Пушкина",
+      "year": 2020,
+      "tmdb_id": null,
+      "tmdb_title": null,
+      "poster_path": null,
+      "resolved_at": "2026-11-22",
+      "via": "miss"
+    },
     "theatrehd теодор курентзис бунтарь от классики|2016": {
       "title": "TheatreHD: Теодор Курентзис. Бунтарь от классики",
       "year": 2016,
@@ -353,12 +362,12 @@
       "file_downloaded_at": "2026-11-16"
     },
     "было не было|2025": {
-      "title": "Было не было",
+      "title": "было не было",
       "year": 2025,
       "tmdb_id": null,
       "tmdb_title": null,
       "poster_path": null,
-      "resolved_at": "2026-11-08",
+      "resolved_at": "2026-11-22",
       "via": "miss"
     },
     "ветка сирени|2007": {
@@ -423,6 +432,15 @@
       "tmdb_title": null,
       "poster_path": null,
       "resolved_at": "2026-11-18",
+      "via": "miss"
+    },
+    "волшебник страны оз эхо 28 ммфаф|1939": {
+      "title": "Волшебник страны Оз. Эхо 28 ММФАФ",
+      "year": 1939,
+      "tmdb_id": null,
+      "tmdb_title": null,
+      "poster_path": null,
+      "resolved_at": "2026-11-22",
       "via": "miss"
     },
     "воскрешение|2025": {
@@ -936,6 +954,23 @@
       "country_via": "tmdb:1363387",
       "file": "uRUCL96wOEBaa8ex3ekgXChPYZJ.jpg",
       "file_downloaded_at": "2026-11-11"
+    },
+    "жар птица|2024": {
+      "title": "Жар-птица",
+      "year": 2024,
+      "tmdb_id": 1248276,
+      "tmdb_title": "Жар-птица",
+      "poster_path": "/wXXtFeQky4qTSK4wgbwdvVYBhsn.jpg",
+      "resolved_at": "2026-11-22",
+      "via": "year",
+      "country": [
+        "Russia",
+        "India"
+      ],
+      "country_at": "2026-11-22",
+      "country_via": "tmdb:1248276",
+      "file": "wXXtFeQky4qTSK4wgbwdvVYBhsn.jpg",
+      "file_downloaded_at": "2026-11-22"
     },
     "жертвоприношение субтитры|1986": {
       "title": "Жертвоприношение (субтитры)",
@@ -1875,7 +1910,7 @@
       "tmdb_id": null,
       "tmdb_title": null,
       "poster_path": null,
-      "resolved_at": "2026-11-08",
+      "resolved_at": "2026-11-22",
       "via": "miss"
     },
     "обсессия субтитры|any": {
@@ -1911,7 +1946,7 @@
       "tmdb_id": null,
       "tmdb_title": null,
       "poster_path": null,
-      "resolved_at": "2026-11-08",
+      "resolved_at": "2026-11-22",
       "via": "miss"
     },
     "окно во двор|1954": {
@@ -1982,6 +2017,22 @@
       "file": "jGOJJVscEPK8YT2z2blacHzfuxp.jpg",
       "file_downloaded_at": "2026-11-05"
     },
+    "ошибки юности|1978": {
+      "title": "Ошибки юности",
+      "year": 1978,
+      "tmdb_id": 76256,
+      "tmdb_title": "Ошибки юности",
+      "poster_path": "/lIxiiMd7XoRYDc3g1EuP3jacugo.jpg",
+      "resolved_at": "2026-11-22",
+      "via": "year",
+      "country": [
+        "Soviet Union"
+      ],
+      "country_at": "2026-11-22",
+      "country_via": "tmdb:76256",
+      "file": "lIxiiMd7XoRYDc3g1EuP3jacugo.jpg",
+      "file_downloaded_at": "2026-11-22"
+    },
     "павильон на воде|2023": {
       "title": "Павильон на воде",
       "year": 2023,
@@ -2033,6 +2084,15 @@
       "via": "miss",
       "retry_query": "Паровоз «Генерал». Немое кино с тапёром"
     },
+    "пароль от сердца итальянский киноклуб|2023": {
+      "title": "Пароль от сердца. Итальянский киноклуб",
+      "year": 2023,
+      "tmdb_id": null,
+      "tmdb_title": null,
+      "poster_path": null,
+      "resolved_at": "2026-11-22",
+      "via": "miss"
+    },
     "патерсон субтитры|2016": {
       "title": "Патерсон (субтитры)",
       "year": 2016,
@@ -2073,6 +2133,15 @@
       "via": "year",
       "file": "AuBdbFZytyvFT6Tw2CRMRNxaoWt.jpg",
       "file_downloaded_at": "2026-11-05"
+    },
+    "песнь дороги премьера|1955": {
+      "title": "ПЕСНЬ ДОРОГИ (ПРЕМЬЕРА)",
+      "year": 1955,
+      "tmdb_id": null,
+      "tmdb_title": null,
+      "poster_path": null,
+      "resolved_at": "2026-11-22",
+      "via": "miss"
     },
     "питер фм|2006": {
       "title": "Питер ФМ",
@@ -2579,7 +2648,7 @@
       "tmdb_id": null,
       "tmdb_title": null,
       "poster_path": null,
-      "resolved_at": "2026-11-08",
+      "resolved_at": "2026-11-22",
       "via": "miss"
     },
     "сирена с миссисипи|1969": {
