@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-22T14:30:10.249262+03:00",
+  "generated_at": "2026-11-22T15:34:22.474788+03:00",
   "window_start": "2026-11-22",
   "window_end": "2026-11-28",
   "statuses": [
@@ -7,85 +7,85 @@
       "venue": "domkino",
       "ok": true,
       "count": 95,
-      "fetched_at": "2026-11-22T14:30:27.841643+03:00",
+      "fetched_at": "2026-11-22T15:34:41.836165+03:00",
       "stale": false,
       "suspicious": false,
       "error": null,
       "warning": null,
       "requests": 7,
-      "seconds": 17.592
+      "seconds": 19.361
     },
     {
       "venue": "rodina",
       "ok": true,
-      "count": 105,
-      "fetched_at": "2026-11-22T14:31:28.096001+03:00",
+      "count": 104,
+      "fetched_at": "2026-11-22T15:35:38.272177+03:00",
       "stale": false,
       "suspicious": false,
       "error": null,
       "warning": null,
-      "requests": 34,
-      "seconds": 60.254
+      "requests": 33,
+      "seconds": 56.436
     },
     {
       "venue": "avrora",
       "ok": true,
       "count": 39,
-      "fetched_at": "2026-11-22T14:31:38.080678+03:00",
+      "fetched_at": "2026-11-22T15:35:46.121989+03:00",
       "stale": false,
       "suspicious": false,
       "error": null,
       "warning": null,
       "requests": 8,
-      "seconds": 9.981
+      "seconds": 7.847
     },
     {
       "venue": "poravkino",
       "ok": true,
-      "count": 88,
-      "fetched_at": "2026-11-22T14:31:44.305728+03:00",
+      "count": 85,
+      "fetched_at": "2026-11-22T15:35:52.157192+03:00",
       "stale": false,
       "suspicious": false,
       "error": null,
       "warning": null,
       "requests": 7,
-      "seconds": 6.225
+      "seconds": 6.035
     },
     {
       "venue": "lenfilm",
       "ok": true,
-      "count": 26,
-      "fetched_at": "2026-11-22T14:31:52.152359+03:00",
+      "count": 25,
+      "fetched_at": "2026-11-22T15:35:59.809584+03:00",
       "stale": false,
       "suspicious": false,
       "error": null,
       "warning": null,
       "requests": 9,
-      "seconds": 7.847
+      "seconds": 7.652
     },
     {
       "venue": "outcinema",
       "ok": true,
       "count": 3,
-      "fetched_at": "2026-11-22T14:31:54.609182+03:00",
+      "fetched_at": "2026-11-22T15:36:01.290494+03:00",
       "stale": false,
       "suspicious": false,
       "error": null,
       "warning": null,
       "requests": 1,
-      "seconds": 2.457
+      "seconds": 1.481
     },
     {
       "venue": "mirage",
       "ok": true,
-      "count": 146,
-      "fetched_at": "2026-11-22T14:32:04.040340+03:00",
+      "count": 142,
+      "fetched_at": "2026-11-22T15:36:10.509152+03:00",
       "stale": false,
       "suspicious": false,
       "error": null,
       "warning": null,
       "requests": 7,
-      "seconds": 9.431
+      "seconds": 9.219
     }
   ],
   "screenings": [
@@ -355,29 +355,6 @@
       }
     },
     {
-      "venue": "mirage",
-      "source_id": "1959eb9d-5a0f-7ebc-58eb-de81d5df400d",
-      "title": "Турбозавры. Суперфильм",
-      "start": "2026-11-22T14:00:00+03:00",
-      "hall": "7",
-      "price_min": null,
-      "price_max": null,
-      "language": null,
-      "tags": [],
-      "url": "https://www.mirage.ru/ticket_new/1959eb9d-5a0f-7ebc-58eb-de81d5df400d/",
-      "source_url": "https://www.mirage.ru/spb/schedule/22.11.2026/cinema/1/",
-      "extra": {
-        "genres": [
-          "фантастика",
-          "приключения",
-          "мультфильм"
-        ],
-        "age": "0+",
-        "price_raw": "40000₽",
-        "film_id": 7693
-      }
-    },
-    {
       "venue": "domkino",
       "source_id": "efafd5909f3e",
       "title": "Ангельский чин",
@@ -398,50 +375,6 @@
         "genres": [
           "документальный"
         ]
-      }
-    },
-    {
-      "venue": "mirage",
-      "source_id": "05af9c39-2f18-4d1c-8731-7c7349fba446",
-      "title": "Сумерки. Сага. Затмение",
-      "start": "2026-11-22T14:10:00+03:00",
-      "hall": "6",
-      "price_min": null,
-      "price_max": null,
-      "language": null,
-      "tags": [],
-      "url": "https://www.mirage.ru/ticket_new/05af9c39-2f18-4d1c-8731-7c7349fba446/",
-      "source_url": "https://www.mirage.ru/spb/schedule/22.11.2026/cinema/1/",
-      "extra": {
-        "genres": [
-          "триллер",
-          "мелодрама",
-          "фэнтези"
-        ],
-        "age": "18+",
-        "film_id": 7658
-      }
-    },
-    {
-      "venue": "mirage",
-      "source_id": "2739dd8f-fcee-4cc0-841d-c7fb5dd932e8",
-      "title": "Годзилла: Минус ноль",
-      "start": "2026-11-22T14:20:00+03:00",
-      "hall": "1",
-      "price_min": null,
-      "price_max": null,
-      "language": null,
-      "tags": [],
-      "url": "https://www.mirage.ru/ticket_new/2739dd8f-fcee-4cc0-841d-c7fb5dd932e8/",
-      "source_url": "https://www.mirage.ru/spb/schedule/22.11.2026/cinema/1/",
-      "extra": {
-        "genres": [
-          "боевик",
-          "фантастика",
-          "драма"
-        ],
-        "age": "18+",
-        "film_id": 7700
       }
     },
     {
@@ -496,134 +429,6 @@
       }
     },
     {
-      "venue": "mirage",
-      "source_id": "ecde02a4-e319-4d1e-a673-bdec8bc45b44",
-      "title": "Скрудж",
-      "start": "2026-11-22T14:50:00+03:00",
-      "hall": "4",
-      "price_min": null,
-      "price_max": null,
-      "language": null,
-      "tags": [],
-      "url": "https://www.mirage.ru/ticket_new/ecde02a4-e319-4d1e-a673-bdec8bc45b44/",
-      "source_url": "https://www.mirage.ru/spb/schedule/22.11.2026/cinema/1/",
-      "extra": {
-        "genres": [
-          "комедия",
-          "драма",
-          "фэнтези"
-        ],
-        "age": "16+",
-        "film_id": 7559
-      }
-    },
-    {
-      "venue": "lenfilm",
-      "source_id": "6ada017f3d00004b005be22c",
-      "title": "Роберт Уилсон: Красота – в загадке",
-      "start": "2026-11-22T15:00:00+03:00",
-      "hall": "1",
-      "price_min": 450,
-      "price_max": 450,
-      "language": "SUB",
-      "tags": [
-        "SUB"
-      ],
-      "url": "https://www.lenfilm.ru/service/Kinoteatr-Lenfilm/",
-      "source_url": "https://kinokassa.kinoplan24.ru/api/v2/release/playbill?cinema_id=2387&date=2026-11-22",
-      "extra": {
-        "release_id": 26259,
-        "year": 2021,
-        "duration_min": 52,
-        "age": "18+",
-        "genres": [
-          "биография",
-          "ИСКУССТВО",
-          "документальный"
-        ],
-        "country": "Германия",
-        "free_places": 174,
-        "online_sale": true
-      }
-    },
-    {
-      "venue": "poravkino",
-      "source_id": "44769",
-      "title": "Дедмобиль",
-      "start": "2026-11-22T15:00:00+03:00",
-      "hall": "Малый синий",
-      "price_min": 400,
-      "price_max": 400,
-      "language": null,
-      "tags": [],
-      "url": "https://poravkino.ru/",
-      "source_url": "https://poravkino.ru/api/schedule?date=2026-11-22",
-      "extra": {
-        "year": 2026,
-        "country": "Россия",
-        "director": "Владимир Котт",
-        "original_title": "Дедмобиль",
-        "duration_min": 95,
-        "age": 12,
-        "genres": [
-          "комедия",
-          "семейный"
-        ],
-        "is_pushkin": false
-      }
-    },
-    {
-      "venue": "rodina",
-      "source_id": "cf64e5014aae",
-      "title": "По волнам Доривала Каимми. XVII Фестиваль бразильского кино",
-      "start": "2026-11-22T15:00:00+03:00",
-      "hall": "Большой зал",
-      "price_min": 200,
-      "price_max": 200,
-      "language": "SUB",
-      "tags": [],
-      "url": "https://rodinakino.ru/events/na-volnah-dorivala-kaimmi-xvii-festival-brazilskogo-kino-2024",
-      "source_url": "https://rodinakino.ru/?date=2026/11/22",
-      "extra": {
-        "year": 2024,
-        "age": "18+",
-        "duration_min": 90,
-        "synopsis": "Документальный фильм раскрывает гениальность и простоту Доривала Каимми, легендарного летописца мистической Баии, неразрывно связанной с морем и прибрежной жизнью. Благодаря редким кадрам и ранее не публиковавшимся архивным материалам фильм воссоздаёт творческий путь музыканта и историю создания его величайших…",
-        "director": "Локка Фария",
-        "genres": [
-          "биография",
-          "документальный"
-        ],
-        "country": "Бразилия"
-      }
-    },
-    {
-      "venue": "poravkino",
-      "source_id": "44770",
-      "title": "Рокки — это я",
-      "start": "2026-11-22T15:05:00+03:00",
-      "hall": "1",
-      "price_min": 400,
-      "price_max": 400,
-      "language": null,
-      "tags": [],
-      "url": "https://poravkino.ru/",
-      "source_url": "https://poravkino.ru/api/schedule?date=2026-11-22",
-      "extra": {
-        "year": 2026,
-        "country": "США",
-        "director": "Питер Фаррелли",
-        "original_title": "Рокки – это я",
-        "duration_min": 135,
-        "age": 18,
-        "genres": [
-          "биографический",
-          "драма"
-        ],
-        "is_pushkin": false
-      }
-    },
-    {
       "venue": "domkino",
       "source_id": "6caf42349686",
       "title": "Лето будет общим",
@@ -670,32 +475,6 @@
           "драма"
         ],
         "country": "Пушкинская карта, Россия"
-      }
-    },
-    {
-      "venue": "poravkino",
-      "source_id": "44771",
-      "title": "Клара и солнце",
-      "start": "2026-11-22T15:30:00+03:00",
-      "hall": "VIP",
-      "price_min": 650,
-      "price_max": 650,
-      "language": null,
-      "tags": [],
-      "url": "https://poravkino.ru/",
-      "source_url": "https://poravkino.ru/api/schedule?date=2026-11-22",
-      "extra": {
-        "year": 2026,
-        "country": "США, Великобритания, Индия",
-        "director": "Тайка Вайтити",
-        "original_title": "Клара и солнце",
-        "duration_min": 115,
-        "age": 12,
-        "genres": [
-          "драма",
-          "фантастика"
-        ],
-        "is_pushkin": false
       }
     },
     {
@@ -750,7 +529,7 @@
           "драма"
         ],
         "country": "США",
-        "free_places": 190,
+        "free_places": 169,
         "online_sale": true
       }
     },
@@ -874,7 +653,7 @@
           "драма"
         ],
         "country": "США",
-        "free_places": 0,
+        "free_places": 5,
         "online_sale": true
       }
     },
@@ -904,7 +683,7 @@
           "комедия"
         ],
         "country": "США, Великобритания",
-        "free_places": 13,
+        "free_places": 3,
         "online_sale": true
       }
     },
@@ -1426,7 +1205,7 @@
           "драма"
         ],
         "country": "США",
-        "free_places": 51,
+        "free_places": 46,
         "online_sale": true
       }
     },
@@ -1577,7 +1356,7 @@
           "биография"
         ],
         "country": "Россия",
-        "free_places": 364,
+        "free_places": 349,
         "online_sale": true
       }
     },
@@ -1893,7 +1672,7 @@
           "драма"
         ],
         "country": "Великобритания, Германия, Греция, Франция",
-        "free_places": 129,
+        "free_places": 128,
         "online_sale": true
       }
     },
@@ -2089,7 +1868,7 @@
           "драма"
         ],
         "country": "США",
-        "free_places": 21,
+        "free_places": 15,
         "online_sale": true
       }
     },
@@ -5201,7 +4980,7 @@
           "драма"
         ],
         "country": "США",
-        "free_places": 133,
+        "free_places": 132,
         "online_sale": true
       }
     },
@@ -5279,7 +5058,7 @@
           "комедийный хоррор"
         ],
         "country": "Великобритания",
-        "free_places": 108,
+        "free_places": 106,
         "online_sale": true
       }
     },
@@ -6755,7 +6534,7 @@
           "биография"
         ],
         "country": "Россия",
-        "free_places": 436,
+        "free_places": 434,
         "online_sale": true
       }
     },
@@ -10598,7 +10377,7 @@
           "комедия"
         ],
         "country": "США, Великобритания",
-        "free_places": 190,
+        "free_places": 188,
         "online_sale": true
       }
     },
@@ -10727,7 +10506,7 @@
           "драма"
         ],
         "country": "США",
-        "free_places": 171,
+        "free_places": 169,
         "online_sale": true
       }
     },
@@ -10895,7 +10674,7 @@
           "драма"
         ],
         "country": "Чили, Испания, Мексика",
-        "free_places": 190,
+        "free_places": 189,
         "online_sale": true
       }
     },
@@ -10942,7 +10721,7 @@
           "романтическая комедия"
         ],
         "country": "Великобритания, Франция, Ирландия, США",
-        "free_places": 128,
+        "free_places": 124,
         "online_sale": true
       }
     },
@@ -11449,7 +11228,7 @@
           "документальный"
         ],
         "country": "Германия",
-        "free_places": 90,
+        "free_places": 91,
         "online_sale": true
       }
     },
@@ -11513,7 +11292,7 @@
           "драма"
         ],
         "country": "Ирландия, Молдова, Казахстан",
-        "free_places": 24,
+        "free_places": 22,
         "online_sale": true
       }
     },
@@ -12086,7 +11865,7 @@
           "драма"
         ],
         "country": "Россия",
-        "free_places": 190,
+        "free_places": 189,
         "online_sale": true
       }
     },
@@ -12207,7 +11986,7 @@
           "театр в кино"
         ],
         "country": "Россия",
-        "free_places": 144,
+        "free_places": 141,
         "online_sale": true
       }
     },
