@@ -1,0 +1,478 @@
+
+
+
+
+
+
+
+
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>Кино вечером · СПб · вс 29 ноября</title>
+<style>
+  :root{color-scheme:light dark;--bg:#fff;--fg:#141414;--mut:#6b6b6b;--line:#e4e4e4;--chip:#efefef;--acc:#0b57d0;--ok:#1a7f37;--warn:#7a5200;--warnbg:#fff4d6;--bad:#b3261e;--badbg:#fbe9e7;
+    --c-domkino:#b3261e;--c-rodina:#1a7f37;--c-avrora:#0b57d0;--c-poravkino:#8a4b00;--c-lenfilm:#0f766e;--c-outcinema:#a21caf;--c-mirage:#c2410c}
+  @media (prefers-color-scheme:dark){:root{--bg:#121212;--fg:#ececec;--mut:#9b9b9b;--line:#2b2b2b;--chip:#232323;--acc:#8ab4f8;--ok:#5fd38d;--warn:#f1c76a;--warnbg:#2b2310;--bad:#ff8a80;--badbg:#3a1a17;
+    --c-domkino:#ff8a80;--c-rodina:#5fd38d;--c-avrora:#8ab4f8;--c-poravkino:#f1c76a;--c-lenfilm:#5eead4;--c-outcinema:#f0abfc;--c-mirage:#fdba74}}
+  *{box-sizing:border-box}
+  html{background:var(--bg)}
+  body{margin:0 auto;max-width:46rem;padding:0 .9rem 4rem;font:16px/1.45 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;color:var(--fg);background:var(--bg)}
+  a{color:var(--acc)}
+  h1{font-size:1.35rem;margin:.9rem 0 0}
+  .sub,.mut{color:var(--mut);font-size:.85rem;margin:.15rem 0 .6rem}
+  .warn{background:var(--warnbg);color:var(--warn);padding:.5rem .7rem;border-radius:.5rem;font-size:.9rem;margin:.4rem 0}
+  .warn a{color:inherit}
+  .warn.bad{background:var(--badbg);color:var(--bad)}
+  .ctl{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+  .days{position:sticky;top:0;z-index:2;display:flex;gap:.3rem;overflow-x:auto;margin:0 -.9rem;padding:.45rem .9rem;background:var(--bg);border-bottom:1px solid var(--line);scrollbar-width:none}
+  .days a{flex:none;padding:.3rem .7rem;border-radius:1rem;text-decoration:none;color:var(--fg);background:var(--chip);font-size:.9rem}
+  .days a.z{color:var(--mut);background:none}
+  .days a[aria-current]{background:var(--fg);color:var(--bg)}
+  .ctls{display:flex;flex-wrap:wrap;gap:.35rem;padding:.6rem 0 .2rem}
+  .chip{font-size:.8rem;padding:.2rem .6rem;border:1px solid var(--line);border-radius:1rem;color:var(--mut);cursor:pointer;user-select:none}
+  .chip.vc::before{content:"";display:inline-block;width:.55em;height:.55em;border-radius:50%;margin-right:.35em;background:var(--vc,var(--mut))}
+#v-domkino:checked ~ header label[for="v-domkino"], #v-rodina:checked ~ header label[for="v-rodina"], #v-avrora:checked ~ header label[for="v-avrora"], #v-poravkino:checked ~ header label[for="v-poravkino"], #v-lenfilm:checked ~ header label[for="v-lenfilm"], #v-outcinema:checked ~ header label[for="v-outcinema"], #v-mirage:checked ~ header label[for="v-mirage"], #allday:checked ~ header label[for="allday"], #no-russia:checked ~ header label[for="no-russia"]{color:var(--fg);border-color:var(--fg)}
+#v-domkino:not(:checked) ~ main .list .r[data-v="domkino"]{display:none!important}
+#v-rodina:not(:checked) ~ main .list .r[data-v="rodina"]{display:none!important}
+#v-avrora:not(:checked) ~ main .list .r[data-v="avrora"]{display:none!important}
+#v-poravkino:not(:checked) ~ main .list .r[data-v="poravkino"]{display:none!important}
+#v-lenfilm:not(:checked) ~ main .list .r[data-v="lenfilm"]{display:none!important}
+#v-outcinema:not(:checked) ~ main .list .r[data-v="outcinema"]{display:none!important}
+#v-mirage:not(:checked) ~ main .list .r[data-v="mirage"]{display:none!important}
+  #no-russia:checked ~ main .list .r[data-country-status="Russian"]{display:none!important}
+.v-domkino{--vc:var(--c-domkino)}
+.v-rodina{--vc:var(--c-rodina)}
+.v-avrora{--vc:var(--c-avrora)}
+.v-poravkino{--vc:var(--c-poravkino)}
+.v-lenfilm{--vc:var(--c-lenfilm)}
+.v-outcinema{--vc:var(--c-outcinema)}
+.v-mirage{--vc:var(--c-mirage)}
+  .list .r.day{display:none}
+  #allday:checked ~ main .list .r.day{display:grid}
+  #allday:checked ~ main .none-ev,#allday:checked ~ main .dayonly{display:none}
+  section{scroll-margin-top:3.1rem;padding-top:1.1rem}
+  h2{font-size:1.1rem;margin:0}
+  h2 .dt{font-weight:400;color:var(--mut)}
+  .cnt{margin:.1rem 0 .4rem;font-size:.85rem;color:var(--mut)}
+  .list{list-style:none;margin:0;padding:0}
+  .r{display:grid;grid-template-columns:3.6rem 1fr 2.9rem;column-gap:.5rem;padding:.55rem 0;border-top:1px solid var(--line)}
+  .r time{font-variant-numeric:tabular-nums;font-weight:600}
+  .r time small{display:block;font-size:.7rem;font-weight:400;color:var(--mut);line-height:1.2}
+  .w{display:flex;flex-wrap:wrap;align-items:baseline;gap:.1rem .5rem;margin-bottom:.1rem}
+  .v{font-size:.72rem;font-weight:700;letter-spacing:.04em;text-transform:uppercase;line-height:1.5;padding:0 .45rem;border-radius:.3rem;text-decoration:none;color:var(--vc,var(--fg));background:var(--chip);background:color-mix(in srgb,var(--vc,var(--fg)) 13%,transparent)}
+  a.v:hover{text-decoration:underline}
+  .h{font-size:.8rem;color:var(--mut)}
+  .t{font-weight:600}
+  .t a{color:inherit}
+  .t .o{font-weight:400;color:var(--mut)}
+  .m{font-size:.86rem;color:var(--mut);margin-top:.1rem}
+  .tag{display:inline-block;font-size:.72rem;padding:0 .4rem;border:1px solid var(--line);border-radius:.3rem;vertical-align:1px}
+  .p{grid-column:3;width:2.9rem;height:4.35rem;object-fit:cover;border-radius:.25rem;background:var(--chip);align-self:start}
+  details{font-size:.86rem;margin-top:.15rem}
+  summary{cursor:pointer;color:var(--acc)}
+  details p{margin:.3rem 0 0}
+  .past{opacity:.45}
+  .none{color:var(--mut);font-size:.9rem;padding:.5rem 0;border-top:1px solid var(--line);margin:0}
+  .pn{display:flex;justify-content:space-between;gap:1rem;padding:.8rem 0;border-top:1px solid var(--line);font-size:.9rem}
+  .pn a:last-child{margin-left:auto}
+  footer{margin-top:2.5rem;border-top:2px solid var(--line);padding-top:.8rem}
+  footer h2{font-size:1rem}
+  .st{list-style:none;padding:0;margin:.4rem 0 .8rem;font-size:.9rem}
+  .st li{padding:.2rem 0}
+  .st .ic{display:inline-block;width:1.3rem}
+  .st .ok .ic{color:var(--ok)}
+  .st .wn .ic{color:var(--warn)}
+  .st .bd .ic{color:var(--bad)}
+  .tmdb{font-size:.78rem;color:var(--mut);margin-top:.8rem}
+  .tmdb img{height:.8rem;width:auto;vertical-align:-.1em;margin-right:.3rem}
+  @media (min-width:40rem){.r{grid-template-columns:4rem 1fr 3.2rem}.p{width:3.2rem;height:4.8rem}}
+</style>
+</head>
+<body data-today="2026-11-23"
+      data-generated="2026-11-23T08:12:57.248769+03:00"
+      data-generated-human="пн 23 ноября в 08:12">
+<input type="checkbox" id="allday" class="ctl">
+<input type="checkbox" id="no-russia" class="ctl">
+<input type="checkbox" id="v-domkino" class="ctl" checked> <input type="checkbox" id="v-rodina" class="ctl" checked> <input type="checkbox" id="v-avrora" class="ctl" checked> <input type="checkbox" id="v-poravkino" class="ctl" checked> <input type="checkbox" id="v-lenfilm" class="ctl" checked> <input type="checkbox" id="v-outcinema" class="ctl" checked> <input type="checkbox" id="v-mirage" class="ctl" checked> 
+<header>
+  <h1>Кино вечером</h1>
+  <p class="sub">СПб · 7 кинотеатров · собрано пн 23 ноября, 08:12 · вечер = с 18:00</p>
+  <p id="stale" class="warn" hidden></p>
+
+  <nav class="days" aria-label="Дни">
+      <a href="index.html">Сегодня</a>
+      <a href="2026-11-24.html">Завтра</a>
+      <a href="2026-11-25.html">ср 25</a>
+      <a href="2026-11-26.html">чт 26</a>
+      <a href="2026-11-27.html">пт 27</a>
+      <a href="2026-11-28.html">сб 28</a>
+      <a href="2026-11-29.html" aria-current="page">вс 29</a>
+  </nav>
+  <div class="ctls">
+    <label for="allday" class="chip">весь день</label>
+    <label for="no-russia" class="chip" title="Скрыть фильмы с участием России, включая копродукции; СССР не считается Россией; неизвестная страна не исключается" aria-label="нероссийские: скрыть фильмы с участием России, включая копродукции; СССР не считается Россией; неизвестная страна не исключается">нероссийские</label>
+<label for="v-domkino" class="chip vc v-domkino">Дом кино</label> <label for="v-rodina" class="chip vc v-rodina">Родина</label> <label for="v-avrora" class="chip vc v-avrora">Аврора</label> <label for="v-poravkino" class="chip vc v-poravkino">Художественный</label> <label for="v-lenfilm" class="chip vc v-lenfilm">Ленфильм</label> <label for="v-outcinema" class="chip vc v-outcinema">Out Cinema</label> <label for="v-mirage" class="chip vc v-mirage">Мираж на Большом</label>   </div>
+</header>
+
+<main>
+  <section id="d-2026-11-29" aria-labelledby="h-2026-11-29">
+    <h2 id="h-2026-11-29">вс 29 ноября</h2>
+      <p class="cnt">11 сеансов вечером<span class="dayonly"> · днём ещё 18</span></p>
+      <ul class="list">
+<li class="r day"
+      data-v="rodina" data-ts="1795936500"
+      data-country-status="other">
+    <time datetime="2026-11-29T10:15:00+03:00">10:15</time>
+    <div class="b">
+      <div class="w">
+<span class="v v-rodina">Родина</span><span class="h">Малый 1 зал</span>      </div>
+      <div class="t">
+<a href="https://rodinakino.ru/events/golodnye-igry-rassvet-zhatvy-2026">Голодные игры: Рассвет Жатвы</a>      </div>
+<div class="m">2026 · США · 158 мин · 18+ · реж. Фрэнсис Лоуренс · приключения, триллер, фантастика · Малый 1 зал · 250 ₽</div><details><summary>о фильме</summary><p>Молодой Хеймитч Эбернети из 12-го дистрикта участвует в легендарных 50-х Голодных играх. Но шансов уцелеть у него немного — в последний раз трибут из его района побеждал на играх сорок лет назад.</p></details>    </div>
+<img class="p" src="posters/tD4kBIthK1NFxesGT5Pj42fM5u5.jpg" alt="" width="46" height="69" loading="lazy" decoding="async">  </li><li class="r day"
+      data-v="rodina" data-ts="1795937100"
+      data-country-status="other">
+    <time datetime="2026-11-29T10:25:00+03:00">10:25</time>
+    <div class="b">
+      <div class="w">
+<span class="v v-rodina">Родина</span><span class="h">Большой зал</span>      </div>
+      <div class="t">
+<a href="https://rodinakino.ru/events/dvornyashka-2026">Дворняшка</a>      </div>
+<div class="m">2026 · Бельгия, Франция · 85 мин · 6+ · реж. Янис Белаид, Жереми Дегрюсон · мультфильм, комедия, приключения · Большой зал · 250 ₽</div><details><summary>о фильме</summary><p>Наш дворовый пёс совсем не похож на роскошных собак, участвующих в самых престижных выставках. Он не грезит большими победами и не ждёт признания: его главная мечта — обрести семью, которая примет его таким, какой он есть. В поисках дома он отправляется на большое соревнование, где ему предстоит потеснить местных…</p></details>    </div>
+<img class="p" src="posters/eU7L6bHzCblawEUplQxJUGzzLO2.jpg" alt="" width="46" height="69" loading="lazy" decoding="async">  </li><li class="r day"
+      data-v="rodina" data-ts="1795937400"
+      data-country-status="Russian">
+    <time datetime="2026-11-29T10:30:00+03:00">10:30</time>
+    <div class="b">
+      <div class="w">
+<span class="v v-rodina">Родина</span><span class="h">Малый 2 зал</span>      </div>
+      <div class="t">
+<a href="https://rodinakino.ru/events/aleksandr-i-2026">Александр I</a>      </div>
+<div class="m">2026 · Пушкинская карта, Россия · 90 мин · 16+ · реж. Морад Абдель-Фаттах · история, биография, драма · Малый 2 зал · 250 ₽</div><details><summary>о фильме</summary><p>Екатерина II всегда знала, что ее преемником станет не сын Павел, а любимый внук Александр. С самых ранних лет его воспитывали как будущего правителя — в жесткой дисциплине и с блестящим образованием. Став наконец императором, Александр был намерен продолжить реформы своих предшественников — отменить крепостное право…</p></details>    </div>
+<img class="p" src="posters/f7QZR7li6m7W55fDzIb0ZPu4PYA.jpg" alt="" width="46" height="69" loading="lazy" decoding="async">  </li><li class="r day"
+      data-v="rodina" data-ts="1795943400"
+      data-country-status="other">
+    <time datetime="2026-11-29T12:10:00+03:00">12:10</time>
+    <div class="b">
+      <div class="w">
+<span class="v v-rodina">Родина</span><span class="h">Большой зал</span>      </div>
+      <div class="t">
+<a href="https://rodinakino.ru/events/uvidet-vsyo-versiya-s-subtitrami-2026">Увидеть всё (версия с субтитрами)</a>      </div>
+<div class="m">2026 · США · 174 мин · 18+ · реж. Нэйтан Филдер, Лэнс Оппенгейм · документальный, биография · Большой зал · 270 ₽</div><details><summary>о фильме</summary><p>Элизабет Холмс была одной из самых молодых миллиардерш мира, пока её компания не оказалась в центре крупнейшего мошеннического скандала в истории Кремниевой долины. Потеряв всё своё состояние и получив тюремный срок, за месяц до заключения она приглашает в свой дом съёмочную группу во главе с комиком-авангардистом. Но…</p></details>    </div>
+<img class="p" src="posters/57tGJt2nHQqrpsrRO9XLxhgGPMd.jpg" alt="" width="46" height="69" loading="lazy" decoding="async">  </li><li class="r day"
+      data-v="rodina" data-ts="1795943700"
+      data-country-status="Russian">
+    <time datetime="2026-11-29T12:15:00+03:00">12:15</time>
+    <div class="b">
+      <div class="w">
+<span class="v v-rodina">Родина</span><span class="h">Малый 2 зал</span>      </div>
+      <div class="t">
+<a href="https://rodinakino.ru/events/lilya-2026">Лиля</a>      </div>
+<div class="m">2026 · Россия · 146 мин · 18+ · реж. Вера Сторожева · драма, мелодрама · Малый 2 зал · 250 ₽</div><details><summary>о фильме</summary><p>1915 год, Первая мировая война. В Петрограде молодой поэт-футурист Владимир Маяковский знакомится с семейной парой — Лилей и Осипом Бриками. Он читает им свою поэму «Облако в штанах», Лиля и Осип сразу и навсегда влюбляются в поэзию Маяковского, понимая, что перед ними необыкновенный талант, поэтический гений. А…</p></details>    </div>
+<img class="p" src="posters/tAGGymXd54ovIAeJMfXhrsmzRvt.jpg" alt="" width="46" height="69" loading="lazy" decoding="async">  </li><li class="r day"
+      data-v="mirage" data-ts="1795944000"
+      data-country-status="unknown">
+    <time datetime="2026-11-29T12:20:00+03:00">12:20</time>
+    <div class="b">
+      <div class="w">
+<a class="v v-mirage" href="https://www.mirage.ru/ticket_new/66edd8c6-67e9-404b-914a-90d31a283882/">Мираж на Большом</a><span class="h">зал 1</span>      </div>
+      <div class="t">
+<span>Голодные игры: Рассвет Жатвы</span>      </div>
+<div class="m">18+ · триллер, приключения, фэнтези · зал 1</div>    </div>
+<img class="p" src="posters/tD4kBIthK1NFxesGT5Pj42fM5u5.jpg" alt="" width="46" height="69" loading="lazy" decoding="async">  </li><li class="r day"
+      data-v="lenfilm" data-ts="1795944600"
+      data-country-status="other">
+    <time datetime="2026-11-29T12:30:00+03:00">12:30</time>
+    <div class="b">
+      <div class="w">
+<a class="v v-lenfilm" href="https://www.lenfilm.ru/service/Kinoteatr-Lenfilm/">Ленфильм</a><span class="h">зал 1</span>      </div>
+      <div class="t">
+<span>Рокки – это я (версия с субтитрами)</span>      </div>
+<div class="m">2026 · США · 129 мин · 18+ · драма · субтитры · зал 1 · 300 ₽</div>    </div>
+<img class="p" src="posters/1ix2T9PtEYzuOMT10VrsFmYxBPS.jpg" alt="" width="46" height="69" loading="lazy" decoding="async">  </li><li class="r day"
+      data-v="rodina" data-ts="1795946700"
+      data-country-status="Russian">
+    <time datetime="2026-11-29T13:05:00+03:00">13:05</time>
+    <div class="b">
+      <div class="w">
+<span class="v v-rodina">Родина</span><span class="h">Малый 1 зал</span>      </div>
+      <div class="t">
+<a href="https://rodinakino.ru/events/kolotun-i-volshebnoe-korolevstvo-2026">Колотун и волшебное королевство</a>      </div>
+<div class="m">2026 · Пушкинская карта, Россия · 116 мин · 6+ · реж. Олег Гусев · фэнтези, приключения, семейный · Малый 1 зал · 250 ₽</div><details><summary>о фильме</summary><p>Ссора в машине, случайный сугроб — и вот мама, папа и сын Снегиревы уже не в пробке по дороге на новогодний праздник, а в волшебном королевстве. Они нечаянно выпускают из заточения злого мага Колотуна, а с магами, особенно злыми, шутки плохи. Теперь, чтобы вернуться домой и спасти оба мира, Снегиревым предстоит…</p></details>    </div>
+<img class="p" src="posters/p30NzHHkWDrtG1g7JEEEd2hltBT.jpg" alt="" width="46" height="69" loading="lazy" decoding="async">  </li><li class="r day"
+      data-v="lenfilm" data-ts="1795953600"
+      data-country-status="Russian">
+    <time datetime="2026-11-29T15:00:00+03:00">15:00</time>
+    <div class="b">
+      <div class="w">
+<a class="v v-lenfilm" href="https://www.lenfilm.ru/service/Kinoteatr-Lenfilm/">Ленфильм</a><span class="h">зал 1</span>      </div>
+      <div class="t">
+<span>Театр в кино: Женитьба Бальзаминова</span>      </div>
+<div class="m">2026 · Россия · 126 мин · 16+ · спектакль, театр в кино · зал 1 · 700 ₽</div>    </div>
+  </li><li class="r day"
+      data-v="rodina" data-ts="1795953600"
+      data-country-status="other">
+    <time datetime="2026-11-29T15:00:00+03:00">15:00</time>
+    <div class="b">
+      <div class="w">
+<span class="v v-rodina">Родина</span><span class="h">Малый 2 зал</span>      </div>
+      <div class="t">
+<a href="https://rodinakino.ru/events/golodnye-igry-rassvet-zhatvy-2026">Голодные игры: Рассвет Жатвы</a>      </div>
+<div class="m">2026 · США · 158 мин · 18+ · реж. Фрэнсис Лоуренс · приключения, триллер, фантастика · субтитры · Малый 2 зал · 300 ₽</div><details><summary>о фильме</summary><p>Молодой Хеймитч Эбернети из 12-го дистрикта участвует в легендарных 50-х Голодных играх. Но шансов уцелеть у него немного — в последний раз трибут из его района побеждал на играх сорок лет назад.</p></details>    </div>
+<img class="p" src="posters/tD4kBIthK1NFxesGT5Pj42fM5u5.jpg" alt="" width="46" height="69" loading="lazy" decoding="async">  </li><li class="r day"
+      data-v="rodina" data-ts="1795954500"
+      data-country-status="other">
+    <time datetime="2026-11-29T15:15:00+03:00">15:15</time>
+    <div class="b">
+      <div class="w">
+<span class="v v-rodina">Родина</span><span class="h">Малый 1 зал</span>      </div>
+      <div class="t">
+<a href="https://rodinakino.ru/events/dvornyashka-2026">Дворняшка</a>      </div>
+<div class="m">2026 · Бельгия, Франция · 85 мин · 6+ · реж. Янис Белаид, Жереми Дегрюсон · мультфильм, комедия, приключения · Малый 1 зал · 250 ₽</div><details><summary>о фильме</summary><p>Наш дворовый пёс совсем не похож на роскошных собак, участвующих в самых престижных выставках. Он не грезит большими победами и не ждёт признания: его главная мечта — обрести семью, которая примет его таким, какой он есть. В поисках дома он отправляется на большое соревнование, где ему предстоит потеснить местных…</p></details>    </div>
+<img class="p" src="posters/eU7L6bHzCblawEUplQxJUGzzLO2.jpg" alt="" width="46" height="69" loading="lazy" decoding="async">  </li><li class="r day"
+      data-v="rodina" data-ts="1795955400"
+      data-country-status="Russian">
+    <time datetime="2026-11-29T15:30:00+03:00">15:30</time>
+    <div class="b">
+      <div class="w">
+<span class="v v-rodina">Родина</span><span class="h">Большой зал</span>      </div>
+      <div class="t">
+<a href="https://rodinakino.ru/events/les-hranitel-zhizni-2025">Лес. Хранитель жизни</a>      </div>
+<div class="m">2025 · Пушкинская карта, Россия · 70 мин · 6+ · реж. Ирина Шапман, Владислав Гришин · документальный · Большой зал · 300 ₽</div><details><summary>о фильме</summary><p>Рассказ о первозданных лесах — мире тонких взаимосвязей, которые формировались тысячи лет. Здесь растут кедры, ели, пихты, а на европейском континенте массивы таких лесов сохранились только на севере России.</p></details>    </div>
+<img class="p" src="posters/wEnM92BeOlbgVSDoV5LGeaRG8ZU.jpg" alt="" width="46" height="69" loading="lazy" decoding="async">  </li><li class="r day"
+      data-v="mirage" data-ts="1795956000"
+      data-country-status="unknown">
+    <time datetime="2026-11-29T15:40:00+03:00">15:40</time>
+    <div class="b">
+      <div class="w">
+<a class="v v-mirage" href="https://www.mirage.ru/ticket_new/2fd87cb3-3e4b-4676-bf24-d41aa6d8420d/">Мираж на Большом</a><span class="h">зал 1</span>      </div>
+      <div class="t">
+<span>Голодные игры: Рассвет Жатвы</span>      </div>
+<div class="m">18+ · триллер, приключения, фэнтези · зал 1</div>    </div>
+<img class="p" src="posters/tD4kBIthK1NFxesGT5Pj42fM5u5.jpg" alt="" width="46" height="69" loading="lazy" decoding="async">  </li><li class="r day"
+      data-v="rodina" data-ts="1795960500"
+      data-country-status="Russian">
+    <time datetime="2026-11-29T16:55:00+03:00">16:55</time>
+    <div class="b">
+      <div class="w">
+<span class="v v-rodina">Родина</span><span class="h">Малый 1 зал</span>      </div>
+      <div class="t">
+<a href="https://rodinakino.ru/events/aleksandr-i-2026">Александр I</a>      </div>
+<div class="m">2026 · Пушкинская карта, Россия · 90 мин · 16+ · реж. Морад Абдель-Фаттах · история, биография, драма · Малый 1 зал · 300 ₽</div><details><summary>о фильме</summary><p>Екатерина II всегда знала, что ее преемником станет не сын Павел, а любимый внук Александр. С самых ранних лет его воспитывали как будущего правителя — в жесткой дисциплине и с блестящим образованием. Став наконец императором, Александр был намерен продолжить реформы своих предшественников — отменить крепостное право…</p></details>    </div>
+<img class="p" src="posters/f7QZR7li6m7W55fDzIb0ZPu4PYA.jpg" alt="" width="46" height="69" loading="lazy" decoding="async">  </li><li class="r day"
+      data-v="rodina" data-ts="1795960800"
+      data-country-status="other">
+    <time datetime="2026-11-29T17:00:00+03:00">17:00</time>
+    <div class="b">
+      <div class="w">
+<span class="v v-rodina">Родина</span><span class="h">Большой зал</span>      </div>
+      <div class="t">
+<a href="https://rodinakino.ru/events/velikaya-illyuziya-eho-28-mmfaf-1937">Великая иллюзия. Эхо 28 ММФАФ</a>      </div>
+<div class="m">1937 · Франция · 114 мин · 12+ · реж. Жан Ренуар · драма · субтитры · Большой зал · 400 ₽</div><details><summary>о фильме</summary><p>Первая мировая война. Французские лётчики — аристократ де Боэльдьё и рабочий Марешаль — попадают в немецкий плен. После нескольких попыток бегства французов переводят в крепость, из которой, как считается, сбежать невозможно. Комендантом оказывается некогда сбивший их военный ас и аристократ фон Рауффенштайн.…</p></details>    </div>
+  </li><li class="r day"
+      data-v="lenfilm" data-ts="1795962600"
+      data-country-status="other">
+    <time datetime="2026-11-29T17:30:00+03:00">17:30</time>
+    <div class="b">
+      <div class="w">
+<a class="v v-lenfilm" href="https://www.lenfilm.ru/service/Kinoteatr-Lenfilm/">Ленфильм</a><span class="h">зал 1</span>      </div>
+      <div class="t">
+<span>Увидеть всё (версия с субтитрами)</span>      </div>
+<div class="m">2026 · США · 174 мин · 18+ · комедия, документальный, драма · субтитры · зал 1 · 500 ₽</div>    </div>
+<img class="p" src="posters/57tGJt2nHQqrpsrRO9XLxhgGPMd.jpg" alt="" width="46" height="69" loading="lazy" decoding="async">  </li><li class="r day"
+      data-v="outcinema" data-ts="1795962600"
+      data-country-status="other">
+    <time datetime="2026-11-29T17:30:00+03:00">17:30</time>
+    <div class="b">
+      <div class="w">
+<span class="v v-outcinema">Out Cinema</span>      </div>
+      <div class="t">
+<a href="https://kinowidget.kinoplan.ru/seats/8588/10065614/6b02c69040000056002d7fe4">ЧТО СЛУЧИЛОСЬ С БЭБИ ДЖЕЙН?</a>      </div>
+<div class="m">1962 · США · 144 мин · 16+ · реж. Роберт Олдрич · триллер, драма · английский язык, русские субтитры · 660 ₽ <span class="tag">КЛАССИКА</span></div><details><summary>о фильме</summary><p>За стенами мрачного особняка Бетт Дэвис и Джоан Кроуфорд ведут блестящую дуэль, превращая сестринскую вражду в леденящий душу психологический триллер</p></details>    </div>
+<img class="p" src="posters/msGYzyWwtjAaA3DScdgmvJ5MReG.jpg" alt="" width="46" height="69" loading="lazy" decoding="async">  </li><li class="r day"
+      data-v="rodina" data-ts="1795964100"
+      data-country-status="other">
+    <time datetime="2026-11-29T17:55:00+03:00">17:55</time>
+    <div class="b">
+      <div class="w">
+<span class="v v-rodina">Родина</span><span class="h">Малый 2 зал</span>      </div>
+      <div class="t">
+<a href="https://rodinakino.ru/events/lyubov-i-yarost-2025">Любовь и ярость</a>      </div>
+<div class="m">2025 · Италия · 103 мин · 18+ · реж. Ивано Де Маттео · драма · субтитры · Малый 2 зал · 350 ₽</div><details><summary>о фильме</summary><p>Вдовец Пьетро всю жизнь посвятил дочери-подростку. Но когда он впервые за долгие годы решает устроить личную жизнь и приводит в дом новую женщину, идеальная семья превращается в поле битвы. Теперь Пьетро разрывается между отцовским инстинктом и голосом разума.</p></details>    </div>
+  </li><li class="r"
+      data-v="mirage" data-ts="1795966200"
+      data-country-status="unknown">
+    <time datetime="2026-11-29T18:30:00+03:00">18:30</time>
+    <div class="b">
+      <div class="w">
+<a class="v v-mirage" href="https://www.mirage.ru/ticket_new/a4a08900-e09d-4f35-a421-bdbca4fd78be/">Мираж на Большом</a><span class="h">зал 4</span>      </div>
+      <div class="t">
+<span>Голодные игры: Рассвет Жатвы</span>      </div>
+<div class="m">18+ · триллер, приключения, фэнтези · зал 4</div>    </div>
+<img class="p" src="posters/tD4kBIthK1NFxesGT5Pj42fM5u5.jpg" alt="" width="46" height="69" loading="lazy" decoding="async">  </li><li class="r"
+      data-v="rodina" data-ts="1795966800"
+      data-country-status="other">
+    <time datetime="2026-11-29T18:40:00+03:00">18:40</time>
+    <div class="b">
+      <div class="w">
+<span class="v v-rodina">Родина</span><span class="h">Малый 1 зал</span>      </div>
+      <div class="t">
+<a href="https://rodinakino.ru/events/golodnye-igry-rassvet-zhatvy-2026">Голодные игры: Рассвет Жатвы</a>      </div>
+<div class="m">2026 · США · 158 мин · 18+ · реж. Фрэнсис Лоуренс · приключения, триллер, фантастика · Малый 1 зал · 350 ₽</div><details><summary>о фильме</summary><p>Молодой Хеймитч Эбернети из 12-го дистрикта участвует в легендарных 50-х Голодных играх. Но шансов уцелеть у него немного — в последний раз трибут из его района побеждал на играх сорок лет назад.</p></details>    </div>
+<img class="p" src="posters/tD4kBIthK1NFxesGT5Pj42fM5u5.jpg" alt="" width="46" height="69" loading="lazy" decoding="async">  </li><li class="r"
+      data-v="mirage" data-ts="1795968000"
+      data-country-status="unknown">
+    <time datetime="2026-11-29T19:00:00+03:00">19:00</time>
+    <div class="b">
+      <div class="w">
+<a class="v v-mirage" href="https://www.mirage.ru/ticket_new/4b5599e6-fe0f-4acb-bf05-a8ea14a34626/">Мираж на Большом</a><span class="h">зал 1</span>      </div>
+      <div class="t">
+<span>Голодные игры: Рассвет Жатвы</span>      </div>
+<div class="m">18+ · триллер, приключения, фэнтези · зал 1</div>    </div>
+<img class="p" src="posters/tD4kBIthK1NFxesGT5Pj42fM5u5.jpg" alt="" width="46" height="69" loading="lazy" decoding="async">  </li><li class="r"
+      data-v="rodina" data-ts="1795968600"
+      data-country-status="Russian">
+    <time datetime="2026-11-29T19:10:00+03:00">19:10</time>
+    <div class="b">
+      <div class="w">
+<span class="v v-rodina">Родина</span><span class="h">Большой зал</span>      </div>
+      <div class="t">
+<a href="https://rodinakino.ru/events/bylo-ne-bylo-2025">было не было</a>      </div>
+<div class="m">2025 · Россия · 88 мин · 18+ · реж. Тимофей Анисимов · драма · Большой зал · 400 ₽</div><details><summary>о фильме</summary><p>Кира сбегает на север в поисках отца. Ей известны только имя и фамилия. Петя местный, но тоже сбежал — от самого себя. Он убеждает Киру, что знает, где ее отец. У каждого из них свои вопросы к прошлому, и только один человек может дать ответы. Им придется пересечь Кольский полуостров, чтобы найти его.</p></details>    </div>
+  </li><li class="r"
+      data-v="mirage" data-ts="1795969800"
+      data-country-status="unknown">
+    <time datetime="2026-11-29T19:30:00+03:00">19:30</time>
+    <div class="b">
+      <div class="w">
+<a class="v v-mirage" href="https://www.mirage.ru/ticket_new/c6a54b4f-f1c2-4611-bf8d-6903800526ec/">Мираж на Большом</a><span class="h">зал 2</span>      </div>
+      <div class="t">
+<span>Голодные игры: Рассвет Жатвы</span>      </div>
+<div class="m">18+ · триллер, приключения, фэнтези · зал 2</div>    </div>
+<img class="p" src="posters/tD4kBIthK1NFxesGT5Pj42fM5u5.jpg" alt="" width="46" height="69" loading="lazy" decoding="async">  </li><li class="r"
+      data-v="rodina" data-ts="1795971300"
+      data-country-status="other">
+    <time datetime="2026-11-29T19:55:00+03:00">19:55</time>
+    <div class="b">
+      <div class="w">
+<span class="v v-rodina">Родина</span><span class="h">Малый 2 зал</span>      </div>
+      <div class="t">
+<a href="https://rodinakino.ru/events/uvidet-vsyo-versiya-s-subtitrami-2026">Увидеть всё (версия с субтитрами)</a>      </div>
+<div class="m">2026 · США · 174 мин · 18+ · реж. Нэйтан Филдер, Лэнс Оппенгейм · документальный, биография · субтитры · Малый 2 зал · 350 ₽</div><details><summary>о фильме</summary><p>Элизабет Холмс была одной из самых молодых миллиардерш мира, пока её компания не оказалась в центре крупнейшего мошеннического скандала в истории Кремниевой долины. Потеряв всё своё состояние и получив тюремный срок, за месяц до заключения она приглашает в свой дом съёмочную группу во главе с комиком-авангардистом. Но…</p></details>    </div>
+<img class="p" src="posters/57tGJt2nHQqrpsrRO9XLxhgGPMd.jpg" alt="" width="46" height="69" loading="lazy" decoding="async">  </li><li class="r"
+      data-v="outcinema" data-ts="1795973100"
+      data-country-status="other">
+    <time datetime="2026-11-29T20:25:00+03:00">20:25</time>
+    <div class="b">
+      <div class="w">
+<span class="v v-outcinema">Out Cinema</span>      </div>
+      <div class="t">
+<a href="https://kinowidget.kinoplan.ru/seats/8588/10085944/6b02c6844000004e002d7fdf">НЕ ТОТ ЧЕЛОВЕК (ПРЕМЬЕРА)</a>      </div>
+<div class="m">1956 · США · 105 мин · 16+ · реж. Альфред Хичкок · нуар, драма · английский язык, русские субтитры · 690 ₽ <span class="tag">ХИЧКОК</span></div><details><summary>о фильме</summary><p>Единственный фильм Хичкока, снятый в почти документальной манере по реальной истории о музыканте Мэнни Балестреро, которого из-за внешнего сходства ошибочно обвинили в серии ограблений, и эта трагическая ошибка медленно разрушила жизнь его самого и его жены</p></details>    </div>
+  </li><li class="r"
+      data-v="lenfilm" data-ts="1795974300"
+      data-country-status="other">
+    <time datetime="2026-11-29T20:45:00+03:00">20:45</time>
+    <div class="b">
+      <div class="w">
+<a class="v v-lenfilm" href="https://www.lenfilm.ru/service/Kinoteatr-Lenfilm/">Ленфильм</a><span class="h">зал 1</span>      </div>
+      <div class="t">
+<span>Мертвец</span>      </div>
+<div class="m">1995 · Германия, США, Япония · 121 мин · 18+ · вестерн, драма, фэнтези · субтитры · зал 1 · 450 ₽</div>    </div>
+<img class="p" src="posters/2bKylZnvFY7oAYUh8cn5ex6w5Vk.jpg" alt="" width="46" height="69" loading="lazy" decoding="async">  </li><li class="r"
+      data-v="rodina" data-ts="1795974600"
+      data-country-status="Russian">
+    <time datetime="2026-11-29T20:50:00+03:00">20:50</time>
+    <div class="b">
+      <div class="w">
+<span class="v v-rodina">Родина</span><span class="h">Большой зал</span>      </div>
+      <div class="t">
+<a href="https://rodinakino.ru/events/chetyre-zhizni-petra-mamonova-2026">Четыре жизни Петра Мамонова</a>      </div>
+<div class="m">2026 · Россия · 126 мин · 18+ · реж. Павел Лунгин · документальный, биография · Большой зал · 400 ₽</div><details><summary>о фильме</summary><p>Рассказ о поисках смысла жизни и перерождении культового музыканта и актёра Петра Мамонова: уникальные архивные кадры, редкие семейные фото, фрагменты интервью разных лет и воспоминания тех, кто был рядом — Сергея Шнурова, Евгения Маргулиса, Виктора Сухорукова, супруги Ольги Мамоновой, Виктории Исаковой, Сергея Лобана…</p></details>    </div>
+<img class="p" src="posters/rmIQQN159fzmTZulMjYiEPl9PdA.jpg" alt="" width="46" height="69" loading="lazy" decoding="async">  </li><li class="r"
+      data-v="rodina" data-ts="1795977000"
+      data-country-status="Russian">
+    <time datetime="2026-11-29T21:30:00+03:00">21:30</time>
+    <div class="b">
+      <div class="w">
+<span class="v v-rodina">Родина</span><span class="h">Малый 1 зал</span>      </div>
+      <div class="t">
+<a href="https://rodinakino.ru/events/aleksandr-i-2026">Александр I</a>      </div>
+<div class="m">2026 · Пушкинская карта, Россия · 90 мин · 16+ · реж. Морад Абдель-Фаттах · история, биография, драма · Малый 1 зал · 350 ₽</div><details><summary>о фильме</summary><p>Екатерина II всегда знала, что ее преемником станет не сын Павел, а любимый внук Александр. С самых ранних лет его воспитывали как будущего правителя — в жесткой дисциплине и с блестящим образованием. Став наконец императором, Александр был намерен продолжить реформы своих предшественников — отменить крепостное право…</p></details>    </div>
+<img class="p" src="posters/f7QZR7li6m7W55fDzIb0ZPu4PYA.jpg" alt="" width="46" height="69" loading="lazy" decoding="async">  </li><li class="r"
+      data-v="mirage" data-ts="1795980000"
+      data-country-status="unknown">
+    <time datetime="2026-11-29T22:20:00+03:00">22:20</time>
+    <div class="b">
+      <div class="w">
+<a class="v v-mirage" href="https://www.mirage.ru/ticket_new/ad288395-fb56-47f4-9091-bebe1797530b/">Мираж на Большом</a><span class="h">зал 1</span>      </div>
+      <div class="t">
+<span>Голодные игры: Рассвет Жатвы</span>      </div>
+<div class="m">18+ · триллер, приключения, фэнтези · зал 1</div>    </div>
+<img class="p" src="posters/tD4kBIthK1NFxesGT5Pj42fM5u5.jpg" alt="" width="46" height="69" loading="lazy" decoding="async">  </li>      </ul>
+  </section>
+  <nav class="pn" aria-label="Соседние дни">
+<a href="2026-11-28.html">← сб 28</a>  </nav>
+</main>
+
+<footer id="src">
+  <h2>Источники</h2>
+  <ul class="st">
+      <li class="ok"><span class="ic" aria-hidden="true">✓</span><b>Дом кино</b> — 64 сеанса · 23.11 08:13 <span class="mut">· 7 запр., 14.5 с</span></li>
+      <li class="ok"><span class="ic" aria-hidden="true">✓</span><b>Родина</b> — 112 сеансов · 23.11 08:14 <span class="mut">· 33 запр., 55.8 с</span></li>
+      <li class="ok"><span class="ic" aria-hidden="true">✓</span><b>Аврора</b> — 33 сеанса · 23.11 08:14 <span class="mut">· 8 запр., 7.3 с</span></li>
+      <li class="ok"><span class="ic" aria-hidden="true">✓</span><b>Художественный</b> — 55 сеансов · 23.11 08:14 <span class="mut">· 7 запр., 6.0 с</span></li>
+      <li class="ok"><span class="ic" aria-hidden="true">✓</span><b>Ленфильм</b> — 27 сеансов · 23.11 08:14 <span class="mut">· 9 запр., 7.5 с</span></li>
+      <li class="ok"><span class="ic" aria-hidden="true">✓</span><b>Out Cinema</b> — 21 сеанс · 23.11 08:14 <span class="mut">· 1 запр., 0.5 с</span></li>
+      <li class="ok"><span class="ic" aria-hidden="true">✓</span><b>Мираж на Большом</b> — 128 сеансов · 23.11 08:14 <span class="mut">· 7 запр., 9.1 с</span></li>
+  </ul>
+  <p class="mut">Снимок данных: <a href="screenings.json">screenings.json</a>. Каждый день — отдельная страница. Вечер — сеансы с 18:00; ночные (до 06:00) стоят под предыдущим днём. Прошедшие сеансы приглушены по часам устройства.</p>
+  <p class="tmdb"><a href="https://www.themoviedb.org"><img src="tmdb.svg" alt="TMDB"></a>Постеры фильмов — <a href="https://www.themoviedb.org">TMDB</a>. This website uses TMDB and the TMDB APIs but is not endorsed, certified, or otherwise approved by TMDB.</p>
+</footer>
+
+<script>
+(function () {
+  var body = document.body;
+
+  // 1. remember toggles (presentation only; CSS does the actual hiding)
+  // Restore-on-load skips row-hiding filters: a saved hide must never silently
+  // drop rows on every fresh load. Such flags are also dropped from the store
+  // on the next change (EPHEMERAL), so the fix self-cleans old junk values.
+  var KEY = 'kino.toggles', saved = {};
+  var EPHEMERAL = { 'no-russia': true };
+  try { saved = JSON.parse(localStorage.getItem(KEY) || '{}'); } catch (e) {}
+  var ctls = Array.prototype.slice.call(document.querySelectorAll('input.ctl'));
+  ctls.forEach(function (i) {
+    if (i.id in saved && !EPHEMERAL[i.id]) i.checked = !!saved[i.id];
+    i.addEventListener('change', function () {
+      var o = {};
+      ctls.forEach(function (j) { if (!EPHEMERAL[j.id]) o[j.id] = j.checked; });
+      try { localStorage.setItem(KEY, JSON.stringify(o)); } catch (e) {}
+    });
+  });
+
+  // 2. dim rows that already started
+  var rows = Array.prototype.slice.call(document.querySelectorAll('.r[data-ts]'));
+  function dim() {
+    var t = Date.now() / 1000;
+    rows.forEach(function (r) { r.classList.toggle('past', +r.dataset.ts < t); });
+  }
+  dim();
+  setInterval(dim, 60000);
+
+  // 3. page older than today?
+  var d = new Date(), pad = function (n) { return (n < 10 ? '0' : '') + n; };
+  var local = d.getFullYear() + '-' + pad(d.getMonth() + 1) + '-' + pad(d.getDate());
+  if (local !== body.dataset.today) {
+    var st = document.getElementById('stale');
+    st.hidden = false;
+    st.textContent = '⚠ Страница собрана ' + body.dataset.generatedHuman + ' — на устройстве уже следующий день, свежего запуска ещё не было.';
+  }
+})();
+</script>
+</body>
+</html>
