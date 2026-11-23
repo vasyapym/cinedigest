@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-23T15:53:00.149656+03:00",
+  "generated_at": "2026-11-23T17:36:22.582742+03:00",
   "window_start": "2026-11-23",
   "window_end": "2026-11-29",
   "statuses": [
@@ -7,85 +7,85 @@
       "venue": "domkino",
       "ok": true,
       "count": 66,
-      "fetched_at": "2026-11-23T15:53:14.566907+03:00",
+      "fetched_at": "2026-11-23T17:36:44.234986+03:00",
       "stale": false,
       "suspicious": false,
       "error": null,
       "warning": null,
       "requests": 7,
-      "seconds": 14.417
+      "seconds": 21.652
     },
     {
       "venue": "rodina",
       "ok": true,
-      "count": 103,
-      "fetched_at": "2026-11-23T15:54:02.699558+03:00",
+      "count": 101,
+      "fetched_at": "2026-11-23T17:37:37.238741+03:00",
       "stale": false,
       "suspicious": false,
       "error": null,
       "warning": null,
       "requests": 32,
-      "seconds": 48.133
+      "seconds": 53.004
     },
     {
       "venue": "avrora",
       "ok": true,
-      "count": 29,
-      "fetched_at": "2026-11-23T15:54:09.553949+03:00",
+      "count": 46,
+      "fetched_at": "2026-11-23T17:37:47.814742+03:00",
       "stale": false,
       "suspicious": false,
       "error": null,
       "warning": null,
       "requests": 8,
-      "seconds": 6.853
+      "seconds": 10.575
     },
     {
       "venue": "poravkino",
       "ok": true,
-      "count": 141,
-      "fetched_at": "2026-11-23T15:54:15.830390+03:00",
+      "count": 136,
+      "fetched_at": "2026-11-23T17:37:53.889540+03:00",
       "stale": false,
       "suspicious": false,
       "error": null,
       "warning": null,
       "requests": 7,
-      "seconds": 6.276
+      "seconds": 6.075
     },
     {
       "venue": "lenfilm",
       "ok": true,
-      "count": 25,
-      "fetched_at": "2026-11-23T15:54:22.957827+03:00",
+      "count": 24,
+      "fetched_at": "2026-11-23T17:38:01.701467+03:00",
       "stale": false,
       "suspicious": false,
       "error": null,
       "warning": null,
       "requests": 9,
-      "seconds": 7.127
+      "seconds": 7.812
     },
     {
       "venue": "outcinema",
       "ok": true,
       "count": 21,
-      "fetched_at": "2026-11-23T15:54:23.480883+03:00",
+      "fetched_at": "2026-11-23T17:38:02.269370+03:00",
       "stale": false,
       "suspicious": false,
       "error": null,
       "warning": null,
       "requests": 1,
-      "seconds": 0.523
+      "seconds": 0.568
     },
     {
       "venue": "mirage",
       "ok": true,
-      "count": 115,
-      "fetched_at": "2026-11-23T15:54:31.767325+03:00",
+      "count": 110,
+      "fetched_at": "2026-11-23T17:38:11.610946+03:00",
       "stale": false,
       "suspicious": false,
       "error": null,
       "warning": null,
       "requests": 7,
-      "seconds": 8.286
+      "seconds": 9.341
     }
   ],
   "screenings": [
@@ -211,28 +211,6 @@
       }
     },
     {
-      "venue": "mirage",
-      "source_id": "541174ce-3f0c-49b8-960d-a9381206a19b",
-      "title": "Одиссея",
-      "start": "2026-11-23T15:20:00+03:00",
-      "hall": "5",
-      "price_min": null,
-      "price_max": null,
-      "language": null,
-      "tags": [],
-      "url": "https://www.mirage.ru/ticket_new/541174ce-3f0c-49b8-960d-a9381206a19b/",
-      "source_url": "https://www.mirage.ru/spb/schedule/23.11.2026/cinema/1/",
-      "extra": {
-        "genres": [
-          "боевик",
-          "приключения",
-          "фэнтези"
-        ],
-        "age": "18+",
-        "film_id": 7450
-      }
-    },
-    {
       "venue": "domkino",
       "source_id": "53818928796c",
       "title": "Ангельский чин",
@@ -253,32 +231,6 @@
         "genres": [
           "документальный"
         ]
-      }
-    },
-    {
-      "venue": "avrora",
-      "source_id": "6afec1913b0000ad0005df3b",
-      "title": "Лиля",
-      "start": "2026-11-23T15:50:00+03:00",
-      "hall": "Большой",
-      "price_min": 450,
-      "price_max": 600,
-      "language": null,
-      "tags": [],
-      "url": "https://avrora.spb.ru/",
-      "source_url": "https://kinokassa.kinoplan24.ru/api/v2/release/playbill?city_id=2&date=2026-11-23",
-      "extra": {
-        "release_id": 26080,
-        "year": 2026,
-        "duration_min": 146,
-        "age": "18+",
-        "genres": [
-          "драма",
-          "биография"
-        ],
-        "country": "Россия",
-        "free_places": 384,
-        "online_sale": true
       }
     },
     {
@@ -303,52 +255,6 @@
           "триллер",
           "драма"
         ]
-      }
-    },
-    {
-      "venue": "mirage",
-      "source_id": "d01758cc-8458-4760-8b17-c7c18d672f99",
-      "title": "Кот в шляпе",
-      "start": "2026-11-23T15:50:00+03:00",
-      "hall": "3",
-      "price_min": null,
-      "price_max": null,
-      "language": null,
-      "tags": [],
-      "url": "https://www.mirage.ru/ticket_new/d01758cc-8458-4760-8b17-c7c18d672f99/",
-      "source_url": "https://www.mirage.ru/spb/schedule/23.11.2026/cinema/1/",
-      "extra": {
-        "genres": [
-          "комедия",
-          "приключения",
-          "мультфильм",
-          "фэнтези",
-          "семейный"
-        ],
-        "age": "6+",
-        "film_id": 7694
-      }
-    },
-    {
-      "venue": "mirage",
-      "source_id": "f7dd39d4-7c6f-28f7-8771-55ccffad0192",
-      "title": "Рокки – это я",
-      "start": "2026-11-23T15:50:00+03:00",
-      "hall": "7",
-      "price_min": null,
-      "price_max": null,
-      "language": null,
-      "tags": [],
-      "url": "https://www.mirage.ru/ticket_new/f7dd39d4-7c6f-28f7-8771-55ccffad0192/",
-      "source_url": "https://www.mirage.ru/spb/schedule/23.11.2026/cinema/1/",
-      "extra": {
-        "genres": [
-          "драма",
-          "биография"
-        ],
-        "age": "18+",
-        "price_raw": "40000₽",
-        "film_id": 7692
       }
     },
     {
@@ -428,56 +334,6 @@
       }
     },
     {
-      "venue": "poravkino",
-      "source_id": "44828",
-      "title": "Скрудж",
-      "start": "2026-11-23T16:25:00+03:00",
-      "hall": "Премьер",
-      "price_min": 450,
-      "price_max": 450,
-      "language": null,
-      "tags": [],
-      "url": "https://poravkino.ru/",
-      "source_url": "https://poravkino.ru/api/schedule?date=2026-11-23",
-      "extra": {
-        "year": 2026,
-        "country": "США, Великобритания",
-        "director": "Тай Уэст",
-        "original_title": "Скрудж",
-        "duration_min": 115,
-        "age": 12,
-        "genres": [
-          "драма",
-          "комедия",
-          "триллер",
-          "фэнтези"
-        ],
-        "is_pushkin": false
-      }
-    },
-    {
-      "venue": "mirage",
-      "source_id": "1ec810d9-b2ba-45c4-8455-f255bc2b395d",
-      "title": "Рождение империи",
-      "start": "2026-11-23T16:30:00+03:00",
-      "hall": "2",
-      "price_min": null,
-      "price_max": null,
-      "language": null,
-      "tags": [],
-      "url": "https://www.mirage.ru/ticket_new/1ec810d9-b2ba-45c4-8455-f255bc2b395d/",
-      "source_url": "https://www.mirage.ru/spb/schedule/23.11.2026/cinema/1/",
-      "extra": {
-        "genres": [
-          "драма",
-          "биография",
-          "история"
-        ],
-        "age": "12+",
-        "film_id": 7643
-      }
-    },
-    {
       "venue": "outcinema",
       "source_id": "463238686271",
       "title": "В СЛУЧАЕ УБИЙСТВА НАБИРАЙТЕ «М»",
@@ -502,181 +358,6 @@
       }
     },
     {
-      "venue": "poravkino",
-      "source_id": "44829",
-      "title": "Четыре жизни Петра Мамонова",
-      "start": "2026-11-23T16:35:00+03:00",
-      "hall": "Малый красный",
-      "price_min": 400,
-      "price_max": 400,
-      "language": null,
-      "tags": [],
-      "url": "https://poravkino.ru/",
-      "source_url": "https://poravkino.ru/api/schedule?date=2026-11-23",
-      "extra": {
-        "year": 2026,
-        "country": "Россия",
-        "director": "Павел Лунгин",
-        "original_title": "Четыре жизни Петра Мамонова",
-        "duration_min": 125,
-        "age": 18,
-        "genres": [
-          "документальный",
-          "биографический"
-        ],
-        "is_pushkin": false
-      }
-    },
-    {
-      "venue": "rodina",
-      "source_id": "a5888a996b5b",
-      "title": "Девичник в спа",
-      "start": "2026-11-23T16:35:00+03:00",
-      "hall": "Малый 2 зал",
-      "price_min": 200,
-      "price_max": 200,
-      "language": null,
-      "tags": [],
-      "url": "https://rodinakino.ru/events/devichnik-v-spa-2026",
-      "source_url": "https://rodinakino.ru/?date=2026/11/23",
-      "extra": {
-        "year": 2026,
-        "age": "18+",
-        "duration_min": 97,
-        "synopsis": "Три лучшие подруги Джейн, Коко и Софи решают снять стресс на спа-курорте, но все идет не по плану, когда к поездке присоединяется их «лучшая подруга» Мел — и долгожданный отдых становится чуть более экстремальным, чем они ожидали.",
-        "director": "Джон Лукас, Скотт Мур",
-        "genres": [
-          "комедия"
-        ],
-        "country": "США"
-      }
-    },
-    {
-      "venue": "poravkino",
-      "source_id": "44830",
-      "title": "Лиля",
-      "start": "2026-11-23T16:45:00+03:00",
-      "hall": "2",
-      "price_min": 400,
-      "price_max": 400,
-      "language": null,
-      "tags": [],
-      "url": "https://poravkino.ru/",
-      "source_url": "https://poravkino.ru/api/schedule?date=2026-11-23",
-      "extra": {
-        "year": 2026,
-        "country": "Россия",
-        "director": "Вера Сторожева",
-        "original_title": "Лиля",
-        "duration_min": 150,
-        "age": 18,
-        "genres": [
-          "драма",
-          "мелодрама"
-        ],
-        "is_pushkin": false
-      }
-    },
-    {
-      "venue": "mirage",
-      "source_id": "6de6d96e-09ef-4a32-9523-c923c6149616",
-      "title": "Лиля",
-      "start": "2026-11-23T16:50:00+03:00",
-      "hall": "6",
-      "price_min": null,
-      "price_max": null,
-      "language": null,
-      "tags": [],
-      "url": "https://www.mirage.ru/ticket_new/6de6d96e-09ef-4a32-9523-c923c6149616/",
-      "source_url": "https://www.mirage.ru/spb/schedule/23.11.2026/cinema/1/",
-      "extra": {
-        "genres": [
-          "драма",
-          "биография"
-        ],
-        "age": "18+",
-        "film_id": 7679
-      }
-    },
-    {
-      "venue": "poravkino",
-      "source_id": "44831",
-      "title": "Бумажный тигр",
-      "start": "2026-11-23T16:55:00+03:00",
-      "hall": "Малый синий",
-      "price_min": 400,
-      "price_max": 400,
-      "language": null,
-      "tags": [],
-      "url": "https://poravkino.ru/",
-      "source_url": "https://poravkino.ru/api/schedule?date=2026-11-23",
-      "extra": {
-        "year": 2026,
-        "country": "США, Франция, Польша, Италия",
-        "director": "Джеймс Грэй",
-        "original_title": "Бумажный тигр",
-        "duration_min": 120,
-        "age": 18,
-        "genres": [
-          "драма",
-          "криминал",
-          "триллер"
-        ],
-        "is_pushkin": false
-      }
-    },
-    {
-      "venue": "avrora",
-      "source_id": "6afec3673b0000b40005e024",
-      "title": "Бумажный тигр",
-      "start": "2026-11-23T17:00:00+03:00",
-      "hall": "Малый",
-      "price_min": 450,
-      "price_max": 450,
-      "language": null,
-      "tags": [],
-      "url": "https://avrora.spb.ru/",
-      "source_url": "https://kinokassa.kinoplan24.ru/api/v2/release/playbill?city_id=2&date=2026-11-23",
-      "extra": {
-        "release_id": 25411,
-        "year": 2026,
-        "duration_min": 115,
-        "age": "18+",
-        "genres": [
-          "триллер",
-          "драма"
-        ],
-        "country": "Франция, США, Польша, Италия",
-        "free_places": 106,
-        "online_sale": true
-      }
-    },
-    {
-      "venue": "lenfilm",
-      "source_id": "6af191393d0000b900e1d4ae",
-      "title": "Новый дом",
-      "start": "2026-11-23T17:00:00+03:00",
-      "hall": "1",
-      "price_min": 400,
-      "price_max": 400,
-      "language": null,
-      "tags": [],
-      "url": "https://www.lenfilm.ru/service/Kinoteatr-Lenfilm/",
-      "source_url": "https://kinokassa.kinoplan24.ru/api/v2/release/playbill?cinema_id=2387&date=2026-11-23",
-      "extra": {
-        "release_id": 26154,
-        "year": 2026,
-        "duration_min": 101,
-        "age": "18+",
-        "genres": [
-          "драма"
-        ],
-        "country": "Россия",
-        "free_places": 185,
-        "online_sale": true
-      }
-    },
-    {
       "venue": "mirage",
       "source_id": "525b7d8d-dc18-4f94-a5b1-229bfcabbcd5",
       "title": "Годзилла: Минус ноль",
@@ -696,56 +377,6 @@
         ],
         "age": "18+",
         "film_id": 7700
-      }
-    },
-    {
-      "venue": "poravkino",
-      "source_id": "44832",
-      "title": "Рождение империи",
-      "start": "2026-11-23T17:05:00+03:00",
-      "hall": "4",
-      "price_min": 400,
-      "price_max": 400,
-      "language": null,
-      "tags": [],
-      "url": "https://poravkino.ru/",
-      "source_url": "https://poravkino.ru/api/schedule?date=2026-11-23",
-      "extra": {
-        "year": 2026,
-        "country": "Россия",
-        "director": "Андрей Кравчук, Алексей Нужный",
-        "original_title": "Рождение империи",
-        "duration_min": 150,
-        "age": 12,
-        "genres": [
-          "биографический",
-          "драма"
-        ],
-        "is_pushkin": false
-      }
-    },
-    {
-      "venue": "rodina",
-      "source_id": "b378778861f6",
-      "title": "Новый дом",
-      "start": "2026-11-23T17:20:00+03:00",
-      "hall": "Малый 1 зал",
-      "price_min": 200,
-      "price_max": 200,
-      "language": null,
-      "tags": [],
-      "url": "https://rodinakino.ru/events/novyj-dom-2026",
-      "source_url": "https://rodinakino.ru/?date=2026/11/23",
-      "extra": {
-        "year": 2026,
-        "age": "18+",
-        "duration_min": 101,
-        "synopsis": "После семи лет тюрьмы Анна выходит на свободу. У нее нет ни дома, ни семьи, ни смысла жизни, а чувство вины за прошлое не отпускает ее. Благотворительный фонд помогает устроиться на работу, предоставляет место в общежитии и направляет в группу психологической поддержки. Там Анна встречает Романа, который помогает ей…",
-        "director": "Никита Грушин",
-        "genres": [
-          "драма"
-        ],
-        "country": "Россия"
       }
     },
     {
@@ -1017,7 +648,7 @@
           "драма"
         ],
         "country": "США",
-        "free_places": 388,
+        "free_places": 383,
         "online_sale": true
       }
     },
@@ -1169,7 +800,7 @@
           "драма"
         ],
         "country": "США",
-        "free_places": 100,
+        "free_places": 95,
         "online_sale": true
       }
     },
@@ -1247,7 +878,7 @@
           "комедийный хоррор"
         ],
         "country": "Великобритания",
-        "free_places": 100,
+        "free_places": 98,
         "online_sale": true
       }
     },
@@ -1812,7 +1443,7 @@
           "драма"
         ],
         "country": "США",
-        "free_places": 102,
+        "free_places": 98,
         "online_sale": true
       }
     },
@@ -2853,7 +2484,7 @@
           "драма"
         ],
         "country": "США",
-        "free_places": 164,
+        "free_places": 163,
         "online_sale": true
       }
     },
@@ -4061,7 +3692,7 @@
       "language": null,
       "tags": [],
       "url": "https://rodinakino.ru/events/devichnik-v-spa-2026",
-      "source_url": "https://rodinakino.ru/?date=2026/11/24",
+      "source_url": "https://rodinakino.ru/?date=2026/11/23",
       "extra": {
         "year": 2026,
         "age": "18+",
@@ -4329,7 +3960,7 @@
       "language": null,
       "tags": [],
       "url": "https://rodinakino.ru/events/novyj-dom-2026",
-      "source_url": "https://rodinakino.ru/?date=2026/11/24",
+      "source_url": "https://rodinakino.ru/?date=2026/11/23",
       "extra": {
         "year": 2026,
         "age": "18+",
@@ -4741,7 +4372,7 @@
           "комедия"
         ],
         "country": "СССР",
-        "free_places": 48,
+        "free_places": 46,
         "online_sale": true
       }
     },
@@ -4766,7 +4397,7 @@
           "драма"
         ],
         "country": "Россия",
-        "free_places": 39,
+        "free_places": 38,
         "online_sale": true
       }
     },
@@ -4974,7 +4605,7 @@
           "комедия"
         ],
         "country": "США, Великобритания",
-        "free_places": 416,
+        "free_places": 412,
         "online_sale": true
       }
     },
@@ -7572,7 +7203,7 @@
           "историческая драма"
         ],
         "country": "Россия",
-        "free_places": 431,
+        "free_places": 429,
         "online_sale": true
       }
     },
@@ -8293,7 +7924,7 @@
           "шоу"
         ],
         "country": "Италия",
-        "free_places": 279,
+        "free_places": 276,
         "online_sale": true
       }
     },
@@ -8548,7 +8179,7 @@
           "драма"
         ],
         "country": "США",
-        "free_places": 101,
+        "free_places": 100,
         "online_sale": true
       }
     },
@@ -9573,6 +9204,59 @@
       }
     },
     {
+      "venue": "avrora",
+      "source_id": "6b041b9b4000004a002f2425",
+      "title": "Бумажный тигр",
+      "start": "2026-11-26T10:55:00+03:00",
+      "hall": "Малый",
+      "price_min": 350,
+      "price_max": 350,
+      "language": null,
+      "tags": [],
+      "url": "https://avrora.spb.ru/",
+      "source_url": "https://kinokassa.kinoplan24.ru/api/v2/release/playbill?city_id=2&date=2026-11-26",
+      "extra": {
+        "release_id": 25411,
+        "year": 2026,
+        "duration_min": 115,
+        "age": "18+",
+        "genres": [
+          "триллер",
+          "драма"
+        ],
+        "country": "Франция, США, Польша, Италия",
+        "free_places": 110,
+        "online_sale": true
+      }
+    },
+    {
+      "venue": "avrora",
+      "source_id": "6b04217a3d00008c00a7bfa0",
+      "title": "Голодные игры: Рассвет жатвы",
+      "start": "2026-11-26T11:15:00+03:00",
+      "hall": "Большой",
+      "price_min": 350,
+      "price_max": 500,
+      "language": null,
+      "tags": [],
+      "url": "https://avrora.spb.ru/",
+      "source_url": "https://kinokassa.kinoplan24.ru/api/v2/release/playbill?city_id=2&date=2026-11-26",
+      "extra": {
+        "release_id": 24086,
+        "year": 2026,
+        "duration_min": 158,
+        "age": "18+",
+        "genres": [
+          "приключения",
+          "фэнтези",
+          "триллер"
+        ],
+        "country": "США",
+        "free_places": 439,
+        "online_sale": true
+      }
+    },
+    {
       "venue": "lenfilm",
       "source_id": "6afec5bc3b00004e0005e15f",
       "title": "Четыре жизни Петра Мамонова",
@@ -9593,7 +9277,7 @@
           "документальный"
         ],
         "country": "Россия",
-        "free_places": 192,
+        "free_places": 190,
         "online_sale": true
       }
     },
@@ -9642,6 +9326,31 @@
         ],
         "age": "18+",
         "film_id": 7662
+      }
+    },
+    {
+      "venue": "avrora",
+      "source_id": "6b041ab140000045002f1e13",
+      "title": "Рокки – это я",
+      "start": "2026-11-26T13:10:00+03:00",
+      "hall": "Малый",
+      "price_min": 400,
+      "price_max": 400,
+      "language": null,
+      "tags": [],
+      "url": "https://avrora.spb.ru/",
+      "source_url": "https://kinokassa.kinoplan24.ru/api/v2/release/playbill?city_id=2&date=2026-11-26",
+      "extra": {
+        "release_id": 24563,
+        "year": 2026,
+        "duration_min": 127,
+        "age": "18+",
+        "genres": [
+          "драма"
+        ],
+        "country": "США",
+        "free_places": 110,
+        "online_sale": true
       }
     },
     {
@@ -9726,6 +9435,31 @@
       }
     },
     {
+      "venue": "avrora",
+      "source_id": "6b041a6b40000046002f1a2b",
+      "title": "Рождение империи",
+      "start": "2026-11-26T14:10:00+03:00",
+      "hall": "Большой",
+      "price_min": 400,
+      "price_max": 550,
+      "language": null,
+      "tags": [],
+      "url": "https://avrora.spb.ru/",
+      "source_url": "https://kinokassa.kinoplan24.ru/api/v2/release/playbill?city_id=2&date=2026-11-26",
+      "extra": {
+        "release_id": 14748,
+        "year": 2026,
+        "duration_min": 140,
+        "age": "12+",
+        "genres": [
+          "историческая драма"
+        ],
+        "country": "Россия",
+        "free_places": 439,
+        "online_sale": true
+      }
+    },
+    {
       "venue": "outcinema",
       "source_id": "475799155042",
       "title": "ПЯТЬ ЛЕГКИХ ПЬЕС",
@@ -9802,6 +9536,33 @@
       }
     },
     {
+      "venue": "avrora",
+      "source_id": "6b041a463d00004d00a79b9b",
+      "title": "Увидеть всё (версия с субтитрами)",
+      "start": "2026-11-26T15:35:00+03:00",
+      "hall": "Малый",
+      "price_min": 450,
+      "price_max": 450,
+      "language": null,
+      "tags": [],
+      "url": "https://avrora.spb.ru/",
+      "source_url": "https://kinokassa.kinoplan24.ru/api/v2/release/playbill?city_id=2&date=2026-11-26",
+      "extra": {
+        "release_id": 26250,
+        "year": 2026,
+        "duration_min": 174,
+        "age": "18+",
+        "genres": [
+          "комедия",
+          "документальный",
+          "драма"
+        ],
+        "country": "США",
+        "free_places": 110,
+        "online_sale": true
+      }
+    },
+    {
       "venue": "mirage",
       "source_id": "c13ba0b8-d1ba-49b9-89ec-765f521c4b12",
       "title": "Голодные игры: Рассвет Жатвы",
@@ -9875,6 +9636,32 @@
         ],
         "country": "США",
         "free_places": 164,
+        "online_sale": true
+      }
+    },
+    {
+      "venue": "avrora",
+      "source_id": "6b041a5b3d00004600a79b9f",
+      "title": "Лиля",
+      "start": "2026-11-26T16:50:00+03:00",
+      "hall": "Большой",
+      "price_min": 450,
+      "price_max": 600,
+      "language": null,
+      "tags": [],
+      "url": "https://avrora.spb.ru/",
+      "source_url": "https://kinokassa.kinoplan24.ru/api/v2/release/playbill?city_id=2&date=2026-11-26",
+      "extra": {
+        "release_id": 26080,
+        "year": 2026,
+        "duration_min": 146,
+        "age": "18+",
+        "genres": [
+          "драма",
+          "биография"
+        ],
+        "country": "Россия",
+        "free_places": 439,
         "online_sale": true
       }
     },
@@ -9974,6 +9761,31 @@
         ],
         "age": "18+",
         "film_id": 7662
+      }
+    },
+    {
+      "venue": "avrora",
+      "source_id": "6b041a1d40000053002f19e8",
+      "title": "Александр I",
+      "start": "2026-11-26T18:50:00+03:00",
+      "hall": "Малый",
+      "price_min": 500,
+      "price_max": 500,
+      "language": null,
+      "tags": [],
+      "url": "https://avrora.spb.ru/",
+      "source_url": "https://kinokassa.kinoplan24.ru/api/v2/release/playbill?city_id=2&date=2026-11-26",
+      "extra": {
+        "release_id": 25432,
+        "year": 2026,
+        "duration_min": 102,
+        "age": "16+",
+        "genres": [
+          "документально-художественный"
+        ],
+        "country": "Россия",
+        "free_places": 110,
+        "online_sale": true
       }
     },
     {
@@ -10144,6 +9956,33 @@
       }
     },
     {
+      "venue": "avrora",
+      "source_id": "6b04198e400000bc002f195e",
+      "title": "Голодные игры: Рассвет жатвы",
+      "start": "2026-11-26T20:50:00+03:00",
+      "hall": "Малый",
+      "price_min": 550,
+      "price_max": 550,
+      "language": null,
+      "tags": [],
+      "url": "https://avrora.spb.ru/",
+      "source_url": "https://kinokassa.kinoplan24.ru/api/v2/release/playbill?city_id=2&date=2026-11-26",
+      "extra": {
+        "release_id": 24086,
+        "year": 2026,
+        "duration_min": 158,
+        "age": "18+",
+        "genres": [
+          "приключения",
+          "фэнтези",
+          "триллер"
+        ],
+        "country": "США",
+        "free_places": 110,
+        "online_sale": true
+      }
+    },
+    {
       "venue": "rodina",
       "source_id": "a96c3552e13f",
       "title": "Было не было",
@@ -10191,6 +10030,36 @@
           "драма"
         ],
         "country": "Россия"
+      }
+    },
+    {
+      "venue": "avrora",
+      "source_id": "6b0419a93d00008800a79b04",
+      "title": "Плетёный муж",
+      "start": "2026-11-26T21:55:00+03:00",
+      "hall": "Большой",
+      "price_min": 500,
+      "price_max": 650,
+      "language": null,
+      "tags": [
+        "SUB"
+      ],
+      "url": "https://avrora.spb.ru/",
+      "source_url": "https://kinokassa.kinoplan24.ru/api/v2/release/playbill?city_id=2&date=2026-11-26",
+      "extra": {
+        "release_id": 25872,
+        "year": 2026,
+        "duration_min": 105,
+        "age": "18+",
+        "genres": [
+          "фантастика",
+          "фэнтези",
+          "мелодрама",
+          "комедия"
+        ],
+        "country": "США, Великобритания",
+        "free_places": 439,
+        "online_sale": true
       }
     },
     {
@@ -10294,6 +10163,57 @@
       }
     },
     {
+      "venue": "avrora",
+      "source_id": "6b0437093e0000bd0010becd",
+      "title": "Александр I",
+      "start": "2026-11-27T10:45:00+03:00",
+      "hall": "Малый",
+      "price_min": 350,
+      "price_max": 350,
+      "language": null,
+      "tags": [],
+      "url": "https://avrora.spb.ru/",
+      "source_url": "https://kinokassa.kinoplan24.ru/api/v2/release/playbill?city_id=2&date=2026-11-27",
+      "extra": {
+        "release_id": 25432,
+        "year": 2026,
+        "duration_min": 102,
+        "age": "16+",
+        "genres": [
+          "документально-художественный"
+        ],
+        "country": "Россия",
+        "free_places": 110,
+        "online_sale": true
+      }
+    },
+    {
+      "venue": "avrora",
+      "source_id": "6b0436f33e0000be0010bd9f",
+      "title": "Лиля",
+      "start": "2026-11-27T11:10:00+03:00",
+      "hall": "Большой",
+      "price_min": 350,
+      "price_max": 500,
+      "language": null,
+      "tags": [],
+      "url": "https://avrora.spb.ru/",
+      "source_url": "https://kinokassa.kinoplan24.ru/api/v2/release/playbill?city_id=2&date=2026-11-27",
+      "extra": {
+        "release_id": 26080,
+        "year": 2026,
+        "duration_min": 146,
+        "age": "18+",
+        "genres": [
+          "драма",
+          "биография"
+        ],
+        "country": "Россия",
+        "free_places": 439,
+        "online_sale": true
+      }
+    },
+    {
       "venue": "rodina",
       "source_id": "898417757707",
       "title": "Лес. Хранитель жизни",
@@ -10363,6 +10283,32 @@
         ],
         "age": "18+",
         "film_id": 7662
+      }
+    },
+    {
+      "venue": "avrora",
+      "source_id": "6b0436883d00002f00a805ee",
+      "title": "Патерсон",
+      "start": "2026-11-27T12:45:00+03:00",
+      "hall": "Малый",
+      "price_min": 400,
+      "price_max": 400,
+      "language": null,
+      "tags": [],
+      "url": "https://avrora.spb.ru/",
+      "source_url": "https://kinokassa.kinoplan24.ru/api/v2/release/playbill?city_id=2&date=2026-11-27",
+      "extra": {
+        "release_id": 8140,
+        "year": 2016,
+        "duration_min": 117,
+        "age": "18+",
+        "genres": [
+          "комедия",
+          "драма"
+        ],
+        "country": "США",
+        "free_places": 110,
+        "online_sale": true
       }
     },
     {
@@ -10439,7 +10385,7 @@
           "драма"
         ],
         "country": "США",
-        "free_places": 194,
+        "free_places": 192,
         "online_sale": true
       }
     },
@@ -10470,6 +10416,33 @@
       }
     },
     {
+      "venue": "avrora",
+      "source_id": "6b0438003e0000b70010c076",
+      "title": "Романовы: преданность и предательство",
+      "start": "2026-11-27T13:55:00+03:00",
+      "hall": "Большой",
+      "price_min": 400,
+      "price_max": 550,
+      "language": null,
+      "tags": [],
+      "url": "https://avrora.spb.ru/",
+      "source_url": "https://kinokassa.kinoplan24.ru/api/v2/release/playbill?city_id=2&date=2026-11-27",
+      "extra": {
+        "release_id": 25494,
+        "year": 2026,
+        "duration_min": 121,
+        "age": "16+",
+        "genres": [
+          "биография",
+          "история",
+          "драма"
+        ],
+        "country": "Россия",
+        "free_places": 439,
+        "online_sale": true
+      }
+    },
+    {
       "venue": "rodina",
       "source_id": "39dd2ede870b",
       "title": "Было не было",
@@ -10491,6 +10464,33 @@
           "драма"
         ],
         "country": "Россия"
+      }
+    },
+    {
+      "venue": "avrora",
+      "source_id": "6b0422fc3e0000a7001079e9",
+      "title": "Голодные игры: Рассвет жатвы",
+      "start": "2026-11-27T15:00:00+03:00",
+      "hall": "Малый",
+      "price_min": 450,
+      "price_max": 450,
+      "language": null,
+      "tags": [],
+      "url": "https://avrora.spb.ru/",
+      "source_url": "https://kinokassa.kinoplan24.ru/api/v2/release/playbill?city_id=2&date=2026-11-27",
+      "extra": {
+        "release_id": 24086,
+        "year": 2026,
+        "duration_min": 158,
+        "age": "18+",
+        "genres": [
+          "приключения",
+          "фэнтези",
+          "триллер"
+        ],
+        "country": "США",
+        "free_places": 110,
+        "online_sale": true
       }
     },
     {
@@ -10621,6 +10621,31 @@
     },
     {
       "venue": "avrora",
+      "source_id": "6b0436ad4000004a002f7a68",
+      "title": "Рокки – это я",
+      "start": "2026-11-27T16:15:00+03:00",
+      "hall": "Большой",
+      "price_min": 450,
+      "price_max": 600,
+      "language": null,
+      "tags": [],
+      "url": "https://avrora.spb.ru/",
+      "source_url": "https://kinokassa.kinoplan24.ru/api/v2/release/playbill?city_id=2&date=2026-11-27",
+      "extra": {
+        "release_id": 24563,
+        "year": 2026,
+        "duration_min": 127,
+        "age": "18+",
+        "genres": [
+          "драма"
+        ],
+        "country": "США",
+        "free_places": 439,
+        "online_sale": true
+      }
+    },
+    {
+      "venue": "avrora",
       "source_id": "6ae0938040000094004e915f",
       "title": "Роберт Уилсон: Красота – в загадке",
       "start": "2026-11-27T18:00:00+03:00",
@@ -10644,7 +10669,7 @@
           "документальный"
         ],
         "country": "Германия",
-        "free_places": 83,
+        "free_places": 84,
         "online_sale": true
       }
     },
@@ -10692,6 +10717,36 @@
         "duration_min": 92,
         "age": "16+",
         "genres": "драма, мелодрама, комедия"
+      }
+    },
+    {
+      "venue": "avrora",
+      "source_id": "6b04223b3d00009700a7c15f",
+      "title": "Плетёный муж",
+      "start": "2026-11-27T18:40:00+03:00",
+      "hall": "Большой",
+      "price_min": 550,
+      "price_max": 700,
+      "language": null,
+      "tags": [
+        "SUB"
+      ],
+      "url": "https://avrora.spb.ru/",
+      "source_url": "https://kinokassa.kinoplan24.ru/api/v2/release/playbill?city_id=2&date=2026-11-27",
+      "extra": {
+        "release_id": 25872,
+        "year": 2026,
+        "duration_min": 105,
+        "age": "18+",
+        "genres": [
+          "фантастика",
+          "фэнтези",
+          "мелодрама",
+          "комедия"
+        ],
+        "country": "США, Великобритания",
+        "free_places": 439,
+        "online_sale": true
       }
     },
     {
@@ -10808,6 +10863,32 @@
       }
     },
     {
+      "venue": "avrora",
+      "source_id": "6b04226c3e00004b00107950",
+      "title": "Лиля",
+      "start": "2026-11-27T19:10:00+03:00",
+      "hall": "Малый",
+      "price_min": 550,
+      "price_max": 550,
+      "language": null,
+      "tags": [],
+      "url": "https://avrora.spb.ru/",
+      "source_url": "https://kinokassa.kinoplan24.ru/api/v2/release/playbill?city_id=2&date=2026-11-27",
+      "extra": {
+        "release_id": 26080,
+        "year": 2026,
+        "duration_min": 146,
+        "age": "18+",
+        "genres": [
+          "драма",
+          "биография"
+        ],
+        "country": "Россия",
+        "free_places": 110,
+        "online_sale": true
+      }
+    },
+    {
       "venue": "mirage",
       "source_id": "7dc06316-7fc1-4b86-bce2-5350f57a0542",
       "title": "Голодные игры: Рассвет Жатвы",
@@ -10906,6 +10987,33 @@
       }
     },
     {
+      "venue": "avrora",
+      "source_id": "6b0421bc3d00004600a7bfe3",
+      "title": "Увидеть всё (версия с субтитрами)",
+      "start": "2026-11-27T20:45:00+03:00",
+      "hall": "Большой",
+      "price_min": 550,
+      "price_max": 700,
+      "language": null,
+      "tags": [],
+      "url": "https://avrora.spb.ru/",
+      "source_url": "https://kinokassa.kinoplan24.ru/api/v2/release/playbill?city_id=2&date=2026-11-27",
+      "extra": {
+        "release_id": 26250,
+        "year": 2026,
+        "duration_min": 174,
+        "age": "18+",
+        "genres": [
+          "комедия",
+          "документальный",
+          "драма"
+        ],
+        "country": "США",
+        "free_places": 439,
+        "online_sale": true
+      }
+    },
+    {
       "venue": "rodina",
       "source_id": "73cdb83a35f6",
       "title": "Психопатка",
@@ -10955,6 +11063,32 @@
           "драма"
         ],
         "country": "Россия"
+      }
+    },
+    {
+      "venue": "avrora",
+      "source_id": "6b04228e3d00009c00a7c199",
+      "title": "Бумажный тигр",
+      "start": "2026-11-27T21:55:00+03:00",
+      "hall": "Малый",
+      "price_min": 550,
+      "price_max": 550,
+      "language": null,
+      "tags": [],
+      "url": "https://avrora.spb.ru/",
+      "source_url": "https://kinokassa.kinoplan24.ru/api/v2/release/playbill?city_id=2&date=2026-11-27",
+      "extra": {
+        "release_id": 25411,
+        "year": 2026,
+        "duration_min": 115,
+        "age": "18+",
+        "genres": [
+          "триллер",
+          "драма"
+        ],
+        "country": "Франция, США, Польша, Италия",
+        "free_places": 110,
+        "online_sale": true
       }
     },
     {
@@ -11571,7 +11705,7 @@
           "театр в кино"
         ],
         "country": "Россия",
-        "free_places": 123,
+        "free_places": 119,
         "online_sale": true
       }
     },
@@ -11695,7 +11829,7 @@
           "драма"
         ],
         "country": "США",
-        "free_places": 134,
+        "free_places": 131,
         "online_sale": true
       }
     },
@@ -12201,7 +12335,7 @@
           "драма"
         ],
         "country": "США",
-        "free_places": 150,
+        "free_places": 147,
         "online_sale": true
       }
     },
