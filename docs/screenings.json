@@ -1,91 +1,91 @@
 {
-  "generated_at": "2026-11-24T17:51:17.543562+03:00",
+  "generated_at": "2026-11-24T18:57:34.687034+03:00",
   "window_start": "2026-11-24",
   "window_end": "2026-11-30",
   "statuses": [
     {
       "venue": "domkino",
       "ok": true,
-      "count": 82,
-      "fetched_at": "2026-11-24T17:51:36.837543+03:00",
+      "count": 83,
+      "fetched_at": "2026-11-24T18:57:49.286790+03:00",
       "stale": false,
       "suspicious": false,
       "error": null,
       "warning": null,
       "requests": 7,
-      "seconds": 19.294
+      "seconds": 14.6
     },
     {
       "venue": "rodina",
       "ok": true,
-      "count": 86,
-      "fetched_at": "2026-11-24T17:52:28.657417+03:00",
+      "count": 84,
+      "fetched_at": "2026-11-24T18:58:40.304463+03:00",
       "stale": false,
       "suspicious": false,
       "error": null,
       "warning": null,
       "requests": 33,
-      "seconds": 51.82
+      "seconds": 51.018
     },
     {
       "venue": "avrora",
       "ok": true,
       "count": 55,
-      "fetched_at": "2026-11-24T17:52:38.156979+03:00",
+      "fetched_at": "2026-11-24T18:58:47.680045+03:00",
       "stale": false,
       "suspicious": false,
       "error": null,
       "warning": null,
       "requests": 8,
-      "seconds": 9.499
+      "seconds": 7.375
     },
     {
       "venue": "poravkino",
       "ok": true,
-      "count": 80,
-      "fetched_at": "2026-11-24T17:52:44.213660+03:00",
+      "count": 78,
+      "fetched_at": "2026-11-24T18:58:53.509677+03:00",
       "stale": false,
       "suspicious": false,
       "error": null,
       "warning": null,
       "requests": 7,
-      "seconds": 6.057
+      "seconds": 5.83
     },
     {
       "venue": "lenfilm",
       "ok": true,
       "count": 24,
-      "fetched_at": "2026-11-24T17:52:51.922950+03:00",
+      "fetched_at": "2026-11-24T18:59:00.693729+03:00",
       "stale": false,
       "suspicious": false,
       "error": null,
       "warning": null,
       "requests": 9,
-      "seconds": 7.709
+      "seconds": 7.184
     },
     {
       "venue": "outcinema",
       "ok": true,
       "count": 18,
-      "fetched_at": "2026-11-24T17:52:52.554797+03:00",
+      "fetched_at": "2026-11-24T18:59:02.033159+03:00",
       "stale": false,
       "suspicious": false,
       "error": null,
       "warning": null,
       "requests": 1,
-      "seconds": 0.632
+      "seconds": 1.339
     },
     {
       "venue": "mirage",
       "ok": true,
-      "count": 180,
-      "fetched_at": "2026-11-24T17:53:01.991117+03:00",
+      "count": 178,
+      "fetched_at": "2026-11-24T18:59:11.045980+03:00",
       "stale": false,
       "suspicious": false,
       "error": null,
       "warning": null,
       "requests": 7,
-      "seconds": 9.436
+      "seconds": 9.013
     }
   ],
   "screenings": [
@@ -356,28 +356,6 @@
       }
     },
     {
-      "venue": "mirage",
-      "source_id": "3acedbf6-9d7c-49e8-82d5-9a66fdedea93",
-      "title": "Скрудж",
-      "start": "2026-11-24T17:10:00+03:00",
-      "hall": "4",
-      "price_min": null,
-      "price_max": null,
-      "language": null,
-      "tags": [],
-      "url": "https://www.mirage.ru/ticket_new/3acedbf6-9d7c-49e8-82d5-9a66fdedea93/",
-      "source_url": "https://www.mirage.ru/spb/schedule/24.11.2026/cinema/1/",
-      "extra": {
-        "genres": [
-          "комедия",
-          "драма",
-          "фэнтези"
-        ],
-        "age": "16+",
-        "film_id": 7559
-      }
-    },
-    {
       "venue": "domkino",
       "source_id": "1a44dc20f470",
       "title": "Изгои",
@@ -400,79 +378,6 @@
           "драма",
           "криминал"
         ]
-      }
-    },
-    {
-      "venue": "poravkino",
-      "source_id": "44890",
-      "title": "Увидеть всё",
-      "start": "2026-11-24T17:50:00+03:00",
-      "hall": "3",
-      "price_min": 400,
-      "price_max": 400,
-      "language": null,
-      "tags": [],
-      "url": "https://poravkino.ru/",
-      "source_url": "https://poravkino.ru/api/schedule?date=2026-11-24",
-      "extra": {
-        "year": 2026,
-        "country": "США",
-        "director": "Нэйтан Филдер, Лэнс Оппенгейм",
-        "original_title": "Увидеть всё",
-        "duration_min": 180,
-        "age": 18,
-        "genres": [
-          "биографический",
-          "документальный"
-        ],
-        "is_pushkin": false
-      }
-    },
-    {
-      "venue": "mirage",
-      "source_id": "763fe814-8c36-488d-b799-81423e889686",
-      "title": "Плетеный муж",
-      "start": "2026-11-24T18:00:00+03:00",
-      "hall": "3",
-      "price_min": null,
-      "price_max": null,
-      "language": null,
-      "tags": [],
-      "url": "https://www.mirage.ru/ticket_new/763fe814-8c36-488d-b799-81423e889686/",
-      "source_url": "https://www.mirage.ru/spb/schedule/24.11.2026/cinema/1/",
-      "extra": {
-        "genres": [
-          "комедия",
-          "фантастика",
-          "мелодрама",
-          "фэнтези"
-        ],
-        "age": "18+",
-        "film_id": 7618
-      }
-    },
-    {
-      "venue": "rodina",
-      "source_id": "fb0b723a471f",
-      "title": "Было не было",
-      "start": "2026-11-24T18:15:00+03:00",
-      "hall": "Большой зал",
-      "price_min": 400,
-      "price_max": 400,
-      "language": null,
-      "tags": [],
-      "url": "https://rodinakino.ru/events/bylo-ne-bylo-2025",
-      "source_url": "https://rodinakino.ru/?date=2026/11/24",
-      "extra": {
-        "year": 2025,
-        "age": "18+",
-        "duration_min": 88,
-        "synopsis": "Кира сбегает на север в поисках отца. Ей известны только имя и фамилия. Петя местный, но тоже сбежал — от самого себя. Он убеждает Киру, что знает, где ее отец. У каждого из них свои вопросы к прошлому, и только один человек может дать ответы. Им придется пересечь Кольский полуостров, чтобы найти его.",
-        "director": "Тимофей Анисимов",
-        "genres": [
-          "драма"
-        ],
-        "country": "Россия"
       }
     },
     {
@@ -500,30 +405,6 @@
           "военный",
           "исторический"
         ]
-      }
-    },
-    {
-      "venue": "rodina",
-      "source_id": "3eb73c340dcd",
-      "title": "Любовь и ярость",
-      "start": "2026-11-24T18:25:00+03:00",
-      "hall": "Малый 2 зал",
-      "price_min": 350,
-      "price_max": 350,
-      "language": "SUB",
-      "tags": [],
-      "url": "https://rodinakino.ru/events/lyubov-i-yarost-2025",
-      "source_url": "https://rodinakino.ru/?date=2026/11/24",
-      "extra": {
-        "year": 2025,
-        "age": "18+",
-        "duration_min": 103,
-        "synopsis": "Вдовец Пьетро всю жизнь посвятил дочери-подростку. Но когда он впервые за долгие годы решает устроить личную жизнь и приводит в дом новую женщину, идеальная семья превращается в поле битвы. Теперь Пьетро разрывается между отцовским инстинктом и голосом разума.",
-        "director": "Ивано Де Маттео",
-        "genres": [
-          "драма"
-        ],
-        "country": "Италия"
       }
     },
     {
@@ -646,34 +527,6 @@
       }
     },
     {
-      "venue": "poravkino",
-      "source_id": "44891",
-      "title": "Скрудж",
-      "start": "2026-11-24T18:40:00+03:00",
-      "hall": "Премьер",
-      "price_min": 500,
-      "price_max": 500,
-      "language": null,
-      "tags": [],
-      "url": "https://poravkino.ru/",
-      "source_url": "https://poravkino.ru/api/schedule?date=2026-11-24",
-      "extra": {
-        "year": 2026,
-        "country": "США, Великобритания",
-        "director": "Тай Уэст",
-        "original_title": "Скрудж",
-        "duration_min": 115,
-        "age": 12,
-        "genres": [
-          "драма",
-          "комедия",
-          "триллер",
-          "фэнтези"
-        ],
-        "is_pushkin": false
-      }
-    },
-    {
       "venue": "domkino",
       "source_id": "6d42ed9b72b8",
       "title": "Случай с фортепиано",
@@ -720,7 +573,7 @@
           "комедия"
         ],
         "country": "СССР",
-        "free_places": 48,
+        "free_places": 41,
         "online_sale": true
       }
     },
@@ -745,7 +598,7 @@
           "драма"
         ],
         "country": "Россия",
-        "free_places": 40,
+        "free_places": 43,
         "online_sale": true
       }
     },
@@ -953,7 +806,7 @@
           "комедия"
         ],
         "country": "США, Великобритания",
-        "free_places": 385,
+        "free_places": 376,
         "online_sale": true
       }
     },
@@ -1368,7 +1221,7 @@
           "биография"
         ],
         "country": "Россия",
-        "free_places": 102,
+        "free_places": 99,
         "online_sale": true
       }
     },
@@ -2218,7 +2071,7 @@
           "комедия"
         ],
         "country": "США, Великобритания",
-        "free_places": 425,
+        "free_places": 424,
         "online_sale": true
       }
     },
@@ -2841,7 +2694,7 @@
           "драма"
         ],
         "country": "США",
-        "free_places": 168,
+        "free_places": 167,
         "online_sale": true
       }
     },
@@ -3552,7 +3405,7 @@
           "историческая драма"
         ],
         "country": "Россия",
-        "free_places": 428,
+        "free_places": 426,
         "online_sale": true
       }
     },
@@ -3815,7 +3668,7 @@
       "language": null,
       "tags": [],
       "url": "https://rodinakino.ru/events/bylo-ne-bylo-2025",
-      "source_url": "https://rodinakino.ru/?date=2026/11/25",
+      "source_url": "https://rodinakino.ru/?date=2026/11/24",
       "extra": {
         "year": 2025,
         "age": "18+",
@@ -4089,7 +3942,7 @@
       "language": null,
       "tags": [],
       "url": "https://rodinakino.ru/events/lyubov-i-yarost-2025",
-      "source_url": "https://rodinakino.ru/?date=2026/11/25",
+      "source_url": "https://rodinakino.ru/?date=2026/11/24",
       "extra": {
         "year": 2025,
         "age": "18+",
@@ -4271,7 +4124,7 @@
           "шоу"
         ],
         "country": "Италия",
-        "free_places": 243,
+        "free_places": 241,
         "online_sale": true
       }
     },
@@ -4715,7 +4568,7 @@
       "url": "https://www.domkino.spb.ru/films/ekho_festivalya_piterdok-2026_dol_koda/",
       "source_url": "https://www.domkino.spb.ru/schedule/2026/11/25/",
       "extra": {
-        "age": "16+"
+        "age": "12+"
       }
     },
     {
@@ -5977,7 +5830,7 @@
           "комедия"
         ],
         "country": "США, Великобритания",
-        "free_places": 177,
+        "free_places": 175,
         "online_sale": true
       }
     },
@@ -6386,7 +6239,7 @@
           "драма"
         ],
         "country": "США",
-        "free_places": 158,
+        "free_places": 156,
         "online_sale": true
       }
     },
@@ -7074,7 +6927,7 @@
           "фэнтези"
         ],
         "country": "США",
-        "free_places": 91,
+        "free_places": 89,
         "online_sale": true
       }
     },
@@ -7513,7 +7366,7 @@
           "документально-художественный"
         ],
         "country": "Россия",
-        "free_places": 107,
+        "free_places": 106,
         "online_sale": true
       }
     },
@@ -8697,6 +8550,31 @@
       }
     },
     {
+      "venue": "domkino",
+      "source_id": "e92e918b8efa",
+      "title": "Показ фильмов-участников кинопремии \"Бриллиантовая бабочка\". Август",
+      "start": "2026-11-27T18:30:00+03:00",
+      "hall": "Большой зал",
+      "price_min": 0,
+      "price_max": 0,
+      "language": null,
+      "tags": [],
+      "url": "https://www.domkino.spb.ru/films/pokaz_filmov-uchastnikov_premii_brilliantovaya_babochka_avgust/",
+      "source_url": "https://www.domkino.spb.ru/schedule/2026/11/27/",
+      "extra": {
+        "year": 2025,
+        "country": "Россия",
+        "duration_min": 138,
+        "age": "16+",
+        "director": "Никита Высоцкий, Илья Лебедев",
+        "genres": [
+          "триллер",
+          "драма",
+          "военный"
+        ]
+      }
+    },
+    {
       "venue": "mirage",
       "source_id": "60fff093-bd8d-44e9-b8ae-a5b05da8fa81",
       "title": "Голодные игры: Рассвет Жатвы",
@@ -9169,7 +9047,7 @@
           "драма"
         ],
         "country": "США",
-        "free_places": 432,
+        "free_places": 430,
         "online_sale": true
       }
     },
@@ -10515,7 +10393,7 @@
           "фэнтези"
         ],
         "country": "США",
-        "free_places": 102,
+        "free_places": 100,
         "online_sale": true
       }
     },
@@ -10680,7 +10558,7 @@
           "театр в кино"
         ],
         "country": "Россия",
-        "free_places": 100,
+        "free_places": 98,
         "online_sale": true
       }
     },
@@ -11882,7 +11760,7 @@
           "биография"
         ],
         "country": "Россия",
-        "free_places": 436,
+        "free_places": 434,
         "online_sale": true
       }
     },
@@ -12851,7 +12729,7 @@
           "романтическая комедия"
         ],
         "country": "Великобритания, Франция, Ирландия, США",
-        "free_places": 137,
+        "free_places": 132,
         "online_sale": true
       }
     },
