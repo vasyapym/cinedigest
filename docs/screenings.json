@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-25T17:19:48.710056+03:00",
+  "generated_at": "2026-11-25T18:44:21.548501+03:00",
   "window_start": "2026-11-25",
   "window_end": "2026-12-01",
   "statuses": [
@@ -7,85 +7,85 @@
       "venue": "domkino",
       "ok": true,
       "count": 62,
-      "fetched_at": "2026-11-25T17:20:21.961239+03:00",
+      "fetched_at": "2026-11-25T18:44:39.926797+03:00",
       "stale": false,
       "suspicious": false,
       "error": null,
       "warning": null,
       "requests": 7,
-      "seconds": 33.251
+      "seconds": 18.378
     },
     {
       "venue": "rodina",
       "ok": true,
-      "count": 70,
-      "fetched_at": "2026-11-25T17:21:07.051084+03:00",
+      "count": 68,
+      "fetched_at": "2026-11-25T18:45:24.764799+03:00",
       "stale": false,
       "suspicious": false,
       "error": null,
       "warning": null,
       "requests": 28,
-      "seconds": 45.09
+      "seconds": 44.838
     },
     {
       "venue": "avrora",
       "ok": true,
       "count": 46,
-      "fetched_at": "2026-11-25T17:21:14.029260+03:00",
+      "fetched_at": "2026-11-25T18:45:32.423077+03:00",
       "stale": false,
       "suspicious": false,
       "error": null,
       "warning": null,
       "requests": 8,
-      "seconds": 6.977
+      "seconds": 7.657
     },
     {
       "venue": "poravkino",
       "ok": true,
-      "count": 79,
-      "fetched_at": "2026-11-25T17:21:19.716815+03:00",
+      "count": 75,
+      "fetched_at": "2026-11-25T18:45:38.700203+03:00",
       "stale": false,
       "suspicious": false,
       "error": null,
       "warning": null,
       "requests": 7,
-      "seconds": 5.688
+      "seconds": 6.277
     },
     {
       "venue": "lenfilm",
       "ok": true,
       "count": 25,
-      "fetched_at": "2026-11-25T17:21:26.865947+03:00",
+      "fetched_at": "2026-11-25T18:45:46.771447+03:00",
       "stale": false,
       "suspicious": false,
       "error": null,
       "warning": null,
       "requests": 9,
-      "seconds": 7.149
+      "seconds": 8.071
     },
     {
       "venue": "outcinema",
       "ok": true,
       "count": 15,
-      "fetched_at": "2026-11-25T17:21:27.319400+03:00",
+      "fetched_at": "2026-11-25T18:45:47.323632+03:00",
       "stale": false,
       "suspicious": false,
       "error": null,
       "warning": null,
       "requests": 1,
-      "seconds": 0.453
+      "seconds": 0.552
     },
     {
       "venue": "mirage",
       "ok": true,
-      "count": 147,
-      "fetched_at": "2026-11-25T17:21:35.975540+03:00",
+      "count": 157,
+      "fetched_at": "2026-11-25T18:45:57.194134+03:00",
       "stale": false,
       "suspicious": false,
       "error": null,
       "warning": null,
       "requests": 7,
-      "seconds": 8.656
+      "seconds": 9.87
     }
   ],
   "screenings": [
@@ -358,96 +358,6 @@
       }
     },
     {
-      "venue": "mirage",
-      "source_id": "a379c2bb-39d9-49b1-a8b8-13fe21471ccd",
-      "title": "Лиля",
-      "start": "2026-11-25T16:50:00+03:00",
-      "hall": "6",
-      "price_min": null,
-      "price_max": null,
-      "language": null,
-      "tags": [],
-      "url": "https://www.mirage.ru/ticket_new/a379c2bb-39d9-49b1-a8b8-13fe21471ccd/",
-      "source_url": "https://www.mirage.ru/spb/schedule/25.11.2026/cinema/1/",
-      "extra": {
-        "genres": [
-          "драма",
-          "биография"
-        ],
-        "age": "18+",
-        "film_id": 7679
-      }
-    },
-    {
-      "venue": "mirage",
-      "source_id": "311c49c1-664e-4747-8584-419371e127c1",
-      "title": "Годзилла: Минус ноль",
-      "start": "2026-11-25T17:00:00+03:00",
-      "hall": "1",
-      "price_min": null,
-      "price_max": null,
-      "language": null,
-      "tags": [],
-      "url": "https://www.mirage.ru/ticket_new/311c49c1-664e-4747-8584-419371e127c1/",
-      "source_url": "https://www.mirage.ru/spb/schedule/25.11.2026/cinema/1/",
-      "extra": {
-        "genres": [
-          "боевик",
-          "фантастика",
-          "драма"
-        ],
-        "age": "18+",
-        "film_id": 7700
-      }
-    },
-    {
-      "venue": "mirage",
-      "source_id": "28baa971-4a96-4162-9b37-e492f7c3aafc",
-      "title": "Скрудж",
-      "start": "2026-11-25T17:10:00+03:00",
-      "hall": "4",
-      "price_min": null,
-      "price_max": null,
-      "language": null,
-      "tags": [],
-      "url": "https://www.mirage.ru/ticket_new/28baa971-4a96-4162-9b37-e492f7c3aafc/",
-      "source_url": "https://www.mirage.ru/spb/schedule/25.11.2026/cinema/1/",
-      "extra": {
-        "genres": [
-          "комедия",
-          "драма",
-          "фэнтези"
-        ],
-        "age": "16+",
-        "film_id": 7559
-      }
-    },
-    {
-      "venue": "rodina",
-      "source_id": "2274c7325966",
-      "title": "Лиля",
-      "start": "2026-11-25T17:15:00+03:00",
-      "hall": "Малый 2 зал",
-      "price_min": 350,
-      "price_max": 350,
-      "language": null,
-      "tags": [],
-      "url": "https://rodinakino.ru/events/lilya-2026",
-      "source_url": "https://rodinakino.ru/?date=2026/11/25",
-      "extra": {
-        "year": 2026,
-        "age": "18+",
-        "duration_min": 146,
-        "synopsis": "1915 год, Первая мировая война. В Петрограде молодой поэт-футурист Владимир Маяковский знакомится с семейной парой — Лилей и Осипом Бриками. Он читает им свою поэму «Облако в штанах», Лиля и Осип сразу и навсегда влюбляются в поэзию Маяковского, понимая, что перед ними необыкновенный талант, поэтический гений. А…",
-        "director": "Вера Сторожева",
-        "genres": [
-          "драма",
-          "мелодрама"
-        ],
-        "country": "Россия"
-      }
-    },
-    {
       "venue": "domkino",
       "source_id": "7fc4bf637f76",
       "title": "История огня",
@@ -467,88 +377,6 @@
         "genres": [
           "анимация"
         ]
-      }
-    },
-    {
-      "venue": "poravkino",
-      "source_id": "44943",
-      "title": "Плетёный муж",
-      "start": "2026-11-25T17:35:00+03:00",
-      "hall": "1",
-      "price_min": 400,
-      "price_max": 400,
-      "language": null,
-      "tags": [],
-      "url": "https://poravkino.ru/",
-      "source_url": "https://poravkino.ru/api/schedule?date=2026-11-25",
-      "extra": {
-        "year": 2026,
-        "country": "США, Великобритания, Австралия",
-        "director": "Алекс Хьюстон Фишер, Элинор Уилсон",
-        "original_title": "Плетеный муж",
-        "duration_min": 110,
-        "age": 18,
-        "genres": [
-          "драма",
-          "комедия",
-          "мелодрама",
-          "фантастика",
-          "фэнтези"
-        ],
-        "is_pushkin": false
-      }
-    },
-    {
-      "venue": "poravkino",
-      "source_id": "44944",
-      "title": "Сердце зверя",
-      "start": "2026-11-25T17:40:00+03:00",
-      "hall": "VIP",
-      "price_min": 700,
-      "price_max": 700,
-      "language": null,
-      "tags": [],
-      "url": "https://poravkino.ru/",
-      "source_url": "https://poravkino.ru/api/schedule?date=2026-11-25",
-      "extra": {
-        "country": "США",
-        "director": "Дэвид Эйр",
-        "original_title": "Сердце зверя",
-        "duration_min": 100,
-        "age": 16,
-        "genres": [
-          "боевик",
-          "драма",
-          "приключения",
-          "триллер"
-        ],
-        "is_pushkin": false
-      }
-    },
-    {
-      "venue": "poravkino",
-      "source_id": "44945",
-      "title": "Увидеть всё",
-      "start": "2026-11-25T17:50:00+03:00",
-      "hall": "3",
-      "price_min": 400,
-      "price_max": 400,
-      "language": null,
-      "tags": [],
-      "url": "https://poravkino.ru/",
-      "source_url": "https://poravkino.ru/api/schedule?date=2026-11-25",
-      "extra": {
-        "year": 2026,
-        "country": "США",
-        "director": "Нэйтан Филдер, Лэнс Оппенгейм",
-        "original_title": "Увидеть всё",
-        "duration_min": 180,
-        "age": 18,
-        "genres": [
-          "биографический",
-          "документальный"
-        ],
-        "is_pushkin": false
       }
     },
     {
@@ -576,27 +404,25 @@
       }
     },
     {
-      "venue": "rodina",
-      "source_id": "1befe88d3a60",
-      "title": "Любовь и ярость",
-      "start": "2026-11-25T18:10:00+03:00",
-      "hall": "Малый 1 зал",
-      "price_min": 350,
-      "price_max": 350,
+      "venue": "mirage",
+      "source_id": "6fb311e0-7a2c-4873-8b1c-2203a55d98a4",
+      "title": "Дедмобиль",
+      "start": "2026-11-25T18:20:00+03:00",
+      "hall": "3",
+      "price_min": null,
+      "price_max": null,
       "language": null,
       "tags": [],
-      "url": "https://rodinakino.ru/events/lyubov-i-yarost-2025",
-      "source_url": "https://rodinakino.ru/?date=2026/11/25",
+      "url": "https://www.mirage.ru/ticket_new/6fb311e0-7a2c-4873-8b1c-2203a55d98a4/",
+      "source_url": "https://www.mirage.ru/spb/schedule/25.11.2026/cinema/1/",
       "extra": {
-        "year": 2025,
-        "age": "18+",
-        "duration_min": 103,
-        "synopsis": "Вдовец Пьетро всю жизнь посвятил дочери-подростку. Но когда он впервые за долгие годы решает устроить личную жизнь и приводит в дом новую женщину, идеальная семья превращается в поле битвы. Теперь Пьетро разрывается между отцовским инстинктом и голосом разума.",
-        "director": "Ивано Де Маттео",
         "genres": [
-          "драма"
+          "комедия",
+          "семейный"
         ],
-        "country": "Италия"
+        "age": "12+",
+        "price_raw": "650₽",
+        "film_id": 7688
       }
     },
     {
@@ -693,31 +519,26 @@
       }
     },
     {
-      "venue": "poravkino",
-      "source_id": "44946",
-      "title": "Скрудж",
+      "venue": "mirage",
+      "source_id": "335dd1a2-c397-438a-b5b9-9204781f676b",
+      "title": "Одиссея",
       "start": "2026-11-25T18:40:00+03:00",
-      "hall": "Премьер",
-      "price_min": 500,
-      "price_max": 500,
+      "hall": "5",
+      "price_min": null,
+      "price_max": null,
       "language": null,
       "tags": [],
-      "url": "https://poravkino.ru/",
-      "source_url": "https://poravkino.ru/api/schedule?date=2026-11-25",
+      "url": "https://www.mirage.ru/ticket_new/335dd1a2-c397-438a-b5b9-9204781f676b/",
+      "source_url": "https://www.mirage.ru/spb/schedule/25.11.2026/cinema/1/",
       "extra": {
-        "year": 2026,
-        "country": "США, Великобритания",
-        "director": "Тай Уэст",
-        "original_title": "Скрудж",
-        "duration_min": 115,
-        "age": 12,
         "genres": [
-          "драма",
-          "комедия",
-          "триллер",
+          "боевик",
+          "приключения",
           "фэнтези"
         ],
-        "is_pushkin": false
+        "age": "18+",
+        "price_raw": "1600₽ 3200₽",
+        "film_id": 7450
       }
     },
     {
@@ -768,7 +589,7 @@
           "шоу"
         ],
         "country": "Италия",
-        "free_places": 180,
+        "free_places": 141,
         "online_sale": true
       }
     },
@@ -828,7 +649,7 @@
         "release_id": 25515,
         "year": 2026,
         "country": "Россия",
-        "free_places": 69,
+        "free_places": 61,
         "online_sale": true
       }
     },
@@ -953,6 +774,29 @@
     },
     {
       "venue": "mirage",
+      "source_id": "ed10ab0f-6aeb-4512-9238-d0857893c4d8",
+      "title": "Увидеть всё",
+      "start": "2026-11-25T19:20:00+03:00",
+      "hall": "2",
+      "price_min": null,
+      "price_max": null,
+      "language": null,
+      "tags": [],
+      "url": "https://www.mirage.ru/ticket_new/ed10ab0f-6aeb-4512-9238-d0857893c4d8/",
+      "source_url": "https://www.mirage.ru/spb/schedule/25.11.2026/cinema/1/",
+      "extra": {
+        "genres": [
+          "комедия",
+          "драма",
+          "документальный"
+        ],
+        "age": "18+",
+        "price_raw": "600₽ 650₽ 3000₽ 4500₽",
+        "film_id": 7660
+      }
+    },
+    {
+      "venue": "mirage",
       "source_id": "f7be7072-ae50-4191-8148-a9a4b05cde44",
       "title": "Скрудж",
       "start": "2026-11-25T19:30:00+03:00",
@@ -970,6 +814,29 @@
           "фэнтези"
         ],
         "age": "16+",
+        "film_id": 7559
+      }
+    },
+    {
+      "venue": "mirage",
+      "source_id": "130a302e-9968-4c0d-9419-42d1afc0c0ec",
+      "title": "Скрудж",
+      "start": "2026-11-25T19:30:00+03:00",
+      "hall": "4",
+      "price_min": null,
+      "price_max": null,
+      "language": null,
+      "tags": [],
+      "url": "https://www.mirage.ru/ticket_new/130a302e-9968-4c0d-9419-42d1afc0c0ec/",
+      "source_url": "https://www.mirage.ru/spb/schedule/25.11.2026/cinema/1/",
+      "extra": {
+        "genres": [
+          "комедия",
+          "драма",
+          "фэнтези"
+        ],
+        "age": "16+",
+        "price_raw": "3000₽ 4500₽",
         "film_id": 7559
       }
     },
@@ -1023,8 +890,30 @@
           "драма"
         ],
         "country": "США",
-        "free_places": 89,
+        "free_places": 86,
         "online_sale": true
+      }
+    },
+    {
+      "venue": "mirage",
+      "source_id": "9e9f9718-ca6a-451d-96ea-fcb634766e97",
+      "title": "Рокки – это я",
+      "start": "2026-11-25T19:35:00+03:00",
+      "hall": "6",
+      "price_min": null,
+      "price_max": null,
+      "language": null,
+      "tags": [],
+      "url": "https://www.mirage.ru/ticket_new/9e9f9718-ca6a-451d-96ea-fcb634766e97/",
+      "source_url": "https://www.mirage.ru/spb/schedule/25.11.2026/cinema/1/",
+      "extra": {
+        "genres": [
+          "драма",
+          "биография"
+        ],
+        "age": "18+",
+        "price_raw": "1600₽ 3200₽ 4800₽",
+        "film_id": 7692
       }
     },
     {
@@ -1067,6 +956,28 @@
       "language": null,
       "tags": [],
       "url": "https://www.mirage.ru/ticket_new/55fd24f8-efe1-4087-95e3-71d2acacff39/",
+      "source_url": "https://www.mirage.ru/spb/schedule/25.11.2026/cinema/1/",
+      "extra": {
+        "genres": [
+          "боевик",
+          "фантастика",
+          "драма"
+        ],
+        "age": "18+",
+        "film_id": 7700
+      }
+    },
+    {
+      "venue": "mirage",
+      "source_id": "3a536c10-99c9-403d-961f-240ec2874b4f",
+      "title": "Годзилла: Минус ноль",
+      "start": "2026-11-25T19:40:00+03:00",
+      "hall": "1",
+      "price_min": null,
+      "price_max": null,
+      "language": null,
+      "tags": [],
+      "url": "https://www.mirage.ru/ticket_new/3a536c10-99c9-403d-961f-240ec2874b4f/",
       "source_url": "https://www.mirage.ru/spb/schedule/25.11.2026/cinema/1/",
       "extra": {
         "genres": [
@@ -1216,6 +1127,30 @@
       }
     },
     {
+      "venue": "mirage",
+      "source_id": "d5229800-1e6f-486d-a3fb-e985549c5814",
+      "title": "Плетеный муж",
+      "start": "2026-11-25T20:15:00+03:00",
+      "hall": "3",
+      "price_min": null,
+      "price_max": null,
+      "language": null,
+      "tags": [],
+      "url": "https://www.mirage.ru/ticket_new/d5229800-1e6f-486d-a3fb-e985549c5814/",
+      "source_url": "https://www.mirage.ru/spb/schedule/25.11.2026/cinema/1/",
+      "extra": {
+        "genres": [
+          "комедия",
+          "фантастика",
+          "мелодрама",
+          "фэнтези"
+        ],
+        "age": "18+",
+        "price_raw": "650₽",
+        "film_id": 7618
+      }
+    },
+    {
       "venue": "outcinema",
       "source_id": "516615853862",
       "title": "ПОЗДНЯЯ ОСЕНЬ",
@@ -1262,7 +1197,7 @@
           "драма"
         ],
         "country": "США",
-        "free_places": 362,
+        "free_places": 359,
         "online_sale": true
       }
     },
@@ -1561,7 +1496,7 @@
           "драма"
         ],
         "country": "США",
-        "free_places": 178,
+        "free_places": 181,
         "online_sale": true
       }
     },
@@ -1667,7 +1602,7 @@
           "комедийный хоррор"
         ],
         "country": "Великобритания",
-        "free_places": 107,
+        "free_places": 105,
         "online_sale": true
       }
     },
@@ -1695,6 +1630,29 @@
     },
     {
       "venue": "mirage",
+      "source_id": "ac978888-b520-494e-aa51-00f3686660eb",
+      "title": "Скрудж",
+      "start": "2026-11-25T21:50:00+03:00",
+      "hall": "4",
+      "price_min": null,
+      "price_max": null,
+      "language": null,
+      "tags": [],
+      "url": "https://www.mirage.ru/ticket_new/ac978888-b520-494e-aa51-00f3686660eb/",
+      "source_url": "https://www.mirage.ru/spb/schedule/25.11.2026/cinema/1/",
+      "extra": {
+        "genres": [
+          "комедия",
+          "драма",
+          "фэнтези"
+        ],
+        "age": "16+",
+        "price_raw": "3000₽ 4500₽",
+        "film_id": 7559
+      }
+    },
+    {
+      "venue": "mirage",
       "source_id": "6eee933b-724b-45a8-915c-ccb283b1ae5e",
       "title": "Бумажный тигр",
       "start": "2026-11-25T22:00:00+03:00",
@@ -1717,6 +1675,53 @@
     },
     {
       "venue": "mirage",
+      "source_id": "f200c7cd-029d-42fe-9a7d-011f09e5ce76",
+      "title": "Бумажный тигр",
+      "start": "2026-11-25T22:00:00+03:00",
+      "hall": "5",
+      "price_min": null,
+      "price_max": null,
+      "language": null,
+      "tags": [],
+      "url": "https://www.mirage.ru/ticket_new/f200c7cd-029d-42fe-9a7d-011f09e5ce76/",
+      "source_url": "https://www.mirage.ru/spb/schedule/25.11.2026/cinema/1/",
+      "extra": {
+        "genres": [
+          "триллер",
+          "драма",
+          "криминал"
+        ],
+        "age": "18+",
+        "price_raw": "1600₽ 3200₽",
+        "film_id": 7686
+      }
+    },
+    {
+      "venue": "mirage",
+      "source_id": "4bd07678-4c8f-4885-82db-1c4a3f23a4bb",
+      "title": "Тайный дневник Верити",
+      "start": "2026-11-25T22:10:00+03:00",
+      "hall": "6",
+      "price_min": null,
+      "price_max": null,
+      "language": null,
+      "tags": [],
+      "url": "https://www.mirage.ru/ticket_new/4bd07678-4c8f-4885-82db-1c4a3f23a4bb/",
+      "source_url": "https://www.mirage.ru/spb/schedule/25.11.2026/cinema/1/",
+      "extra": {
+        "genres": [
+          "детектив",
+          "триллер",
+          "драма",
+          "криминал"
+        ],
+        "age": "18+",
+        "price_raw": "1600₽ 3200₽ 4800₽",
+        "film_id": 7628
+      }
+    },
+    {
+      "venue": "mirage",
       "source_id": "3c8c18fe-6116-43d2-93bf-d8ec6faf97cb",
       "title": "Годзилла: Минус ноль",
       "start": "2026-11-25T22:20:00+03:00",
@@ -1726,6 +1731,28 @@
       "language": null,
       "tags": [],
       "url": "https://www.mirage.ru/ticket_new/3c8c18fe-6116-43d2-93bf-d8ec6faf97cb/",
+      "source_url": "https://www.mirage.ru/spb/schedule/25.11.2026/cinema/1/",
+      "extra": {
+        "genres": [
+          "боевик",
+          "фантастика",
+          "драма"
+        ],
+        "age": "18+",
+        "film_id": 7700
+      }
+    },
+    {
+      "venue": "mirage",
+      "source_id": "68ebaf80-19ee-443b-9633-fefa440cefa5",
+      "title": "Годзилла: Минус ноль",
+      "start": "2026-11-25T22:20:00+03:00",
+      "hall": "1",
+      "price_min": null,
+      "price_max": null,
+      "language": null,
+      "tags": [],
+      "url": "https://www.mirage.ru/ticket_new/68ebaf80-19ee-443b-9633-fefa440cefa5/",
       "source_url": "https://www.mirage.ru/spb/schedule/25.11.2026/cinema/1/",
       "extra": {
         "genres": [
@@ -1784,6 +1811,50 @@
         ],
         "age": "18+",
         "film_id": 7628
+      }
+    },
+    {
+      "venue": "mirage",
+      "source_id": "654a0a3b-ce4e-4753-ae2c-a677331c32bf",
+      "title": "Психопатка",
+      "start": "2026-11-25T22:30:00+03:00",
+      "hall": "3",
+      "price_min": null,
+      "price_max": null,
+      "language": null,
+      "tags": [],
+      "url": "https://www.mirage.ru/ticket_new/654a0a3b-ce4e-4753-ae2c-a677331c32bf/",
+      "source_url": "https://www.mirage.ru/spb/schedule/25.11.2026/cinema/1/",
+      "extra": {
+        "genres": [
+          "комедия",
+          "триллер",
+          "ужасы"
+        ],
+        "age": "18+",
+        "price_raw": "650₽",
+        "film_id": 7683
+      }
+    },
+    {
+      "venue": "mirage",
+      "source_id": "262f4ec8-7027-40ba-89b6-abe9c0b22e1a",
+      "title": "Обитель зла",
+      "start": "2026-11-25T22:40:00+03:00",
+      "hall": "2",
+      "price_min": null,
+      "price_max": null,
+      "language": null,
+      "tags": [],
+      "url": "https://www.mirage.ru/ticket_new/262f4ec8-7027-40ba-89b6-abe9c0b22e1a/",
+      "source_url": "https://www.mirage.ru/spb/schedule/25.11.2026/cinema/1/",
+      "extra": {
+        "genres": [
+          "ужасы"
+        ],
+        "age": "18+",
+        "price_raw": "600₽ 650₽ 3000₽ 4500₽",
+        "film_id": 7556
       }
     },
     {
@@ -2381,7 +2452,7 @@
           "фэнтези"
         ],
         "country": "США",
-        "free_places": 430,
+        "free_places": 429,
         "online_sale": true
       }
     },
@@ -2765,7 +2836,7 @@
       "language": null,
       "tags": [],
       "url": "https://rodinakino.ru/events/lilya-2026",
-      "source_url": "https://rodinakino.ru/?date=2026/11/26",
+      "source_url": "https://rodinakino.ru/?date=2026/11/25",
       "extra": {
         "year": 2026,
         "age": "18+",
@@ -3054,7 +3125,7 @@
           "историческая драма"
         ],
         "country": "Россия",
-        "free_places": 434,
+        "free_places": 428,
         "online_sale": true
       }
     },
@@ -3398,7 +3469,7 @@
           "драма"
         ],
         "country": "США",
-        "free_places": 95,
+        "free_places": 93,
         "online_sale": true
       }
     },
@@ -3776,7 +3847,7 @@
           "биография"
         ],
         "country": "Россия",
-        "free_places": 433,
+        "free_places": 431,
         "online_sale": true
       }
     },
@@ -4164,7 +4235,7 @@
         "release_id": 25432,
         "year": 2026,
         "duration_min": 102,
-        "age": "16+",
+        "age": "12+",
         "genres": [
           "документально-художественный"
         ],
@@ -4356,7 +4427,7 @@
       "language": "SUB",
       "tags": [],
       "url": "https://rodinakino.ru/events/lyubov-i-yarost-2025",
-      "source_url": "https://rodinakino.ru/?date=2026/11/26",
+      "source_url": "https://rodinakino.ru/?date=2026/11/25",
       "extra": {
         "year": 2025,
         "age": "18+",
@@ -4466,7 +4537,7 @@
           "романтическая комедия"
         ],
         "country": "Великобритания, Франция, Ирландия, США",
-        "free_places": 78,
+        "free_places": 73,
         "online_sale": true
       }
     },
@@ -5402,7 +5473,7 @@
         "release_id": 25432,
         "year": 2026,
         "duration_min": 102,
-        "age": "16+",
+        "age": "12+",
         "genres": [
           "документально-художественный"
         ],
@@ -5964,7 +6035,7 @@
           "драма"
         ],
         "country": "Россия",
-        "free_places": 434,
+        "free_places": 432,
         "online_sale": true
       }
     },
@@ -6203,7 +6274,7 @@
           "драма"
         ],
         "country": "США",
-        "free_places": 165,
+        "free_places": 164,
         "online_sale": true
       }
     },
@@ -6564,7 +6635,7 @@
           "документальный"
         ],
         "country": "Германия",
-        "free_places": 81,
+        "free_places": 80,
         "online_sale": true
       }
     },
@@ -6850,7 +6921,7 @@
           "биография"
         ],
         "country": "Россия",
-        "free_places": 84,
+        "free_places": 79,
         "online_sale": true
       }
     },
@@ -7713,7 +7784,7 @@
           "драма"
         ],
         "country": "Россия, Индия",
-        "free_places": 185,
+        "free_places": 183,
         "online_sale": true
       }
     },
@@ -7923,7 +7994,7 @@
         "release_id": 25432,
         "year": 2026,
         "duration_min": 102,
-        "age": "16+",
+        "age": "12+",
         "genres": [
           "документально-художественный"
         ],
@@ -8463,7 +8534,7 @@
           "фэнтези"
         ],
         "country": "США",
-        "free_places": 52,
+        "free_places": 49,
         "online_sale": true
       }
     },
@@ -8628,7 +8699,7 @@
           "театр в кино"
         ],
         "country": "Россия",
-        "free_places": 63,
+        "free_places": 60,
         "online_sale": true
       }
     },
@@ -8774,7 +8845,7 @@
           "драма"
         ],
         "country": "США",
-        "free_places": 85,
+        "free_places": 79,
         "online_sale": true
       }
     },
@@ -9511,12 +9582,12 @@
         "release_id": 25432,
         "year": 2026,
         "duration_min": 102,
-        "age": "16+",
+        "age": "12+",
         "genres": [
           "документально-художественный"
         ],
         "country": "Россия",
-        "free_places": 110,
+        "free_places": 108,
         "online_sale": true
       }
     },
@@ -9658,7 +9729,7 @@
           "театр в кино"
         ],
         "country": "Россия",
-        "free_places": 155,
+        "free_places": 152,
         "online_sale": true
       }
     },
@@ -9709,7 +9780,7 @@
           "историческая драма"
         ],
         "country": "Россия",
-        "free_places": 104,
+        "free_places": 103,
         "online_sale": true
       }
     },
@@ -9830,7 +9901,7 @@
           "биография"
         ],
         "country": "Россия",
-        "free_places": 429,
+        "free_places": 426,
         "online_sale": true
       }
     },
@@ -10020,7 +10091,7 @@
           "драма"
         ],
         "country": "США",
-        "free_places": 131,
+        "free_places": 129,
         "online_sale": true
       }
     },
@@ -10071,7 +10142,7 @@
           "фэнтези"
         ],
         "country": "США",
-        "free_places": 102,
+        "free_places": 96,
         "online_sale": true
       }
     },
@@ -10144,7 +10215,7 @@
           "драма"
         ],
         "country": "США",
-        "free_places": 436,
+        "free_places": 434,
         "online_sale": true
       }
     },
@@ -10428,7 +10499,7 @@
           "фэнтези"
         ],
         "country": "Германия, США, Япония",
-        "free_places": 165,
+        "free_places": 163,
         "online_sale": true
       }
     },
@@ -10799,7 +10870,7 @@
           "романтическая комедия"
         ],
         "country": "Великобритания, Франция, Ирландия, США",
-        "free_places": 129,
+        "free_places": 130,
         "online_sale": true
       }
     },
