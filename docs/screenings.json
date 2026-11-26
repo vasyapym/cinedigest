@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-26T16:52:41.694172+03:00",
+  "generated_at": "2026-11-26T18:25:37.555187+03:00",
   "window_start": "2026-11-26",
   "window_end": "2026-12-02",
   "statuses": [
@@ -10,82 +10,82 @@
       "fetched_at": "2026-11-26T06:17:40.101772+03:00",
       "stale": true,
       "suspicious": false,
-      "error": "fetch failed: HttpError: ConnectTimeout: HTTPSConnectionPool(host='www.domkino.spb.ru', port=443): Max retries exceeded with url: /schedule/2026/11/26/ (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.domkino.spb.ru', port=443) at 0x744e26e2cb30>, 'Connection to www.domkino.spb.ru timed out. (connect timeout=5.0)'))",
+      "error": "fetch failed: HttpError: ConnectTimeout: HTTPSConnectionPool(host='www.domkino.spb.ru', port=443): Max retries exceeded with url: /schedule/2026/11/26/ (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.domkino.spb.ru', port=443) at 0x7621aeb760c0>, 'Connection to www.domkino.spb.ru timed out. (connect timeout=5.0)'))",
       "warning": null,
       "requests": 4,
-      "seconds": 28.317
+      "seconds": 28.346
     },
     {
       "venue": "rodina",
       "ok": true,
-      "count": 101,
-      "fetched_at": "2026-11-26T16:53:54.222004+03:00",
+      "count": 99,
+      "fetched_at": "2026-11-26T18:26:58.265461+03:00",
       "stale": false,
       "suspicious": false,
       "error": null,
       "warning": null,
       "requests": 28,
-      "seconds": 44.211
+      "seconds": 52.364
     },
     {
       "venue": "avrora",
       "ok": true,
       "count": 64,
-      "fetched_at": "2026-11-26T16:54:01.910658+03:00",
+      "fetched_at": "2026-11-26T18:27:05.900013+03:00",
       "stale": false,
       "suspicious": false,
       "error": null,
       "warning": null,
       "requests": 8,
-      "seconds": 7.686
+      "seconds": 7.632
     },
     {
       "venue": "poravkino",
       "ok": true,
-      "count": 77,
-      "fetched_at": "2026-11-26T16:54:07.985559+03:00",
+      "count": 73,
+      "fetched_at": "2026-11-26T18:27:12.172461+03:00",
       "stale": false,
       "suspicious": false,
       "error": null,
       "warning": null,
       "requests": 7,
-      "seconds": 6.075
+      "seconds": 6.272
     },
     {
       "venue": "lenfilm",
       "ok": true,
       "count": 22,
-      "fetched_at": "2026-11-26T16:54:15.282792+03:00",
+      "fetched_at": "2026-11-26T18:27:19.902337+03:00",
       "stale": false,
       "suspicious": false,
       "error": null,
       "warning": null,
       "requests": 9,
-      "seconds": 7.297
+      "seconds": 7.73
     },
     {
       "venue": "outcinema",
       "ok": true,
       "count": 12,
-      "fetched_at": "2026-11-26T16:54:15.758566+03:00",
+      "fetched_at": "2026-11-26T18:27:20.460650+03:00",
       "stale": false,
       "suspicious": false,
       "error": null,
       "warning": null,
       "requests": 1,
-      "seconds": 0.476
+      "seconds": 0.558
     },
     {
       "venue": "mirage",
       "ok": true,
-      "count": 115,
-      "fetched_at": "2026-11-26T16:54:24.987600+03:00",
+      "count": 112,
+      "fetched_at": "2026-11-26T18:27:29.706474+03:00",
       "stale": false,
       "suspicious": false,
       "error": null,
       "warning": null,
       "requests": 7,
-      "seconds": 9.229
+      "seconds": 9.246
     }
   ],
   "screenings": [
@@ -283,50 +283,6 @@
       }
     },
     {
-      "venue": "mirage",
-      "source_id": "87d64220-8233-4f61-b782-d9e0c3c8c45f",
-      "title": "Александр I",
-      "start": "2026-11-26T16:30:00+03:00",
-      "hall": "6",
-      "price_min": null,
-      "price_max": null,
-      "language": null,
-      "tags": [],
-      "url": "https://www.mirage.ru/ticket_new/87d64220-8233-4f61-b782-d9e0c3c8c45f/",
-      "source_url": "https://www.mirage.ru/spb/schedule/26.11.2026/cinema/1/",
-      "extra": {
-        "genres": [
-          "драма",
-          "биография",
-          "история"
-        ],
-        "age": "12+",
-        "film_id": 7695
-      }
-    },
-    {
-      "venue": "mirage",
-      "source_id": "15c1ac9e-882b-44b8-bb00-dc62b2c760f1",
-      "title": "Скрудж",
-      "start": "2026-11-26T16:40:00+03:00",
-      "hall": "5",
-      "price_min": null,
-      "price_max": null,
-      "language": null,
-      "tags": [],
-      "url": "https://www.mirage.ru/ticket_new/15c1ac9e-882b-44b8-bb00-dc62b2c760f1/",
-      "source_url": "https://www.mirage.ru/spb/schedule/26.11.2026/cinema/1/",
-      "extra": {
-        "genres": [
-          "комедия",
-          "драма",
-          "фэнтези"
-        ],
-        "age": "16+",
-        "film_id": 7559
-      }
-    },
-    {
       "venue": "domkino",
       "source_id": "074122d0afeb",
       "title": "Бумажный тигр",
@@ -349,56 +305,6 @@
           "триллер",
           "драма"
         ]
-      }
-    },
-    {
-      "venue": "poravkino",
-      "source_id": "44998",
-      "title": "Скрудж",
-      "start": "2026-11-26T16:50:00+03:00",
-      "hall": "4",
-      "price_min": 400,
-      "price_max": 400,
-      "language": null,
-      "tags": [],
-      "url": "https://poravkino.ru/",
-      "source_url": "https://poravkino.ru/api/schedule?date=2026-11-26",
-      "extra": {
-        "year": 2026,
-        "country": "США, Великобритания",
-        "director": "Тай Уэст",
-        "original_title": "Скрудж",
-        "duration_min": 115,
-        "age": 12,
-        "genres": [
-          "драма",
-          "комедия",
-          "триллер",
-          "фэнтези"
-        ],
-        "is_pushkin": false
-      }
-    },
-    {
-      "venue": "mirage",
-      "source_id": "74666873-e675-482b-9d69-ba8960165067",
-      "title": "Голодные игры: Рассвет Жатвы",
-      "start": "2026-11-26T17:05:00+03:00",
-      "hall": "3",
-      "price_min": null,
-      "price_max": null,
-      "language": null,
-      "tags": [],
-      "url": "https://www.mirage.ru/ticket_new/74666873-e675-482b-9d69-ba8960165067/",
-      "source_url": "https://www.mirage.ru/spb/schedule/26.11.2026/cinema/1/",
-      "extra": {
-        "genres": [
-          "триллер",
-          "приключения",
-          "фэнтези"
-        ],
-        "age": "18+",
-        "film_id": 7662
       }
     },
     {
@@ -426,31 +332,6 @@
       }
     },
     {
-      "venue": "rodina",
-      "source_id": "bddf5fe6af68",
-      "title": "Увидеть всё (версия с субтитрами)",
-      "start": "2026-11-26T17:05:00+03:00",
-      "hall": "Малый 2 зал",
-      "price_min": 350,
-      "price_max": 350,
-      "language": "SUB",
-      "tags": [],
-      "url": "https://rodinakino.ru/events/uvidet-vsyo-versiya-s-subtitrami-2026",
-      "source_url": "https://rodinakino.ru/?date=2026/11/26",
-      "extra": {
-        "year": 2026,
-        "age": "18+",
-        "duration_min": 174,
-        "synopsis": "Элизабет Холмс была одной из самых молодых миллиардерш мира, пока её компания не оказалась в центре крупнейшего мошеннического скандала в истории Кремниевой долины. Потеряв всё своё состояние и получив тюремный срок, за месяц до заключения она приглашает в свой дом съёмочную группу во главе с комиком-авангардистом. Но…",
-        "director": "Нэйтан Филдер, Лэнс Оппенгейм",
-        "genres": [
-          "документальный",
-          "биография"
-        ],
-        "country": "США"
-      }
-    },
-    {
       "venue": "domkino",
       "source_id": "ec72bcdae995",
       "title": "Непокой",
@@ -472,115 +353,6 @@
           "триллер",
           "анимация"
         ]
-      }
-    },
-    {
-      "venue": "poravkino",
-      "source_id": "44999",
-      "title": "Александр I",
-      "start": "2026-11-26T17:30:00+03:00",
-      "hall": "Малый синий",
-      "price_min": 400,
-      "price_max": 400,
-      "language": null,
-      "tags": [],
-      "url": "https://poravkino.ru/",
-      "source_url": "https://poravkino.ru/api/schedule?date=2026-11-26",
-      "extra": {
-        "year": 2026,
-        "country": "Россия",
-        "director": "Морад Абдель-Фаттах",
-        "original_title": "Александр I",
-        "duration_min": 115,
-        "age": 16,
-        "genres": [
-          "биографический",
-          "драма"
-        ],
-        "is_pushkin": false
-      }
-    },
-    {
-      "venue": "rodina",
-      "source_id": "6975443879c5",
-      "title": "Дворняшка",
-      "start": "2026-11-26T17:35:00+03:00",
-      "hall": "Малый 1 зал",
-      "price_min": 300,
-      "price_max": 300,
-      "language": null,
-      "tags": [],
-      "url": "https://rodinakino.ru/events/dvornyashka-2026",
-      "source_url": "https://rodinakino.ru/?date=2026/11/26",
-      "extra": {
-        "year": 2026,
-        "age": "6+",
-        "duration_min": 85,
-        "synopsis": "Наш дворовый пёс совсем не похож на роскошных собак, участвующих в самых престижных выставках. Он не грезит большими победами и не ждёт признания: его главная мечта — обрести семью, которая примет его таким, какой он есть. В поисках дома он отправляется на большое соревнование, где ему предстоит потеснить местных…",
-        "director": "Янис Белаид, Жереми Дегрюсон",
-        "genres": [
-          "мультфильм",
-          "комедия",
-          "приключения",
-          "семейный"
-        ],
-        "country": "Бельгия, Франция"
-      }
-    },
-    {
-      "venue": "poravkino",
-      "source_id": "45000",
-      "title": "Голодные игры: Рассвет Жатвы",
-      "start": "2026-11-26T17:45:00+03:00",
-      "hall": "3",
-      "price_min": 400,
-      "price_max": 400,
-      "language": null,
-      "tags": [],
-      "url": "https://poravkino.ru/",
-      "source_url": "https://poravkino.ru/api/schedule?date=2026-11-26",
-      "extra": {
-        "year": 2026,
-        "country": "США",
-        "director": "Фрэнсис Лоуренс",
-        "original_title": "Голодные игры: Рассвет жатвы",
-        "duration_min": 165,
-        "age": 18,
-        "genres": [
-          "боевик",
-          "триллер",
-          "фантастика"
-        ],
-        "is_pushkin": false
-      }
-    },
-    {
-      "venue": "poravkino",
-      "source_id": "45001",
-      "title": "Плетёный муж",
-      "start": "2026-11-26T17:55:00+03:00",
-      "hall": "VIP",
-      "price_min": 700,
-      "price_max": 700,
-      "language": null,
-      "tags": [],
-      "url": "https://poravkino.ru/",
-      "source_url": "https://poravkino.ru/api/schedule?date=2026-11-26",
-      "extra": {
-        "year": 2026,
-        "country": "США, Великобритания, Австралия",
-        "director": "Алекс Хьюстон Фишер, Элинор Уилсон",
-        "original_title": "Плетеный муж",
-        "duration_min": 110,
-        "age": 18,
-        "genres": [
-          "драма",
-          "комедия",
-          "мелодрама",
-          "фантастика",
-          "фэнтези"
-        ],
-        "is_pushkin": false
       }
     },
     {
@@ -691,7 +463,7 @@
           "документально-художественный"
         ],
         "country": "Россия",
-        "free_places": 86,
+        "free_places": 79,
         "online_sale": true
       }
     },
@@ -939,7 +711,7 @@
           "драма"
         ],
         "country": "Чили, Испания, Мексика",
-        "free_places": 175,
+        "free_places": 176,
         "online_sale": true
       }
     },
@@ -1012,7 +784,7 @@
           "романтическая комедия"
         ],
         "country": "Великобритания, Франция, Ирландия, США",
-        "free_places": 74,
+        "free_places": 71,
         "online_sale": true
       }
     },
@@ -1191,7 +963,7 @@
           "фэнтези"
         ],
         "country": "США",
-        "free_places": 14,
+        "free_places": 13,
         "online_sale": true
       }
     },
@@ -1337,8 +1109,8 @@
       "source_url": "https://rodinakino.ru/?date=2026/11/26",
       "extra": {
         "year": 2026,
-        "age": "12+",
-        "duration_min": 102,
+        "age": "16+",
+        "duration_min": 101,
         "synopsis": "Екатерина II всегда знала, что ее преемником станет не сын Павел, а любимый внук Александр. С самых ранних лет его воспитывали как будущего правителя — в жесткой дисциплине и с блестящим образованием. Став наконец императором, Александр был намерен продолжить реформы своих предшественников — отменить крепостное право…",
         "director": "Морад Абдель-Фаттах",
         "genres": [
@@ -2285,7 +2057,7 @@
           "биография"
         ],
         "country": "Россия",
-        "free_places": 431,
+        "free_places": 429,
         "online_sale": true
       }
     },
@@ -2751,8 +2523,8 @@
       "source_url": "https://rodinakino.ru/?date=2026/11/27",
       "extra": {
         "year": 2026,
-        "age": "12+",
-        "duration_min": 102,
+        "age": "16+",
+        "duration_min": 101,
         "synopsis": "Екатерина II всегда знала, что ее преемником станет не сын Павел, а любимый внук Александр. С самых ранних лет его воспитывали как будущего правителя — в жесткой дисциплине и с блестящим образованием. Став наконец императором, Александр был намерен продолжить реформы своих предшественников — отменить крепостное право…",
         "director": "Морад Абдель-Фаттах",
         "genres": [
@@ -3262,7 +3034,7 @@
           "фэнтези"
         ],
         "country": "США",
-        "free_places": 97,
+        "free_places": 94,
         "online_sale": true
       }
     },
@@ -3390,7 +3162,7 @@
           "драма"
         ],
         "country": "США",
-        "free_places": 158,
+        "free_places": 155,
         "online_sale": true
       }
     },
@@ -3454,7 +3226,7 @@
       "language": "SUB",
       "tags": [],
       "url": "https://rodinakino.ru/events/uvidet-vsyo-versiya-s-subtitrami-2026",
-      "source_url": "https://rodinakino.ru/?date=2026/11/27",
+      "source_url": "https://rodinakino.ru/?date=2026/11/26",
       "extra": {
         "year": 2026,
         "age": "18+",
@@ -3968,7 +3740,7 @@
           "документальный"
         ],
         "country": "Германия",
-        "free_places": 72,
+        "free_places": 68,
         "online_sale": true
       }
     },
@@ -4021,7 +3793,7 @@
     },
     {
       "venue": "mirage",
-      "source_id": "5d8f353bce40",
+      "source_id": "60fff093-bd8d-44e9-b8ae-a5b05da8fa81",
       "title": "Голодные игры: Рассвет Жатвы",
       "start": "2026-11-27T18:30:00+03:00",
       "hall": "4",
@@ -4029,7 +3801,7 @@
       "price_max": null,
       "language": null,
       "tags": [],
-      "url": null,
+      "url": "https://www.mirage.ru/ticket_new/60fff093-bd8d-44e9-b8ae-a5b05da8fa81/",
       "source_url": "https://www.mirage.ru/spb/schedule/27.11.2026/cinema/1/",
       "extra": {
         "genres": [
@@ -4091,7 +3863,7 @@
           "комедия"
         ],
         "country": "США, Великобритания",
-        "free_places": 409,
+        "free_places": 404,
         "online_sale": true
       }
     },
@@ -4335,7 +4107,7 @@
           "биография"
         ],
         "country": "Россия",
-        "free_places": 53,
+        "free_places": 46,
         "online_sale": true
       }
     },
@@ -4653,7 +4425,7 @@
           "драма"
         ],
         "country": "США",
-        "free_places": 378,
+        "free_places": 371,
         "online_sale": true
       }
     },
@@ -4878,8 +4650,8 @@
       "source_url": "https://rodinakino.ru/?date=2026/11/27",
       "extra": {
         "year": 2026,
-        "age": "12+",
-        "duration_min": 102,
+        "age": "16+",
+        "duration_min": 101,
         "synopsis": "Екатерина II всегда знала, что ее преемником станет не сын Павел, а любимый внук Александр. С самых ранних лет его воспитывали как будущего правителя — в жесткой дисциплине и с блестящим образованием. Став наконец императором, Александр был намерен продолжить реформы своих предшественников — отменить крепостное право…",
         "director": "Морад Абдель-Фаттах",
         "genres": [
@@ -5303,7 +5075,7 @@
       "language": null,
       "tags": [],
       "url": "https://rodinakino.ru/events/dvornyashka-2026",
-      "source_url": "https://rodinakino.ru/?date=2026/11/28",
+      "source_url": "https://rodinakino.ru/?date=2026/11/26",
       "extra": {
         "year": 2026,
         "age": "6+",
@@ -5359,8 +5131,8 @@
       "source_url": "https://rodinakino.ru/?date=2026/11/28",
       "extra": {
         "year": 2026,
-        "age": "12+",
-        "duration_min": 102,
+        "age": "16+",
+        "duration_min": 101,
         "synopsis": "Екатерина II всегда знала, что ее преемником станет не сын Павел, а любимый внук Александр. С самых ранних лет его воспитывали как будущего правителя — в жесткой дисциплине и с блестящим образованием. Став наконец императором, Александр был намерен продолжить реформы своих предшественников — отменить крепостное право…",
         "director": "Морад Абдель-Фаттах",
         "genres": [
@@ -5604,7 +5376,7 @@
           "драма"
         ],
         "country": "Россия, Индия",
-        "free_places": 177,
+        "free_places": 175,
         "online_sale": true
       }
     },
@@ -5848,7 +5620,7 @@
           "драма"
         ],
         "country": "США",
-        "free_places": 178,
+        "free_places": 176,
         "online_sale": true
       }
     },
@@ -6077,7 +5849,7 @@
       "language": null,
       "tags": [],
       "url": "https://rodinakino.ru/events/dvornyashka-2026",
-      "source_url": "https://rodinakino.ru/?date=2026/11/28",
+      "source_url": "https://rodinakino.ru/?date=2026/11/26",
       "extra": {
         "year": 2026,
         "age": "6+",
@@ -6269,8 +6041,8 @@
       "source_url": "https://rodinakino.ru/?date=2026/11/28",
       "extra": {
         "year": 2026,
-        "age": "12+",
-        "duration_min": 102,
+        "age": "16+",
+        "duration_min": 101,
         "synopsis": "Екатерина II всегда знала, что ее преемником станет не сын Павел, а любимый внук Александр. С самых ранних лет его воспитывали как будущего правителя — в жесткой дисциплине и с блестящим образованием. Став наконец императором, Александр был намерен продолжить реформы своих предшественников — отменить крепостное право…",
         "director": "Морад Абдель-Фаттах",
         "genres": [
@@ -6402,7 +6174,7 @@
           "фэнтези"
         ],
         "country": "США",
-        "free_places": 21,
+        "free_places": 19,
         "online_sale": true
       }
     },
@@ -6567,7 +6339,7 @@
           "театр в кино"
         ],
         "country": "Россия",
-        "free_places": 63,
+        "free_places": 61,
         "online_sale": true
       }
     },
@@ -6713,7 +6485,7 @@
           "драма"
         ],
         "country": "США",
-        "free_places": 69,
+        "free_places": 67,
         "online_sale": true
       }
     },
@@ -6854,8 +6626,8 @@
       "source_url": "https://rodinakino.ru/?date=2026/11/28",
       "extra": {
         "year": 2026,
-        "age": "12+",
-        "duration_min": 102,
+        "age": "16+",
+        "duration_min": 101,
         "synopsis": "Екатерина II всегда знала, что ее преемником станет не сын Павел, а любимый внук Александр. С самых ранних лет его воспитывали как будущего правителя — в жесткой дисциплине и с блестящим образованием. Став наконец императором, Александр был намерен продолжить реформы своих предшественников — отменить крепостное право…",
         "director": "Морад Абдель-Фаттах",
         "genres": [
@@ -6909,7 +6681,7 @@
           "драма"
         ],
         "country": "США",
-        "free_places": 437,
+        "free_places": 435,
         "online_sale": true
       }
     },
@@ -7089,8 +6861,8 @@
       "source_url": "https://rodinakino.ru/?date=2026/11/29",
       "extra": {
         "year": 2026,
-        "age": "12+",
-        "duration_min": 102,
+        "age": "16+",
+        "duration_min": 101,
         "synopsis": "Екатерина II всегда знала, что ее преемником станет не сын Павел, а любимый внук Александр. С самых ранних лет его воспитывали как будущего правителя — в жесткой дисциплине и с блестящим образованием. Став наконец императором, Александр был намерен продолжить реформы своих предшественников — отменить крепостное право…",
         "director": "Морад Абдель-Фаттах",
         "genres": [
@@ -7193,7 +6965,7 @@
           "драма"
         ],
         "country": "США",
-        "free_places": 435,
+        "free_places": 431,
         "online_sale": true
       }
     },
@@ -7382,7 +7154,7 @@
           "драма"
         ],
         "country": "США",
-        "free_places": 178,
+        "free_places": 177,
         "online_sale": true
       }
     },
@@ -7597,7 +7369,7 @@
           "театр в кино"
         ],
         "country": "Россия",
-        "free_places": 143,
+        "free_places": 141,
         "online_sale": true
       }
     },
@@ -7769,7 +7541,7 @@
           "биография"
         ],
         "country": "Россия",
-        "free_places": 410,
+        "free_places": 406,
         "online_sale": true
       }
     },
@@ -7876,8 +7648,8 @@
       "source_url": "https://rodinakino.ru/?date=2026/11/29",
       "extra": {
         "year": 2026,
-        "age": "12+",
-        "duration_min": 102,
+        "age": "16+",
+        "duration_min": 101,
         "synopsis": "Екатерина II всегда знала, что ее преемником станет не сын Павел, а любимый внук Александр. С самых ранних лет его воспитывали как будущего правителя — в жесткой дисциплине и с блестящим образованием. Став наконец императором, Александр был намерен продолжить реформы своих предшественников — отменить крепостное право…",
         "director": "Морад Абдель-Фаттах",
         "genres": [
@@ -7959,7 +7731,7 @@
           "драма"
         ],
         "country": "США",
-        "free_places": 116,
+        "free_places": 111,
         "online_sale": true
       }
     },
@@ -8010,7 +7782,7 @@
           "фэнтези"
         ],
         "country": "США",
-        "free_places": 69,
+        "free_places": 67,
         "online_sale": true
       }
     },
@@ -8393,7 +8165,7 @@
           "биография"
         ],
         "country": "Россия",
-        "free_places": 108,
+        "free_places": 104,
         "online_sale": true
       }
     },
@@ -8458,8 +8230,8 @@
       "source_url": "https://rodinakino.ru/?date=2026/11/29",
       "extra": {
         "year": 2026,
-        "age": "12+",
-        "duration_min": 102,
+        "age": "16+",
+        "duration_min": 101,
         "synopsis": "Екатерина II всегда знала, что ее преемником станет не сын Павел, а любимый внук Александр. С самых ранних лет его воспитывали как будущего правителя — в жесткой дисциплине и с блестящим образованием. Став наконец императором, Александр был намерен продолжить реформы своих предшественников — отменить крепостное право…",
         "director": "Морад Абдель-Фаттах",
         "genres": [
@@ -8672,8 +8444,8 @@
       "source_url": "https://rodinakino.ru/?date=2026/11/30",
       "extra": {
         "year": 2026,
-        "age": "12+",
-        "duration_min": 102,
+        "age": "16+",
+        "duration_min": 101,
         "synopsis": "Екатерина II всегда знала, что ее преемником станет не сын Павел, а любимый внук Александр. С самых ранних лет его воспитывали как будущего правителя — в жесткой дисциплине и с блестящим образованием. Став наконец императором, Александр был намерен продолжить реформы своих предшественников — отменить крепостное право…",
         "director": "Морад Абдель-Фаттах",
         "genres": [
@@ -8917,7 +8689,7 @@
           "драма"
         ],
         "country": "США",
-        "free_places": 192,
+        "free_places": 190,
         "online_sale": true
       }
     },
@@ -9064,8 +8836,8 @@
       "source_url": "https://rodinakino.ru/?date=2026/11/30",
       "extra": {
         "year": 2026,
-        "age": "12+",
-        "duration_min": 102,
+        "age": "16+",
+        "duration_min": 101,
         "synopsis": "Екатерина II всегда знала, что ее преемником станет не сын Павел, а любимый внук Александр. С самых ранних лет его воспитывали как будущего правителя — в жесткой дисциплине и с блестящим образованием. Став наконец императором, Александр был намерен продолжить реформы своих предшественников — отменить крепостное право…",
         "director": "Морад Абдель-Фаттах",
         "genres": [
@@ -9101,7 +8873,7 @@
           "драма"
         ],
         "country": "США",
-        "free_places": 183,
+        "free_places": 181,
         "online_sale": true
       }
     },
@@ -9305,7 +9077,7 @@
           "романтическая комедия"
         ],
         "country": "Великобритания, Франция, Ирландия, США",
-        "free_places": 127,
+        "free_places": 126,
         "online_sale": true
       }
     },
@@ -9371,8 +9143,8 @@
       "source_url": "https://rodinakino.ru/?date=2026/11/30",
       "extra": {
         "year": 2026,
-        "age": "12+",
-        "duration_min": 102,
+        "age": "16+",
+        "duration_min": 101,
         "synopsis": "Екатерина II всегда знала, что ее преемником станет не сын Павел, а любимый внук Александр. С самых ранних лет его воспитывали как будущего правителя — в жесткой дисциплине и с блестящим образованием. Став наконец императором, Александр был намерен продолжить реформы своих предшественников — отменить крепостное право…",
         "director": "Морад Абдель-Фаттах",
         "genres": [
@@ -9478,8 +9250,8 @@
       "source_url": "https://rodinakino.ru/?date=2026/12/01",
       "extra": {
         "year": 2026,
-        "age": "12+",
-        "duration_min": 102,
+        "age": "16+",
+        "duration_min": 101,
         "synopsis": "Екатерина II всегда знала, что ее преемником станет не сын Павел, а любимый внук Александр. С самых ранних лет его воспитывали как будущего правителя — в жесткой дисциплине и с блестящим образованием. Став наконец императором, Александр был намерен продолжить реформы своих предшественников — отменить крепостное право…",
         "director": "Морад Абдель-Фаттах",
         "genres": [
@@ -9685,8 +9457,8 @@
       "source_url": "https://rodinakino.ru/?date=2026/12/01",
       "extra": {
         "year": 2026,
-        "age": "12+",
-        "duration_min": 102,
+        "age": "16+",
+        "duration_min": 101,
         "synopsis": "Екатерина II всегда знала, что ее преемником станет не сын Павел, а любимый внук Александр. С самых ранних лет его воспитывали как будущего правителя — в жесткой дисциплине и с блестящим образованием. Став наконец императором, Александр был намерен продолжить реформы своих предшественников — отменить крепостное право…",
         "director": "Морад Абдель-Фаттах",
         "genres": [
@@ -9893,8 +9665,8 @@
       "source_url": "https://rodinakino.ru/?date=2026/12/01",
       "extra": {
         "year": 2026,
-        "age": "12+",
-        "duration_min": 102,
+        "age": "16+",
+        "duration_min": 101,
         "synopsis": "Екатерина II всегда знала, что ее преемником станет не сын Павел, а любимый внук Александр. С самых ранних лет его воспитывали как будущего правителя — в жесткой дисциплине и с блестящим образованием. Став наконец императором, Александр был намерен продолжить реформы своих предшественников — отменить крепостное право…",
         "director": "Морад Абдель-Фаттах",
         "genres": [
@@ -10180,8 +9952,8 @@
       "source_url": "https://rodinakino.ru/?date=2026/12/02",
       "extra": {
         "year": 2026,
-        "age": "12+",
-        "duration_min": 102,
+        "age": "16+",
+        "duration_min": 101,
         "synopsis": "Екатерина II всегда знала, что ее преемником станет не сын Павел, а любимый внук Александр. С самых ранних лет его воспитывали как будущего правителя — в жесткой дисциплине и с блестящим образованием. Став наконец императором, Александр был намерен продолжить реформы своих предшественников — отменить крепостное право…",
         "director": "Морад Абдель-Фаттах",
         "genres": [
@@ -10411,8 +10183,8 @@
       "source_url": "https://rodinakino.ru/?date=2026/12/02",
       "extra": {
         "year": 2026,
-        "age": "12+",
-        "duration_min": 102,
+        "age": "16+",
+        "duration_min": 101,
         "synopsis": "Екатерина II всегда знала, что ее преемником станет не сын Павел, а любимый внук Александр. С самых ранних лет его воспитывали как будущего правителя — в жесткой дисциплине и с блестящим образованием. Став наконец императором, Александр был намерен продолжить реформы своих предшественников — отменить крепостное право…",
         "director": "Морад Абдель-Фаттах",
         "genres": [
@@ -10444,7 +10216,7 @@
           "историческая драма"
         ],
         "country": "Россия",
-        "free_places": 439,
+        "free_places": 438,
         "online_sale": true
       }
     },
@@ -10644,8 +10416,8 @@
       "source_url": "https://rodinakino.ru/?date=2026/12/02",
       "extra": {
         "year": 2026,
-        "age": "12+",
-        "duration_min": 102,
+        "age": "16+",
+        "duration_min": 101,
         "synopsis": "Екатерина II всегда знала, что ее преемником станет не сын Павел, а любимый внук Александр. С самых ранних лет его воспитывали как будущего правителя — в жесткой дисциплине и с блестящим образованием. Став наконец императором, Александр был намерен продолжить реформы своих предшественников — отменить крепостное право…",
         "director": "Морад Абдель-Фаттах",
         "genres": [

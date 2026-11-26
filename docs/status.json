@@ -6,81 +6,81 @@
     "fetched_at": "2026-11-26T06:17:40.101772+03:00",
     "stale": true,
     "suspicious": false,
-    "error": "fetch failed: HttpError: ConnectTimeout: HTTPSConnectionPool(host='www.domkino.spb.ru', port=443): Max retries exceeded with url: /schedule/2026/11/26/ (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.domkino.spb.ru', port=443) at 0x744e26e2cb30>, 'Connection to www.domkino.spb.ru timed out. (connect timeout=5.0)'))",
+    "error": "fetch failed: HttpError: ConnectTimeout: HTTPSConnectionPool(host='www.domkino.spb.ru', port=443): Max retries exceeded with url: /schedule/2026/11/26/ (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.domkino.spb.ru', port=443) at 0x7621aeb760c0>, 'Connection to www.domkino.spb.ru timed out. (connect timeout=5.0)'))",
     "warning": null,
     "requests": 4,
-    "seconds": 28.317
+    "seconds": 28.346
   },
   {
     "venue": "rodina",
     "ok": true,
-    "count": 101,
-    "fetched_at": "2026-11-26T16:53:54.222004+03:00",
+    "count": 99,
+    "fetched_at": "2026-11-26T18:26:58.265461+03:00",
     "stale": false,
     "suspicious": false,
     "error": null,
     "warning": null,
     "requests": 28,
-    "seconds": 44.211
+    "seconds": 52.364
   },
   {
     "venue": "avrora",
     "ok": true,
     "count": 64,
-    "fetched_at": "2026-11-26T16:54:01.910658+03:00",
+    "fetched_at": "2026-11-26T18:27:05.900013+03:00",
     "stale": false,
     "suspicious": false,
     "error": null,
     "warning": null,
     "requests": 8,
-    "seconds": 7.686
+    "seconds": 7.632
   },
   {
     "venue": "poravkino",
     "ok": true,
-    "count": 77,
-    "fetched_at": "2026-11-26T16:54:07.985559+03:00",
+    "count": 73,
+    "fetched_at": "2026-11-26T18:27:12.172461+03:00",
     "stale": false,
     "suspicious": false,
     "error": null,
     "warning": null,
     "requests": 7,
-    "seconds": 6.075
+    "seconds": 6.272
   },
   {
     "venue": "lenfilm",
     "ok": true,
     "count": 22,
-    "fetched_at": "2026-11-26T16:54:15.282792+03:00",
+    "fetched_at": "2026-11-26T18:27:19.902337+03:00",
     "stale": false,
     "suspicious": false,
     "error": null,
     "warning": null,
     "requests": 9,
-    "seconds": 7.297
+    "seconds": 7.73
   },
   {
     "venue": "outcinema",
     "ok": true,
     "count": 12,
-    "fetched_at": "2026-11-26T16:54:15.758566+03:00",
+    "fetched_at": "2026-11-26T18:27:20.460650+03:00",
     "stale": false,
     "suspicious": false,
     "error": null,
     "warning": null,
     "requests": 1,
-    "seconds": 0.476
+    "seconds": 0.558
   },
   {
     "venue": "mirage",
     "ok": true,
-    "count": 115,
-    "fetched_at": "2026-11-26T16:54:24.987600+03:00",
+    "count": 112,
+    "fetched_at": "2026-11-26T18:27:29.706474+03:00",
     "stale": false,
     "suspicious": false,
     "error": null,
     "warning": null,
     "requests": 7,
-    "seconds": 9.229
+    "seconds": 9.246
   }
 ]
