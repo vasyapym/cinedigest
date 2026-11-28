@@ -2,85 +2,85 @@
   {
     "venue": "domkino",
     "ok": true,
-    "count": 110,
-    "fetched_at": "2026-11-28T06:17:38.770584+03:00",
+    "count": 114,
+    "fetched_at": "2026-11-28T14:52:22.351598+03:00",
     "stale": false,
     "suspicious": false,
     "error": null,
     "warning": null,
     "requests": 7,
-    "seconds": 14.82
+    "seconds": 19.957
   },
   {
     "venue": "rodina",
     "ok": true,
-    "count": 117,
-    "fetched_at": "2026-11-28T06:18:30.413713+03:00",
+    "count": 111,
+    "fetched_at": "2026-11-28T14:53:16.002938+03:00",
     "stale": false,
     "suspicious": false,
     "error": null,
     "warning": null,
     "requests": 32,
-    "seconds": 51.643
+    "seconds": 53.651
   },
   {
     "venue": "avrora",
     "ok": true,
-    "count": 50,
-    "fetched_at": "2026-11-28T06:18:37.607337+03:00",
+    "count": 46,
+    "fetched_at": "2026-11-28T14:53:24.106913+03:00",
     "stale": false,
     "suspicious": false,
     "error": null,
     "warning": null,
     "requests": 8,
-    "seconds": 7.193
+    "seconds": 8.103
   },
   {
     "venue": "poravkino",
     "ok": true,
-    "count": 154,
-    "fetched_at": "2026-11-28T06:18:43.368734+03:00",
+    "count": 133,
+    "fetched_at": "2026-11-28T14:53:30.318087+03:00",
     "stale": false,
     "suspicious": false,
     "error": null,
     "warning": null,
     "requests": 7,
-    "seconds": 5.761
+    "seconds": 6.211
   },
   {
     "venue": "lenfilm",
     "ok": true,
-    "count": 22,
-    "fetched_at": "2026-11-28T06:18:50.424902+03:00",
+    "count": 20,
+    "fetched_at": "2026-11-28T14:53:38.009651+03:00",
     "stale": false,
     "suspicious": false,
     "error": null,
     "warning": null,
     "requests": 9,
-    "seconds": 7.056
+    "seconds": 7.692
   },
   {
     "venue": "outcinema",
     "ok": true,
     "count": 7,
-    "fetched_at": "2026-11-28T06:18:53.255596+03:00",
+    "fetched_at": "2026-11-28T14:53:38.546529+03:00",
     "stale": false,
     "suspicious": false,
     "error": null,
     "warning": null,
     "requests": 1,
-    "seconds": 2.831
+    "seconds": 0.537
   },
   {
     "venue": "mirage",
     "ok": true,
-    "count": 165,
-    "fetched_at": "2026-11-28T06:19:01.955643+03:00",
+    "count": 155,
+    "fetched_at": "2026-11-28T14:53:50.245657+03:00",
     "stale": false,
     "suspicious": false,
     "error": null,
     "warning": null,
     "requests": 7,
-    "seconds": 8.7
+    "seconds": 11.699
   }
 ]
